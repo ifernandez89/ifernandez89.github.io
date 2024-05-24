@@ -459,8 +459,8 @@ a:visited {
 /* Estilos para dispositivos móviles */
 @media only screen and (min-height:350px) {
     .headline {
-        height: 200px;
-        width: 800px;
+        height: 80px;
+        width: auto;
        /* width: 800px;*/
     }
 }
