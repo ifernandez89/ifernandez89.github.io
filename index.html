@@ -40,7 +40,38 @@
   </div>
   <!-- Image Header -->
   <div class="w3-display-container headline inner">
-    <img src="imgHead3.png" alt="coffee" style="width:100%;min-height:350px;max-height:850px;">
+    <!--img src="imgHead3.png" alt="coffee" style="width:100%;min-height:350px;max-height:850px;"-->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 600" preserveAspectRatio="xMaxYMin meet">
+      <defs>
+          <linearGradient id="gradient_melt2" x1="50%" y1="0%" x2="50%" y2="100%" >
+              <stop offset="0%" style="stop-color:rgb(255, 255, 255);stop-opacity:0" />
+              <stop offset="20%" style="stop-color:rgb(255, 255, 255);stop-opacity:0.3" />
+              <stop offset="40%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+          </linearGradient>
+          <filter id="filter_sunBlur" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+          </filter>
+          <linearGradient id="gradient_cloud1" x1="658.39" y1="-55.99" x2="646.49" y2="574.71" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#fff4ff"/>
+              <stop offset="0.2" stop-color="#fbf3fe"/>
+              <stop offset="0.38" stop-color="#f0f0fc"/>
+              <stop offset="0.56" stop-color="#ddecf7"/>
+              <stop offset="0.73" stop-color="#c3e5f2"/>
+              <stop offset="0.91" stop-color="#a1ddea"/>
+              <stop offset="1" stop-color="#8bd7e5"/>
+          </linearGradient>
+          <linearGradient id="gradient_cloud2" x1="623.27" y1="84.56" x2="628.08" y2="789.71" xlink:href="#gradient_cloud1"/>
+          <linearGradient id="gradient_cloud3" x1="624.83" y1="567.32" x2="624.83" y2="818.88" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#fff4ff"/>
+              <stop offset="1" stop-color="#ded7e5"/>
+          </linearGradient>
+          <path id="cloud" d="M1429.3,399.4a98.2,98.2,0,0,0-97.1-98.2,42.6,42.6,0,0,0-81.6,17,43.7,43.7,0,0,0,4.5,19.1,97.8,97.8,0,0,0-22.1,62.1,92.3,92.3,0,0,0,.7,11.8,98.2,98.2,0,0,0-82,59.1,41.8,41.8,0,0,0-16.6-3.4,42.6,42.6,0,0,0-42.6,42.6,40.7,40.7,0,0,0,2.3,13.5,76,76,0,0,0-69,57,44,44,0,0,0-8.3-.9A39.5,39.5,0,0,0,987,593.5a113.1,113.1,0,0,0-81.7-34.8h-4.1a42.4,42.4,0,0,0-74.8-5.9,39.3,39.3,0,0,0-45.1,6.4,98.2,98.2,0,0,0-167.4-49.2A75.8,75.8,0,0,0,559,534.7a94,94,0,0,0-16.9-1.5A97.5,97.5,0,0,0,471.8,563a39.5,39.5,0,0,0-68,12.5,116.8,116.8,0,0,0-28.2-12.4c.3-2.2,8.4-50.1-42-49.4a43,43,0,0,0-40.8,30.5,96.3,96.3,0,0,0-10.8-.7,87.8,87.8,0,0,0-40.9,10.1,87.8,87.8,0,0,0-138-68A98.3,98.3,0,0,0,16,411.2a115,115,0,0,0,.7-11.8A98.1,98.1,0,0,0-45,308.2V591.8c.6.4,0,63.2,0,63.2H1314.5a113.3,113.3,0,0,0-21.5-62.1c28.2-17.3,46.8-91.8,46.3-95.7A98.2,98.2,0,0,0,1429.3,399.4Z"/>
+      </defs>
+      <!-- CLOUDS -->
+      <use xlink:href="#cloud" id="cloud1" fill="url(#gradient_cloud1)"   x="-40" y="-100" />
+      <use xlink:href="#cloud" id="cloud2" fill="url(#gradient_cloud2)"   x="40" y="-60" />
+      <use xlink:href="#cloud" id="cloud3" fill="url(#gradient_cloud3)"  x="0" y="0" />
+      </svg>
   <!--div class="w3-container w3-display-bottomleft w3-margin-bottom">  
     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-white" title="IFernández">ifernández</button>
   </div-->
@@ -63,9 +94,9 @@
     </div>
   </div>
   <!-- Designer Container -->
-    <div class="w3-row w3-padding-64 w3-center" id="designer">
-      <div class="w3-col m6" height="20vh;"> 
-      <div class="w3-container w3-content w3-padding-64" style="max-width:800px;background-color:#f4f4f3" id="designer">
+    <div class="w3-padding-64 w3-center" id="designer">
+      <div class="w3-row w3-padding-64" id="designer">
+      <div class="w3-col m6" height="20vh;" style="margin-top: 6%;"> 
       <h2 class="w3-wide text2">Ignacio Fernández</h2>
       <p class="w3-opacity text2"><i>Backend/Frontend Designer</i></p>
       <a href=""><img src="5.png" alt="Boss" style="width:30%" class="w3-circle w3-hover-opacity"></a>
@@ -75,8 +106,7 @@
       <p class="text2">Diseño UX/UI (Puerto E-Learning - UADER)</p>
         <p class="text3">[C# - Java - Html - Css - Javascript - React - Sql]</p>
     </div>
-    </div>
-  <div class="w3-col m6" style="margin-top: 10%;">
+  <div class="w3-col m6" style="margin-top: 6%;">
     <div class="a">
       <div class="avatar">
         <svg id="Camada_1" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 251.5 430.6" enable-background="new 0 0 251.5 430.6" xml:space="preserve">
@@ -303,14 +333,14 @@
         </svg>
       </div>
     </div>
-  
       <p class="text2 w3-opacity">I'm a back & front-end developer.</p>
       <p class="text2">I have dedicated myself to creating visually appealing and user-friendly websites.</p>
       <p class="text2">I'm always open to using new skill sets and I believe in the power of collaboration.</p>
     </div>
   </div>
+  </div>
 <!-- Project Section -->
-    <div class="w3-row-padding w3-padding-64 section w3-white" id="works">
+    <div class="w3-row-padding w3-padding-64 section backg" id="works">
     <div class="w3-quarter" id="sigap">
       <div class="w3-card w3-white">
         <video onloadstart="this.muted=true" autoplay loop
