@@ -500,7 +500,7 @@ nav {
     }*/
 }
 .backg{
-  background-image: url('imgHead3.png');
+  background-image: url('port3.png');
   opacity: 0.9;
   /*background-color: #ded7e5;
   background-color: #fff4ff;
@@ -509,7 +509,7 @@ nav {
   max-height:850px;*/
 }
 .back2{
-  background-image: url('port3.png');
+  background-image: url('back2.jpg');
   width:100%;
   height: 700px;
 }
