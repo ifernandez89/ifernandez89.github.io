@@ -502,16 +502,17 @@ nav {
 .backg{
   background-image: url('imgHead3.png');
   opacity: 0.9;
-  /*background-color: #ded7e5;*/
-  /*background-color: #fff4ff;
+  /*background-color: #ded7e5;
+  background-color: #fff4ff;
    width:100%;
   min-height:350px;
-  max-height:850px;
-  background-image: url('imgHead3.png');
-  opacity: 5;*/
+  max-height:850px;*/
 }
-.shadow{
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 19px 38px rgba(0, 0, 0, 0.2);
+.back2{
+  background-image: url('port3.png');
+  width:100%;
+  height: 700px;
 }
+
 
 /*...............................................................*/
