@@ -70,6 +70,7 @@ button {
 .color2 {
     color: #FDCB6E;
 }
+<<<<<<< HEAD
 
 .a {
     width: 100%;
@@ -473,6 +474,8 @@ button {
       transform: scale(0.96);
     }
   }  
+=======
+>>>>>>> 1f49b2810ae0da485b40321cba0e6bc10699c782
 header {
     background: #111;
 }
