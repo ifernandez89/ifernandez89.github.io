@@ -459,14 +459,16 @@ a:visited {
 /* Estilos para dispositivos móviles */
 @media only screen and (min-height:350px) {
     .headline {
-        height: 230px;
+        height: 200px;
+        width: auto;
        /* width: 800px;*/
     }
 }
 /*576px*/
 @media (min-width: 1235px) {
     .headline {
-        height: 365px;
+        height: 350px;
+        width: auto;
        /* width: 800px;*/
     }
 }
@@ -512,6 +514,7 @@ nav {
   background-image: url('back2.jpg');
   width:100%;
   height: 700px;
+  
 }
 
 
