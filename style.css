@@ -482,6 +482,7 @@ a:visited {
     font-family: 'Bitstream Vera Sans Mono';
 }
 .text4 {
+  text-align: justify;
     font-family: 'Montserrat';
 }
 @keyframes fade-in {
