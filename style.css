@@ -123,13 +123,23 @@ a:visited {
         width: auto;
        /* width: 800px;*/
     }
+    .margen{
+      margin-top: 6%;
+    }
 }
-/*576px*/
+@media only screen and (min-height:450px) {
+  .margen{
+    margin-top: 30%;
+  }
+}
 @media (min-width: 1235px) {
     .headline {
         height: 350px;
         width: auto;
        /* width: 800px;*/
+    }
+    .margen{
+      margin-top: -4%;
     }
 }
 .text1 {
@@ -244,21 +254,22 @@ header a, a:visited {
   from {background-position: 0;}
   to {background-position:10000px 0;}
 }
-
+.margen{
+  margin-top: 6%;
+}
 .stars, .twinkling, .clouds {
 position:absolute;
 top: 0;
 left:0;
 right:0;
 bottom:-100%;
-
 display:block;
 }
 .stars {
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index:-2;
 }
-.twinkling{
+/*.twinkling{
 background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
 z-index:1;
 -moz-animation:move-twink-back 200s linear infinite;
@@ -266,8 +277,7 @@ z-index:1;
 -o-animation:move-twink-back 200s linear infinite;
 -webkit-animation:move-twink-back 200s linear infinite;
 animation:move-twink-back 200s linear infinite;
-}
-
+}*/
 .clouds{
   background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
   z-index:-1;
