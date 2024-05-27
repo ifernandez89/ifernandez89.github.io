@@ -121,25 +121,18 @@ a:visited {
     .headline {
         height: 80px;
         width: auto;
-       /* width: 800px;*/
-    }
-    .margen{
-      margin-top: 6%;
     }
 }
-@media only screen and (min-height:450px) {
-  .margen{
-    margin-top: 100%;
+@media only screen and (min-width:600px) {
+  .headline {
+      height: 150px;
+      width: auto;
   }
 }
-@media (min-width: 1235px) {
+@media (min-width: 1235px) {/*revisar por encima de 1200 para televisores*/
     .headline {
-        height: 350px;
+        height: 280px;
         width: auto;
-       /* width: 800px;*/
-    }
-    .margen{
-      margin-top:5%;
     }
 }
 .text1 {
@@ -164,28 +157,14 @@ a:visited {
         opacity: 1;
     }
 }
-nav {
-    /*position: fixed;
-    width: 100%;
-    z-index: 10;
-    &.scrolled {
-        background: rgba(#111, 0.9);
-    }*/
-}
 .backg{
   background-image: url('port3.png');
   opacity: 0.9;
-  /*background-color: #ded7e5;
-  background-color: #fff4ff;
-   width:100%;
-  min-height:350px;
-  max-height:850px;*/
 }
 .back2{
   background-image: url('back2.jpg');
   width:100%;
   height: 700px;
-  
 }
 /* ============================================================================================== 
 SED Innovations
@@ -220,7 +199,6 @@ header a, a:visited {
   text-decoration:none;
   color:#fcfcfc;
 }
-
 @keyframes move-twink-back {
   from {background-position:0 0;}
   to {background-position:-10000px 5000px;}
@@ -237,7 +215,6 @@ header a, a:visited {
   from {background-position:0 0;}
   to {background-position:-10000px 5000px;}
 }
-
 @keyframes move-clouds-back {
   from {background-position:0 0;}
   to {background-position:10000px 0;}
@@ -255,9 +232,9 @@ header a, a:visited {
   to {background-position:10000px 0;}
 }
 .margen{
-  margin-top: 6%;
+  margin-top: 1%;
 }
-.stars, .twinkling, .clouds {
+.stars, .clouds {
 position:absolute;
 top: 0;
 left:0;
@@ -269,16 +246,8 @@ display:block;
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index:-2;
 }
-/*.twinkling{
-background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-z-index:1;
--moz-animation:move-twink-back 200s linear infinite;
--ms-animation:move-twink-back 200s linear infinite;
--o-animation:move-twink-back 200s linear infinite;
--webkit-animation:move-twink-back 200s linear infinite;
-animation:move-twink-back 200s linear infinite;
-}*/
 .clouds{
+  margin-top: -5%;
   background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
   z-index:-1;
 -moz-animation:move-clouds-back 200s linear infinite;
