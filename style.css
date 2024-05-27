@@ -123,7 +123,7 @@ a:visited {
         width: auto;
     }
 }
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:620px) {
   .headline {
       height: 150px;
       width: auto;
