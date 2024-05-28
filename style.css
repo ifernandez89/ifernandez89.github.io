@@ -127,21 +127,21 @@ a:visited {
       margin-top: 6%;
     }
 }
-@media only screen and (min-height:450px) {
+@media only screen and (min-height:600px) {
   .margen{
-    margin-top: 100%;
+    margin-top: 50%;
   }
 }
 @media (min-width: 1235px) {
     .headline {
         height: 350px;
         width: auto;
-       /* width: 800px;*/
     }
     .margen{
-      margin-top:5%;
+      margin-top:400%;
     }
 }
+
 .text1 {
     font-family: 'Inconsolata';
 }
