@@ -129,24 +129,24 @@ a:visited {
       width: auto;
   }
 }  
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
   .headline {
       height: 210px;
       width: auto;
   }
 }
-@media only screen and (min-width: 1355px) {
-  .headline {
-      height: 285px;
-      width: auto;
-    }
-  }
-  @media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1355px) {/*revisar por encima de 1200 para televisores*/
     .headline {
-        height: 430px;
+        height: 300px;
         width: auto;
-      }
     }
+}
+@media only screen and (min-width: 1400px) {/*revisar por encima de 1200 para televisores*/
+  .headline {
+      height: 430px;
+      width: auto;
+  }
+}
 .text1 {
     font-family: 'Inconsolata';
 }
