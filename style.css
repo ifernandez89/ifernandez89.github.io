@@ -121,27 +121,47 @@ a:visited {
     .headline {
         height: 80px;
         width: auto;
-       /* width: 800px;*/
-    }
-    .margen{
-      margin-top: 6%;
     }
 }
+<<<<<<< HEAD
 @media only screen and (min-height:600px) {
   .margen{
     margin-top: 50%;
+=======
+@media only screen and (min-width:620px) {
+  .headline {
+      height: 150px;
+      width: auto;
+>>>>>>> 78d113e323aa799a5d6c1741b28496f20d26790f
   }
 }
-@media (min-width: 1235px) {
+@media (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
+  .headline {
+      height: 210px;
+      width: auto;
+  }
+}
+@media (min-width: 1235px) {/*revisar por encima de 1200 para televisores*/
     .headline {
-        height: 350px;
+        height: 280px;
         width: auto;
+<<<<<<< HEAD
     }
     .margen{
       margin-top:400%;
     }
 }
 
+=======
+    }
+}
+@media (min-width: 1300px) {/*revisar por encima de 1200 para televisores*/
+  .headline {
+      height: 450px;
+      width: auto;
+  }
+}
+>>>>>>> 78d113e323aa799a5d6c1741b28496f20d26790f
 .text1 {
     font-family: 'Inconsolata';
 }
@@ -164,28 +184,14 @@ a:visited {
         opacity: 1;
     }
 }
-nav {
-    /*position: fixed;
-    width: 100%;
-    z-index: 10;
-    &.scrolled {
-        background: rgba(#111, 0.9);
-    }*/
-}
 .backg{
   background-image: url('port3.png');
   opacity: 0.9;
-  /*background-color: #ded7e5;
-  background-color: #fff4ff;
-   width:100%;
-  min-height:350px;
-  max-height:850px;*/
 }
 .back2{
   background-image: url('back2.jpg');
   width:100%;
   height: 700px;
-  
 }
 /* ============================================================================================== 
 SED Innovations
@@ -220,7 +226,6 @@ header a, a:visited {
   text-decoration:none;
   color:#fcfcfc;
 }
-
 @keyframes move-twink-back {
   from {background-position:0 0;}
   to {background-position:-10000px 5000px;}
@@ -237,7 +242,6 @@ header a, a:visited {
   from {background-position:0 0;}
   to {background-position:-10000px 5000px;}
 }
-
 @keyframes move-clouds-back {
   from {background-position:0 0;}
   to {background-position:10000px 0;}
@@ -255,9 +259,9 @@ header a, a:visited {
   to {background-position:10000px 0;}
 }
 .margen{
-  margin-top: 6%;
+  margin-top: 1%;
 }
-.stars, .twinkling, .clouds {
+.stars, .clouds {
 position:absolute;
 top: 0;
 left:0;
@@ -269,16 +273,8 @@ display:block;
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index:-2;
 }
-/*.twinkling{
-background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-z-index:1;
--moz-animation:move-twink-back 200s linear infinite;
--ms-animation:move-twink-back 200s linear infinite;
--o-animation:move-twink-back 200s linear infinite;
--webkit-animation:move-twink-back 200s linear infinite;
-animation:move-twink-back 200s linear infinite;
-}*/
 .clouds{
+  margin-top: -5%;
   background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
   z-index:-1;
 -moz-animation:move-clouds-back 200s linear infinite;
@@ -286,4 +282,168 @@ animation:move-twink-back 200s linear infinite;
 -o-animation:move-clouds-back 200s linear infinite;
 -webkit-animation:move-clouds-back 200s linear infinite;
 animation:move-clouds-back 200s linear infinite;
+}
+/**************************************************************************************************************/
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
 }
