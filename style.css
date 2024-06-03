@@ -123,41 +123,62 @@ a:visited {
 @media only screen and (min-height:350px) {
     .headline {
         height: 80px;
-        width: auto;
+        width: 100%;
     }
     .margenes{
       margin-top:6%;
     }
+    .tam {
+      height: 200px;
+      width: 100%;
+  }
 }
 @media only screen and (min-width:620px) {
   .headline {
       height: 150px;
-      width: auto;
+      width: 100%;
   }
   .margenes{
     margin-top:6%;
   }
+  .tam {
+    height: 250px;
+    width: 150%;
+}
 }  
 @media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
   .headline {
       height: 210px;
-      width: auto;
+      width: 100%;
   }
+  .tam {
+    height: 280px;
+    width: 150%;
+}
 }
 @media only screen and (min-width: 1355px) {/*revisar por encima de 1200 para televisores*/
     .headline {
         height: 300px;
-        width: auto;
+        width: 100%;
     }
     .margenes{
       margin-top:10%;
     }
+    .tam {
+      height: 300px;
+      width: 100%;
+  }
 }
 @media only screen and (min-width: 1400px) {/*revisar por encima de 1200 para televisores*/
   .headline {
       height: 430px;
-      width: auto;
+      width: 100%;
   }
+  .tam {
+      height: 400px;
+      width: 700px;
+      align-items: center;
+}
 }
 .text1 {
   font-family: 'Space Grotesk', sans-serif;
@@ -442,22 +463,31 @@ animation:move-clouds-back 200s linear infinite;
 }
 /******************************************************************************************************/
 label{cursor: pointer;}
-
 /* Contenedor para centrar */
 .ContainerCenter{
   display: flex;
-  align-items: center;
+ /* align-items: center;*/
   flex-direction: column;
 }
 /* Input */
 input{display: none}
-
 /* Slider */
 .Carrusels{
-  height: 400px;
-  width: 600px;
+  /*height: 400px;
+  width: 600px;*/
   position: relative;
   overflow-x: hidden;
+}
+.tam{
+    position: relative;
+    text-align: center;
+    background-size: auto;
+    &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+    }
 }
 .Carrusel{
   height: 100%;
@@ -480,7 +510,6 @@ input{display: none}
 #Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-100%, 0);}
 #Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}
 
-
 /* Flechas */
 .Carrusels .ArrowLeft, .Carrusels .ArrowRight{
   position: absolute;
@@ -497,7 +526,6 @@ input{display: none}
 #Slider1:checked ~ .Carrusels .Arrow1{display: flex;}
 #Slider2:checked ~ .Carrusels .Arrow2{display: flex;}
 #Slider3:checked ~ .Carrusels .Arrow3{display: flex;}
-
 
 /* Selectores */
 .Selectors {
