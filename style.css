@@ -177,7 +177,7 @@ a:visited {
   .tam {
       height: 400px;
       width: 700px;
-      align-items: center;
+      margin-left: 10%;
 }
 }
 .text1 {
