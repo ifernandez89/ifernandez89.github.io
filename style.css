@@ -123,7 +123,7 @@ a:visited {
 @media only screen and (min-height:350px) {
     .headline {
         height: 80px;
-        width: 100%;
+        width: auto;
     }
     .margenes{
       margin-top:6%;
@@ -136,7 +136,7 @@ a:visited {
 @media only screen and (min-width:620px) {
   .headline {
       height: 150px;
-      width: 100%;
+      width: auto;
   }
   .margenes{
     margin-top:6%;
@@ -149,7 +149,7 @@ a:visited {
 @media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
   .headline {
       height: 210px;
-      width: 100%;
+      width: auto;
   }
   .tam {
     height: 280px;
@@ -159,10 +159,10 @@ a:visited {
 @media only screen and (min-width: 1355px) {/*revisar por encima de 1200 para televisores*/
     .headline {
         height: 300px;
-        width: 100%;
+        width: auto;
     }
     .margenes{
-      margin-top:10%;
+      margin-top:2%;
     }
     .tam {
       height: 300px;
@@ -172,12 +172,15 @@ a:visited {
 @media only screen and (min-width: 1400px) {/*revisar por encima de 1200 para televisores*/
   .headline {
       height: 430px;
-      width: 100%;
+      width: auto;
   }
   .tam {
       height: 400px;
       width: 700px;
       margin-left: 10%;
+}
+.margenes{
+  margin-top:1%;
 }
 }
 .text1 {
