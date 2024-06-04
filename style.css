@@ -69,6 +69,9 @@ button {
 header {
     background: #111;
 }
+.margenes{
+  margin-top:10%;
+}
 .headline {
     position: relative;
     text-align: center;
@@ -78,9 +81,9 @@ header {
         content: "";
         top: 0;
         left: 0;
-        width: 100%;
+       /*width: 100%;
         height: 100%;
-        background: rgba(#111, 0.5);
+        background: rgba(#dfbdbd, 0.5);*/
     }
 }
 .inner {
@@ -122,33 +125,71 @@ a:visited {
         height: 80px;
         width: auto;
     }
+    .margenes{
+      margin-top:6%;
+    }
+    .tam {
+      height: 200px;
+      width: 100%;
+  }
 }
 @media only screen and (min-width:620px) {
   .headline {
       height: 150px;
       width: auto;
   }
+  .margenes{
+    margin-top:6%;
+  }
+  .tam {
+    height: 250px;
+    width: 150%;
 }
-@media (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
+}  
+@media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
   .headline {
       height: 210px;
       width: auto;
   }
+  .tam {
+    height: 280px;
+    width: 150%;
 }
-@media (min-width: 1235px) {/*revisar por encima de 1200 para televisores*/
+}
+@media only screen and (min-width: 1355px) {
     .headline {
-        height: 280px;
+        height: 300px;
         width: auto;
     }
-}
-@media (min-width: 1300px) {/*revisar por encima de 1200 para televisores*/
-  .headline {
-      height: 350px;
-      width: auto;
+    .margenes{
+      margin-top:2%;
+    }
+    .tam {
+      height: 300px;
+      width: 100%;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .headline {
+      height: 430px;
+      width: auto;
+  }
+  .tam {
+      height: 400px;
+      width: 700px;
+      margin-left: 10%;
+}
+.margenes{
+  margin-top:10%;
+}
+}
+@media only screen and (min-width: 1500px) {
+.margenes{
+  margin-top:1%;
+}
+}
 .text1 {
-    font-family: 'Inconsolata';
+  font-family: 'Space Grotesk', sans-serif;
 }
 .text2 {
   font-family: 'Inconsolata';
@@ -174,9 +215,8 @@ a:visited {
   opacity: 0.9;
 }
 .back2{
-  background-image: url('back2.jpg');
-  width:100%;
-  height: 700px;
+ /* background-image: url('laptop-design-coffee-cup.jpg');*/
+  opacity: 0.9;
 }
 /* ============================================================================================== 
 SED Innovations
@@ -242,9 +282,6 @@ header a, a:visited {
 @-ms-keyframes move-clouds-back {
   from {background-position: 0;}
   to {background-position:10000px 0;}
-}
-.margen{
-  margin-top: 1%;
 }
 .stars, .clouds {
 position:absolute;
@@ -432,3 +469,107 @@ animation:move-clouds-back 200s linear infinite;
     font-weight:600
   }
 }
+/******************************************************************************************************/
+label{cursor: pointer;}
+/* Contenedor para centrar */
+.ContainerCenter{
+  display: flex;
+ /* align-items: center;*/
+  flex-direction: column;
+}
+/* Input */
+input{display: none}
+/* Slider */
+.Carrusels{
+  /*height: 400px;
+  width: 600px;*/
+  position: relative;
+  overflow-x: hidden;
+}
+.tam{
+    position: relative;
+    text-align: center;
+    background-size: auto;
+    &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+    }
+}
+.Carrusel{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  overflow-y: hidden;
+  transition: all .5s ease;
+}
+/* Estado 1 
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(0%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(200%, 0);}
+
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-100%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(0%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
+
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-200%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}*/
+
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(0%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(200%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(300%, 0);}
+
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-100%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(0%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(200%, 0);}
+
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-300%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-200%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(100%, 0);}
+
+#Slider4:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-300%, 0);}
+#Slider4:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-200%, 0);}
+#Slider4:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
+#Slider4:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(0%, 0);}
+/* Flechas */
+.Carrusels .ArrowLeft, .Carrusels .ArrowRight{
+  position: absolute;
+  height: 100%;
+  width: 2em;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  user-select: none;
+}
+.Carrusels .ArrowLeft{left: 0px;}
+.Carrusels .ArrowRight{right: 0px;}
+/* Configuracion de flechas individuales */
+#Slider1:checked ~ .Carrusels .Arrow1{display: flex;}
+#Slider2:checked ~ .Carrusels .Arrow2{display: flex;}
+#Slider3:checked ~ .Carrusels .Arrow3{display: flex;}
+#Slider4:checked ~ .Carrusels .Arrow4{display: flex;}
+/* Selectores */
+.Selectors {
+  width: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.Selectors .Selector {
+  background-color: #FFF;
+  height: 10px;
+  width: 10px;
+  display: block;
+  border-radius: 5px;
+}
+/* Condicionales para botón inferior */
+#Slider1:checked ~ .Selectors .Selector:nth-of-type(1) {background-color: #999999;}
+#Slider2:checked ~ .Selectors .Selector:nth-of-type(2) {background-color: #999999;}
+#Slider3:checked ~ .Selectors .Selector:nth-of-type(3) {background-color: #999999;}
+#Slider4:checked ~ .Selectors .Selector:nth-of-type(4) {background-color: #999999;}
