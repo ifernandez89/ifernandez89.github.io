@@ -500,19 +500,33 @@ input{display: none}
   overflow-y: hidden;
   transition: all .5s ease;
 }
-/* Estado 1 */
+/* Estado 1 
 #Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(0%, 0);}
 #Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
 #Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(200%, 0);}
-/* Estado 2 */
+
 #Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-100%, 0);}
 #Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(0%, 0);}
 #Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
-/* Estado 3 */
-#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-200%, 0);}
-#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-100%, 0);}
-#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}
 
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-200%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}*/
+
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(0%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(200%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(300%, 0);}
+
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-200%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(300%, 0);}
+
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-300%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-200%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(0%, 0);}
 /* Flechas */
 .Carrusels .ArrowLeft, .Carrusels .ArrowRight{
   position: absolute;
@@ -529,7 +543,7 @@ input{display: none}
 #Slider1:checked ~ .Carrusels .Arrow1{display: flex;}
 #Slider2:checked ~ .Carrusels .Arrow2{display: flex;}
 #Slider3:checked ~ .Carrusels .Arrow3{display: flex;}
-
+#Slider4:checked ~ .Carrusels .Arrow4{display: flex;}
 /* Selectores */
 .Selectors {
   width: 60px;
@@ -548,3 +562,4 @@ input{display: none}
 #Slider1:checked ~ .Selectors .Selector:nth-of-type(1) {background-color: #999999;}
 #Slider2:checked ~ .Selectors .Selector:nth-of-type(2) {background-color: #999999;}
 #Slider3:checked ~ .Selectors .Selector:nth-of-type(3) {background-color: #999999;}
+#Slider4:checked ~ .Selectors .Selector:nth-of-type(4) {background-color: #999999;}
