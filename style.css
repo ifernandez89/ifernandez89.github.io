@@ -156,7 +156,7 @@ a:visited {
     width: 150%;
 }
 }
-@media only screen and (min-width: 1355px) {
+@media only screen and (min-width: 1355px) {/*revisar por encima de 1200 para televisores*/
     .headline {
         height: 300px;
         width: auto;
@@ -169,7 +169,7 @@ a:visited {
       width: 100%;
   }
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1400px) {/*revisar por encima de 1200 para televisores*/
   .headline {
       height: 430px;
       width: auto;
