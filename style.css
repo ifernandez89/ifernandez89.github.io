@@ -185,9 +185,14 @@ a:visited {
 }
 @media only screen and (min-width: 1500px) {
 .margenes{
-  margin-top:1%;
+  margin-top:10%;
 }
 }
+@media only screen and (min-width: 1550px) {
+  .margenes{
+    margin-top:1%;
+  }
+  }
 .text1 {
   font-family: 'Space Grotesk', sans-serif;
 }
