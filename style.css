@@ -300,6 +300,9 @@ display:block;
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index:-2;
 }
+.stars2 {
+  background-image:url(http://www.script-tutorials.com/demos/360/images/stars.png);
+}
 .clouds{
   margin-top: -5%;
   background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
