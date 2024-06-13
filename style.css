@@ -272,13 +272,17 @@ margin-left: 20%;
 }
 .text2 {
   font-family: 'Inconsolata';
-}
+  text-shadow: 2px 2px 5px black;
+ }
 .text3 {
     font-family: 'Bitstream Vera Sans Mono';
 }
 .text4 {
   text-align: justify;
     font-family: 'Montserrat';
+}
+.text5{
+  font-family: "Lato", sans-serif;
 }
 @keyframes fade-in {
     0% {
