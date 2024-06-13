@@ -75,7 +75,7 @@ header {
 .headline {
     position: relative;
     text-align: center;
-    background-size: auto;
+    background-size:auto;
     &:after {
         position: absolute;
         content: "";
@@ -91,7 +91,7 @@ header {
     top: 50%;
     left: 50%;
     opacity: 0;
-    z-index: 1;
+    z-index: 0;/****************************************** 1 *******************************************/
     transform: translateX(-50%) translateY(-50%);
     animation: fade-in 0.75s 0.25s ease-in forwards;
     h1 {
@@ -105,13 +105,57 @@ header {
     }
 }
 section {
-    width: 100%;
+    width: 80%;
     margin: 25px auto;
     padding: 20px;
-    max-width: 800px;
+    max-width:500px;
     font-size: 1.2em;
     line-height: 1.6em;
     box-sizing: border-box;
+}
+.contenedorglass {
+  /* Imagen de fondo */
+  background-size: cover;
+  width: 30vw;
+  height: 30vh;
+  /* Flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glass-box {
+  width: 30vmin;
+  height: 20vmin;
+  border-radius: 10px;
+
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.02);
+  box-shadow:  0px 20px 20px 20px rgba(1, 1, 15, 0.3);
+
+  /*  */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  /* Flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Animación */
+  transition: 250ms;
+  transition-timing-function: ease-out;
+}
+
+.glass-box:hover {
+  transform: translateY(-10vmin);
+}
+
+.glass-box h1 {
+  font-size: 9vmin;
+  color: rgba(194, 189, 216, 0.8);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.534);
+}
+.position{
+  z-index: 1;
 }
 a:link {
 	text-decoration: none;
@@ -222,6 +266,10 @@ a:visited {
 .back2{
  /* background-image: url('laptop-design-coffee-cup.jpg');*/
   opacity: 0.9;
+}
+.back3{
+  background: rgb(117,156,251);
+  background: linear-gradient(225deg, rgba(117,156,251,1) 0%, rgba(25,51,113,1) 19%, rgba(71,96,157,1) 49%, rgba(120,145,204,1) 81%, rgba(59,56,56,1) 100%);
 }
 /* ============================================================================================== 
 SED Innovations
