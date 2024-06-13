@@ -20,13 +20,11 @@
 }
 html {
     /*background-color:#f4f4f3;*/
-   
     /*background: linear-gradient(0deg, rgba(0,165,231,1) 1%, rgba(8,149,205,1) 10%, rgba(27,137,181,1) 22%, rgba(31,117,152,1) 36%, rgba(34,103,129,1) 50%, rgba(32,88,106,1) 66%, rgba(32,75,89,1) 80%, rgba(28,59,69,1) 92%, rgba(23,43,50,1) 100%);*/
 }
 body {
-    font-family: 'Montserrat', sans-serif;background: linear-gradient(0deg, rgba(37,52,56,1) 6%, rgba(65,95,103,1) 21%, rgba(111,169,185,1) 39%, rgba(89,124,134,1) 55%, rgba(101,147,159,1) 71%, rgba(50,78,85,1) 76%);
-    padding: 0;
-   /* color: #333;*/
+    font-family: 'Montserrat', sans-serif;
+    /* color: #333;*/
 }
 button {
     display: inline-block;
@@ -68,6 +66,15 @@ button {
 }
 .color2 {
     color: #FDCB6E;
+}
+.color3{
+  background: linear-gradient(0deg, rgba(37,52,56,1) 6%, rgba(74,112,122,1) 19%, rgba(96,147,161,1) 37%, rgba(84,135,149,1) 54%, rgba(78,133,147,1) 68%, rgba(58,91,99,1) 83%, rgba(42,67,73,1) 94%);   
+}
+.color4{
+  background: linear-gradient(135deg, #000000, #0a192f, #0a192f, #172a45);
+}
+.color5{
+  background-color:#0e71ae;
 }
 .margenes{
   margin-top:10%;
