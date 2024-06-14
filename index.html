@@ -40,14 +40,14 @@
       <a href="#contact" onclick="document.getElementById('contact').style.display='block'" class="w3-bar-item w3-button" style="color: black;">Contact</a>
     </div>
   </div>
-  <!-- Image Header -->
-  <header class="w3-display-container w3-content w3-wide header" style="max-width:1600px;" id="home">
-    <img class="w3-image w3-opacity-min" src="fotos/mountainsfinal.png" width="1600" height="800">
-    <div class="w3-display-middle w3-center">
-      <h1 class="w3-text-white"><span class="w3-padding w3-black w3-opacity-min text2"><b><i style="font-size: 100%;">I</i></b></span><span class="w3-hide-small w3-text-light-grey text1" style="font-size: 90%;">Fernández</span></h1> 
-    </div>
-  </header>  
-  <!-- Modal -->       
+ <!-- Header -->
+<header class="w3-display-container w3-content w3-wide header" style="max-width:1600px;" id="home">
+  <img class="w3-image w3-opacity-min" src="fotos/mountainsfinal.png" width="1600" height="800">
+  <div class="w3-display-middle w3-center">
+    <h1 class="w3-text-white"><span class="w3-padding w3-black w3-opacity-min text2"><b><i style="font-size: 100%;">I</i></b></span><span class="w3-hide-small w3-text-light-grey text1" style="font-size: 90%;">Fernández</span></h1>
+  </div>
+</header>
+  <!-- Modal -->
   <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-top">
       <header class="w3-container w3-teal w3-display-container">
@@ -66,38 +66,44 @@
   </div>
 
  <!-- Designer Container -->
-  <div class="w3-row w3-padding-64 w3-card-4" id="designer" style="background-color: #fff9ff;margin-top: 10%;" >
-  <div class="w3-col m6 w3-center" height="20vh;"> 
-  <h2 class="w3-wide text2">Ignacio Fernández</h2>
-  <br>
-  <a href=""><img src="7.png" alt="Boss" style="width:30%;" class="w3-circle w3-hover-opacity-on w3-border"></a>
-  <br>
-  <br>
-  <p class="text2 w3-opacity">Universidad Técnica Nacional, Paraná - Entre Ríos</p>
-  <br>
-  <p class="text2">Técnico Universitario en Programación</p>
-  <p class="text2">Desarrollador Web (Argentina Programa 4.0) Tramo 1 y 2. </p>
-  <p class="text2">Diseño UX/UI (Puerto E-Learning - UADER)</p>
-    <p class="text3">[C# - Java - Html - Css - Javascript - React - Sql]</p>
-</div>
-<div class="w3-col m6 w3-center">
-  <h2 class="w3-wide text2">Software Developer</h2>
-  <br>
-  <a href=""><img src="8.png" alt="Boss" style="width:30%;" class="w3-circle w3-hover-opacity-on w3-border"></a>
-  <br>
-  <br>
-  <p class="text2 w3-opacity"><i>Hi! i'm a back & front-end developer.</i></p>
-  <br>
-  <div style="margin-left: 10%;margin-right: 10%;">
-  <p class="text2" style="text-align: center;">I specialize in developing both back-end and front-end components.</p>
-  <p class="text2" style="text-align: center;">Focusing on crafting websites that are not only visually striking but also highly intuitive for users. </p>
-  <p class="text2" style="text-align: center;">My approach emphasizes creating seamless user experiences through thoughtful design and functionality. </p>
+  <div class="w3-row w3-padding-64 w3-card-4 position text1" id="designer">
+    <div class="w3-content w3-white" style="max-width:1100px">
+      <div class="w3-col m6 w3-center">
+        <h2 class="w3-wide text4">Ignacio Fernández</h2>
+        <br>
+        <div class="w3-col m6 w3-hide-large w3-hide-medium">
+          <section class="contenedorglass">
+            <div class="glass-box">
+              <a href=""><img src="fotos/designer.png" class="w3-opacity-min center w3-image w3-circle"></a>
+            </div>
+          </section>
+      </div>
+        <p class="text5 w3-opacity"><i>Hi! i'm a back & front-end developer.</i></p>
+        <br>
+        <p class="text5 w3-opacity">C# - Java - Html - Css - Javascript - React - Sql</p>
+      <br>
+      <p class="text5 ">Técnico Universitario en Programación (UTN Paraná - Entre Ríos)</p>
+      <p class="text5 ">Desarrollador Web (Argentina Programa 4.0) Tramo 1 y 2. </p>
+      <p class="text5 ">Diseño UX/UI (Puerto E-Learning - UADER)</p>
+    <br>
+      <p class="text5 " style="text-align: center;">I specialize in developing both back-end and front-end components.</p>
+      <p class="text5 " style="text-align: center;">Focusing on crafting websites that are not only visually striking but also highly intuitive for users. </p>
+      <p class="text5 " style="text-align: center;">My approach emphasizes creating seamless user experiences through thoughtful design and functionality. </p>
+    <br>
+      <p class="text5 "  style="text-align: center;"></p>
   </div>
+    <div class="w3-col m6 w3-hide-small">
+      <section class="contenedorglass">
+        <div class="glass-box">
+          <a href=""><img src="7.png" class="w3-hover-white with w3-hover-opacity center w3-image w3-circle"></a>
+        </div>
+      </section>
+  </div> 
 </div>
-<br>
-</div>
+    </div>
+
 <!--Practica Profesional-->
-<div class="w3-row w3-padding-64 w3-card-2 w3-theme-l4" id="designer" id="works">
+<div class="w3-row w3-padding-64 w3-card-2" id="designer" id="works">
   <div class="w3-col m6" id="sigap">
     <div class="ContainerCenter">
       <!-- Radio Seleccionar -->
@@ -107,20 +113,20 @@
       <input type="radio" name="Carrusel" id="Slider4">
       <div class="Carrusels tam">
         <!-- Imagen contenido -->
-        <div class="Carrusel w3-border" style="background-image: url(fotos/3qgis.png);"></div> 
+        <div class="Carrusel w3-border" style="background-image: url(fotos/1qgis.png);"></div> 
         <div class="Carrusel w3-border" style="background-image: url(fotos/sigapimg.png);"></div>
         <div class="Carrusel w3-border" style="background-image: url(fotos/sigapimg3.png);"></div>
         <div class="Carrusel w3-border" style="background-image: url(fotos/csap.jpeg);"></div> 
         <!-- Flechas a la izquierda por cada imagen -->
-        <label for="Slider4" class="ArrowLeft Arrow1 w3-hover-text-green">❮</label>
-        <label for="Slider1" class="ArrowLeft Arrow2 w3-hover-text-green">❮</label>
-        <label for="Slider2" class="ArrowLeft Arrow3 w3-hover-text-green">❮</label>
-        <label for="Slider3" class="ArrowLeft Arrow4 w3-hover-text-green">❮</label>
+        <label for="Slider4" class="ArrowLeft Arrow1 w3-hover-text-green" style="font-size: 150%;">❮</label>
+        <label for="Slider1" class="ArrowLeft Arrow2 w3-hover-text-green" style="font-size: 150%;">❮</label>
+        <label for="Slider2" class="ArrowLeft Arrow3 w3-hover-text-green" style="font-size: 150%;">❮</label>
+        <label for="Slider3" class="ArrowLeft Arrow4 w3-hover-text-green" style="font-size: 150%;">❮</label>
         <!-- Flechas a la derecha por cada imagen -->
-        <label for="Slider2" class="ArrowRight Arrow1 w3-hover-text-green">❯</label> 
-        <label for="Slider3" class="ArrowRight Arrow2 w3-hover-text-green">❯</label>
-        <label for="Slider4" class="ArrowRight Arrow3 w3-hover-text-green">❯</label>
-        <label for="Slider1" class="ArrowRight Arrow4 w3-hover-text-green">❯</label> 
+        <label for="Slider2" class="ArrowRight Arrow1 w3-hover-text-green" style="font-size: 150%;">❯</label> 
+        <label for="Slider3" class="ArrowRight Arrow2 w3-hover-text-green" style="font-size: 150%;">❯</label>
+        <label for="Slider4" class="ArrowRight Arrow3 w3-hover-text-green" style="font-size: 150%;">❯</label>
+        <label for="Slider1" class="ArrowRight Arrow4 w3-hover-text-green" style="font-size: 150%;">❯</label> 
       </div>
     </div>
   </div>
@@ -137,9 +143,10 @@
 </div>
 <!--Fin Practica Profesional-->
 <!-- Project Section -->
-<div class="w3-row-padding w3-padding-64 section backg w3-card-2" id="works">
-    <div class="w3-quarter w3-center" id="sigap">
-      <div class="w3-card w3-padding-large" style="border-radius: 10px;background-color:#f4f4f4;">
+<div class="w3-row w3-row-padding w3-padding-64 section w3-card-2" id="works">
+    <div class="w3-quarter w3-center " id="sigap">
+      <div class="w3-card w3-padding-large w3-theme-l4" style="border-radius: 10px;">
+        <!--div class="w3-opacity-min w3-card w3-padding-large" style="border-radius: 10px;background: linear-gradient(0deg, rgba(0,165,231,1) 1%, rgba(8,149,205,1) 10%, rgba(27,137,181,1) 22%, rgba(31,117,152,1) 36%, rgba(34,103,129,1) 50%, rgba(32,88,106,1) 66%, rgba(32,75,89,1) 80%, rgba(28,59,69,1) 92%, rgba(23,43,50,1) 100%);"-->
         <video onloadstart="this.muted=true" autoplay loop
 				src="videos/Sigap.mp4" width="100%";></video>
         <div class="w3-container ">
@@ -151,7 +158,7 @@
       </div>
     </div>
     <div class="w3-quarter w3-center" id="mate">
-      <div class="w3-opacity-min w3-card w3-padding-large" style="border-radius: 10px;background: linear-gradient(0deg, rgba(0,165,231,1) 1%, rgba(8,149,205,1) 10%, rgba(27,137,181,1) 22%, rgba(31,117,152,1) 36%, rgba(34,103,129,1) 50%, rgba(32,88,106,1) 66%, rgba(32,75,89,1) 80%, rgba(28,59,69,1) 92%, rgba(23,43,50,1) 100%);">
+      <div class="w3-card w3-padding-large w3-theme-l4" style="border-radius: 10px;">
         <video onloadstart="this.muted=true" autoplay loop
 				src="videos/mate.mp4" width="100%";></video>
         <div class="w3-container ">
@@ -162,7 +169,7 @@
       </div>
     </div>
     <div class="w3-quarter w3-center" id="gsites">
-      <div class="w3-opacity-min w3-card w3-padding-large" style="border-radius: 10px;background: linear-gradient(0deg, rgba(0,165,231,1) 1%, rgba(8,149,205,1) 10%, rgba(27,137,181,1) 22%, rgba(31,117,152,1) 36%, rgba(34,103,129,1) 50%, rgba(32,88,106,1) 66%, rgba(32,75,89,1) 80%, rgba(28,59,69,1) 92%, rgba(23,43,50,1) 100%);">
+      <div class="w3-card w3-padding-large w3-theme-l4" style="border-radius: 10px;">
         <video onloadstart="this.muted=true" autoplay loop
 				src="videos/gsites.mp4" width="100%";></video>
         <div class="w3-container ">
@@ -173,7 +180,7 @@
       </div>
     </div>
     <div class="w3-quarter w3-center">
-      <div class="w3-opacity-min w3-card w3-padding-large" id="ergonomic" style="border-radius: 10px;background: linear-gradient(0deg, rgba(0,165,231,1) 1%, rgba(8,149,205,1) 10%, rgba(27,137,181,1) 22%, rgba(31,117,152,1) 36%, rgba(34,103,129,1) 50%, rgba(32,88,106,1) 66%, rgba(32,75,89,1) 80%, rgba(28,59,69,1) 92%, rgba(23,43,50,1) 100%);">
+      <div class="w3-card w3-padding-large w3-theme-l4" id="ergonomic" style="border-radius: 10px;">
         <video onloadstart="this.muted=true" autoplay loop
 				src="videos/ergovideo.mp4" width="100%";></video>
         <div class="w3-container ">
@@ -185,9 +192,6 @@
         </div>
       </div>
     </div> 
-<div class="w3-quarter w3-center">
-   
-</div>
   </div>
   <!-- Services -->
 

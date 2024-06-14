@@ -112,14 +112,68 @@ button {
         font-size: 1.4em;
     }
 }
-section {
+.header{
+    position: absolute;
+    inset: 0;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+    object-position: center;
+    align-items: center;
+    z-index: -1;
+}
+.colorrr{
+  background: rgb(27,109,138);
+  background: linear-gradient(0deg, rgba(27,109,138,1) 2%, rgba(34,84,102,1) 33%, rgba(33,67,79,1) 67%, rgba(17,43,49,1) 97%);
+}
+section {
+    width: 80%;
     margin: 25px auto;
     padding: 20px;
     max-width:500px;
     font-size: 1.2em;
     line-height: 1.6em;
     box-sizing: border-box;
+}
+.contenedorglass {
+  /* Imagen de fondo */
+  background-size: cover;
+  width: 60vw;
+  height: 45vh;
+  /* Flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glass-box {
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 10px;
+  /*backdrop-filter: blur(5px);*/
+  z-index: 1;
+  /*background-color: rgba(255, 255, 255, 0.02);
+  box-shadow:  0px 20px 20px 20px rgba(1, 1, 15, 0.3);
+  /*  */
+  /*border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);*/
+  /* Flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Animación */
+  transition: 250ms;
+  transition-timing-function: ease-out;
+}
+.glass-box:hover {
+  transform: translateY(-10vmin);
+}
+.glass-box h1 {
+  font-size: 9vmin;
+  color: rgba(194, 189, 216, 0.8);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.534);
+}
+.position{
+  z-index: 1;
 }
 a:link {
 	text-decoration: none;
@@ -225,7 +279,7 @@ margin-left: 20%;
     font-family: 'Bitstream Vera Sans Mono';
 }
 .text4 {
-  text-align: justify;
+  /*text-align: justify;*/
     font-family: 'Montserrat';
 }
 .text5{
@@ -251,11 +305,7 @@ margin-left: 20%;
   background: rgb(117,156,251);
   background: linear-gradient(225deg, rgba(117,156,251,1) 0%, rgba(25,51,113,1) 19%, rgba(71,96,157,1) 49%, rgba(120,145,204,1) 81%, rgba(59,56,56,1) 100%);
 }
-/* ============================================================================================== 
-SED Innovations
-https://sed.am
-https://mkrtchyan.ga
-================================================================================================= */
+/* ============================================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -315,31 +365,6 @@ header a, a:visited {
 @-ms-keyframes move-clouds-back {
   from {background-position: 0;}
   to {background-position:10000px 0;}
-}
-.stars, .clouds {
-position:absolute;
-top: 0;
-left:0;
-right:0;
-bottom:-100%;
-display:block;
-}
-.stars {
-  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:-2;
-}
-.stars2 {
-  background-image:url(http://www.script-tutorials.com/demos/360/images/stars.png);
-}
-.clouds{
-  margin-top: -5%;
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
-  z-index:-1;
--moz-animation:move-clouds-back 200s linear infinite;
--ms-animation:move-clouds-back 200s linear infinite;
--o-animation:move-clouds-back 200s linear infinite;
--webkit-animation:move-clouds-back 200s linear infinite;
-animation:move-clouds-back 200s linear infinite;
 }
 /**************************************************************************************************************/
 .site-footer
