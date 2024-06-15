@@ -19,11 +19,13 @@
     /* Puedes agregar más formatos (woff, woff2, etc.) si los tienes */
 }
 html {
-    background-color:#f4f4f3;
+    /*background-color:#f4f4f3;*/
+    /*background: linear-gradient(0deg, rgba(0,165,231,1) 1%, rgba(8,149,205,1) 10%, rgba(27,137,181,1) 22%, rgba(31,117,152,1) 36%, rgba(34,103,129,1) 50%, rgba(32,88,106,1) 66%, rgba(32,75,89,1) 80%, rgba(28,59,69,1) 92%, rgba(23,43,50,1) 100%);*/
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    color: #333;
+    /* color: #333;*/
+    
 }
 button {
     display: inline-block;
@@ -66,8 +68,14 @@ button {
 .color2 {
     color: #FDCB6E;
 }
-header {
-    background: #111;
+.color3{
+  background: linear-gradient(0deg, rgba(37,52,56,1) 6%, rgba(74,112,122,1) 19%, rgba(96,147,161,1) 37%, rgba(84,135,149,1) 54%, rgba(78,133,147,1) 68%, rgba(58,91,99,1) 83%, rgba(42,67,73,1) 94%);   
+}
+.color4{
+  background: linear-gradient(135deg, #000000, #0a192f, #0a192f, #172a45);
+}
+.color5{
+  background-color:#0e71ae;
 }
 .margenes{
   margin-top:10%;
@@ -104,6 +112,20 @@ header {
         font-size: 1.4em;
     }
 }
+.header{
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    align-items: center;
+    z-index: -1;
+}
+.colorrr{
+  background: rgb(27,109,138);
+  background: linear-gradient(0deg, rgba(27,109,138,1) 2%, rgba(34,84,102,1) 33%, rgba(33,67,79,1) 67%, rgba(17,43,49,1) 97%);
+}
 section {
     width: 80%;
     margin: 25px auto;
@@ -116,39 +138,35 @@ section {
 .contenedorglass {
   /* Imagen de fondo */
   background-size: cover;
-  width: 30vw;
-  height: 30vh;
+  width: 60vw;
+  height: 45vh;
   /* Flex */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .glass-box {
-  width: 30vmin;
-  height: 20vmin;
+  width: 50vmin;
+  height: 50vmin;
   border-radius: 10px;
-
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.02);
+  /*backdrop-filter: blur(5px);*/
+  z-index: 1;
+  /*background-color: rgba(255, 255, 255, 0.02);
   box-shadow:  0px 20px 20px 20px rgba(1, 1, 15, 0.3);
-
   /*  */
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  /*border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);*/
   /* Flex */
   display: flex;
   justify-content: center;
   align-items: center;
-
   /* Animación */
   transition: 250ms;
   transition-timing-function: ease-out;
 }
-
 .glass-box:hover {
   transform: translateY(-10vmin);
 }
-
 .glass-box h1 {
   font-size: 9vmin;
   color: rgba(194, 189, 216, 0.8);
@@ -163,6 +181,10 @@ a:link {
 a:visited {
 	text-decoration: none
 }
+.center{
+align-items: right;
+margin-left: 20%;
+}
 /* Estilos para dispositivos móviles */
 @media only screen and (min-height:350px) {
     .headline {
@@ -176,6 +198,10 @@ a:visited {
       height: 200px;
       width: 100%;
   }
+  .center{
+    align-items: center;
+    margin-left: 0%;
+  }
 }
 @media only screen and (min-width:620px) {
   .headline {
@@ -188,6 +214,10 @@ a:visited {
   .tam {
     height: 250px;
     width: 150%;
+}
+.center{
+  align-items: center;
+  margin-left: 0%;
 }
 }  
 @media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
@@ -239,22 +269,26 @@ a:visited {
   }
 .text1 {
   font-family: 'Space Grotesk', sans-serif;
+  font-size: 110%;
 }
 .text2 {
   font-family: 'Inconsolata';
-}
+  text-shadow: 2px 2px 5px black;
+ }
 .text3 {
     font-family: 'Bitstream Vera Sans Mono';
 }
 .text4 {
-  text-align: justify;
+  /*text-align: justify;*/
     font-family: 'Montserrat';
+}
+.text5{
+  font-family: "Lato", sans-serif;
 }
 @keyframes fade-in {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -271,11 +305,7 @@ a:visited {
   background: rgb(117,156,251);
   background: linear-gradient(225deg, rgba(117,156,251,1) 0%, rgba(25,51,113,1) 19%, rgba(71,96,157,1) 49%, rgba(120,145,204,1) 81%, rgba(59,56,56,1) 100%);
 }
-/* ============================================================================================== 
-SED Innovations
-https://sed.am
-https://mkrtchyan.ga
-================================================================================================= */
+/* ============================================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -335,31 +365,6 @@ header a, a:visited {
 @-ms-keyframes move-clouds-back {
   from {background-position: 0;}
   to {background-position:10000px 0;}
-}
-.stars, .clouds {
-position:absolute;
-top: 0;
-left:0;
-right:0;
-bottom:-100%;
-display:block;
-}
-.stars {
-  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:-2;
-}
-.stars2 {
-  background-image:url(http://www.script-tutorials.com/demos/360/images/stars.png);
-}
-.clouds{
-  margin-top: -5%;
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
-  z-index:-1;
--moz-animation:move-clouds-back 200s linear infinite;
--ms-animation:move-clouds-back 200s linear infinite;
--o-animation:move-clouds-back 200s linear infinite;
--webkit-animation:move-clouds-back 200s linear infinite;
-animation:move-clouds-back 200s linear infinite;
 }
 /**************************************************************************************************************/
 .site-footer
@@ -617,3 +622,5 @@ input{display: none}
 #Slider2:checked ~ .Selectors .Selector:nth-of-type(2) {background-color: #999999;}
 #Slider3:checked ~ .Selectors .Selector:nth-of-type(3) {background-color: #999999;}
 #Slider4:checked ~ .Selectors .Selector:nth-of-type(4) {background-color: #999999;}
+/*******************************************************************************************************/
+
