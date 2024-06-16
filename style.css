@@ -202,6 +202,7 @@ margin-left: 20%;
     align-items: center;
     margin-left: 0%;
   }
+
 }
 @media only screen and (min-width:620px) {
   .headline {
@@ -217,6 +218,9 @@ margin-left: 20%;
 }
 .center{
   align-items: center;
+  margin-left: 0%;
+}
+.ContainerCenter{
   margin-left: 0%;
 }
 }  
@@ -298,7 +302,7 @@ margin-left: 20%;
   opacity: 0.9;
 }
 .back2{
- /* background-image: url('laptop-design-coffee-cup.jpg');*/
+ background-image: url('mountainsfinal2.png');
   opacity: 0.9;
 }
 .back3{
@@ -311,6 +315,7 @@ margin-left: 20%;
   padding: 0;
 }
 header {
+  background-size: cover;
   background-color:rgba(33, 33, 33, 0.9);
   color:#ffffff;
   display:block;
@@ -535,7 +540,8 @@ label{cursor: pointer;}
 /* Contenedor para centrar */
 .ContainerCenter{
   display: flex;
-  margin-left: -3%;
+  margin-left: 3%;
+  margin-right: 3%;
  /* align-items: center;*/
   flex-direction: column;
 }
