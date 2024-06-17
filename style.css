@@ -202,8 +202,8 @@ border-radius: 60px;
   .center{
     align-items: center;
     margin-left: 0%;
+    border-radius: 20px;
   }
-
 }
 @media only screen and (min-width:620px) {
   .headline {
