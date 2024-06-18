@@ -185,7 +185,7 @@ a:visited {
 .center{
 /*align-items: right;*/
 /*margin-left: 20%;*/
-border-radius: 90px;
+border-radius: 20px;
 }
 /* Estilos para dispositivos móviles */
 @media only screen and (min-height:350px) { /*minimo de altura*/
