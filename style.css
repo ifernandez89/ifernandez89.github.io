@@ -149,6 +149,7 @@ section {
   width: 50vmin;
   height: 50vmin;
   border-radius: 10px;
+  
   /*backdrop-filter: blur(5px);*/
   z-index: 0;
   /*background-color: rgba(255, 255, 255, 0.02);
