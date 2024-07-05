@@ -18,10 +18,6 @@
     src: url('ruta/a/tu/fuente/Montserrat-Regular.ttf') format('truetype');
     /* Puedes agregar más formatos (woff, woff2, etc.) si los tienes */
 }
-html {
-    /*background-color:#f4f4f3;*/
-    /*background: linear-gradient(0deg, rgba(0,165,231,1) 1%, rgba(8,149,205,1) 10%, rgba(27,137,181,1) 22%, rgba(31,117,152,1) 36%, rgba(34,103,129,1) 50%, rgba(32,88,106,1) 66%, rgba(32,75,89,1) 80%, rgba(28,59,69,1) 92%, rgba(23,43,50,1) 100%);*/
-}
 body {
     font-family: 'Montserrat', sans-serif;
     /* color: #333;*/
@@ -164,9 +160,6 @@ section {
   /* Animación */
   /*transition: 250ms;
   transition-timing-function: ease-out;*/
-}
-.glass-box:hover {
-  /*transform: translateY(-10vmin);*/
 }
 .glass-box h1 {
   font-size: 9vmin;
