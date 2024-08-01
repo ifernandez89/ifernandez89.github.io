@@ -216,16 +216,6 @@ border-radius: 20px;
     height: 280px;
     width: 150%;
 }
-.ContainerCenter{
-  margin-left: -5%;
-}
-}
-@media only screen and (min-width: 1300px) {
-  .ContainerCenter{
-    /*margin-left: -5%;*/
-    width: 1500px;
-    height:1500px;
-  }
 }
 @media only screen and (min-width: 1355px) {/*revisar por encima de 1200 para televisores*/
     .headline {
@@ -239,6 +229,7 @@ border-radius: 20px;
       height: 300px;
       width: 100%;
   }
+  
 }
 @media only screen and (min-width: 1400px) {/*revisar por encima de 1200 para televisores*/
   .headline {
@@ -532,7 +523,7 @@ header a, a:visited {
 label{cursor: pointer;}
 /* Contenedor para centrar */
 .ContainerCenter{
-  width: 100%;
+  width:90%;
   height: 100%;
   display: flex;
  /*margin-left: -5%;*/
