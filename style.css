@@ -145,7 +145,6 @@ section {
   width: 50vmin;
   height: 50vmin;
   border-radius: 10px;
-  
   /*backdrop-filter: blur(5px);*/
   z-index: 0;
   /*background-color: rgba(255, 255, 255, 0.02);
@@ -190,10 +189,10 @@ border-radius: 20px;
       margin-top:6%;
     }
     .tam {
+      margin-top: 5px;
       height: 250px;
       width: 100%;
       margin-left: 10%;
-      align-items: center;
   }
 }
 @media only screen and (min-width:620px) {
@@ -207,8 +206,11 @@ border-radius: 20px;
   .tam {
     height: 250px;
     width: 150%;
-    align-items: center;
 }
+/*.gis{
+  width: 80%;
+  height: 100%;
+}*/
 }  
 @media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
   .headline {
@@ -218,14 +220,16 @@ border-radius: 20px;
   .tam {
     height: 280px;
     width: 150%;
-    align-items: center;
 }
+/*.gis{
+  width: 100vw;
+  height: 100vw;
+}*/
 }
 @media only screen and (min-width: 1300px) {
   .tam {
     height: 450px;
     width: 100%;
-    align-items: center;
 }
 }
 @media only screen and (min-width: 1355px) {/*revisar por encima de 1200 para televisores*/
@@ -237,11 +241,13 @@ border-radius: 20px;
       margin-top:2%;
     }
    .tam {
-    margin-top: 5%;
-      height: 350px;
+      height: 300px;
       width: 100%;
-      align-items: center;
   }
+  /*.gis{
+    width: 100vw;
+    height: 100vw;
+  }*/
 }
 @media only screen and (min-width: 1400px) {/*revisar por encima de 1200 para televisores*/
   .headline {
