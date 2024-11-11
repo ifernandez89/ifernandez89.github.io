@@ -20,8 +20,9 @@
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    /* color: #333;*/
-    
+}
+.footer-margin{
+  margin-left: 20px;
 }
 button {
     display: inline-block;
