@@ -173,8 +173,6 @@ a:visited {
 	text-decoration: none
 }
 .center{
-/*align-items: right;*/
-/*margin-left: 20%;*/
 border-radius: 20px;
 }
 /* Estilos para dispositivos móviles */
@@ -287,11 +285,24 @@ border-radius: 20px;
     font-family: 'Bitstream Vera Sans Mono';
 }
 .text4 {
-  /*text-align: justify;*/
     font-family: 'Montserrat';
 }
 .text5{
-  font-family: "Lato", sans-serif;
+    font-family: "Lato", sans-serif;
+}
+.text6{
+  letter-spacing: 2.5px; 
+  font-family: 'Aguafina Script', -apple-system, Helvetica,sans-serif; 
+}
+.section-title {
+  letter-spacing: 2.5px; 
+  color: #000000;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  align-self: flex-end;
+  font-style: italic;
+  font-size: 300%;
+  font-family: 'Aguafina Script', -apple-system, Helvetica,sans-serif; 
+  text-align: center; 
 }
 @keyframes fade-in {
     0% {
