@@ -228,9 +228,10 @@
 <div class="w3-row w3-row-padding w3-padding-64 section w3-white w3-card-2" id="works">
   <h2 class="section-title">Some Figma Designs...</h2>
   <br>
-  <div class="w3-col m4 w3-center " id="ifernandez">
-    <div class="w3-card w3-padding-large w3-white" style="border-radius: 10px;">
+  <div class="w3-col m4 w3-center" id="ifernandez">
+    <div class="w3-card w3-padding-large w3-white item" style="border-radius: 10px;">
       <img src="fotos/figma1.png" width="100%";>
+      <div class="item-overlay top"></div>
       <div class="w3-container ">
         <br>
         <h3 class="text6" style="font-style: italic;">Ifernandez</h3>
@@ -238,8 +239,9 @@
     </div>
   </div>
   <div class="w3-col m4 w3-center" id="pillow">
-    <div class="w3-card w3-padding-large w3-white" style="border-radius: 10px;">
+    <div class="w3-card w3-padding-large w3-white item" style="border-radius: 10px;">
       <img src="fotos/figma3.png" width="100%";>
+      <div class="item-overlay top"></div>
       <div class="w3-container">
         <br>
         <h3 class="text6" style="font-style: italic;">BlueCosmicStorm</h3>
@@ -247,8 +249,9 @@
     </div>
   </div> 
   <div class="w3-col m4 w3-center" id="bluecosmicstorm">
-    <div class="w3-card w3-padding-large w3-white" style="border-radius: 10px;">
+    <div class="w3-card w3-padding-large w3-white item" style="border-radius: 10px;">
       <img src="fotos/figma2.png" width="100%";>
+      <div class="item-overlay top"></div>
       <div class="w3-container ">
         <br>
         <h3 class="text6" style="font-style: italic;">Pillow</h3>
@@ -329,6 +332,28 @@
   <script src="d3.parcoords.js"></script>
   <script src="hypercube.js"></script>
   <script>
+      $('.tile')
+    // tile mouse actions
+    .on('mouseover', function(){
+      $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+    })
+    .on('mouseout', function(){
+      $(this).children('.photo').css({'transform': 'scale(1)'});
+    })
+    .on('mousemove', function(e){
+      $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+    })
+    // tiles set up
+    .each(function(){
+      $(this)
+        // add a photo container
+        .append('<div class="photo"></div>')
+        // some text just to show zoom level on current item in this example
+        .append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
+        // set up a background image for each tile based on data-image attribute
+        .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
+    })
+
     var bool=false;
     // color scale
     function color(d) {
