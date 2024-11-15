@@ -204,6 +204,16 @@ border-radius: 20px;
     width: 150%;
 }
 }  
+@media only screen and (min-width: 900px) {/*revisar por encima de 1200 para televisores*/
+  .headline {
+      height: 210px;
+      width: auto;
+  }
+  .tam {
+    height: 280px;
+    width: 100%;
+}
+}
 @media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
   .headline {
       height: 210px;
