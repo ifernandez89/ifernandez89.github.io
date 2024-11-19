@@ -289,7 +289,7 @@ border-radius: 20px;
   font-family: 'Aguafina Script', -apple-system, Helvetica,sans-serif; 
 }
 .section-title {
-  letter-spacing: 2.5px; 
+  letter-spacing: 6px; 
   color: #000000;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   align-self: flex-end;
@@ -647,6 +647,7 @@ input{display: none}
 .item img {
   max-width: 100%;
   transition: all 0.3s;
+  cursor: zoom-in;
 }
 .item:hover img {
   transform: scale(1.2);
