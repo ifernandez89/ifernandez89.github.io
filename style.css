@@ -1,22 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 @font-face {
-    font-family: 'Hermit';
-    src: url('ruta/a/tu/fuente/Hermit.woff2') format('woff2'),
-        url('ruta/a/tu/fuente/Hermit.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: 'Bitstream Vera Sans Mono';
-    src: url('ruta/a/tu/fuente/BitstreamVeraSansMono.woff2') format('woff2'),
-        url('ruta/a/tu/fuente/BitstreamVeraSansMono.woff') format('woff');
+    src: url('fuentes/BitstreamVeraSansMono-Bold.woff2') format('woff2'),
+        url('fuentes/BitstreamVeraSansMono-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('ruta/a/tu/fuente/Montserrat-Regular.ttf') format('truetype');
-    /* Puedes agregar más formatos (woff, woff2, etc.) si los tienes */
 }
 body {
     font-family: 'Montserrat', sans-serif;

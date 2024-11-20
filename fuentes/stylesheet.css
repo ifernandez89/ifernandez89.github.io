@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    src: url('BitstreamVeraSansMono-BoldOb.eot');
+    src: local('Bitstream Vera Sans Mono Bold Oblique'), local('BitstreamVeraSansMono-BoldOb'),
+        url('BitstreamVeraSansMono-BoldOb.eot?#iefix') format('embedded-opentype'),
+        url('BitstreamVeraSansMono-BoldOb.woff2') format('woff2'),
+        url('BitstreamVeraSansMono-BoldOb.woff') format('woff'),
+        url('BitstreamVeraSansMono-BoldOb.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    src: url('BitstreamVeraSansMono-Oblique.eot');
+    src: local('Bitstream Vera Sans Mono Oblique'), local('BitstreamVeraSansMono-Oblique'),
+        url('BitstreamVeraSansMono-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('BitstreamVeraSansMono-Oblique.woff2') format('woff2'),
+        url('BitstreamVeraSansMono-Oblique.woff') format('woff'),
+        url('BitstreamVeraSansMono-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    src: url('BitstreamVeraSansMono-Bold.eot');
+    src: local('Bitstream Vera Sans Mono Bold'), local('BitstreamVeraSansMono-Bold'),
+        url('BitstreamVeraSansMono-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BitstreamVeraSansMono-Bold.woff2') format('woff2'),
+        url('BitstreamVeraSansMono-Bold.woff') format('woff'),
+        url('BitstreamVeraSansMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    src: url('BitstreamVeraSansMono-Roman.eot');
+    src: local('Bitstream Vera Sans Mono'), local('BitstreamVeraSansMono-Roman'),
+        url('BitstreamVeraSansMono-Roman.eot?#iefix') format('embedded-opentype'),
+        url('BitstreamVeraSansMono-Roman.woff2') format('woff2'),
+        url('BitstreamVeraSansMono-Roman.woff') format('woff'),
+        url('BitstreamVeraSansMono-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
