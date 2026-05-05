@@ -11,7 +11,6 @@
   <meta property="og:image" content="fotos/archeoscope_app_mobile.png">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type="text/css" href="d3.parcoords.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,6 +19,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap" rel="stylesheet">
+  <!-- model-viewer for 3D GLB rendering -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -312,36 +313,45 @@
       <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:20px; font-size:75%; letter-spacing:2px; padding:4px 14px; margin-bottom:20px; display:inline-block;">⚗️ EXPERIMENTAL SYSTEMS</span>
       <br><br>
       <h2 class="text4 w3-text-white" style="letter-spacing:2px; font-size:145%; margin-bottom:12px;">Visual Lab</h2>
-      <p class="text1" style="color:#7eb8d4; font-size:95%; margin-bottom:20px; font-style:italic;">An experimental environment where I explore geometry, procedural visuals and interactive systems.</p>
+      <p class="text1" style="color:#7eb8d4; font-size:95%; margin-bottom:20px; font-style:italic;">An experimental environment where I explore 3D modeling, procedural geometry and interactive real-time rendering.</p>
       <div style="text-align:left; margin-bottom:24px;">
-        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Procedural geometry</strong> — 4D structures projected into 3D space</p>
-        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Real-time rendering</strong> — D3.js + canvas animation loops</p>
+        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>3D Modeling</strong> — GLB/GLTF assets rendered in real time on the web</p>
+        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Impossible geometry</strong> — optical illusions & non-euclidean structures</p>
         <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Symbolic representation</strong> — geometry as a language for cosmos</p>
-        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Interactive systems</strong> — click, hover, state-driven behavior</p>
+        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Interactive viewer</strong> — orbit, zoom, pan — full WebGL pipeline</p>
       </div>
-      <p class="text1 w3-text-light-grey" style="font-size:85%; line-height:1.7; max-width:420px; margin: 0 auto;">These experiments feed directly into <strong style="color:#7eb8d4;">Archeoscope</strong> — testing how geometry, time and perception can be rendered in real time.</p>
+      <p class="text1 w3-text-light-grey" style="font-size:85%; line-height:1.7; max-width:420px; margin: 0 auto;">These experiments feed directly into <strong style="color:#7eb8d4;">Archeoscope</strong> — testing how 3D assets, geometry and perception can be rendered in real time on the browser.</p>
     </div>    
-    <div class="w3-col m6" style="position:relative; z-index:1;"><br>
-       <p class="text1" style="color:#7eb8d4; font-size:82%; letter-spacing:2px;">TESSERACT — 4D HYPERCUBE · ORTHOGONAL PROJECTION</p>
-            <form id="hypercube-options" class="w3-opacity-max">
-              <input type="checkbox" name="indices" disabled class="w3-opacity-max">
-              <input type="checkbox" name="edges" disabled class="w3-opacity-max">
-              <input type="checkbox" name="perspective" disabled class="w3-opacity-max">
-              <input type="checkbox" name="rotate_xz" disabled class="w3-opacity-max">
-              <input type="checkbox" name="rotate_yz" disabled class="w3-opacity-max">
-              <input type="checkbox" name="rotate_xw" disabled class="w3-opacity-max">
-              <input type="checkbox" name="rotate_yw" disabled class="w3-opacity-max">
-              <input type="checkbox" name="rotate_xy" disabled class="w3-opacity-max">
-              <input type="checkbox" name="rotate_zw" disabled class="w3-opacity-max">
-            </form>
-            <canvas id="hypercube-canvas" class="hand" width="300" height="300" onclick="miFuncionStart()" aria-label="Hipercubo interactivo en proyección ortogonal — hacer clic para pausar/reanudar" role="img" style="border-radius:12px; box-shadow: 0 0 40px rgba(0,100,180,0.25), 0 0 80px rgba(0,60,120,0.1);"></canvas>
-          <div id="parcoords" class="parcoords mov" style="width:0px;height:0px;margin: 0px 0px;"></div>
-          <p class="text1" style="color:#4a7a9b; font-size:78%; margin-top:10px;">click to pause · hover to interact</p>
-          <br>
-          <p class="text1 w3-text-light-grey" style="font-size:84%; line-height:1.7; max-width:340px; margin:0 auto;">A tesseract is a 4-dimensional hypercube projected into 3D space. Each vertex represents a coordinate in 4D — rendered here in real time using D3.js and a custom rotation engine.</p>
-          <br>
-          <p class="text1" style="font-size:76%; color:#2a5a8c;"><a style="color:#4a7a9b;" href="https://syntagmatic.github.io/hypercube/rotate/">Adapted</a> from milosz's <a style="color:#4a7a9b;" href="http://hypercube.milosz.ca/">hypercube</a> · D3 parallel coordinates</p>
-          </div>
+    <div class="w3-col m6" style="position:relative; z-index:1; padding: 20px;"><br>
+       <p class="text1" style="color:#7eb8d4; font-size:82%; letter-spacing:2px; margin-bottom:12px;">UFO — 3D MODEL · INTERACTIVE VIEWER</p>
+       <!-- 3D Model Viewer -->
+       <model-viewer
+         src="modelos3d/ufo.glb"
+         alt="UFO 3D model — impossible geometry sculpture"
+         auto-rotate
+         camera-controls
+         shadow-intensity="1.2"
+         shadow-softness="0.8"
+         exposure="1.1"
+         environment-image="neutral"
+         style="width:100%; height:360px; border-radius:12px; box-shadow: 0 0 40px rgba(0,100,180,0.25), 0 0 80px rgba(0,60,120,0.1); background: radial-gradient(ellipse at center, #0d1b2a 0%, #080810 100%);"
+         camera-orbit="45deg 65deg 2.5m"
+         min-camera-orbit="auto auto 1m"
+         max-camera-orbit="auto auto 6m"
+         interaction-prompt="auto">
+       </model-viewer>
+       <p class="text1" style="color:#4a7a9b; font-size:78%; margin-top:10px;">drag to orbit · scroll to zoom · pinch on mobile</p>
+       <br>
+       <p class="text1 w3-text-light-grey" style="font-size:84%; line-height:1.7; max-width:380px; margin:0 auto;">Impossible geometry sculpture — a hexagonal structure where each face forms an optical illusion. Inspired by Escher's impossible objects and sacred geometry. 3D printed, then modeled as a GLB asset for real-time web rendering via WebGL.</p>
+       <br>
+       <div style="display:flex; flex-wrap:wrap; gap:6px; justify-content:center;">
+         <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:76%; padding:3px 9px;">WebGL</span>
+         <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:76%; padding:3px 9px;">GLTF/GLB</span>
+         <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:76%; padding:3px 9px;">model-viewer</span>
+         <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:76%; padding:3px 9px;">3D Printing</span>
+         <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:76%; padding:3px 9px;">Sacred Geometry</span>
+       </div>
+    </div>
 </div>
   <!-- Help -->
   <!-- Contact Modal -->
@@ -395,138 +405,8 @@
     </div>
     </footer>
   <script src="script.js"></script>
-  <script src="d3.v2.js"></script>
-  <script src="d3.parcoords.js"></script>
-  <script src="hypercube.js"></script>
   <script>
 document.querySelectorAll('.item').forEach(function(item) { item.addEventListener('mousemove', function(e) { const img = this.querySelector('img'); const rect = this.getBoundingClientRect(); const x = e.clientX - rect.left; const y = e.clientY - rect.top; const xPercent = x / rect.width * 100; const yPercent = y / rect.height * 100; img.style.transformOrigin = `${xPercent}% ${yPercent}%`; }); });
-    
-    var bool=false;
-    // color scale
-    function color(d) {
-      var z = 0.5 + 0.3 * d.z;
-      var w = 151 + Math.floor(40*(d.w));
-      return "rgba(1," + w + ",0," + z + ")";
-    };
-    // parallel coordinates
-    var parcoords = d3.parcoords()("#parcoords")
-      .color(color)
-      .alpha(0.8)
-      .composite("lighter");
-    // hypercube
-    var cube = hypercube();
-    cube.init()
-    // scale parallel coordinates, min/max length from center to opposite vertices 
-    parcoords
-      .data([
-        { x: -2, y: -2, z: -2, w: -2},     // minimum for each dimension
-        { x: 2, y: 2, z: 2, w: 2}          // maximum for each dimension
-      ])
-      .dimensions(["x", "y", "z", "w"])
-      .autoscale()
-      .reorderable();
-    // add hypercube vertices and render the data
-    parcoords
-      .data(cube.vertices)
-      .render()
-    // change some display properties
-    parcoords.ctx.foreground.lineWidth = 2.4;
-    parcoords.svg.selectAll(".axis g text").attr("display", "none");
-    parcoords.svg.selectAll(".axis line").attr("display", "none");
-    // animation and chart linking
-    function anim(t) {
-      cube.draw();
-      parcoords.data(cube.vertices).render();
-      var dimensions = parcoords.dimensions(); 
-      var first_dimension = dimensions[0]
-      var last_dimension = dimensions[dimensions.length-1]
-      var yscale_first = parcoords.yscale[first_dimension];
-      var yscale_last = parcoords.yscale[last_dimension];
-      var x_first = parcoords.xscale(first_dimension);
-      var x_last = parcoords.xscale(last_dimension);
-      parcoords.ctx.foreground.fillStyle = "#fff";
-      parcoords.ctx.foreground.font = "bold 12px sans-serif";
-      parcoords.ctx.foreground.textBaseline = 'middle';
-      parcoords.ctx.foreground.textAlign = 'right';
-      cube.vertices.forEach(function(d,i) {
-          parcoords.ctx.foreground.fillText(i,x_first-4,yscale_first(d[first_dimension]));
-      });
-      parcoords.ctx.foreground.textAlign = 'left';
-      cube.vertices.forEach(function(d,i) {
-          parcoords.ctx.foreground.fillText(i,x_last+4,yscale_last(d[last_dimension]));
-      });
-    }
-   d3.timer(anim);
-   function miFuncionStart(){ 
-    if(bool){
-    //alert('llamo al start cubo');
-    location.reload();
-    // color scale
-    function color(d) {
-      var z = 0.5 + 0.3 * d.z;
-      var w = 151 + Math.floor(40*(d.w));
-      return "rgba(1," + w + ",0," + z + ")";
-    };
-    // parallel coordinates
-    var parcoords = d3.parcoords()("#parcoords")
-      .color(color)
-      .alpha(0.8)
-      .composite("lighter");
-    // hypercube
-    var cube = hypercube();
-    cube.init()
-    // scale parallel coordinates, min/max length from center to opposite vertices 
-    parcoords
-      .data([
-        { x: -2, y: -2, z: -2, w: -2},     // minimum for each dimension
-        { x: 2, y: 2, z: 2, w: 2}          // maximum for each dimension
-      ])
-      .dimensions(["x", "y", "z", "w"])
-      .autoscale()
-      .reorderable();
-    // add hypercube vertices and render the data
-    parcoords
-      .data(cube.vertices)
-      .render()
-    // change some display properties
-    parcoords.ctx.foreground.lineWidth = 2.4;
-    parcoords.svg.selectAll(".axis g text").attr("display", "none");
-    parcoords.svg.selectAll(".axis line").attr("display", "none");
-    // animation and chart linking
-    function anim(t) {
-      cube.draw();
-      parcoords.data(cube.vertices).render();
-      var dimensions = parcoords.dimensions(); 
-      var first_dimension = dimensions[0]
-      var last_dimension = dimensions[dimensions.length-1]
-      var yscale_first = parcoords.yscale[first_dimension];
-      var yscale_last = parcoords.yscale[last_dimension];
-      var x_first = parcoords.xscale(first_dimension);
-      var x_last = parcoords.xscale(last_dimension);
-      parcoords.ctx.foreground.fillStyle = "#fff";
-      parcoords.ctx.foreground.font = "bold 12px sans-serif";
-      parcoords.ctx.foreground.textBaseline = 'middle';
-      parcoords.ctx.foreground.textAlign = 'right';
-      cube.vertices.forEach(function(d,i) {
-          parcoords.ctx.foreground.fillText(i,x_first-4,yscale_first(d[first_dimension]));
-      });
-      parcoords.ctx.foreground.textAlign = 'left';
-      cube.vertices.forEach(function(d,i) {
-          parcoords.ctx.foreground.fillText(i,x_last+4,yscale_last(d[last_dimension]));
-      });
-    }
-   d3.timer(anim);}}
-    const elemento = document.getElementById("hypercube-canvas");
-    elemento.addEventListener("click", function() { 
-      if(!bool){
-      function anim() {
-      cube.draw()
-    }
-    d3.timer(0);
-  bool=true;
-//alert('se frena el cubo, valor del bool: '+bool);
-}});
-/************************************************************************************************/
 </script>
 </body>
 </html>
