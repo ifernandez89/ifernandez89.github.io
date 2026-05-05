@@ -1,7 +1,7 @@
 // Script for side navigation
 function w3_open() {
   var x = document.getElementById("mySidebar");
-  x.style.fontFamily="Orbitron-Regular";
+  x.style.fontFamily="Inter, sans-serif";
   x.style.width = "250px";
   x.style.paddingTop = "15%";
   x.style.display = "block";
@@ -22,6 +22,57 @@ function openNav() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+/*-----------------------------------------------------------------------------------------*/
+/* Service Worker Registration */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js')
+      .then(function(reg) {
+        console.log('SW registered:', reg.scope);
+      })
+      .catch(function(err) {
+        console.warn('SW registration failed:', err);
+      });
+  });
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/* PWA Install prompt */
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const btn = document.getElementById('pwa-install-btn');
+  if (btn) {
+    btn.style.display = 'inline-flex';
+    btn.addEventListener('click', () => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(() => {
+        deferredPrompt = null;
+        btn.style.display = 'none';
+      });
+    });
+  }
+});
+
+window.addEventListener('appinstalled', () => {
+  const btn = document.getElementById('pwa-install-btn');
+  if (btn) btn.style.display = 'none';
+});
+
+/*-----------------------------------------------------------------------------------------*/
+/* Mobile: close nav on link click */
+document.addEventListener('DOMContentLoaded', function() {
+  var navLinks = document.querySelectorAll('#navDemo a');
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      var x = document.getElementById("navDemo");
+      x.className = x.className.replace(" w3-show", "");
+    });
+  });
+});
+
 /*-----------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------------------*/

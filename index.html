@@ -2,14 +2,36 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ignacio Fernández — Full Stack Developer</title>
   <meta name="description" content="Portfolio de Ignacio Fernández, Full Stack Developer especializado en simulación astronómica, experiencias 3D interactivas y sistemas web. Creador de Archeoscope.">
   <meta name="robots" content="index, follow">
+  <meta name="author" content="Ignacio Fernández">
+  <meta name="theme-color" content="#0d1b2a">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="IFernández">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Ignacio Fernández — Full Stack Developer">
   <meta property="og:description" content="Full Stack Developer especializado en simulación astronómica, Three.js, WebGL y experiencias interactivas. Creador de Archeoscope.">
   <meta property="og:image" content="fotos/archeoscope_app_mobile.png">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ifernandez89.github.io/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ignacio Fernández — Full Stack Developer">
+  <meta name="twitter:description" content="Full Stack Developer · Three.js · WebGL · Astronomical Simulations">
+  <meta name="twitter:image" content="fotos/archeoscope_app_mobile.png">
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
@@ -242,7 +264,6 @@
         <h3 class="work-card-title">S.I.G.A.P</h3>
         <p class="work-card-meta">Municipalidad de Paraná · Servicios Públicos</p>
         <p class="work-card-desc">Sistema integral de gestión de alumbrado público. Georeferenciación, estadísticas de consumo eléctrico y seguimiento de luminarias. Java · SQL · QGIS · PostGIS.</p>
-        <a href="https://github.com/ifernandez89/Sigap.git" class="work-card-link" target="_blank" rel="noopener noreferrer">ver en GitHub ↗</a>
       </div>
     </div>
     <!-- Oxlahun Cauac -->
@@ -393,6 +414,10 @@
         <a href="https://github.com/ifernandez89" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i> GitHub</a>
         <a href="https://wa.me/543434704479" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i> WhatsApp</a>
       </div>
+      <!-- PWA Install button — shown only when installable -->
+      <button id="pwa-install-btn" style="display:none; margin-top:28px;" aria-label="Instalar app">
+        <i class="fa fa-download" style="margin-right:8px;"></i> Add to Home Screen
+      </button>
     </div>
   </div>
 </section>

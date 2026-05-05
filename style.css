@@ -540,3 +540,137 @@ model-viewer:hover {
 .hand {
   cursor: grab;
 }
+
+/* ============================================================================================== */
+/* PWA & MOBILE FIXES */
+/* ============================================================================================== */
+
+/* Safe area insets for notched phones (iPhone X+) */
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.site-footer-new {
+  padding-bottom: calc(24px + env(safe-area-inset-bottom));
+}
+
+/* Minimum touch target size — 44x44px (Apple HIG / WCAG) */
+.w3-bar-item.w3-button,
+.work-card-link,
+.contact-submit,
+.contact-links a,
+.footer-top {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tap highlight — remove default blue flash on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* model-viewer — full width on mobile, no overflow */
+model-viewer {
+  width: 100% !important;
+  max-width: 100%;
+  touch-action: pan-y;
+}
+
+/* Works & Figma sections — better mobile padding */
+@media only screen and (max-width: 480px) {
+  .works-section,
+  .figma-section,
+  .contact-section {
+    padding: 48px 16px;
+  }
+
+  .works-section-title,
+  .figma-section-title,
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .work-card-body {
+    padding: 16px 18px 20px;
+  }
+
+  .contact-submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Archeoscope grid — single column on small phones */
+  .w3-col.m6 {
+    width: 100% !important;
+  }
+}
+
+/* Navbar — ensure it sits above everything on mobile */
+.w3-top {
+  z-index: 100 !important;
+}
+
+/* Mobile nav dropdown — full width, readable */
+#navDemo {
+  position: fixed;
+  top: 46px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding-top: 0 !important;
+}
+
+#navDemo a {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #0d1b2a !important;
+}
+
+/* PWA install button */
+#pwa-install-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 10px 22px;
+  background: transparent;
+  color: #7eb8d4;
+  border: 1px solid #2a5a8c;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-items: center;
+}
+
+#pwa-install-btn:hover {
+  background: rgba(126, 184, 212, 0.1);
+}
+
+/* Videos — prevent overflow on mobile */
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Contact form — full width inputs on mobile */
+@media only screen and (max-width: 600px) {
+  .contact-field input,
+  .contact-field textarea {
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+}
