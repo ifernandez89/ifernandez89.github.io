@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "No commit/push sin autorización",
+  "description": "Antes de ejecutar cualquier comando git commit o git push, pide autorización explícita al usuario. Nunca commitear ni pushear sin confirmación previa.",
+  "version": "1",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": [
+      "shell"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "STOP. Check if the command about to be executed contains 'git commit' or 'git push'. If it does, you MUST NOT proceed. Instead, ask the user for explicit permission before running any git commit or git push command. Do not combine commit/push with other commands to bypass this check. Always wait for the user to say 'yes' or 'adelante' or similar confirmation."
+  }
+}

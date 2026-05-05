@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Actualizar CHANGELOG",
+  "description": "Después de cada tarea completada, actualiza el CHANGELOG.md con los cambios realizados si corresponde.",
+  "version": "1",
+  "when": {
+    "type": "agentStop"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Check if meaningful changes were made to the project during this session. If yes, update or create CHANGELOG.md with a brief summary of what changed, grouped by date. Use format: ## [date] followed by bullet points. Do not update if only minor fixes or no real changes occurred."
+  }
+}
