@@ -1,503 +1,1480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Ignacio Fernández — Full Stack Developer</title>
-  <meta name="description" content="Portfolio de Ignacio Fernández, Full Stack Developer especializado en simulación astronómica, experiencias 3D interactivas y sistemas web. Creador de Archeoscope.">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Ignacio Fernández">
-  <meta name="theme-color" content="#0d1b2a">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Ignacio Fernández — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio de Ignacio Fernández, Full Stack Developer especializado en simulación astronómica, experiencias 3D interactivas y sistemas web. Creador de Archeoscope."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Ignacio Fernández" />
+    <meta name="theme-color" content="#0d1b2a" />
 
-  <!-- PWA -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="IFernández">
-  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="IFernández" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/icon-192x192.png"
+    />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ignacio Fernández — Full Stack Developer">
-  <meta property="og:description" content="Full Stack Developer especializado en simulación astronómica, Three.js, WebGL y experiencias interactivas. Creador de Archeoscope.">
-  <meta property="og:image" content="fotos/archeoscope_app_mobile.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ifernandez89.github.io/">
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Ignacio Fernández — Full Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Full Stack Developer especializado en simulación astronómica, Three.js, WebGL y experiencias interactivas. Creador de Archeoscope."
+    />
+    <meta property="og:image" content="fotos/archeoscope_app_mobile.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ifernandez89.github.io/" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ignacio Fernández — Full Stack Developer">
-  <meta name="twitter:description" content="Full Stack Developer · Three.js · WebGL · Astronomical Simulations">
-  <meta name="twitter:image" content="fotos/archeoscope_app_mobile.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ignacio Fernández — Full Stack Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Full Stack Developer · Three.js · WebGL · Astronomical Simulations"
+    />
+    <meta name="twitter:image" content="fotos/archeoscope_app_mobile.png" />
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <!-- model-viewer for 3D GLB rendering -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Ignacio Fernández",
-    "jobTitle": "Full Stack Developer",
-    "url": "https://ifernandez89.github.io/",
-    "sameAs": [
-      "https://www.linkedin.com/in/ignacio-fernández-b88631184",
-      "https://github.com/ifernandez89"
-    ],
-    "knowsAbout": ["Three.js", "WebGL", "React", "Next.js", "Astronomical Simulation", "NestJS"]
-  }
-  </script>
-</head>
-<body id="myPage">
-  <!-- Navbar -->
-  <div class="w3-top">
-    <div class="w3-bar" style="z-index: 1;">
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white"
-        href="javascript:void(0);" onclick="openNav()" aria-label="Abrir menú de navegación"><i class="fa fa-bars" aria-hidden="true"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large" aria-label="Inicio"><i class="fa fa-male w3-margin-right" style="color: black;" aria-hidden="true"></i></a>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <a href="#designer" class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large" style="color: black; font-family:'Inter',sans-serif;"> Designer <i class="fa fa-caret-down"></i></a>
-        <br><br>
-        <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
-          <a href="#figma" class="w3-bar-item w3-button">Figma</a>
-          <a href="#about" class="w3-bar-item w3-button">Visual Lab</a>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/lib/w3-theme-black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- model-viewer for 3D GLB rendering -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ignacio Fernández",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://ifernandez89.github.io/",
+        "sameAs": [
+          "https://www.linkedin.com/in/ignacio-fernández-b88631184",
+          "https://github.com/ifernandez89"
+        ],
+        "knowsAbout": [
+          "Three.js",
+          "WebGL",
+          "React",
+          "Next.js",
+          "Astronomical Simulation",
+          "NestJS"
+        ]
+      }
+    </script>
+  </head>
+  <body id="myPage">
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar" style="z-index: 1">
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white"
+          href="javascript:void(0);"
+          onclick="openNav()"
+          aria-label="Abrir menú de navegación"
+          ><i class="fa fa-bars" aria-hidden="true"></i
+        ></a>
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-padding-large"
+          aria-label="Inicio"
+          ><i
+            class="fa fa-code w3-margin-right"
+            style="color: black"
+            aria-hidden="true"
+          ></i
+        ></a>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <a
+            href="#designer"
+            class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large"
+            style="color: black; font-family: &quot;Inter&quot;, sans-serif"
+          >
+            Designer <i class="fa fa-caret-down"></i
+          ></a>
+          <br /><br />
+          <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
+            <a href="#figma" class="w3-bar-item w3-button">Figma</a>
+            <a href="#about" class="w3-bar-item w3-button">Visual Lab</a>
+          </div>
         </div>
-      </div>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <a href="#works" class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large" style="color: black; font-family:'Inter',sans-serif;">Works <i class="fa fa-caret-down"></i></a>
-        <br><br>
-        <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
-          <a href="#archeoscope" class="w3-bar-item w3-button">Archeoscope</a>
-          <a href="#ai-workflow" class="w3-bar-item w3-button">AI Workflow</a>
-          <a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/" class="w3-bar-item w3-button">Oxlahun Cauac</a>
-          <a href="https://ifernandezdesign.github.io/pillow/" class="w3-bar-item w3-button">Pillow</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <a
+            href="#works"
+            class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large"
+            style="color: black; font-family: &quot;Inter&quot;, sans-serif"
+            >Works <i class="fa fa-caret-down"></i
+          ></a>
+          <br /><br />
+          <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
+            <a href="#archeoscope" class="w3-bar-item w3-button">Archeoscope</a>
+            <a href="#ai-workflow" class="w3-bar-item w3-button">AI Workflow</a>
+            <a
+              href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/"
+              class="w3-bar-item w3-button"
+              >Oxlahun Cauac</a
+            >
+            <a
+              href="https://ifernandezdesign.github.io/pillow/"
+              class="w3-bar-item w3-button"
+              >Pillow</a
+            >
+          </div>
         </div>
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large"
+          style="color: black; font-family: &quot;Inter&quot;, sans-serif"
+          >Contact</a
+        >
       </div>
-      <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large" style="color: black; font-family:'Inter',sans-serif;">Contact</a>
-  </div>
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="#designer" class="w3-bar-item w3-button" style="color: black;">Designer</a>
-      <a href="#works" class="w3-bar-item w3-button" style="color: black;">Works</a>
-      <a href="#about" class="w3-bar-item w3-button" style="color: black;">Visual Lab</a>
-      <a href="#contact" class="w3-bar-item w3-button" style="color: black;">Contact</a>
+      <!-- Navbar on small screens -->
+      <div
+        id="navDemo"
+        class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"
+      >
+        <a href="#designer" class="w3-bar-item w3-button" style="color: black"
+          >Designer</a
+        >
+        <a href="#works" class="w3-bar-item w3-button" style="color: black"
+          >Works</a
+        >
+        <a href="#about" class="w3-bar-item w3-button" style="color: black"
+          >Visual Lab</a
+        >
+        <a href="#contact" class="w3-bar-item w3-button" style="color: black"
+          >Contact</a
+        >
+      </div>
     </div>
-  </div>
 
- <!-- Header -->
-<header class="w3-display-container w3-content w3-wide header" style="max-width:2000px;" id="home">
-  <img class="w3-image" src="fotos/mmirrored1.png" alt="Portfolio de Ignacio Fernández">
-  <div class="w3-display-middle w3-center">
-    <p class="hero-kicker">FULL STACK DEVELOPER · PARANÁ, ARGENTINA</p>
-    <h1 class="hero-title">Ignacio Fernández</h1>
-    <p class="hero-tagline">Software Público + <strong>interfaces experimentales</strong></p>
-    <p class="hero-sub">Gestión documental · Simulación astronómica · Experiencias 3D</p>
-  </div>
-</header>
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-wide header"
+      style="max-width: 2000px"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="fotos/mmirrored1.png"
+        alt="Portfolio de Ignacio Fernández"
+      />
+      <div class="w3-display-middle w3-center">
+        <p class="hero-kicker">FULL STACK DEVELOPER · PARANÁ, ARGENTINA</p>
+        <h1 class="hero-title">Ignacio Fernández</h1>
+        <p class="hero-tagline">
+          Software Público + <strong>interfaces experimentales</strong>
+        </p>
+        <p class="hero-sub">
+          Gestión documental · Simulación astronómica · Experiencias 3D
+        </p>
+      </div>
+    </header>
 
- <!-- Designer Container -->
-  <div class="w3-row w3-padding-64 position w3-card-2" id="designer" style="background-size:cover;background-image: url(fotos/mmirrored2.png);opacity: 1;">
-  <div class="w3-col m6">
-    <section>
-      <div>
-        <img src="fotos/ig.jpg" class="w3-white with w3-opacity center w3-image" alt="Ignacio Fernández">
+    <!-- Designer Container -->
+    <div
+      class="w3-row w3-padding-64 position w3-card-2"
+      id="designer"
+      style="
+        background-size: cover;
+        background-image: url(fotos/mmirrored2.png);
+        opacity: 1;
+      "
+    >
+      <div class="w3-col m6">
+        <section>
+          <div>
+            <img
+              src="fotos/ig.jpg"
+              class="w3-white with w3-opacity center w3-image"
+              alt="Ignacio Fernández"
+            />
+          </div>
+        </section>
+      </div>
+      <br />
+      <!-- Small screens -->
+      <div class="w3-col m6">
+        <div class="w3-hide-large w3-hide-medium">
+          <h2
+            class="w3-wide w3-center"
+            style="font-family: &quot;Inter&quot;, sans-serif; font-weight: 600"
+          >
+            Ignacio Fernández
+          </h2>
+          <br />
+          <p class="body-text w3-opacity w3-center w3-text-light-grey">
+            <i
+              >Full Stack Developer — 3D, Simulations &amp; Interactive
+              Experiences</i
+            >
+          </p>
+          <br />
+          <p class="body-text w3-opacity w3-center w3-text-light-grey">
+            Next.js · React Three Fiber · Three.js · NestJS · WebGL · PWA
+          </p>
+          <br />
+        </div>
+        <!-- Large medium screens -->
+        <div class="w3-hide-small">
+          <h2
+            class="w3-wide w3-justify w3-text-grey"
+            style="font-family: &quot;Inter&quot;, sans-serif; font-weight: 600"
+          >
+            Ignacio Fernández
+          </h2>
+          <br />
+          <p class="body-text w3-opacity w3-justify w3-text-light-grey">
+            <i
+              >Full Stack Developer — 3D, Simulations &amp; Interactive
+              Experiences</i
+            >
+          </p>
+          <br />
+          <p class="body-text w3-opacity w3-justify w3-text-light-grey">
+            Next.js · React Three Fiber · Three.js · NestJS · WebGL · PWA
+          </p>
+          <br />
+        </div>
+        <p class="body-text w3-justify">
+          <span
+            class="w3-padding w3-black w3-opacity-min"
+            style="
+              font-size: 100%;
+              font-family: &quot;Inter&quot;, sans-serif;
+              font-weight: 500;
+            "
+            >Técnico Universitario en Programación (UTN Paraná - Entre
+            Ríos)</span
+          >
+        </p>
+        <br />
+        <p class="body-text w3-justify">
+          <span
+            class="w3-padding w3-black w3-opacity-min"
+            style="
+              font-size: 100%;
+              font-family: &quot;Inter&quot;, sans-serif;
+              font-weight: 500;
+            "
+            >Desarrollador Web (Argentina Programa 4.0)</span
+          >
+        </p>
+        <br />
+        <p class="body-text w3-justify">
+          <span
+            class="w3-padding w3-black w3-opacity-min"
+            style="
+              font-size: 100%;
+              font-family: &quot;Inter&quot;, sans-serif;
+              font-weight: 500;
+            "
+            >Diseño UX/UI (Puerto E-Learning - UADER)</span
+          >
+        </p>
+        <br />
+        <hr />
+        <br />
+        <!-- Stack técnico -->
+        <div class="w3-container" style="margin-bottom: 16px">
+          <p
+            class="body-text w3-opacity"
+            style="font-size: 105%; margin-bottom: 10px; letter-spacing: 1px"
+          >
+            Stack
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px">
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Next.js</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >React</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Three.js</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >React Three Fiber</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >WebGL</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >NestJS</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >REST APIs</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Web Audio API</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >PWA</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Java</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >SQL</span
+            >
+          </div>
+        </div>
+        <!-- Especialidad -->
+        <div class="w3-container" style="margin-bottom: 16px">
+          <p
+            class="body-text w3-opacity"
+            style="font-size: 105%; margin-bottom: 10px; letter-spacing: 1px"
+          >
+            Especialización
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px">
+            <span
+              class="w3-tag w3-theme-d2 tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Simulación astronómica</span
+            >
+            <span
+              class="w3-tag w3-theme-d2 tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Arqueoastronomía</span
+            >
+            <span
+              class="w3-tag w3-theme-d2 tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Calendarios ancestrales</span
+            >
+            <span
+              class="w3-tag w3-theme-d2 tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Experiencias 3D inmersivas</span
+            >
+            <span
+              class="w3-tag w3-theme-d2 tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Visualización en tiempo real</span
+            >
+          </div>
+        </div>
+        <!-- AI-Assisted Development -->
+        <div class="w3-container" style="margin-bottom: 16px">
+          <p
+            class="body-text w3-opacity"
+            style="font-size: 105%; margin-bottom: 10px; letter-spacing: 1px"
+          >
+            ⚙️ AI-Assisted Development
+          </p>
+          <p
+            class="body-text w3-text-light-grey"
+            style="font-size: 92%; line-height: 1.7; margin-bottom: 12px"
+          >
+            Implemento workflows de desarrollo asistido por IA (vibe coding),
+            combinando editores inteligentes, múltiples modelos y estrategias de
+            prompting para acelerar la construcción de sistemas complejos. La IA
+            se utiliza como herramienta de aceleración, no como sustituto del
+            criterio técnico.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px">
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Múltiples modelos (local/cloud)</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Skills reutilizables</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Validación manual + testing</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Prompting estratégico</span
+            >
+            <span
+              class="w3-tag w3-dark-grey tag-text"
+              style="border-radius: 4px; padding: 4px 10px"
+              >Control arquitectónico</span
+            >
+          </div>
+        </div>
+        <div class="w3-hide-large w3-hide-medium w3-container">
+          <p
+            class="body-text"
+            style="text-align: center; font-size: 115%; font-style: italic"
+          >
+            "Desarrollo soluciones fullstack con flujos asistidos por IA,<br />
+            manteniendo control sobre arquitectura, lógica y validación."
+          </p>
+          <br />
+        </div>
+        <div class="w3-hide-small w3-container">
+          <p
+            class="body-text w3-justify"
+            style="text-align: center; font-size: 115%; font-style: italic"
+          >
+            "Desarrollo soluciones fullstack con flujos asistidos por IA,<br />
+            manteniendo control sobre arquitectura, lógica y validación."
+          </p>
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <!-- Archeoscope Section — Flagship Project -->
+    <div
+      class="w3-row w3-padding-64 w3-card-2"
+      id="archeoscope"
+      data-project="archeoscope"
+      style="
+        background: linear-gradient(
+          135deg,
+          #0a0a1a 0%,
+          #0d1b2a 50%,
+          #0a192f 100%
+        );
+        border-top: 2px solid #1a3a5c;
+      "
+    >
+      <div class="w3-col m6 w3-center" style="padding: 20px 0">
+        <span
+          class="w3-tag tag-text"
+          style="
+            background: #1a3a5c;
+            color: #7eb8d4;
+            border-radius: 20px;
+            letter-spacing: 2px;
+            padding: 5px 16px;
+            margin-bottom: 16px;
+            display: inline-block;
+          "
+          >✦ FLAGSHIP ECOSYSTEM · MOBILE APP</span
+        >
+        <br /><br />
+        <img
+          src="fotos/archeoscope_app_mobile.png"
+          alt="Archeoscope App"
+          style="
+            max-width: 300px;
+            width: 85%;
+            border-radius: 24px;
+            box-shadow:
+              0 12px 48px rgba(0, 100, 180, 0.35),
+              0 0 80px rgba(0, 60, 120, 0.2);
+          "
+        />
+      </div>
+      <div class="w3-col m6">
+        <div class="w3-container" style="padding-top: 20px">
+          <h3
+            class="w3-text-white"
+            style="
+              font-family: &quot;Inter&quot;, sans-serif;
+              font-weight: 600;
+              letter-spacing: 3px;
+              font-size: 160%;
+            "
+          >
+            🌌 Archeoscope
+          </h3>
+          <p
+            class="body-text"
+            style="color: #7eb8d4; font-size: 105%; margin-bottom: 16px"
+          >
+            <i>Un ecosistema: del juego PC a la app de bolsillo</i>
+          </p>
+          <p
+            class="body-text w3-text-light-grey"
+            style="margin-bottom: 16px; line-height: 1.7; font-size: 100%"
+          >
+            Archeoscope nació como
+            <strong style="color: #7eb8d4">juego de exploración para PC</strong>
+            — simulación 3D del cielo, mecánicas basadas en astronomía real y
+            arqueoastronomía. De ese universo surge una
+            <strong style="color: #7eb8d4">versión mobile complementaria</strong
+            >: no es el juego en sí, sino una app de
+            <em>consulta y exploración cotidiana</em> del mismo dominio
+            simbólico (cielo, tiempo, calendarios).
+          </p>
+          <p
+            class="body-text w3-text-light-grey"
+            style="margin-bottom: 20px; line-height: 1.7; font-size: 95%"
+          >
+            Desarrollado con un enfoque de
+            <strong>ingeniería asistida por IA</strong>: múltiples modelos, vibe
+            coding y definición de <em>skills</em> específicas para modularizar
+            la generación de código manteniendo coherencia arquitectónica.
+          </p>
+
+          <div style="margin-bottom: 20px">
+            <p
+              class="tag-text"
+              style="
+                color: #7eb8d4;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+                font-size: 78%;
+              "
+            >
+              📱 MOBILE — APP DE CONSULTA
+            </p>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6px 16px;
+              "
+            >
+              <p class="body-text w3-text-light-grey" style="font-size: 88%">
+                <span>🌍</span> <strong>Hoy</strong> — cielo en tiempo real
+              </p>
+              <p class="body-text w3-text-light-grey" style="font-size: 88%">
+                <span>✨</span> <strong>Constelaciones</strong> — cielo nocturno
+              </p>
+              <p class="body-text w3-text-light-grey" style="font-size: 88%">
+                <span>🪐</span> <strong>Astrología</strong> — posiciones y
+                aspectos
+              </p>
+              <p class="body-text w3-text-light-grey" style="font-size: 88%">
+                <span>📅</span> <strong>Calendarios</strong> — Maya, Babilónico,
+                Tzolk'in
+              </p>
+              <p class="body-text w3-text-light-grey" style="font-size: 88%">
+                <span>🌦️</span> <strong>Clima</strong> — fases lunares
+              </p>
+              <p class="body-text w3-text-light-grey" style="font-size: 88%">
+                <span>🔔</span> <strong>Eventos</strong> — alertas astronómicas
+              </p>
+            </div>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 6px;
+              margin-bottom: 24px;
+            "
+          >
+            <span
+              class="w3-tag tag-text"
+              style="
+                background: #0d2137;
+                color: #7eb8d4;
+                border-radius: 4px;
+                padding: 4px 10px;
+              "
+              >React Native</span
+            >
+            <span
+              class="w3-tag tag-text"
+              style="
+                background: #0d2137;
+                color: #7eb8d4;
+                border-radius: 4px;
+                padding: 4px 10px;
+              "
+              >Three.js</span
+            >
+            <span
+              class="w3-tag tag-text"
+              style="
+                background: #0d2137;
+                color: #7eb8d4;
+                border-radius: 4px;
+                padding: 4px 10px;
+              "
+              >Astronomical Engine</span
+            >
+            <span
+              class="w3-tag tag-text"
+              style="
+                background: #0d2137;
+                color: #7eb8d4;
+                border-radius: 4px;
+                padding: 4px 10px;
+              "
+              >Web Audio API</span
+            >
+            <span
+              class="w3-tag tag-text"
+              style="
+                background: #0d2137;
+                color: #7eb8d4;
+                border-radius: 4px;
+                padding: 4px 10px;
+              "
+              >PWA</span
+            >
+            <span
+              class="w3-tag tag-text"
+              style="
+                background: #0d2137;
+                color: #7eb8d4;
+                border-radius: 4px;
+                padding: 4px 10px;
+              "
+              >AI-Assisted Dev</span
+            >
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap">
+            <a
+              href="https://ifernandez89.github.io/ArcheoScope/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w3-button tag-text"
+              style="
+                background: #1a3a5c;
+                color: #7eb8d4;
+                border-radius: 6px;
+                padding: 10px 20px;
+                letter-spacing: 1px;
+                border: 1px solid #2a5a8c;
+              "
+            >
+              🚀 Ver App Mobile ↗
+            </a>
+            <a
+              href="https://github.com/ifernandez89/ArcheoScope"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w3-button tag-text"
+              style="
+                background: transparent;
+                color: #7eb8d4;
+                border-radius: 6px;
+                padding: 10px 20px;
+                letter-spacing: 1px;
+                border: 1px solid #2a5a8c;
+              "
+            >
+              <i class="fa fa-github"></i> GitHub ↗
+            </a>
+            <button
+              type="button"
+              data-interact
+              class="btn-interact btn-interact-dark"
+              aria-label="Abrir preview interactivo de Archeoscope"
+            >
+              Live preview
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Archeoscope PC / Game — Coming Soon -->
+    <div
+      class="w3-row w3-padding-32 w3-card-2"
+      id="archeoscope-pc"
+      style="
+        background: linear-gradient(135deg, #080810 0%, #0a0f1a 100%);
+        border-top: 1px solid #1a3a5c;
+      "
+    >
+      <div class="w3-container w3-center" style="padding: 40px 20px">
+        <span
+          class="w3-tag tag-text"
+          style="
+            background: #0d2137;
+            color: #7eb8d4;
+            border-radius: 20px;
+            letter-spacing: 2px;
+            padding: 4px 14px;
+            margin-bottom: 14px;
+            display: inline-block;
+          "
+          >🎮 ARCHEOSCOPE — PC / ORIGINAL GAME</span
+        >
+        <br /><br />
+        <h3
+          class="w3-text-white"
+          style="
+            font-family: &quot;Inter&quot;, sans-serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 130%;
+          "
+        >
+          El juego original · En desarrollo
+        </h3>
+        <p
+          class="body-text"
+          style="
+            color: #7eb8d4;
+            font-size: 90%;
+            margin: 10px auto 4px;
+            max-width: 640px;
+            line-height: 1.6;
+            font-style: italic;
+          "
+        >
+          La raíz del proyecto — de acá nace todo el ecosistema Archeoscope.
+        </p>
+        <p
+          class="body-text w3-text-light-grey"
+          style="
+            font-size: 92%;
+            margin: 16px auto;
+            max-width: 640px;
+            line-height: 1.7;
+          "
+        >
+          Juego de <strong>exploración inmersiva</strong> para PC: simulación 3D
+          del cielo en tiempo real, navegación por épocas históricas, mecánicas
+          basadas en astronomía real y arqueoastronomía. El jugador explora
+          estructuras simbólicas (constelaciones, calendarios ancestrales,
+          alineaciones rituales) mientras interactúa con un universo generado
+          proceduralmente.
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+            margin-bottom: 20px;
+          "
+        >
+          <span
+            class="w3-tag tag-text"
+            style="
+              background: #0d2137;
+              color: #7eb8d4;
+              border-radius: 4px;
+              padding: 4px 10px;
+            "
+            >Three.js</span
+          >
+          <span
+            class="w3-tag tag-text"
+            style="
+              background: #0d2137;
+              color: #7eb8d4;
+              border-radius: 4px;
+              padding: 4px 10px;
+            "
+            >Procedural Generation</span
+          >
+          <span
+            class="w3-tag tag-text"
+            style="
+              background: #0d2137;
+              color: #7eb8d4;
+              border-radius: 4px;
+              padding: 4px 10px;
+            "
+            >Real Astronomy</span
+          >
+          <span
+            class="w3-tag tag-text"
+            style="
+              background: #0d2137;
+              color: #7eb8d4;
+              border-radius: 4px;
+              padding: 4px 10px;
+            "
+            >Game Mechanics</span
+          >
+        </div>
+        <a
+          href="https://ifernandez89.github.io/ArcheoScope/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w3-button tag-text"
+          style="
+            background: #1a3a5c;
+            color: #7eb8d4;
+            border-radius: 6px;
+            padding: 10px 22px;
+            letter-spacing: 1px;
+            border: 1px solid #2a5a8c;
+            margin-top: 8px;
+          "
+        >
+          🌐 Ir al sitio ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- AI-Assisted Development -->
+    <section class="ai-section" id="ai-workflow">
+      <div class="ai-bg-grid" aria-hidden="true"></div>
+      <div class="ai-row">
+        <div class="ai-col-text">
+          <span class="ai-badge">⚙️ AI-ASSISTED WORKFLOW</span>
+          <h2 class="ai-title">
+            Desarrollo asistido por IA,<br /><span class="ai-title-accent"
+              >con criterio propio</span
+            >
+          </h2>
+          <p class="ai-lede">
+            Implemento flujos de <strong>vibe coding</strong> con múltiples
+            modelos y <strong>skills reutilizables</strong> para iterar rápido
+            sobre sistemas complejos — sin perder coherencia arquitectónica.
+          </p>
+          <p class="ai-insight-inline">
+            La IA acelera. Yo decido la arquitectura, la lógica y lo que queda.
+          </p>
+        </div>
+        <div class="ai-col-cards">
+          <div class="ai-card-row">
+            <article class="ai-card-mini">
+              <span aria-hidden="true">🧠</span>
+              <div>
+                <h3>Multi-modelo</h3>
+                <p>Modelos locales + cloud según la tarea.</p>
+              </div>
+            </article>
+            <article class="ai-card-mini">
+              <span aria-hidden="true">🎯</span>
+              <div>
+                <h3>Skills reutilizables</h3>
+                <p>Generación modular y consistente.</p>
+              </div>
+            </article>
+          </div>
+          <div class="ai-card-row">
+            <article class="ai-card-mini">
+              <span aria-hidden="true">✅</span>
+              <div>
+                <h3>Validación humana</h3>
+                <p>Revisión manual + testing siempre.</p>
+              </div>
+            </article>
+            <article class="ai-card-mini">
+              <span aria-hidden="true">🏛️</span>
+              <div>
+                <h3>Control arquitectónico</h3>
+                <p>Las decisiones de diseño son mías.</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
-  </div>
-  <br>
-<!-- Small screens -->
-  <div class="w3-col m6">
-    <div class="w3-hide-large w3-hide-medium">
-      <h2 class="w3-wide w3-center" style="font-family:'Inter',sans-serif; font-weight:600;">Ignacio Fernández</h2>
-    <br>
-    <p class="body-text w3-opacity w3-center w3-text-light-grey"><i>Full Stack Developer — 3D, Simulations &amp; Interactive Experiences</i></p>
-    <br>
-    <p class="body-text w3-opacity w3-center w3-text-light-grey">Next.js · React Three Fiber · Three.js · NestJS · WebGL · PWA</p>
-  <br>
-    </div>
-<!-- Large medium screens -->
-<div class="w3-hide-small">
-    <h2 class="w3-wide w3-justify w3-text-grey" style="font-family:'Inter',sans-serif; font-weight:600;">Ignacio Fernández</h2>
-    <br>
-    <p class="body-text w3-opacity w3-justify w3-text-light-grey"><i>Full Stack Developer — 3D, Simulations &amp; Interactive Experiences</i></p>
-    <br>
-    <p class="body-text w3-opacity w3-justify w3-text-light-grey">Next.js · React Three Fiber · Three.js · NestJS · WebGL · PWA</p>
-  <br>
-</div>
-  <p class="body-text w3-justify"><span class="w3-padding w3-black w3-opacity-min" style="font-size: 100%; font-family:'Inter',sans-serif; font-weight:500;">Técnico Universitario en Programación  (UTN Paraná - Entre Ríos)</span></p><br>
-  <p class="body-text w3-justify"><span class="w3-padding w3-black w3-opacity-min" style="font-size: 100%; font-family:'Inter',sans-serif; font-weight:500;">Desarrollador Web (Argentina Programa 4.0)</span></p><br>
-  <p class="body-text w3-justify"><span class="w3-padding w3-black w3-opacity-min" style="font-size: 100%; font-family:'Inter',sans-serif; font-weight:500;">Diseño UX/UI (Puerto E-Learning - UADER)</span></p>
-<br>
-<hr>
-<br>
-<!-- Stack técnico -->
-<div class="w3-container" style="margin-bottom:16px;">
-  <p class="body-text w3-opacity" style="font-size:105%; margin-bottom:10px; letter-spacing:1px;">Stack</p>
-  <div style="display:flex; flex-wrap:wrap; gap:6px;">
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">Next.js</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">React</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">Three.js</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">React Three Fiber</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">WebGL</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">NestJS</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">REST APIs</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">Web Audio API</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">PWA</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">Java</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">SQL</span>
-  </div>
-</div>
-<!-- Especialidad -->
-<div class="w3-container" style="margin-bottom:16px;">
-  <p class="body-text w3-opacity" style="font-size:105%; margin-bottom:10px; letter-spacing:1px;">Especialización</p>
-  <div style="display:flex; flex-wrap:wrap; gap:6px;">
-    <span class="w3-tag w3-theme-d2 tag-text" style="border-radius:4px; padding:4px 10px;">Simulación astronómica</span>
-    <span class="w3-tag w3-theme-d2 tag-text" style="border-radius:4px; padding:4px 10px;">Arqueoastronomía</span>
-    <span class="w3-tag w3-theme-d2 tag-text" style="border-radius:4px; padding:4px 10px;">Calendarios ancestrales</span>
-    <span class="w3-tag w3-theme-d2 tag-text" style="border-radius:4px; padding:4px 10px;">Experiencias 3D inmersivas</span>
-    <span class="w3-tag w3-theme-d2 tag-text" style="border-radius:4px; padding:4px 10px;">Visualización en tiempo real</span>
-  </div>
-</div>
-<!-- AI-Assisted Development -->
-<div class="w3-container" style="margin-bottom:16px;">
-  <p class="body-text w3-opacity" style="font-size:105%; margin-bottom:10px; letter-spacing:1px;">⚙️ AI-Assisted Development</p>
-  <p class="body-text w3-text-light-grey" style="font-size:92%; line-height:1.7; margin-bottom:12px;">Implemento workflows de desarrollo asistido por IA (vibe coding), combinando editores inteligentes, múltiples modelos y estrategias de prompting para acelerar la construcción de sistemas complejos. La IA se utiliza como herramienta de aceleración, no como sustituto del criterio técnico.</p>
-  <div style="display:flex; flex-wrap:wrap; gap:6px;">
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">Múltiples modelos (local/cloud)</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">Skills reutilizables</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">Validación manual + testing</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">Prompting estratégico</span>
-    <span class="w3-tag w3-dark-grey tag-text" style="border-radius:4px; padding:4px 10px;">Control arquitectónico</span>
-  </div>
-</div>
-<div class="w3-hide-large w3-hide-medium w3-container">
-  <p class="body-text" style="text-align: center; font-size:115%; font-style:italic;">"Desarrollo soluciones fullstack con flujos asistidos por IA,<br>
-  manteniendo control sobre arquitectura, lógica y validación."</p>
-<br>
-</div>
-<div class="w3-hide-small w3-container">
-  <p class="body-text w3-justify" style="text-align: center; font-size:115%; font-style:italic;">"Desarrollo soluciones fullstack con flujos asistidos por IA,<br>
-  manteniendo control sobre arquitectura, lógica y validación."</p>
-  <br>
-</div>
-</div>
-</div>
 
-<!-- Archeoscope Section — Flagship Project -->
-<div class="w3-row w3-padding-64 w3-card-2" id="archeoscope" data-project="archeoscope" style="background: linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 50%, #0a192f 100%); border-top: 2px solid #1a3a5c;">
-  <div class="w3-col m6 w3-center" style="padding: 20px 0;">
-    <span class="w3-tag tag-text" style="background:#1a3a5c; color:#7eb8d4; border-radius:20px; letter-spacing:2px; padding:5px 16px; margin-bottom:16px; display:inline-block;">✦ FLAGSHIP ECOSYSTEM · MOBILE APP</span>
-    <br><br>
-    <img src="fotos/archeoscope_app_mobile.png" alt="Archeoscope App" style="max-width:300px; width:85%; border-radius:24px; box-shadow: 0 12px 48px rgba(0,100,180,0.35), 0 0 80px rgba(0,60,120,0.2);">
-  </div>
-  <div class="w3-col m6">
-    <div class="w3-container" style="padding-top:20px;">
-      <h3 class="w3-text-white" style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:3px; font-size:160%;">🌌 Archeoscope</h3>
-      <p class="body-text" style="color:#7eb8d4; font-size:105%; margin-bottom:16px;"><i>Un ecosistema: del juego PC a la app de bolsillo</i></p>
-      <p class="body-text w3-text-light-grey" style="margin-bottom:16px; line-height:1.7; font-size:100%;">Archeoscope nació como <strong style="color:#7eb8d4;">juego de exploración para PC</strong> — simulación 3D del cielo, mecánicas basadas en astronomía real y arqueoastronomía. De ese universo surge una <strong style="color:#7eb8d4;">versión mobile complementaria</strong>: no es el juego en sí, sino una app de <em>consulta y exploración cotidiana</em> del mismo dominio simbólico (cielo, tiempo, calendarios).</p>
-      <p class="body-text w3-text-light-grey" style="margin-bottom:20px; line-height:1.7; font-size:95%;">Desarrollado con un enfoque de <strong>ingeniería asistida por IA</strong>: múltiples modelos, vibe coding y definición de <em>skills</em> específicas para modularizar la generación de código manteniendo coherencia arquitectónica.</p>
-
-      <div style="margin-bottom:20px;">
-        <p class="tag-text" style="color:#7eb8d4; letter-spacing:2px; margin-bottom:10px; font-size:78%;">📱 MOBILE — APP DE CONSULTA</p>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px 16px;">
-          <p class="body-text w3-text-light-grey" style="font-size:88%;"><span>🌍</span> <strong>Hoy</strong> — cielo en tiempo real</p>
-          <p class="body-text w3-text-light-grey" style="font-size:88%;"><span>✨</span> <strong>Constelaciones</strong> — cielo nocturno</p>
-          <p class="body-text w3-text-light-grey" style="font-size:88%;"><span>🪐</span> <strong>Astrología</strong> — posiciones y aspectos</p>
-          <p class="body-text w3-text-light-grey" style="font-size:88%;"><span>📅</span> <strong>Calendarios</strong> — Maya, Babilónico, Tzolk'in</p>
-          <p class="body-text w3-text-light-grey" style="font-size:88%;"><span>🌦️</span> <strong>Clima</strong> — fases lunares</p>
-          <p class="body-text w3-text-light-grey" style="font-size:88%;"><span>🔔</span> <strong>Eventos</strong> — alertas astronómicas</p>
-        </div>
-      </div>
-
-      <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:24px;">
-        <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">React Native</span>
-        <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">Three.js</span>
-        <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">Astronomical Engine</span>
-        <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">Web Audio API</span>
-        <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">PWA</span>
-        <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">AI-Assisted Dev</span>
-      </div>
-      <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a href="https://ifernandez89.github.io/ArcheoScope/" target="_blank" rel="noopener noreferrer"
-           class="w3-button tag-text"
-           style="background:#1a3a5c; color:#7eb8d4; border-radius:6px; padding:10px 20px; letter-spacing:1px; border: 1px solid #2a5a8c;">
-          🚀 Ver App Mobile ↗
-        </a>
-        <button type="button" data-interact class="btn-interact btn-interact-dark" aria-label="Abrir preview interactivo de Archeoscope">
-          Live preview
-        </button>
-        <a href="https://github.com/ifernandez89/ArcheoScope" target="_blank" rel="noopener noreferrer"
-           class="w3-button tag-text"
-           style="background:transparent; color:#7eb8d4; border-radius:6px; padding:10px 20px; letter-spacing:1px; border: 1px solid #2a5a8c;">
-          <i class="fa fa-github"></i> GitHub ↗
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Archeoscope PC / Game — Coming Soon -->
-<div class="w3-row w3-padding-32 w3-card-2" id="archeoscope-pc" style="background: linear-gradient(135deg, #080810 0%, #0a0f1a 100%); border-top: 1px solid #1a3a5c;">
-  <div class="w3-container w3-center" style="padding: 40px 20px;">
-    <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:20px; letter-spacing:2px; padding:4px 14px; margin-bottom:14px; display:inline-block;">🎮 ARCHEOSCOPE — PC / ORIGINAL GAME</span>
-    <br><br>
-    <h3 class="w3-text-white" style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:2px; font-size:130%;">El juego original · En desarrollo</h3>
-    <p class="body-text" style="color:#7eb8d4; font-size:90%; margin: 10px auto 4px; max-width:640px; line-height:1.6; font-style:italic;">La raíz del proyecto — de acá nace todo el ecosistema Archeoscope.</p>
-    <p class="body-text w3-text-light-grey" style="font-size:92%; margin: 16px auto; max-width:640px; line-height:1.7;">Juego de <strong>exploración inmersiva</strong> para PC: simulación 3D del cielo en tiempo real, navegación por épocas históricas, mecánicas basadas en astronomía real y arqueoastronomía. El jugador explora estructuras simbólicas (constelaciones, calendarios ancestrales, alineaciones rituales) mientras interactúa con un universo generado proceduralmente.</p>
-    <div style="display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-bottom:20px;">
-      <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">Three.js</span>
-      <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">Procedural Generation</span>
-      <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">Real Astronomy</span>
-      <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:4px 10px;">Game Mechanics</span>
-    </div>
-    <a href="https://ifernandez89.github.io/ArcheoScope/" target="_blank" rel="noopener noreferrer"
-       class="w3-button tag-text"
-       style="background:#1a3a5c; color:#7eb8d4; border-radius:6px; padding:10px 22px; letter-spacing:1px; border: 1px solid #2a5a8c; margin-top:8px;">
-      🌐 Ir al sitio ↗
-    </a>
-  </div>
-</div>
-
-<!-- AI-Assisted Development -->
-<section class="ai-section" id="ai-workflow">
-  <div class="ai-bg-grid" aria-hidden="true"></div>
-  <div class="ai-row">
-    <div class="ai-col-text">
-      <span class="ai-badge">⚙️ AI-ASSISTED WORKFLOW</span>
-      <h2 class="ai-title">Desarrollo asistido por IA,<br><span class="ai-title-accent">con criterio propio</span></h2>
-      <p class="ai-lede">Implemento flujos de <strong>vibe coding</strong> con múltiples modelos y <strong>skills reutilizables</strong> para iterar rápido sobre sistemas complejos — sin perder coherencia arquitectónica.</p>
-      <p class="ai-insight-inline">La IA acelera. Yo decido la arquitectura, la lógica y lo que queda.</p>
-    </div>
-    <div class="ai-col-cards">
-      <div class="ai-card-row">
-        <article class="ai-card-mini">
-          <span aria-hidden="true">🧠</span>
-          <div>
-            <h3>Multi-modelo</h3>
-            <p>Modelos locales + cloud según la tarea.</p>
+    <!-- Works Section -->
+    <section class="works-section" id="works">
+      <h2 class="works-section-title">Works</h2>
+      <p class="works-section-subtitle">
+        Proyectos seleccionados — sistemas, web e interacción
+      </p>
+      <div class="works-grid">
+        <!-- SIGAP -->
+        <div class="work-card">
+          <div class="work-card-media">
+            <img src="fotos/sigapimg.png" alt="SIGAP" loading="lazy" />
           </div>
-        </article>
-        <article class="ai-card-mini">
-          <span aria-hidden="true">🎯</span>
-          <div>
-            <h3>Skills reutilizables</h3>
-            <p>Generación modular y consistente.</p>
+          <div class="work-card-body">
+            <h3 class="work-card-title">S.I.G.A.P</h3>
+            <p class="work-card-meta">
+              Municipalidad de Paraná · Servicios Públicos
+            </p>
+            <p class="work-card-desc">
+              Sistema integral de gestión de alumbrado público.
+              Georeferenciación, estadísticas de consumo eléctrico y seguimiento
+              de luminarias en toda la ciudad.
+            </p>
+            <div
+              style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px"
+            >
+              <span
+                class="tag-text"
+                style="
+                  background: #eaf1f7;
+                  color: #2a6496;
+                  border-radius: 4px;
+                  padding: 2px 8px;
+                  font-size: 70%;
+                "
+                >Java</span
+              >
+              <span
+                class="tag-text"
+                style="
+                  background: #eaf1f7;
+                  color: #2a6496;
+                  border-radius: 4px;
+                  padding: 2px 8px;
+                  font-size: 70%;
+                "
+                >SQL</span
+              >
+              <span
+                class="tag-text"
+                style="
+                  background: #eaf1f7;
+                  color: #2a6496;
+                  border-radius: 4px;
+                  padding: 2px 8px;
+                  font-size: 70%;
+                "
+                >QGIS</span
+              >
+              <span
+                class="tag-text"
+                style="
+                  background: #eaf1f7;
+                  color: #2a6496;
+                  border-radius: 4px;
+                  padding: 2px 8px;
+                  font-size: 70%;
+                "
+                >PostGIS</span
+              >
+            </div>
           </div>
-        </article>
-      </div>
-      <div class="ai-card-row">
-        <article class="ai-card-mini">
-          <span aria-hidden="true">✅</span>
-          <div>
-            <h3>Validación humana</h3>
-            <p>Revisión manual + testing siempre.</p>
+        </div>
+        <!-- Oxlahun Cauac -->
+        <div class="work-card" data-project="oxlahun">
+          <div class="work-card-media">
+            <video
+              onloadstart="this.muted = true"
+              autoplay
+              loop
+              playsinline
+              muted
+              src="videos/OC.mp4"
+            ></video>
           </div>
-        </article>
-        <article class="ai-card-mini">
-          <span aria-hidden="true">🏛️</span>
-          <div>
-            <h3>Control arquitectónico</h3>
-            <p>Las decisiones de diseño son mías.</p>
+          <div class="work-card-body">
+            <h3 class="work-card-title">Oxlahun Cauac</h3>
+            <p class="work-card-desc">
+              Tormenta Cósmica Azul es una página de contacto e informativa
+              holistica, para compartir pensamientos, filosofias y curiosidades
+              del mundo de las energías!
+            </p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap">
+              <button
+                type="button"
+                data-interact
+                class="btn-interact"
+                aria-label="Abrir preview interactivo de Oxlahun Cauac"
+              >
+                Live preview
+              </button>
+              <a
+                href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/"
+                class="work-card-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver proyecto ↗</a
+              >
+            </div>
           </div>
-        </article>
+        </div>
+        <!-- Pillow -->
+        <div class="work-card" data-project="pillow">
+          <div class="work-card-media">
+            <video
+              onloadstart="this.muted = true"
+              autoplay
+              loop
+              playsinline
+              muted
+              src="videos/pillow.mp4"
+            ></video>
+          </div>
+          <div class="work-card-body">
+            <h3 class="work-card-title">Pillow</h3>
+            <p class="work-card-desc">
+              Por un mejor sueño y descanso. La mejor solución ergonomica para
+              tu cabeza, espalda y cuerpo. Desde hace 5 años construimos
+              productos de excelencia!
+            </p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap">
+              <button
+                type="button"
+                data-interact
+                class="btn-interact"
+                aria-label="Abrir preview interactivo de Pillow"
+              >
+                Live preview
+              </button>
+              <a
+                href="https://ifernandezdesign.github.io/pillow/"
+                class="work-card-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver proyecto ↗</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Works Section -->
-<section class="works-section" id="works">
-  <h2 class="works-section-title">Works</h2>
-  <p class="works-section-subtitle">Proyectos seleccionados — sistemas, web e interacción</p>
-  <div class="works-grid">
-    <!-- SIGAP -->
-    <div class="work-card">
-      <div class="work-card-media">
-        <img src="fotos/sigapimg.png" alt="SIGAP" loading="lazy">
+    <!-- Figma Section — Redesigned -->
+    <section class="figma-section" id="figma">
+      <h2 class="figma-section-title">Design Work</h2>
+      <p class="figma-section-subtitle">UI/UX prototypes crafted in Figma</p>
+      <div class="figma-grid">
+        <div class="figma-card" id="ifernandez">
+          <div class="figma-card-img item">
+            <img
+              src="fotos/figma1.png"
+              alt="Diseño Figma — Ifernández portfolio"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="figma-card-title">Ifernández</h3>
+        </div>
+        <div class="figma-card" id="pillow">
+          <div class="figma-card-img item">
+            <img
+              src="fotos/figma3.png"
+              alt="Diseño Figma — BlueCosmicStorm"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="figma-card-title">BlueCosmicStorm</h3>
+        </div>
+        <div class="figma-card" id="bluecosmicstorm">
+          <div class="figma-card-img item">
+            <img
+              src="fotos/figma2.png"
+              alt="Diseño Figma — Pillow"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="figma-card-title">Pillow</h3>
+        </div>
       </div>
-      <div class="work-card-body">
-        <h3 class="work-card-title">S.I.G.A.P</h3>
-        <p class="work-card-meta">Municipalidad de Paraná · Servicios Públicos</p>
-        <p class="work-card-desc">Sistema integral de gestión de alumbrado público. Georeferenciación, estadísticas de consumo eléctrico y seguimiento de luminarias en toda la ciudad.</p>
-        <div style="display:flex; flex-wrap:wrap; gap:4px; margin-top:10px;">
-          <span class="tag-text" style="background:#eaf1f7; color:#2a6496; border-radius:4px; padding:2px 8px; font-size:70%;">Java</span>
-          <span class="tag-text" style="background:#eaf1f7; color:#2a6496; border-radius:4px; padding:2px 8px; font-size:70%;">SQL</span>
-          <span class="tag-text" style="background:#eaf1f7; color:#2a6496; border-radius:4px; padding:2px 8px; font-size:70%;">QGIS</span>
-          <span class="tag-text" style="background:#eaf1f7; color:#2a6496; border-radius:4px; padding:2px 8px; font-size:70%;">PostGIS</span>
+    </section>
+
+    <!-- Experimental Systems Section -->
+    <div
+      class="w3-row w3-padding-64 w3-center w3-card-2"
+      id="about"
+      style="
+        background: linear-gradient(
+          135deg,
+          #080810 0%,
+          #0d1020 50%,
+          #080810 100%
+        );
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <!-- Particle canvas background -->
+      <canvas
+        id="particle-bg"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          opacity: 0.35;
+        "
+      ></canvas>
+      <div
+        class="w3-col m6"
+        style="position: relative; z-index: 1; padding: 20px 32px"
+      >
+        <span
+          class="w3-tag tag-text"
+          style="
+            background: #0d2137;
+            color: #7eb8d4;
+            border-radius: 20px;
+            letter-spacing: 2px;
+            padding: 4px 14px;
+            margin-bottom: 20px;
+            display: inline-block;
+          "
+          >⚗️ EXPERIMENTAL SYSTEMS</span
+        >
+        <br /><br />
+        <h2
+          class="w3-text-white"
+          style="
+            font-family: &quot;Inter&quot;, sans-serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 145%;
+            margin-bottom: 12px;
+          "
+        >
+          Visual Lab
+        </h2>
+        <p
+          class="body-text"
+          style="
+            color: #7eb8d4;
+            font-size: 95%;
+            margin-bottom: 20px;
+            font-style: italic;
+          "
+        >
+          An experimental environment where I explore 3D modeling, procedural
+          geometry and interactive real-time rendering.
+        </p>
+        <div style="text-align: left; margin-bottom: 24px">
+          <p
+            class="body-text w3-text-light-grey"
+            style="font-size: 88%; margin-bottom: 8px"
+          >
+            ⬡ <strong>3D Modeling</strong> — GLB/GLTF assets rendered in real
+            time on the web
+          </p>
+          <p
+            class="body-text w3-text-light-grey"
+            style="font-size: 88%; margin-bottom: 8px"
+          >
+            ⬡ <strong>Impossible geometry</strong> — optical illusions &
+            non-euclidean structures
+          </p>
+          <p
+            class="body-text w3-text-light-grey"
+            style="font-size: 88%; margin-bottom: 8px"
+          >
+            ⬡ <strong>Symbolic representation</strong> — geometry as a language
+            for cosmos
+          </p>
+          <p
+            class="body-text w3-text-light-grey"
+            style="font-size: 88%; margin-bottom: 8px"
+          >
+            ⬡ <strong>Interactive viewer</strong> — orbit, zoom, pan — full
+            WebGL pipeline
+          </p>
+        </div>
+        <p
+          class="body-text w3-text-light-grey"
+          style="
+            font-size: 85%;
+            line-height: 1.7;
+            max-width: 420px;
+            margin: 0 auto;
+          "
+        >
+          These experiments feed directly into
+          <strong style="color: #7eb8d4">Archeoscope</strong> — testing how 3D
+          assets, geometry and perception can be rendered in real time on the
+          browser.
+        </p>
+      </div>
+      <div
+        class="w3-col m6"
+        style="position: relative; z-index: 1; padding: 20px"
+      >
+        <br />
+        <p
+          class="tag-text"
+          style="color: #7eb8d4; letter-spacing: 2px; margin-bottom: 12px"
+        >
+          UFO — 3D MODEL · INTERACTIVE VIEWER
+        </p>
+        <!-- 3D Model Viewer -->
+        <model-viewer
+          src="modelos3d/ufo.glb"
+          alt="UFO 3D model — impossible geometry sculpture"
+          auto-rotate
+          auto-rotate-delay="0"
+          rotation-per-second="30deg"
+          camera-controls
+          shadow-intensity="1.2"
+          shadow-softness="0.8"
+          exposure="1.1"
+          environment-image="neutral"
+          style="
+            width: 100%;
+            height: 360px;
+            border-radius: 12px;
+            box-shadow:
+              0 0 40px rgba(0, 100, 180, 0.25),
+              0 0 80px rgba(0, 60, 120, 0.1);
+            background: radial-gradient(
+              ellipse at center,
+              #0d1b2a 0%,
+              #080810 100%
+            );
+          "
+          camera-orbit="45deg 65deg 2.5m"
+          min-camera-orbit="auto auto 1m"
+          max-camera-orbit="auto auto 6m"
+          interaction-prompt="none"
+        >
+        </model-viewer>
+        <p
+          class="body-text"
+          style="color: #4a7a9b; font-size: 78%; margin-top: 10px"
+        >
+          drag to orbit · scroll to zoom · pinch on mobile
+        </p>
+        <br />
+        <p
+          class="body-text w3-text-light-grey"
+          style="
+            font-size: 84%;
+            line-height: 1.7;
+            max-width: 380px;
+            margin: 0 auto;
+          "
+        >
+          Impossible geometry sculpture — a hexagonal structure where each face
+          forms an optical illusion. Inspired by Escher's impossible objects and
+          sacred geometry. 3D printed, then modeled as a GLB asset for real-time
+          web rendering via WebGL.
+        </p>
+        <br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+          "
+        >
+          <span
+            class="w3-tag tag-text"
+            style="
+              background: #0d2137;
+              color: #7eb8d4;
+              border-radius: 4px;
+              padding: 3px 9px;
+            "
+            >WebGL</span
+          >
+          <span
+            class="w3-tag tag-text"
+            style="
+              background: #0d2137;
+              color: #7eb8d4;
+              border-radius: 4px;
+              padding: 3px 9px;
+            "
+            >GLTF/GLB</span
+          >
+          <span
+            class="w3-tag tag-text"
+            style="
+              background: #0d2137;
+              color: #7eb8d4;
+              border-radius: 4px;
+              padding: 3px 9px;
+            "
+            >model-viewer</span
+          >
+          <span
+            class="w3-tag tag-text"
+            style="
+              background: #0d2137;
+              color: #7eb8d4;
+              border-radius: 4px;
+              padding: 3px 9px;
+            "
+            >3D Printing</span
+          >
+          <span
+            class="w3-tag tag-text"
+            style="
+              background: #0d2137;
+              color: #7eb8d4;
+              border-radius: 4px;
+              padding: 3px 9px;
+            "
+            >Sacred Geometry</span
+          >
         </div>
       </div>
     </div>
-    <!-- Oxlahun Cauac -->
-    <div class="work-card" data-project="oxlahun">
-      <div class="work-card-media">
-        <video onloadstart="this.muted=true" autoplay loop playsinline muted src="videos/OC.mp4"></video>
-      </div>
-      <div class="work-card-body">
-        <h3 class="work-card-title">Oxlahun Cauac</h3>
-        <p class="work-card-desc">Tormenta Cósmica Azul es una página de contacto e informativa holistica, para compartir pensamientos, filosofias y curiosidades del mundo de las energías!</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button type="button" data-interact class="btn-interact" aria-label="Abrir preview interactivo de Oxlahun Cauac">Live preview</button>
-          <a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/" class="work-card-link" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+
+    <!-- Contact Section — Inline -->
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <h2 class="contact-title">Let's talk</h2>
+        <p class="contact-subtitle">
+          Have a project in mind, want to collaborate, or just say hi? Drop me a
+          message.
+        </p>
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/nacho.xiphos@gmail.com"
+          method="POST"
+          target="_blank"
+        >
+          <!-- FormSubmit config -->
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nuevo mensaje desde tu portfolio"
+          />
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display: none" />
+          <div class="contact-row">
+            <div class="contact-field">
+              <label for="contact-name">Name</label>
+              <input
+                id="contact-name"
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <div class="contact-field">
+              <label for="contact-email">Email</label>
+              <input
+                id="contact-email"
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                autocomplete="email"
+              />
+            </div>
+          </div>
+          <div class="contact-field">
+            <label for="contact-message">Message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              placeholder="Tell me about your project..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="contact-submit">Send message</button>
+        </form>
+        <div class="contact-alt">
+          <p>Or reach me directly:</p>
+          <div class="contact-links">
+            <a href="mailto:nacho.xiphos@gmail.com" aria-label="Email"
+              ><i class="fa fa-envelope-o"></i> nacho.xiphos@gmail.com</a
+            >
+            <a
+              href="https://www.linkedin.com/in/ignacio-fernández-b88631184"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              ><i class="fa fa-linkedin"></i> LinkedIn</a
+            >
+            <a
+              href="https://github.com/ifernandez89"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              ><i class="fa fa-github"></i> GitHub</a
+            >
+            <a
+              href="https://wa.me/543434704479"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              ><i class="fa fa-whatsapp"></i> WhatsApp</a
+            >
+          </div>
+          <!-- PWA Install button — shown only when installable -->
+          <button
+            id="pwa-install-btn"
+            style="display: none; margin-top: 28px"
+            aria-label="Instalar app"
+          >
+            <i class="fa fa-download" style="margin-right: 8px"></i> Add to Home
+            Screen
+          </button>
         </div>
       </div>
-    </div>
-    <!-- Pillow -->
-    <div class="work-card" data-project="pillow">
-      <div class="work-card-media">
-        <video onloadstart="this.muted=true" autoplay loop playsinline muted src="videos/pillow.mp4"></video>
-      </div>
-      <div class="work-card-body">
-        <h3 class="work-card-title">Pillow</h3>
-        <p class="work-card-desc">Por un mejor sueño y descanso. La mejor solución ergonomica para tu cabeza, espalda y cuerpo. Desde hace 5 años construimos productos de excelencia!</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button type="button" data-interact class="btn-interact" aria-label="Abrir preview interactivo de Pillow">Live preview</button>
-          <a href="https://ifernandezdesign.github.io/pillow/" class="work-card-link" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Figma Section — Redesigned -->
-<section class="figma-section" id="figma">
-  <h2 class="figma-section-title">Design Work</h2>
-  <p class="figma-section-subtitle">UI/UX prototypes crafted in Figma</p>
-  <div class="figma-grid">
-    <div class="figma-card" id="ifernandez">
-      <div class="figma-card-img item">
-        <img src="fotos/figma1.png" alt="Diseño Figma — Ifernández portfolio" loading="lazy">
+    <!-- Footer -->
+    <footer class="site-footer-new">
+      <div class="footer-inner">
+        <p class="footer-copy">
+          © <span id="footer-year"></span> Ignacio Fernández · Paraná, Entre
+          Ríos
+        </p>
+        <a href="#home" class="footer-top" aria-label="Volver al inicio"
+          ><i class="fa fa-chevron-up"></i
+        ></a>
       </div>
-      <h3 class="figma-card-title">Ifernández</h3>
-    </div>
-    <div class="figma-card" id="pillow">
-      <div class="figma-card-img item">
-        <img src="fotos/figma3.png" alt="Diseño Figma — BlueCosmicStorm" loading="lazy">
-      </div>
-      <h3 class="figma-card-title">BlueCosmicStorm</h3>
-    </div>
-    <div class="figma-card" id="bluecosmicstorm">
-      <div class="figma-card-img item">
-        <img src="fotos/figma2.png" alt="Diseño Figma — Pillow" loading="lazy">
-      </div>
-      <h3 class="figma-card-title">Pillow</h3>
-    </div>
-  </div>
-</section>
+    </footer>
 
-  <!-- Experimental Systems Section -->
-  <div class="w3-row w3-padding-64 w3-center w3-card-2" id="about" style="background: linear-gradient(135deg, #080810 0%, #0d1020 50%, #080810 100%); position: relative; overflow: hidden;">
-    <!-- Particle canvas background -->
-    <canvas id="particle-bg" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; opacity:0.35;"></canvas>
-    <div class="w3-col m6" style="position:relative; z-index:1; padding: 20px 32px;">
-      <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:20px; letter-spacing:2px; padding:4px 14px; margin-bottom:20px; display:inline-block;">⚗️ EXPERIMENTAL SYSTEMS</span>
-      <br><br>
-      <h2 class="w3-text-white" style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:2px; font-size:145%; margin-bottom:12px;">Visual Lab</h2>
-      <p class="body-text" style="color:#7eb8d4; font-size:95%; margin-bottom:20px; font-style:italic;">An experimental environment where I explore 3D modeling, procedural geometry and interactive real-time rendering.</p>
-      <div style="text-align:left; margin-bottom:24px;">
-        <p class="body-text w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>3D Modeling</strong> — GLB/GLTF assets rendered in real time on the web</p>
-        <p class="body-text w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Impossible geometry</strong> — optical illusions & non-euclidean structures</p>
-        <p class="body-text w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Symbolic representation</strong> — geometry as a language for cosmos</p>
-        <p class="body-text w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Interactive viewer</strong> — orbit, zoom, pan — full WebGL pipeline</p>
-      </div>
-      <p class="body-text w3-text-light-grey" style="font-size:85%; line-height:1.7; max-width:420px; margin: 0 auto;">These experiments feed directly into <strong style="color:#7eb8d4;">Archeoscope</strong> — testing how 3D assets, geometry and perception can be rendered in real time on the browser.</p>
-    </div>    
-    <div class="w3-col m6" style="position:relative; z-index:1; padding: 20px;"><br>
-       <p class="tag-text" style="color:#7eb8d4; letter-spacing:2px; margin-bottom:12px;">UFO — 3D MODEL · INTERACTIVE VIEWER</p>
-       <!-- 3D Model Viewer -->
-       <model-viewer
-         src="modelos3d/ufo.glb"
-         alt="UFO 3D model — impossible geometry sculpture"
-         auto-rotate
-         auto-rotate-delay="0"
-         rotation-per-second="30deg"
-         camera-controls
-         shadow-intensity="1.2"
-         shadow-softness="0.8"
-         exposure="1.1"
-         environment-image="neutral"
-         style="width:100%; height:360px; border-radius:12px; box-shadow: 0 0 40px rgba(0,100,180,0.25), 0 0 80px rgba(0,60,120,0.1); background: radial-gradient(ellipse at center, #0d1b2a 0%, #080810 100%);"
-         camera-orbit="45deg 65deg 2.5m"
-         min-camera-orbit="auto auto 1m"
-         max-camera-orbit="auto auto 6m"
-         interaction-prompt="none">
-       </model-viewer>
-       <p class="body-text" style="color:#4a7a9b; font-size:78%; margin-top:10px;">drag to orbit · scroll to zoom · pinch on mobile</p>
-       <br>
-       <p class="body-text w3-text-light-grey" style="font-size:84%; line-height:1.7; max-width:380px; margin:0 auto;">Impossible geometry sculpture — a hexagonal structure where each face forms an optical illusion. Inspired by Escher's impossible objects and sacred geometry. 3D printed, then modeled as a GLB asset for real-time web rendering via WebGL.</p>
-       <br>
-       <div style="display:flex; flex-wrap:wrap; gap:6px; justify-content:center;">
-         <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:3px 9px;">WebGL</span>
-         <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:3px 9px;">GLTF/GLB</span>
-         <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:3px 9px;">model-viewer</span>
-         <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:3px 9px;">3D Printing</span>
-         <span class="w3-tag tag-text" style="background:#0d2137; color:#7eb8d4; border-radius:4px; padding:3px 9px;">Sacred Geometry</span>
-       </div>
-    </div>
-</div>
-
-<!-- Contact Section — Inline -->
-<section class="contact-section" id="contact">
-  <div class="contact-inner">
-    <h2 class="contact-title">Let's talk</h2>
-    <p class="contact-subtitle">Have a project in mind, want to collaborate, or just say hi? Drop me a message.</p>
-    <form class="contact-form" action="https://formsubmit.co/nacho.xiphos@gmail.com" method="POST" target="_blank">
-      <!-- FormSubmit config -->
-      <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio">
-      <input type="hidden" name="_captcha" value="true">
-      <input type="hidden" name="_template" value="table">
-      <input type="text" name="_honey" style="display:none">
-      <div class="contact-row">
-        <div class="contact-field">
-          <label for="contact-name">Name</label>
-          <input id="contact-name" type="text" name="name" placeholder="Your name" required autocomplete="name">
-        </div>
-        <div class="contact-field">
-          <label for="contact-email">Email</label>
-          <input id="contact-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email">
-        </div>
-      </div>
-      <div class="contact-field">
-        <label for="contact-message">Message</label>
-        <textarea id="contact-message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
-      </div>
-      <button type="submit" class="contact-submit">Send message</button>
-    </form>
-    <div class="contact-alt">
-      <p>Or reach me directly:</p>
-      <div class="contact-links">
-        <a href="mailto:nacho.xiphos@gmail.com" aria-label="Email"><i class="fa fa-envelope-o"></i> nacho.xiphos@gmail.com</a>
-        <a href="https://www.linkedin.com/in/ignacio-fernández-b88631184" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/ifernandez89" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i> GitHub</a>
-        <a href="https://wa.me/543434704479" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i> WhatsApp</a>
-      </div>
-      <!-- PWA Install button — shown only when installable -->
-      <button id="pwa-install-btn" style="display:none; margin-top:28px;" aria-label="Instalar app">
-        <i class="fa fa-download" style="margin-right:8px;"></i> Add to Home Screen
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="site-footer-new">
-  <div class="footer-inner">
-    <p class="footer-copy">© <span id="footer-year"></span> Ignacio Fernández · Paraná, Entre Ríos</p>
-    <a href="#home" class="footer-top" aria-label="Volver al inicio"><i class="fa fa-chevron-up"></i></a>
-  </div>
-</footer>
-
-  <script src="script.js"></script>
-  <script>
-document.querySelectorAll('.item').forEach(function(item) { item.addEventListener('mousemove', function(e) { const img = this.querySelector('img'); const rect = this.getBoundingClientRect(); const x = e.clientX - rect.left; const y = e.clientY - rect.top; const xPercent = x / rect.width * 100; const yPercent = y / rect.height * 100; img.style.transformOrigin = `${xPercent}% ${yPercent}%`; }); });
-document.getElementById('footer-year').textContent = new Date().getFullYear();
-</script>
-</body>
+    <script src="script.js"></script>
+    <script>
+      document.querySelectorAll(".item").forEach(function (item) {
+        item.addEventListener("mousemove", function (e) {
+          const img = this.querySelector("img");
+          const rect = this.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const xPercent = (x / rect.width) * 100;
+          const yPercent = (y / rect.height) * 100;
+          img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+        });
+      });
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
 </html>
