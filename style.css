@@ -674,3 +674,255 @@ video {
     font-size: 16px; /* prevents iOS zoom on focus */
   }
 }
+
+/* ============================================================================================== */
+/* HERO */
+/* ============================================================================================== */
+#home {
+  position: relative;
+}
+
+#home .w3-display-middle {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+.hero-kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #7eb8d4;
+  margin-bottom: 16px;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
+}
+
+.hero-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 6vw, 4.2rem);
+  color: #fff;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
+}
+
+.hero-tagline {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: clamp(0.95rem, 2.2vw, 1.35rem);
+  font-weight: 300;
+  color: #e6edf3;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.85);
+}
+
+.hero-tagline strong {
+  color: #7eb8d4;
+  font-weight: 600;
+}
+
+.hero-sub {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: clamp(0.75rem, 1.4vw, 0.9rem);
+  font-weight: 400;
+  color: #a8b8c4;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.85);
+}
+
+@media (max-width: 600px) {
+  .hero-kicker {
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .hero-tagline {
+    margin-bottom: 8px;
+  }
+  .hero-sub {
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+}
+
+/* ============================================================================================== */
+/* AI-ASSISTED DEVELOPMENT — dedicated section */
+/* ============================================================================================== */
+.ai-section {
+  width: 100%;
+  padding: 96px 5%;
+  background: linear-gradient(135deg, #0a1020 0%, #0d1b2a 50%, #0a1525 100%);
+  border-top: 1px solid #1a3a5c;
+  border-bottom: 1px solid #1a3a5c;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.ai-kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #7eb8d4;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.ai-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.ai-subtitle {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #7eb8d4;
+  text-align: center;
+  margin-bottom: 36px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.ai-lede {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.02rem;
+  color: #c8d4e0;
+  line-height: 1.8;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.ai-lede strong {
+  color: #7eb8d4;
+  font-weight: 500;
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.ai-card {
+  background: rgba(13, 33, 55, 0.5);
+  border: 1px solid #1a3a5c;
+  border-radius: 10px;
+  padding: 20px 22px;
+  transition: border-color 0.3s, transform 0.3s, background 0.3s;
+}
+
+.ai-card:hover {
+  border-color: #7eb8d4;
+  background: rgba(13, 33, 55, 0.8);
+  transform: translateY(-3px);
+}
+
+.ai-card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.ai-card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.ai-card-desc {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #8ea8bc;
+  line-height: 1.5;
+}
+
+.ai-insight {
+  text-align: center;
+  padding-top: 28px;
+  border-top: 1px solid #1a3a5c;
+}
+
+.ai-insight p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #a8b8c4;
+  font-style: italic;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.ai-insight strong {
+  color: #7eb8d4;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ============================================================================================== */
+/* WORKS — subsection titles for grouped display */
+/* ============================================================================================== */
+.works-subgroup {
+  margin-top: 56px;
+}
+
+.works-subgroup:first-of-type {
+  margin-top: 0;
+}
+
+.works-subgroup-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #2a6496;
+  text-align: center;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.works-subgroup-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* Production badge on SIGAP card */
+.production-badge {
+  display: inline-block;
+  background: #d4f1dc;
+  color: #1a6b3d;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
