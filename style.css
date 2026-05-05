@@ -660,3 +660,25 @@ input{display: none}
   color: #fff;
   margin-left: 20px;
 }
+
+/* ============================================================================================== */
+/* Experimental Systems — Visual Lab */
+#about {
+  background: linear-gradient(135deg, #080810 0%, #0d1020 50%, #080810 100%);
+}
+
+#hypercube-canvas {
+  transition: box-shadow 0.4s ease;
+}
+
+#hypercube-canvas:hover {
+  box-shadow: 0 0 60px rgba(0, 120, 200, 0.45), 0 0 120px rgba(0, 80, 160, 0.2) !important;
+}
+
+#particle-bg {
+  transition: opacity 0.5s ease;
+}
+
+#about:hover #particle-bg {
+  opacity: 0.55 !important;
+}

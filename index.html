@@ -47,7 +47,7 @@
         <br><br>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
           <a href="#figma" class="w3-bar-item w3-button">Figma</a>
-          <a href="#about" class="w3-bar-item w3-button">About</a>
+          <a href="#about" class="w3-bar-item w3-button">Visual Lab</a>
         </div>
       </div>
       <div class="w3-dropdown-hover w3-hide-small">
@@ -66,7 +66,7 @@
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <a href="#designer" class="w3-bar-item w3-button" style="color: black;">Designer</a>
       <a href="#works" class="w3-bar-item w3-button" style="color: black;">Works</a>
-      <a href="#about" class="w3-bar-item w3-button" style="color: black;">About</a>
+      <a href="#about" class="w3-bar-item w3-button" style="color: black;">Visual Lab</a>
       <a href="#contact" onclick="document.getElementById('contact').style.display='block'" class="w3-bar-item w3-button" style="color: black;">Contact</a>
     </div>
   </div>
@@ -304,18 +304,25 @@
     </div>
   </div>
 </div>
-  <!-- About Section -->
-  <div class="w3-row w3-padding-64 w3-center w3-card-2" id="about" style="background-image: url('fotos/dragonChinoPng.png');background-size:auto;background-repeat: no-repeat;">
-    <div class="w3-col m6 ">
-      <h1 class="w3-center" style="text-shadow: 2px 2px 5px black;">Welcome to the magical realm of frontend development!</h1><br>
-      <h5 class="w3-center text1">Each line of code casts its own enchantment.</h5>
-      <p class="w3-large"> <span class="w3-tag w3-light-grey"></span> </p>
-      <p class="w3-large w3-text-grey w3-hide-medium"><a class="text4">Pixels and code lead your journey in design. Captivated by the interplay of colors, shapes come alive on the digital canvas. Seamlessly blending functionality and beauty, crafting an immersive digital experience.</a></p>
-      <br>
-      <a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/" class="w3-button w3-black w3-padding-large w3-hover-opacity-on">Descubre Más</a>
+  <!-- Experimental Systems Section -->
+  <div class="w3-row w3-padding-64 w3-center w3-card-2" id="about" style="background: linear-gradient(135deg, #080810 0%, #0d1020 50%, #080810 100%); position: relative; overflow: hidden;">
+    <!-- Particle canvas background -->
+    <canvas id="particle-bg" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; opacity:0.35;"></canvas>
+    <div class="w3-col m6" style="position:relative; z-index:1; padding: 20px 32px;">
+      <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:20px; font-size:75%; letter-spacing:2px; padding:4px 14px; margin-bottom:20px; display:inline-block;">⚗️ EXPERIMENTAL SYSTEMS</span>
+      <br><br>
+      <h2 class="text4 w3-text-white" style="letter-spacing:2px; font-size:145%; margin-bottom:12px;">Visual Lab</h2>
+      <p class="text1" style="color:#7eb8d4; font-size:95%; margin-bottom:20px; font-style:italic;">An experimental environment where I explore geometry, procedural visuals and interactive systems.</p>
+      <div style="text-align:left; margin-bottom:24px;">
+        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Procedural geometry</strong> — 4D structures projected into 3D space</p>
+        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Real-time rendering</strong> — D3.js + canvas animation loops</p>
+        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Symbolic representation</strong> — geometry as a language for cosmos</p>
+        <p class="text1 w3-text-light-grey" style="font-size:88%; margin-bottom:8px;">⬡ <strong>Interactive systems</strong> — click, hover, state-driven behavior</p>
+      </div>
+      <p class="text1 w3-text-light-grey" style="font-size:85%; line-height:1.7; max-width:420px; margin: 0 auto;">These experiments feed directly into <strong style="color:#7eb8d4;">Archeoscope</strong> — testing how geometry, time and perception can be rendered in real time.</p>
     </div>    
-    <div class="w3-col m6"><br>
-       <p>Hypercube Edges in Orthogonal Projection</p>
+    <div class="w3-col m6" style="position:relative; z-index:1;"><br>
+       <p class="text1" style="color:#7eb8d4; font-size:82%; letter-spacing:2px;">TESSERACT — 4D HYPERCUBE · ORTHOGONAL PROJECTION</p>
             <form id="hypercube-options" class="w3-opacity-max">
               <input type="checkbox" name="indices" disabled class="w3-opacity-max">
               <input type="checkbox" name="edges" disabled class="w3-opacity-max">
@@ -327,11 +334,13 @@
               <input type="checkbox" name="rotate_xy" disabled class="w3-opacity-max">
               <input type="checkbox" name="rotate_zw" disabled class="w3-opacity-max">
             </form>
-            <canvas id="hypercube-canvas" class="hand" width="300" height="300" onclick="miFuncionStart()" aria-label="Hipercubo interactivo en proyección ortogonal — hacer clic para pausar/reanudar" role="img"></canvas>
-          <div id="parcoords" class="parcoords mov" style="width:0px;height:0px;margin: 0px 0px;"></div>     
-          <p class="w3-large w3-text-grey"><a class="text4">Hypercubes are mathematical figures that exist in dimensions greater than what we can visualize. The tesseract, a 4-dimensional hypercube, is a fascinating example of how we can imagine and extend our geometric understanding beyond three-dimensional space.
-          </a></p><hr>
-          <p class="text1"><a class="w3-theme-l4" href="https://syntagmatic.github.io/hypercube/rotate/">Adapted</a> from milosz's <a class="w3-theme-l4" href="http://hypercube.milosz.ca/">hypercube</a> <a class="w3-theme-l4" href="http://d3js.org/&quot;">D3</a> based <a class="w3-theme-l4" href="http://syntagmatic.github.com/parallel-coordinates/">parallel coordinates</a> JavaScript library <a class="w3-theme-l4" href="https://github.com/syntagmatic/parallel-coordinates#resources">more reading</a></p>
+            <canvas id="hypercube-canvas" class="hand" width="300" height="300" onclick="miFuncionStart()" aria-label="Hipercubo interactivo en proyección ortogonal — hacer clic para pausar/reanudar" role="img" style="border-radius:12px; box-shadow: 0 0 40px rgba(0,100,180,0.25), 0 0 80px rgba(0,60,120,0.1);"></canvas>
+          <div id="parcoords" class="parcoords mov" style="width:0px;height:0px;margin: 0px 0px;"></div>
+          <p class="text1" style="color:#4a7a9b; font-size:78%; margin-top:10px;">click to pause · hover to interact</p>
+          <br>
+          <p class="text1 w3-text-light-grey" style="font-size:84%; line-height:1.7; max-width:340px; margin:0 auto;">A tesseract is a 4-dimensional hypercube projected into 3D space. Each vertex represents a coordinate in 4D — rendered here in real time using D3.js and a custom rotation engine.</p>
+          <br>
+          <p class="text1" style="font-size:76%; color:#2a5a8c;"><a style="color:#4a7a9b;" href="https://syntagmatic.github.io/hypercube/rotate/">Adapted</a> from milosz's <a style="color:#4a7a9b;" href="http://hypercube.milosz.ca/">hypercube</a> · D3 parallel coordinates</p>
           </div>
 </div>
   <!-- Help -->
