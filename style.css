@@ -93,7 +93,7 @@ header {
   max-width: 100%;
   margin: 0;
   padding: 80px 5%;
-  background: #f8f9fa;
+  background: #f4f6f9;
 }
 
 .works-section-title {
@@ -101,7 +101,7 @@ header {
   font-weight: 700;
   font-size: 2.4rem;
   text-align: center;
-  color: #0a0a0a;
+  color: #0d1b2a;
   margin-bottom: 8px;
   letter-spacing: -0.5px;
 }
@@ -109,7 +109,7 @@ header {
 .works-section-subtitle {
   font-family: 'IBM Plex Sans', sans-serif;
   text-align: center;
-  color: #666;
+  color: #5a7a8a;
   font-size: 1rem;
   margin-bottom: 48px;
 }
@@ -126,22 +126,24 @@ header {
   background: #fff;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2eaf2;
+  box-shadow: 0 4px 20px rgba(10, 25, 47, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .work-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 40px rgba(10, 60, 120, 0.12);
+  border-color: #b8d4e8;
 }
 
 .work-card-media {
   width: 100%;
   height: 200px;
   overflow: hidden;
-  background: #0a0a0a;
+  background: #0a1525;
 }
 
 .work-card-media img,
@@ -168,21 +170,21 @@ header {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #0a0a0a;
+  color: #0d1b2a;
   margin-bottom: 6px;
 }
 
 .work-card-meta {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.82rem;
-  color: #888;
+  color: #7a9aaa;
   margin-bottom: 10px;
 }
 
 .work-card-desc {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.88rem;
-  color: #444;
+  color: #3a5060;
   line-height: 1.6;
   flex: 1;
 }
@@ -193,14 +195,14 @@ header {
   font-family: 'Inter', sans-serif;
   font-size: 0.82rem;
   font-weight: 500;
-  color: #1a3a5c;
+  color: #2a6496;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .work-card-link:hover {
-  border-bottom-color: #1a3a5c;
-  color: #1a3a5c;
+  border-bottom-color: #7eb8d4;
+  color: #1a4a7a;
 }
 
 /* ============================================================================================== */
@@ -211,7 +213,7 @@ header {
   max-width: 100%;
   margin: 0;
   padding: 80px 5%;
-  background: #fff;
+  background: #eef2f7;
 }
 
 .figma-section-title {
@@ -219,7 +221,7 @@ header {
   font-weight: 700;
   font-size: 2.4rem;
   text-align: center;
-  color: #0a0a0a;
+  color: #0d1b2a;
   margin-bottom: 8px;
   letter-spacing: -0.5px;
 }
@@ -227,7 +229,7 @@ header {
 .figma-section-subtitle {
   font-family: 'IBM Plex Sans', sans-serif;
   text-align: center;
-  color: #666;
+  color: #5a7a8a;
   font-size: 1rem;
   margin-bottom: 48px;
 }
@@ -247,12 +249,14 @@ header {
 .figma-card-img {
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #d4e2ee;
+  box-shadow: 0 4px 24px rgba(10, 25, 47, 0.07);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 
 .figma-card-img:hover {
-  box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 48px rgba(10, 60, 120, 0.14);
+  border-color: #7eb8d4;
   transform: translateY(-4px);
 }
 
@@ -271,7 +275,7 @@ header {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
-  color: #333;
+  color: #2a4a6a;
   margin-top: 14px;
   letter-spacing: 1px;
 }
