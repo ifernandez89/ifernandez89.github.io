@@ -1,5 +1,5 @@
-const CACHE_NAME = 'ifernandez-portfolio-v1';
-const CACHE_STATIC = 'ifernandez-static-v1';
+const CACHE_NAME = 'ifernandez-portfolio-v2';
+const CACHE_STATIC = 'ifernandez-static-v2';
 
 // Assets to pre-cache on install
 const PRECACHE_ASSETS = [
