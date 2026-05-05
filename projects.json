@@ -1,0 +1,28 @@
+{
+  "projects": {
+    "archeoscope": {
+      "name": "Archeoscope",
+      "liveUrl": "https://ifernandez89.github.io/ArcheoScope/",
+      "previewMp4": "https://ifernandez89.github.io/ArcheoScope/preview.mp4",
+      "previewWebm": "https://ifernandez89.github.io/ArcheoScope/preview.webm",
+      "fallbackImage": "fotos/archeoscope_app_mobile.png",
+      "embeddable": true
+    },
+    "pillow": {
+      "name": "Pillow",
+      "liveUrl": "https://ifernandezdesign.github.io/pillow/",
+      "previewMp4": "https://ifernandezdesign.github.io/pillow/preview.mp4",
+      "previewWebm": "https://ifernandezdesign.github.io/pillow/preview.webm",
+      "fallbackVideo": "videos/pillow.mp4",
+      "embeddable": true
+    },
+    "oxlahun": {
+      "name": "Oxlahun Cauac",
+      "liveUrl": "https://tormentacosmicaazul.github.io/BlueCosmicStorm/",
+      "previewMp4": "https://tormentacosmicaazul.github.io/BlueCosmicStorm/preview.mp4",
+      "previewWebm": "https://tormentacosmicaazul.github.io/BlueCosmicStorm/preview.webm",
+      "fallbackVideo": "videos/OC.mp4",
+      "embeddable": true
+    }
+  }
+}

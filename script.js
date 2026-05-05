@@ -180,3 +180,188 @@ document.addEventListener('DOMContentLoaded', function() {
   init();
   animate();
 })();
+
+/*-----------------------------------------------------------------------------------------*/
+/* Dynamic Project Previews — loads projects.json, swaps videos with remote previews,
+   wires interactive iframe modal. Fully non-blocking: if anything fails, falls back to
+   the locally-committed video/image already in the DOM. */
+(function() {
+  const CONFIG_URL = 'projects.json';
+
+  // Test if a remote resource exists (HEAD request, short timeout)
+  async function remoteExists(url) {
+    if (!url) return false;
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 4000);
+      const res = await fetch(url, { method: 'HEAD', signal: controller.signal, mode: 'cors' });
+      clearTimeout(timeoutId);
+      return res.ok;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  // Build the <source> tags and inject into an existing <video> element.
+  // If remote preview exists -> use it (webm + mp4). Else keep the existing src.
+  async function enhanceVideo(videoEl, project) {
+    if (!videoEl) return;
+
+    const hasRemoteMp4 = await remoteExists(project.previewMp4);
+    const hasRemoteWebm = await remoteExists(project.previewWebm);
+
+    if (!hasRemoteMp4 && !hasRemoteWebm) return; // keep local fallback
+
+    // Clear existing src and use <source> tags (webm first for quality)
+    const currentSrc = videoEl.getAttribute('src');
+    videoEl.removeAttribute('src');
+    videoEl.innerHTML = '';
+
+    if (hasRemoteWebm) {
+      const s = document.createElement('source');
+      s.src = project.previewWebm;
+      s.type = 'video/webm';
+      videoEl.appendChild(s);
+    }
+    if (hasRemoteMp4) {
+      const s = document.createElement('source');
+      s.src = project.previewMp4;
+      s.type = 'video/mp4';
+      videoEl.appendChild(s);
+    }
+    // Final fallback: original local source
+    if (currentSrc) {
+      const s = document.createElement('source');
+      s.src = currentSrc;
+      videoEl.appendChild(s);
+    }
+
+    videoEl.load();
+    const playPromise = videoEl.play();
+    if (playPromise && playPromise.catch) playPromise.catch(() => {});
+  }
+
+  // ─── Iframe Modal ─────────────────────────────────────────────────────────
+  let modalEl = null;
+  function ensureModal() {
+    if (modalEl) return modalEl;
+    modalEl = document.createElement('div');
+    modalEl.className = 'iframe-modal';
+    modalEl.innerHTML = `
+      <div class="iframe-modal-backdrop" data-close></div>
+      <div class="iframe-modal-inner">
+        <div class="iframe-modal-header">
+          <span class="iframe-modal-title"></span>
+          <div class="iframe-modal-actions">
+            <a class="iframe-modal-open" target="_blank" rel="noopener noreferrer" aria-label="Abrir en nueva pestaña">
+              <i class="fa fa-external-link"></i>
+            </a>
+            <button class="iframe-modal-close" data-close aria-label="Cerrar">×</button>
+          </div>
+        </div>
+        <div class="iframe-modal-body">
+          <iframe title="Project preview" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" loading="lazy"></iframe>
+          <div class="iframe-modal-fallback" hidden>
+            <p>Este sitio no permite embeberse en otra página.</p>
+            <a class="iframe-modal-fallback-btn" target="_blank" rel="noopener noreferrer">Abrir en nueva pestaña ↗</a>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modalEl);
+
+    // Close on backdrop / X button
+    modalEl.addEventListener('click', (e) => {
+      if (e.target.hasAttribute('data-close')) closeModal();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalEl.classList.contains('open')) closeModal();
+    });
+
+    return modalEl;
+  }
+
+  function openModal(project) {
+    const el = ensureModal();
+    const iframe = el.querySelector('iframe');
+    const title = el.querySelector('.iframe-modal-title');
+    const openLink = el.querySelector('.iframe-modal-open');
+    const fallback = el.querySelector('.iframe-modal-fallback');
+    const fallbackBtn = el.querySelector('.iframe-modal-fallback-btn');
+
+    title.textContent = project.name;
+    openLink.href = project.liveUrl;
+    fallbackBtn.href = project.liveUrl;
+    fallback.hidden = true;
+    iframe.hidden = false;
+
+    // Try to load iframe; if blocked by X-Frame-Options or CSP, show fallback.
+    // (onload fires even on blocked pages, so we check post-load with a small delay.)
+    iframe.onload = () => {
+      try {
+        // If cross-origin and blocked, accessing contentWindow.location throws.
+        // We can't reliably detect X-Frame-Options blocking, so trust the load event.
+      } catch (err) {
+        iframe.hidden = true;
+        fallback.hidden = false;
+      }
+    };
+
+    iframe.src = project.liveUrl;
+    el.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    if (!modalEl) return;
+    modalEl.classList.remove('open');
+    const iframe = modalEl.querySelector('iframe');
+    iframe.src = 'about:blank';
+    document.body.style.overflow = '';
+  }
+
+  // ─── Wire up ──────────────────────────────────────────────────────────────
+  async function init() {
+    let data;
+    try {
+      const res = await fetch(CONFIG_URL, { cache: 'no-store' });
+      if (!res.ok) throw new Error('projects.json not found');
+      data = await res.json();
+    } catch (err) {
+      console.warn('Project previews disabled:', err.message);
+      return;
+    }
+
+    // For every [data-project="key"] in the DOM, enhance its media
+    // and wire its interact button.
+    const hosts = document.querySelectorAll('[data-project]');
+    hosts.forEach((host) => {
+      const key = host.getAttribute('data-project');
+      const project = data.projects[key];
+      if (!project) return;
+
+      const video = host.querySelector('video');
+      if (video) enhanceVideo(video, project);
+
+      const interactBtn = host.querySelector('[data-interact]');
+      if (interactBtn) {
+        interactBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (project.embeddable) {
+            openModal(project);
+          } else {
+            window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+          }
+        });
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

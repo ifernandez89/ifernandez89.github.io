@@ -1,0 +1,55 @@
+name: Generate preview video
+
+on:
+  workflow_dispatch:         # manual run from Actions tab
+  schedule:
+    - cron: '0 4 * * 0'      # weekly, Sunday 04:00 UTC
+
+permissions:
+  contents: write            # allow the workflow to commit the preview
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Playwright
+        working-directory: ./scripts
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Record preview
+        working-directory: ./scripts
+        run: node record-preview.js
+
+      - name: Convert webm to mp4
+        run: |
+          ffmpeg -y -i preview.webm \
+            -c:v libx264 -preset medium -crf 28 \
+            -pix_fmt yuv420p -movflags +faststart \
+            -an preview.mp4
+
+      - name: Commit preview artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add preview.webm preview.mp4
+          if git diff --staged --quiet; then
+            echo "No changes to preview files."
+            exit 0
+          fi
+          git commit -m "chore: update auto-generated preview [skip ci]"
+          git push

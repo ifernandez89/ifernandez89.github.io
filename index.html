@@ -193,7 +193,7 @@
 </div>
 
 <!-- Archeoscope Section — Flagship Project -->
-<div class="w3-row w3-padding-64 w3-card-2" id="archeoscope" style="background: linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 50%, #0a192f 100%); border-top: 2px solid #1a3a5c;">
+<div class="w3-row w3-padding-64 w3-card-2" id="archeoscope" data-project="archeoscope" style="background: linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 50%, #0a192f 100%); border-top: 2px solid #1a3a5c;">
   <div class="w3-col m6 w3-center" style="padding: 20px 0;">
     <span class="w3-tag tag-text" style="background:#1a3a5c; color:#7eb8d4; border-radius:20px; letter-spacing:2px; padding:5px 16px; margin-bottom:16px; display:inline-block;">✦ FLAGSHIP ECOSYSTEM · MOBILE APP</span>
     <br><br>
@@ -232,6 +232,9 @@
            style="background:#1a3a5c; color:#7eb8d4; border-radius:6px; padding:10px 20px; letter-spacing:1px; border: 1px solid #2a5a8c;">
           🚀 Ver App Mobile ↗
         </a>
+        <button type="button" data-interact class="btn-interact btn-interact-dark" aria-label="Abrir preview interactivo de Archeoscope">
+          🎬 Live preview
+        </button>
         <a href="https://github.com/ifernandez89/ArcheoScope" target="_blank" rel="noopener noreferrer"
            class="w3-button tag-text"
            style="background:transparent; color:#7eb8d4; border-radius:6px; padding:10px 20px; letter-spacing:1px; border: 1px solid #2a5a8c;">
@@ -347,24 +350,30 @@
     <p class="works-subgroup-label">▸ Web projects</p>
     <h3 class="works-subgroup-title">Proyectos independientes</h3>
     <div class="works-grid">
-      <div class="work-card">
+      <div class="work-card" data-project="oxlahun">
         <div class="work-card-media">
-          <video onloadstart="this.muted=true" autoplay loop playsinline src="videos/OC.mp4"></video>
+          <video onloadstart="this.muted=true" autoplay loop playsinline muted src="videos/OC.mp4"></video>
         </div>
         <div class="work-card-body">
           <h3 class="work-card-title">Oxlahun Cauac</h3>
           <p class="work-card-desc">Tormenta Cósmica Azul es una página de contacto e informativa holistica, para compartir pensamientos, filosofias y curiosidades del mundo de las energías!</p>
-          <a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/" class="work-card-link" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="button" data-interact class="btn-interact" aria-label="Abrir preview interactivo de Oxlahun Cauac">🎬 Live preview</button>
+            <a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/" class="work-card-link" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+          </div>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card" data-project="pillow">
         <div class="work-card-media">
-          <video onloadstart="this.muted=true" autoplay loop playsinline src="videos/pillow.mp4"></video>
+          <video onloadstart="this.muted=true" autoplay loop playsinline muted src="videos/pillow.mp4"></video>
         </div>
         <div class="work-card-body">
           <h3 class="work-card-title">Pillow</h3>
           <p class="work-card-desc">Por un mejor sueño y descanso. La mejor solución ergonomica para tu cabeza, espalda y cuerpo. Desde hace 5 años construimos productos de excelencia!</p>
-          <a href="https://ifernandezdesign.github.io/pillow/" class="work-card-link" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="button" data-interact class="btn-interact" aria-label="Abrir preview interactivo de Pillow">🎬 Live preview</button>
+            <a href="https://ifernandezdesign.github.io/pillow/" class="work-card-link" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+          </div>
         </div>
       </div>
       <div class="work-card">
