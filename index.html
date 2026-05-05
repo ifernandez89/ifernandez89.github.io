@@ -1,26 +1,47 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>CURRÍCULUM PORTFOLIO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ignacio Fernández — Full Stack Developer</title>
+  <meta name="description" content="Portfolio de Ignacio Fernández, Full Stack Developer especializado en simulación astronómica, experiencias 3D interactivas y sistemas web. Creador de Archeoscope.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Ignacio Fernández — Full Stack Developer">
+  <meta property="og:description" content="Full Stack Developer especializado en simulación astronómica, Three.js, WebGL y experiencias interactivas. Creador de Archeoscope.">
+  <meta property="og:image" content="fotos/archeoscope_app_mobile.png">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" type="text/css" href="d3.parcoords.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Inconsolata" />
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Monserrat" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ignacio Fernández",
+    "jobTitle": "Full Stack Developer",
+    "url": "https://ifernandez89.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/ignacio-fernández-b88631184",
+      "https://github.com/ifernandez89"
+    ],
+    "knowsAbout": ["Three.js", "WebGL", "React", "Next.js", "Astronomical Simulation", "NestJS"]
+  }
+  </script>
 </head>
 <body id="myPage">
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar" style="z-index: 1;">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white"
-        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-male w3-margin-right" style="color: black;"></i></a>
+        href="javascript:void(0);" onclick="openNav()" aria-label="Abrir menú de navegación"><i class="fa fa-bars" aria-hidden="true"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large" aria-label="Inicio"><i class="fa fa-male w3-margin-right" style="color: black;" aria-hidden="true"></i></a>
       <div class="w3-dropdown-hover w3-hide-small">
         <a href="#designer" class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large" style="color: black;"> Designer <i class="fa fa-caret-down"></i></a>
         <br><br>
@@ -33,10 +54,10 @@
         <a href="#works" class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large" style="color: black;">Works <i class="fa fa-caret-down"></i></a>
         <br><br>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
-          <a href="https://github.com/ifernandez89/Sigap.git" class="w3-bar-item w3-button">S.I.G.A.P</a>
+          <a href="#archeoscope" class="w3-bar-item w3-button">Archeoscope</a>
           <a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/" class="w3-bar-item w3-button">Oxlahun Cauac</a>
           <a href="https://ifernandezdesign.github.io/pillow/" class="w3-bar-item w3-button">Pillow</a>
-          <a href="http://ergonomic.infinityfreeapp.com/?i=1#" class="w3-bar-item w3-button">Ergonomic</a>
+          <a href="https://ergonomic.infinityfreeapp.com/?i=1#" class="w3-bar-item w3-button">Ergonomic</a>
         </div>
       </div>
       <a href="#contact" onclick="document.getElementById('contact').style.display='block'" class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large" style="color: black;">Contact</a>
@@ -51,34 +72,19 @@
   </div>
  <!-- Header -->
 <header class="w3-display-container w3-content w3-wide header " style="max-width:2000px;" id="home">
-  <img class="w3-image" src="fotos/mmirrored1.png">
+  <img class="w3-image" src="fotos/mmirrored1.png" alt="Portfolio de Ignacio Fernández">
   <div class="w3-display-middle w3-center">
     <h1 class="w3-text-white"><span class="w3-padding w3-black w3-opacity-min text2"><b><i style="font-size: 100%;">I</i></b></span><span class="w3-hide-small w3-text-light-grey text1" style="font-size: 90%;">Fernández</span></h1>
+    <p class="w3-hide-small w3-text-light-grey text1" style="font-size:62%; letter-spacing:2px; margin-top:10px; text-shadow:1px 1px 6px rgba(0,0,0,0.8);">Full Stack Developer · 3D &amp; Astronomical Simulations · Interactive Experiences</p>
   </div>
 </header>
-  <!-- Modal -->
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-4 w3-animate-top text3">
-      <header class="w3-container w3-teal w3-display-container">
-        <span onclick="document.getElementById('id01').style.display='none'"
-          class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
-        <h4>Oh snap! We just showed you a modal..</h4>
-        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-      </header>
-      <div class="w3-container">
-        <p>Cool huh? Ok, enough teasing around..</p>
-      </div>
-      <footer class="w3-container w3-teal">
-        <p>Modal footer</p>
-      </footer>
-    </div>
-  </div>
+  <!-- Modal eliminado (era placeholder de demo) -->
  <!-- Designer Container -->
   <div class="w3-row w3-padding-64 position text1 w3-card-2" id="designer" style="background-size:cover;background-image: url(fotos/mmirrored2.png);opacity: 1;">
   <div class="w3-col m6">
     <section class="">
       <div class="">
-        <a href=""><img src="fotos/ig.jpg" class="w3-white with w3-opacity center w3-image" ></a>
+        <img src="fotos/ig.jpg" class="w3-white with w3-opacity center w3-image" alt="Ignacio Fernández">
       </div>
     </section>
   </div>
@@ -88,18 +94,18 @@
     <div class="w3-hide-large w3-hide-medium">
       <h2 class="w3-wide text4 w3-center">Ignacio Fernández</h2>
     <br>
-    <p class="text5 w3-opacity w3-center w3-text-light-grey"><i>Hi! i'm a back & front-end developer.</i></p>
+    <p class="text5 w3-opacity w3-center w3-text-light-grey"><i>Full Stack Developer — 3D, Simulations &amp; Interactive Experiences</i></p>
     <br>
-    <p class="text5 w3-opacity w3-center w3-text-light-grey">C# - Java - Html - Css - Javascript - React - Sql</p>
+    <p class="text5 w3-opacity w3-center w3-text-light-grey">Next.js · React Three Fiber · Three.js · NestJS · WebGL · PWA</p>
   <br>
     </div>
 <!-- Large medium screens -->
 <div class="w3-hide-small">
     <h2 class="w3-wide text4 w3-justify w3-text-grey">Ignacio Fernández</h2>
     <br>
-    <p class="text5 w3-opacity w3-justify w3-text-light-grey"><i>Hi! i'm a back & front-end developer.</i></p>
+    <p class="text5 w3-opacity w3-justify w3-text-light-grey"><i>Full Stack Developer — 3D, Simulations &amp; Interactive Experiences</i></p>
     <br>
-    <p class="text5 w3-opacity w3-justify w3-text-light-grey">C# - Java - Html - Css - Javascript - React - Sql</p>
+    <p class="text5 w3-opacity w3-justify w3-text-light-grey">Next.js · React Three Fiber · Three.js · NestJS · WebGL · PWA</p>
   <br>
 </div>
   <p class="text5 w3-justify"><span class="w3-padding w3-black w3-opacity-min text2" style="font-size: 100%;">Técnico Universitario en Programación  (UTN Paraná - Entre Ríos)</span></p><br>
@@ -108,85 +114,118 @@
 <br>
 <hr>
 <br>
+<!-- Stack técnico -->
+<div class="w3-container" style="margin-bottom:16px;">
+  <p class="text5 w3-opacity" style="font-size:105%; margin-bottom:10px; letter-spacing:1px;">Stack</p>
+  <div style="display:flex; flex-wrap:wrap; gap:6px;">
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">Next.js</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">React</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">Three.js</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">React Three Fiber</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">WebGL</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">NestJS</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">REST APIs</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">Web Audio API</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">PWA</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">Java</span>
+    <span class="w3-tag w3-dark-grey text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">SQL</span>
+  </div>
+</div>
+<!-- Especialidad -->
+<div class="w3-container" style="margin-bottom:16px;">
+  <p class="text5 w3-opacity" style="font-size:105%; margin-bottom:10px; letter-spacing:1px;">Especialización</p>
+  <div style="display:flex; flex-wrap:wrap; gap:6px;">
+    <span class="w3-tag w3-theme-d2 text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">Simulación astronómica</span>
+    <span class="w3-tag w3-theme-d2 text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">Arqueoastronomía</span>
+    <span class="w3-tag w3-theme-d2 text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">Calendarios ancestrales</span>
+    <span class="w3-tag w3-theme-d2 text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">Experiencias 3D inmersivas</span>
+    <span class="w3-tag w3-theme-d2 text1" style="border-radius:4px; font-size:82%; padding:4px 10px;">Visualización en tiempo real</span>
+  </div>
+</div>
 <div class="w3-hide-large w3-hide-medium w3-container">
-<i style="font-size: 115%;"><p class="text5" style="text-align: center;">"I specialize in developing both back-end and front-end components.</p>
-  <p class="w3-large text5" style="text-align: center;">Focusing on crafting websites that are not only visually striking but also highly intuitive for users. </p>
-  <p class="w3-large text5" style="text-align: center;">My approach emphasizes creating seamless user experiences through thoughtful design and functionality."</p></i>
+  <p class="text5" style="text-align: center; font-size:115%; font-style:italic;">"Construyo experiencias que integran tecnología, ciencia y cultura<br>
+  a través de simulaciones interactivas y visualización en tiempo real."</p>
 <br>
 </div>
 <div class="w3-hide-small w3-container">
-<i style="font-size: 115%;"><p class="text5 w3-justify" style="text-align: center;">"I specialize in developing both back-end and front-end components.</p>
-  <p class="w3-large text5 w3-justify" style="text-align: center;">Focusing on crafting websites that are not only visually striking but also highly intuitive for users. </p>
-  <p class="w3-large text5 w3-justify" style="text-align: center;">My approach emphasizes creating seamless user experiences through thoughtful design and functionality."</p></i>
+  <p class="text5 w3-justify" style="text-align: center; font-size:115%; font-style:italic;">"Construyo experiencias que integran tecnología, ciencia y cultura<br>
+  a través de simulaciones interactivas y visualización en tiempo real."</p>
   <br>
 </div>
 </div>
 </div>
-<!--Practica Profesional-->
-<div class="w3-row w3-padding-64 w3-card-2" id="designer" id="works">
-    <div class="w3-col m6">
-    <div class="ContainerCenter">
-      <!-- Radio Seleccionar -->
-      <input type="radio" name="Carrusel" id="Slider1" checked>
-      <input type="radio" name="Carrusel" id="Slider2">
-      <input type="radio" name="Carrusel" id="Slider3">
-      <input type="radio" name="Carrusel" id="Slider4">
-      <div class="Carrusels tam" style="border-radius: 20px;">
-        <!-- Imagen contenido -->
-        <div class="Carrusel w3-border" style="background-image: url(fotos/sigapimg.png);"></div>
-        <div class="Carrusel w3-border" style="background-image: url(fotos/sigapimg3.png);"></div>
-        <div class="Carrusel w3-border" style="background-image: url(fotos/csap.jpeg);"></div> 
-        <div class="Carrusel w3-border" style="background-image: url(fotos/1qgis.png);"></div> 
-        <!-- Flechas a la izquierda por cada imagen -->
-        <label for="Slider4" class="ArrowLeft Arrow1 w3-hover-text-green" style="font-size: 150%;"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-        <label for="Slider1" class="ArrowLeft Arrow2 w3-hover-text-green" style="font-size: 150%;"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-        <label for="Slider2" class="ArrowLeft Arrow3 w3-hover-text-green" style="font-size: 150%;"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-        <label for="Slider3" class="ArrowLeft Arrow4 w3-hover-text-green" style="font-size: 150%;"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></label>
-        <!-- Flechas a la derecha por cada imagen -->
-        <label for="Slider2" class="ArrowRight Arrow1 w3-hover-text-green" style="font-size: 150%;"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label> 
-        <label for="Slider3" class="ArrowRight Arrow2 w3-hover-text-green" style="font-size: 150%;"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
-        <label for="Slider4" class="ArrowRight Arrow3 w3-hover-text-green" style="font-size: 150%;"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label>
-        <label for="Slider1" class="ArrowRight Arrow4 w3-hover-text-green" style="font-size: 150%;"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></label> 
+<!-- Archeoscope Section — Flagship Project -->
+<div class="w3-row w3-padding-64 w3-card-2" id="archeoscope" style="background: linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 50%, #0a192f 100%); border-top: 2px solid #1a3a5c;">
+  <div class="w3-col m6 w3-center" style="padding: 20px 0;">
+    <span class="w3-tag text1" style="background:#1a3a5c; color:#7eb8d4; border-radius:20px; font-size:78%; letter-spacing:2px; padding:5px 16px; margin-bottom:16px; display:inline-block;">✦ FLAGSHIP PROJECT</span>
+    <br><br>
+    <img src="fotos/archeoscope_app_mobile.png" alt="Archeoscope App" style="max-width:300px; width:85%; border-radius:24px; box-shadow: 0 12px 48px rgba(0,100,180,0.35), 0 0 80px rgba(0,60,120,0.2);">
+  </div>
+  <div class="w3-col m6">
+    <div class="w3-container" style="padding-top:20px;">
+      <h3 class="text4 w3-text-white" style="letter-spacing:3px; font-size:160%;">🌌 Archeoscope</h3>
+      <p class="text5" style="color:#7eb8d4; font-size:105%; margin-bottom:16px;"><i>Explorador del cielo y el tiempo</i></p>
+      <p class="w3-large text1 w3-text-light-grey" style="margin-bottom:20px; line-height:1.6;">Aplicación móvil que combina <strong>astronomía real, astrología y calendarios ancestrales</strong> en una interfaz simple e inmersiva. Motor de cálculo astronómico propio, datos en tiempo real.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 16px; margin-bottom:22px;">
+        <p class="text1 w3-text-light-grey" style="font-size:90%;"><span>🌍</span> <strong>Hoy</strong> — cielo en tiempo real</p>
+        <p class="text1 w3-text-light-grey" style="font-size:90%;"><span>✨</span> <strong>Constelaciones</strong> — cielo nocturno</p>
+        <p class="text1 w3-text-light-grey" style="font-size:90%;"><span>🪐</span> <strong>Astrología</strong> — posiciones y aspectos</p>
+        <p class="text1 w3-text-light-grey" style="font-size:90%;"><span>📅</span> <strong>Calendarios</strong> — Maya, Babilónico, Tzolk'in</p>
+        <p class="text1 w3-text-light-grey" style="font-size:90%;"><span>🌦️</span> <strong>Clima</strong> — fases lunares y entorno</p>
+        <p class="text1 w3-text-light-grey" style="font-size:90%;"><span>🖥️</span> <strong>PC</strong> — versión desktop en desarrollo</p>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:24px;">
+        <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:78%; padding:4px 10px;">React Native</span>
+        <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:78%; padding:4px 10px;">Three.js</span>
+        <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:78%; padding:4px 10px;">Astronomical Engine</span>
+        <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:78%; padding:4px 10px;">Web Audio API</span>
+        <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:4px; font-size:78%; padding:4px 10px;">PWA</span>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="https://ifernandez89.github.io/ArcheoScope/" target="_blank" rel="noopener noreferrer"
+           class="w3-button text1"
+           style="background:#1a3a5c; color:#7eb8d4; border-radius:6px; padding:10px 20px; font-size:90%; letter-spacing:1px; border: 1px solid #2a5a8c;">
+          🚀 Ver App Mobile ↗
+        </a>
+        <a href="https://github.com/ifernandez89/ArcheoScope" target="_blank" rel="noopener noreferrer"
+           class="w3-button text1"
+           style="background:transparent; color:#7eb8d4; border-radius:6px; padding:10px 20px; font-size:90%; letter-spacing:1px; border: 1px solid #2a5a8c;">
+          <i class="fa fa-github"></i> GitHub ↗
+        </a>
       </div>
     </div>
+  </div>
 </div>
-  <div class="w3-col m6">
-    <div class="w3-container">
-      <h3 class="text4 ">S.I.G.A.P</h3>
-      <p class="w3-large"><a class="text4">Utilizando el Sistema de 
-        Información Geográfica Qgis! <img src="fotos/qgis-logo.jpg " alt="Qgis" width="25px" height="25px" style="margin-top: -1.5%;">, se compartió la base de datos con Postgis y Postgres, unificando todo en un Sistema Integral de Alumbrado Público, desarrollado con: Java-Html-Css-Javascript. Este proyecto para relevar puntos de tableros de comando y luminarias de toda la ciudad de Paraná en un plano georeferenciado, se potencia al usarse en conjunto con SIGAP &#128516;, donde se pueden realizar estadísticas, relacionar facturas de consumo eléctrico, correcciones de factor de potencia, ver gráficos con información de progreso en tecnología led en la ciudad, generación de informes, etc.
-        </a></p><br>
-        <button class="w3-button w3-black w3-padding-large w3-hover-opacity-on"><a href="https://github.com/ifernandez89/Sigap.git">Más</a></button>
-      </div>
-      <br><br>
-      <div class="w3-container">
-      <p class="text5 w3-opacity w3-justify" style="font-size: 115%;">Otras Herramientas:</p></div>
-        <a class="w3-button" href=""><i class=""><img src="fotos/postgresql-svgrepo-com.svg" alt="PostgreSql" width="25px" height="25px"></i></a>
-        <a class="w3-button" href=""><i class=""><img src="fotos/tomcat-svgrepo-com.svg" alt="Apache Tomcat" width="25px" height="25px"></i></a>
-        <a class="w3-button" href=""><i class=""><img src="fotos/eclipse-icon-svgrepo-com.svg " alt="Eclipse" width="25px" height="25px"></i></a>
-        <a class="w3-button" href=""><i class=""><img src="fotos/visual-studio-code-svgrepo-com.svg" alt="VSCode" width="25px" height="25px"></i></a>
-        <a class="w3-button" href=""><i class=""><img src="fotos/java-svgrepo-com.svg" alt="Java" width="25px" height="25px"></i></a>
-        <a class="w3-button" href=""><i class=""><img src="fotos/cad.jpg" width="25px" height="25px" alt="Autocad"></i></a>
-        <a class="w3-button" href=""><i class=""><img src="fotos/photoshop-cc-logo-svgrepo-com.svg " alt="Photoshop" width="25px" height="25px"></i></a>
-        <a class="w3-button" href=""><i class=""><img src="fotos/corel-draw-svgrepo-com.svg " alt="Corel Draw" width="25px" height="25px"></i></a>
-        <a class="w3-button" href=""><i class=""><img src="fotos/Microsoft-Office-2023.png " alt="Corel Draw" width="25px" height="25px"></i></a>
-        <a class="w3-button" href=""><i class=""><img src="fotos/figma.png" alt="Figma" width="25px" height="25px"></i></a>
-      </div>
-</div> 
-<!--Fin Practica Profesional-->
+<!-- Fin Archeoscope Section -->
+
+<!-- Archeoscope PC / Game — Coming Soon -->
+<div class="w3-row w3-padding-32 w3-card-2" id="archeoscope-pc" style="background: linear-gradient(135deg, #080810 0%, #0a0f1a 100%); border-top: 1px solid #1a3a5c;">
+  <div class="w3-container w3-center" style="padding: 32px 20px;">
+    <span class="w3-tag text1" style="background:#0d2137; color:#7eb8d4; border-radius:20px; font-size:75%; letter-spacing:2px; padding:4px 14px; margin-bottom:14px; display:inline-block;">🎮 ARCHEOSCOPE — PC / DESKTOP</span>
+    <br><br>
+    <h3 class="text4 w3-text-white" style="letter-spacing:2px; font-size:130%;">Versión Desktop · En desarrollo</h3>
+    <p class="text1 w3-text-light-grey" style="font-size:90%; margin: 12px auto; max-width:600px; line-height:1.6;">Experiencia inmersiva de escritorio — simulación 3D del cielo, exploración interactiva y mecánicas de juego basadas en astronomía real. Video promocional próximamente.</p>
+    <a href="https://ifernandez89.github.io/ArcheoScope/" target="_blank" rel="noopener noreferrer"
+       class="w3-button text1"
+       style="background:#1a3a5c; color:#7eb8d4; border-radius:6px; padding:10px 22px; font-size:88%; letter-spacing:1px; border: 1px solid #2a5a8c; margin-top:8px;">
+      🌐 Ir al sitio ↗
+    </a>
+  </div>
+</div>
+<!-- Fin Archeoscope PC -->
 <!-- Project Section -->
 <div class="w3-row w3-row-padding w3-padding-64 section" id="works">
-    <div class="w3-quarter w3-center " id="sigap">
-      <div class="w3-card w3-padding-large w3-theme-l4" style="border-radius: 10px;">
-        <video onloadstart="this.muted=true" autoplay loop
-				src="videos/Sigap.mp4" width="100%";></video>
-        <div class="w3-container ">
-          <h3 class="text5">S.I.G.A.P</h3>
-          <button class="w3-button w3-black w3-padding-large w3-hover-opacity-on"><a href="https://github.com/ifernandez89/Sigap.git">Más</a></button>
+    <div class="w3-quarter w3-center" id="sigap-card">
+      <div class="w3-card w3-padding-large w3-theme-l4" style="border-radius: 10px; opacity: 0.88;">
+        <img src="fotos/sigapimg.png" alt="SIGAP" style="width:100%; border-radius:8px; object-fit:cover; max-height:200px;">
+        <div class="w3-container">
+          <h3 class="text5" style="font-size:95%;">S.I.G.A.P</h3>
+          <p class="text1" style="font-size:85%; color:#555; margin-bottom:8px;">Municipalidad de Paraná · Servicios Públicos</p>
+          <p class="text1" style="font-size:82%;">Sistema integral de gestión de alumbrado público. Georeferenciación, estadísticas de consumo eléctrico y seguimiento de luminarias. Java · SQL · QGIS · PostGIS.</p>
           <br>
-          <br>
-          <p class="text1">Sistema integral de gestión para la Municipalidad de Paraná, facturas, registros, ordenes e
-            informes, y tambien, analisis, estadisticas. Desarrollado con Java y SQL</p>
+          <a href="https://github.com/ifernandez89/Sigap.git" class="w3-text-grey" style="font-size:80%; text-decoration:underline;">ver en GitHub ↗</a>
         </div>
       </div>
     </div>
@@ -196,7 +235,7 @@
 				src="videos/OC.mp4" width="100%";></video>
         <div class="w3-container ">
           <h3 class="text5">Oxlahun Cauac</h3>
-          <button class="w3-button w3-black w3-padding-large w3-hover-opacity-on"><a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/" >Más</a></button>
+          <a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/" class="w3-button w3-black w3-padding-large w3-hover-opacity-on">Más</a>
           <br>
           <br>
           <p class="text1">Tormenta Cósmica Azul es una página de contacto e informativa holistica, para compartir pensamientos, filosofias y curiosidades del mundo de las energías!</p>
@@ -209,7 +248,7 @@
 				src="videos/pillow.mp4" width="100%";></video>
         <div class="w3-container">
           <h3 class="text5">Pillow</h3>
-          <button class="w3-button w3-black w3-padding-large w3-hover-opacity-on"><a href="https://ifernandezdesign.github.io/pillow/">Más</a></button>
+          <a href="https://ifernandezdesign.github.io/pillow/" class="w3-button w3-black w3-padding-large w3-hover-opacity-on">Más</a>
           <br>
           <br>
           <p class="text1">Por un mejor sueño y descanso. La mejor solución ergonomica para tu cabeza, espalda y cuerpo.
@@ -223,7 +262,7 @@
 				src="videos/ergovideo.mp4" width="100%";></video>
         <div class="w3-container ">
           <h3 class="text2">Ergonomic</h3>
-          <button class="w3-button w3-black w3-padding-large w3-hover-opacity-on"><a href="http://ergonomic.infinityfreeapp.com/?i=1#">Más</a></button>
+          <a href="https://ergonomic.infinityfreeapp.com/?i=1#" class="w3-button w3-black w3-padding-large w3-hover-opacity-on">Más</a>
           <br>
           <br>
           <p class="text1">Soluciones y dirección estratégica, diseño creativo y desarrollo técnico para productos y
@@ -239,7 +278,7 @@
   <br>
   <div class="w3-col m4 w3-center" id="ifernandez">
     <div class="w3-card w3-padding-large w3-white item" style="border-radius: 10px;">
-      <img src="fotos/figma1.png" width="100%";>
+      <img src="fotos/figma1.png" width="100%" alt="Diseño Figma — Ifernández portfolio">
       <div class="w3-container">
         <br>
         <h3 class="text4" style="font-style: italic;letter-spacing: 3px;">Ifernández</h3>
@@ -248,7 +287,7 @@
   </div>
   <div class="w3-col m4 w3-center" id="pillow">
     <div class="w3-card w3-padding-large w3-white item" style="border-radius: 10px;">
-      <img src="fotos/figma3.png" width="100%";>
+      <img src="fotos/figma3.png" width="100%" alt="Diseño Figma — BlueCosmicStorm">
       <div class="w3-container">
         <br>
         <h3 class="text4" style="font-style: italic;letter-spacing: 3px;">BlueCosmicStorm</h3>
@@ -257,7 +296,7 @@
   </div> 
   <div class="w3-col m4 w3-center" id="bluecosmicstorm">
     <div class="w3-card w3-padding-large w3-white item" style="border-radius: 10px;">
-      <img src="fotos/figma2.png" width="100%";>
+      <img src="fotos/figma2.png" width="100%" alt="Diseño Figma — Pillow">
       <div class="w3-container">
         <br>
         <h3 class="text4" style="font-style: italic;letter-spacing:3px;">Pillow</h3>
@@ -273,7 +312,7 @@
       <p class="w3-large"> <span class="w3-tag w3-light-grey"></span> </p>
       <p class="w3-large w3-text-grey w3-hide-medium"><a class="text4">Pixels and code lead your journey in design. Captivated by the interplay of colors, shapes come alive on the digital canvas. Seamlessly blending functionality and beauty, crafting an immersive digital experience.</a></p>
       <br>
-      <button class="w3-black w3-padding-large w3-hover-opacity-on"><a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/">Descubre Más</a></button>
+      <a href="https://tormentacosmicaazul.github.io/BlueCosmicStorm/" class="w3-button w3-black w3-padding-large w3-hover-opacity-on">Descubre Más</a>
     </div>    
     <div class="w3-col m6"><br>
        <p>Hypercube Edges in Orthogonal Projection</p>
@@ -288,7 +327,7 @@
               <input type="checkbox" name="rotate_xy" disabled class="w3-opacity-max">
               <input type="checkbox" name="rotate_zw" disabled class="w3-opacity-max">
             </form>
-            <canvas id="hypercube-canvas" class="hand" width="300" height="300" onclick="miFuncionStart()"></canvas>
+            <canvas id="hypercube-canvas" class="hand" width="300" height="300" onclick="miFuncionStart()" aria-label="Hipercubo interactivo en proyección ortogonal — hacer clic para pausar/reanudar" role="img"></canvas>
           <div id="parcoords" class="parcoords mov" style="width:0px;height:0px;margin: 0px 0px;"></div>     
           <p class="w3-large w3-text-grey"><a class="text4">Hypercubes are mathematical figures that exist in dimensions greater than what we can visualize. The tesseract, a 4-dimensional hypercube, is a fascinating example of how we can imagine and extend our geometric understanding beyond three-dimensional space.
           </a></p><hr>
@@ -307,10 +346,22 @@
       <p>Stop by and check out what you need.</p>
       <br>
       <form action="https://formsubmit.co/nacho.xiphos@gmail.com" method="post" target="_blank">
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="email"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p>
+          <label for="contact-name" class="w3-text-grey" style="font-size:90%; display:block; margin-bottom:4px;">Name</label>
+          <input id="contact-name" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Your name" required name="Name">
+        </p>
+        <p>
+          <label for="contact-email" class="w3-text-grey" style="font-size:90%; display:block; margin-bottom:4px;">Email</label>
+          <input id="contact-email" class="w3-input w3-padding-16 w3-border" type="email" placeholder="your@email.com" required name="email">
+        </p>
+        <p>
+          <label for="contact-date" class="w3-text-grey" style="font-size:90%; display:block; margin-bottom:4px;">Date and time</label>
+          <input id="contact-date" class="w3-input w3-padding-16 w3-border" type="datetime-local" required name="date">
+        </p>
+        <p>
+          <label for="contact-message" class="w3-text-grey" style="font-size:90%; display:block; margin-bottom:4px;">Message</label>
+          <input id="contact-message" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Your message" required name="Message">
+        </p>
         <br>
         <button class="w3-button w3-black" type="submit">SEND</button>
         <br>
@@ -322,14 +373,13 @@
     <!-- Footer -->
     <footer class="w3-text-grey w3-xlarge w3-row w3-padding-64 color4">
       <div class="w3-col m6 w3-right w3-opacity-min">
-        <a class="w3-button w3-right" href="#"><i class="fa fa-chevron-circle-up"></i></a>
+        <a class="w3-button w3-right" href="#" aria-label="Volver al inicio"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
       </div>
     <div class="w3-col m2 text-grey">
 
-        <a class="w3-button w3-text-grey " style="margin-left: 10px ;" href="https://www.linkedin.com/in/ignacio-fernández-b88631184"><i class="fa fa-linkedin"></i></a>
-        <a class="w3-button w3-text-grey" href="https://ifernandez89.github.io/"><i class="fa fa-github"></i></a><br><br>
+        <a class="w3-button w3-text-grey " style="margin-left: 10px ;" href="https://www.linkedin.com/in/ignacio-fernández-b88631184" aria-label="LinkedIn de Ignacio Fernández"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a class="w3-button w3-text-grey" href="https://ifernandez89.github.io/" aria-label="GitHub de Ignacio Fernández"><i class="fa fa-github" aria-hidden="true"></i></a><br><br>
 
-      <p class="w3-medium w3-hover-text-green footer-heading" style="color: #7a7a7a;"><a href="Mi_CV.pdf" download="Mi_CV.pdf">Descargar mi CV (PDF)</a></p><br>
       <h6 class="w3-hover-text-green footer-link" style="color: #7a7a7a;"><i class="fa fa-map-marker"></i>  Paraná, Entre Rios.</h6><br>
       <h6 class="w3-hover-text-green footer-link" style="color: #7a7a7a;"><i class="fa fa-whatsapp"></i> 3434704479</h6><br>
       <h6 class="w3-hover-text-green footer-link" style="color: #7a7a7a;"><i class="fa fa-envelope-o"></i>  nacho.xiphos@gmail.com</h6><br>
