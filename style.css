@@ -47,6 +47,19 @@ section {
   line-height: 1.6em;
 }
 
+/* Reset for full-width custom sections */
+.ai-section,
+.works-section,
+.figma-section,
+.contact-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  box-sizing: border-box;
+}
+
 .position {
   z-index: 1;
 }

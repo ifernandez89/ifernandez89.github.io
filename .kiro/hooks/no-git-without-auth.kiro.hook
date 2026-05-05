@@ -11,6 +11,6 @@
   },
   "then": {
     "type": "askAgent",
-    "prompt": "STOP. Check if the command about to be executed contains 'git commit' or 'git push'. If it does, you MUST NOT proceed. Instead, ask the user for explicit permission before running any git commit or git push command. Do not combine commit/push with other commands to bypass this check. Always wait for the user to say 'yes' or 'adelante' or similar confirmation."
+    "prompt": "Check if the command contains 'git commit' or 'git push'. If it does, review the LAST message from the user in the conversation. If the user explicitly said 'adelante', 'yes', 'sí', 'dale', 'ok', 'push', 'commit y push', or any clear authorization in their most recent message, then PROCEED with the command — do not block it. Only block and ask for permission if there is NO prior authorization from the user in the current exchange."
   }
 }

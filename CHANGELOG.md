@@ -10,6 +10,7 @@
 - Reduced from 6 cards to 4 (Multi-modelo, Skills reutilizables, Validación humana, Control arquitectónico)
 - Removed redundant subtitle and insight block — integrated into main text column
 - Responsive: collapses to single column on mobile
+- **Fix**: added `width/max-width/margin !important` reset to prevent generic `section {}` rule from collapsing `.ai-section` width to 500px
 
 ### Fixes
 - Hero: "ENGINEER" → "DEVELOPER" (título técnico, no ingeniería)
