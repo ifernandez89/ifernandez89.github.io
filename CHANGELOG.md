@@ -1,5 +1,20 @@
 # Changelog
 
+## [2025-05-06] — Project descriptions rewrite + positioning
+
+### Works Descriptions
+- **SIGAP**: rewritten as technical system description (GIS + backend + spatial DB), removed "en producción" claim
+- **Pillow**: repositioned from product copy to UX case study ("prototipo de e-commerce con foco en UX, microinteracciones, drawer cart, feedback en tiempo real")
+- **Oxlahun Cauac**: rewritten as design project ("identidad visual propia, diseño responsive, animaciones CSS, narrativa visual coherente")
+
+### Archeoscope PC
+- Description rewritten to balance "juego + sistema": "experiencia lúdica construida sobre un sistema modular de interacción"
+
+### Hero
+- "Software Público" → "Open Source" (más alineado con el perfil)
+
+---
+
 ## [2025-05-05] — Layout fixes, AI horizontal, Works flattened
 
 ### Works Section
