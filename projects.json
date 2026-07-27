@@ -23,6 +23,11 @@
       "previewWebm": "https://tormentacosmicaazul.github.io/BlueCosmicStorm/preview.webm",
       "fallbackVideo": "videos/OC.mp4",
       "embeddable": true
+    },
+    "plantas": {
+      "name": "Plantas Medicinales",
+      "liveUrl": "https://ifernandez89.github.io/PlantasMedicinales/",
+      "embeddable": true
     }
   }
 }

@@ -1,5 +1,22 @@
 # Changelog
 
+## [2026-07-27 - Update] — Responsive Mobile, SEO & Plantas Project Upgrades
+
+### Mobile Responsive & Layout
+- **Scroll horizontal**: Se agregó `max-width: 100%; overflow-x: hidden;` a `html` y `body` en `style.css` para solucionar el scroll horizontal involuntario en dispositivos móviles.
+- **Diagrama de JarBees**: Se aplicó restricción de `width: 100%` y `max-width: 100%` en el contenedor `.diagram-terminal` y `.terminal-body` para forzar el scroll interno del diagrama y evitar el desborde del viewport en pantallas pequeñas.
+
+### Posicionamiento y SEO
+- **Identidad**: Actualización de todas las referencias de nombre de "Ignacio Fernández" a su nombre completo "**Ignacio Gabriel Fernández**" en `<title>`, `<h1>` principal, perfiles, esquemas JSON-LD y footer.
+- **Meta-descripción**: Actualizado el tag de descripción de SEO con: "Portfolio de Ignacio Gabriel Fernández, Técnico Universitario en Programación. Proyectos de IA, NestJS, JarBees y Archeoscope."
+- **Enlaces**: Integración de enlace directo al repositorio de **JarBees** en su sección de Flagship.
+
+### Ecosistema de Desarrollo
+- **Radar Dev**: Eliminado el proyecto del ecosistema por completo.
+- **Plantas**: Tarjeta rediseñada incorporando una galería interactiva con capturas del proyecto (`portfolio-home-desktop.png`, `portfolio-list-desktop.png` y `portfolio-detail-calendula-desktop.png`) y agregando links para "Live preview" (modal embebido mediante `projects.json`) y enlace al sitio público `https://ifernandez89.github.io/PlantasMedicinales/`.
+
+---
+
 ## [2026-07-27] — Reestructuración Narrativa y Posicionamiento como Arquitecto de Software
 
 ### JarBees (Nuevo Flagship Project)
