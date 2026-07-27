@@ -365,3 +365,17 @@ document.addEventListener('DOMContentLoaded', function() {
     init();
   }
 })();
+
+// Reusable gallery image switcher
+function setProjectImage(projectId, imagePath, thumbElement) {
+  const mainImg = document.getElementById(projectId + 'MainImage');
+  if (mainImg) {
+    mainImg.src = imagePath;
+  }
+  if (thumbElement && thumbElement.parentElement) {
+    const thumbs = thumbElement.parentElement.querySelectorAll('.thumb-img');
+    thumbs.forEach(thumb => thumb.classList.remove('active'));
+    thumbElement.classList.add('active');
+  }
+}
+

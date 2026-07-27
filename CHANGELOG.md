@@ -1,5 +1,31 @@
 # Changelog
 
+## [2026-07-27] — Reestructuración Narrativa y Posicionamiento como Arquitecto de Software
+
+### JarBees (Nuevo Flagship Project)
+- **Sección JarBees**: Agregado como proyecto principal con foco en su arquitectura cognitiva (QICA 2.0 y JarBees 3.0), destacando métricas (+60 fuentes, RAG híbrido, local-first) y un diagrama interactivo de consola.
+- **Galería**: Galería de fotos interactiva para alternar entre capturas de la interfaz.
+
+### Archeoscope (Flagship Project)
+- **Galería**: Añadido galería interactiva de fotos que complementa la imagen original con capturas del motor de cómputo celeste y astrológico.
+- **Logo**: Integración del logo oficial (`logo-archeoscope-main.png`) al lado del título del ecosistema ArcheoScope y en los menús de navegación (Navbar desplegable y menú móvil) en reemplazo del emoji `🌌`.
+- **PC Game**: Actualizado el estado del juego original de PC a '¡Listo! (Próximamente video de promoción)'.
+- **Copy**: Copy reescrito para destacar los aspectos de ingeniería astronómica y desarrollo asistido por IA de alta madurez.
+
+### Identidad & SEO (Hero y Meta Tags)
+- **Hero**: Tagline y subtexto actualizados con el rol de "Software Architect · AI Systems · Knowledge Engineering" y la frase de visión.
+- **Meta-tags**: Meta-etiquetas actualizadas (título, descripción, tags de Open Graph y Twitter) junto al esquema JSON-LD para reflejar la orientación arquitectónica.
+
+### Experiencia & Ecosistema (Ex-Works)
+- **Experiencia**: Creación de la sección independiente para S.I.G.A.P, destacando el impacto de la transformación digital de alumbrado público con bases de datos espaciales (PostGIS) y removiendo el badge de 'Producción activa' de la tarjeta.
+- **Ecosistema**: Creación de una sección para micro-sistemas, que agrupa Oxlahun Cauac y Pillow con dos nuevos proyectos de desarrollo: **Radar Dev** (telemetría de agentes) y **Plantas** (módulo documental para RAG local).
+
+### Componentes de UI & Navegación
+- **Estilos**: Estilos premium agregados en `style.css` para el diagrama de terminal, las tarjetas de métricas y las transiciones de las galerías interactivas de fotos.
+- **Galería de fotos**: Implementado una función genérica en `script.js` (`setProjectImage`) para cambiar imágenes de proyectos en caliente.
+
+---
+
 ## [2025-05-06] — Project descriptions rewrite + positioning
 
 ### Works Descriptions
