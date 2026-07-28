@@ -7,13 +7,19 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: #1a1a1a;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -708,72 +714,97 @@ video {
 /* ============================================================================================== */
 #home {
   position: relative;
+  overflow: hidden;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(6, 11, 22, 0.45) 0%, rgba(5, 8, 16, 0.75) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 #home .w3-display-middle {
   width: 100%;
   max-width: 900px;
   padding: 0 24px;
+  z-index: 2;
 }
 
 .hero-kicker {
   font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: 0.82rem;
+  font-weight: 600;
   letter-spacing: 3px;
-  color: #7eb8d4;
-  margin-bottom: 16px;
-  text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
+  color: #4FC3F7;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(79, 195, 247, 0.3);
 }
 
 .hero-title {
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: clamp(2rem, 6vw, 4.2rem);
-  color: #fff;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 6.5vw, 4.2rem);
+  color: #ffffff;
   letter-spacing: -1px;
   line-height: 1.05;
   margin-bottom: 18px;
-  text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.95);
 }
 
 .hero-tagline {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: clamp(0.95rem, 2.2vw, 1.35rem);
-  font-weight: 300;
-  color: #e6edf3;
-  margin-bottom: 12px;
+  font-size: clamp(1rem, 2.3vw, 1.4rem);
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 14px;
   line-height: 1.5;
-  text-shadow: 1px 1px 10px rgba(0,0,0,0.85);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
 }
 
 .hero-tagline strong {
-  color: #7eb8d4;
-  font-weight: 600;
+  color: #64B5F6;
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 0 16px rgba(100, 181, 246, 0.4);
 }
 
 .hero-sub {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: clamp(0.75rem, 1.4vw, 0.9rem);
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem) !important;
   font-weight: 400;
-  color: #a8b8c4;
-  letter-spacing: 1.5px;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.85);
+  color: #e2e8f0 !important;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+  background: rgba(8, 14, 26, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(100, 181, 246, 0.2);
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: inline-block;
 }
 
 @media (max-width: 600px) {
   .hero-kicker {
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     letter-spacing: 2px;
     margin-bottom: 10px;
   }
   .hero-tagline {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 0.98rem;
   }
   .hero-sub {
-    font-size: 0.72rem;
-    letter-spacing: 1px;
+    font-size: 0.8rem !important;
+    letter-spacing: 0px;
     line-height: 1.5;
+    padding: 10px 14px;
   }
 }
 
@@ -1428,60 +1459,115 @@ video {
 /* ============================================================================================== */
 @media (max-width: 768px) {
   /* JarBees — single column */
+  .jarbees-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
   .jarbees-row {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 24px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .jarbees-col-media {
     width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
     order: -1; /* Image above text on mobile */
+    box-sizing: border-box;
   }
 
-  /* Galleries — always full width on mobile */
+  .jarbees-col-text {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Galleries — clean phone scale on mobile */
   .jarbees-gallery,
   .archeoscope-gallery {
     max-width: 100%;
     width: 100%;
+    align-items: center;
   }
 
   .gallery-main-img {
-    max-width: 100%;
+    max-width: 280px;
     width: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 40, 80, 0.4);
   }
 
   .gallery-main-img img {
     width: 100%;
     height: auto;
-    max-height: 480px;
+    max-height: 380px;
     object-fit: contain;
-    object-position: center top;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .gallery-thumbs {
+    justify-content: center;
+    width: 100%;
   }
 
   /* Metrics grid */
   .jarbees-metrics {
     gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* Details/capabilities grid */
   .jarbees-details-grid {
     grid-template-columns: 1fr;
     gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* Architecture section */
   .jarbees-architecture-section {
     padding: 16px 12px;
     margin-top: 24px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   /* Diagram terminal */
   .diagram-terminal {
     max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .terminal-body {
-    padding: 14px 12px;
+    padding: 14px 10px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .terminal-body pre {
+    margin: 0;
+    max-width: 100%;
+    white-space: pre;
+    font-size: 0.7rem;
+    line-height: 1.45;
   }
 
   .terminal-body code {
@@ -1496,19 +1582,28 @@ video {
     grid-template-columns: 1fr !important;
   }
 
+  .gallery-main-img {
+    max-width: 240px;
+  }
+
+  .gallery-main-img img {
+    max-height: 340px;
+  }
+
   /* JarBees architecture font smaller */
-  .terminal-body code {
-    font-size: 0.65rem;
+  .terminal-body code,
+  .terminal-body pre {
+    font-size: 0.62rem;
   }
 
   /* Narrow padding for flagships container */
   .jarbees-architecture-section {
-    padding: 14px 10px;
+    padding: 12px 8px;
   }
 
   /* Hero overlay text safe on narrow screens */
   #home .w3-display-middle {
-    padding: 0 16px;
+    padding: 0 12px;
   }
 
   /* Footer text wrap on very small phones */
