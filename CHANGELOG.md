@@ -1,5 +1,24 @@
 # Changelog
 
+## [2026-07-28] — Fix Dimensiones Mobile + Revisión Técnica Completa
+
+### Fix: Imágenes/Videos en Cards Mobile
+- **Desktop**: `height: 240px` (antes 200px), `object-fit: cover` con recorte equilibrado
+- **Mobile (`≤480px`)**: `height: 200px`, **`object-fit: contain`** para mostrar imagen/video completo sin recortes verticales
+- **Correcciones CSS**: `object-position: center`, `display: block` (elimina espacio extra), `border-radius` en `.work-card-media`
+
+### Revisión Técnica & Accesibilidad (Fixes Críticos)
+- **HTML válido**: `<html lang="es">`, viewport con `initial-scale=1`, eliminado modal placeholder `id01`
+- **SEO**: Meta description, Open Graph tags (`og:title`, `og:description`, `og:image`), JSON-LD Person schema
+- **Accesibilidad**: 
+  - Todos los `<img>` con `alt` descriptivo (hero, perfil, figma)
+  - Íconos con `aria-label` + `aria-hidden="true"` (navbar, footer, canvas hypercube)
+  - Formulario con `<label>` explícitos vinculados por `id`/`for`, campo email `type="email"`
+  - `<button><a>` inválidos → convertidos a `<a class="w3-button">`
+  - Citas en `<i><p>` → `<p style="font-style:italic">` (HTML válido)
+- **Seguridad**: HTTP → HTTPS en links externos (ergonomic)
+- **Fuentes**: `//fonts.googleapis.com` → `https://` explícito
+
 ## [2026-07-27 - Update v3] — Auditoría Mobile UX/UI — Imágenes, Diagrama y Layout
 
 > Todos los cambios están **estrictamente acotados a breakpoints mobile** (`max-width: 768px` / `max-width: 480px`). El layout de escritorio **no fue modificado**.
