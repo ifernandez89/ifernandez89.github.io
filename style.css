@@ -49,6 +49,14 @@ section {
   line-height: 1.6em;
 }
 
+@media (max-width: 480px) {
+  section {
+    width: 100%;
+    padding: 16px;
+    max-width: 100%;
+  }
+}
+
 /* Reset for full-width custom sections */
 .ai-section,
 .works-section,
@@ -462,6 +470,8 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   justify-content: space-between;
   align-items: center;
 }
@@ -517,11 +527,16 @@ model-viewer:hover {
 .item img {
   max-width: 100%;
   transition: all 0.3s;
-  cursor: zoom-in;
 }
 
-.item:hover img {
-  transform: scale(1.2);
+/* Zoom effect only on devices with a mouse/pointer — avoids overflow on touch */
+@media (hover: hover) and (pointer: fine) {
+  .item img {
+    cursor: zoom-in;
+  }
+  .item:hover img {
+    transform: scale(1.12);
+  }
 }
 
 /* ============================================================================================== */
@@ -1148,6 +1163,12 @@ video {
   padding: 0 24px;
 }
 
+@media (max-width: 480px) {
+  .jarbees-container {
+    padding: 0 16px;
+  }
+}
+
 .jarbees-row {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -1223,12 +1244,16 @@ video {
   overflow: hidden;
   border: 1px solid rgba(42, 90, 140, 0.3);
   box-shadow: 0 12px 36px rgba(0, 40, 80, 0.3);
+  width: 100%;
 }
 
 .gallery-main-img img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  /* Disable inherited scale transform from .item:hover inside galleries */
+  transition: none;
 }
 
 .gallery-thumbs {
@@ -1363,11 +1388,13 @@ video {
   padding: 20px;
   max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .terminal-body pre {
   margin: 0;
   max-width: 100%;
+  white-space: pre;
 }
 
 .terminal-body code {
@@ -1375,6 +1402,7 @@ video {
   font-size: 0.84rem;
   color: #e0edf5;
   line-height: 1.6;
+  white-space: pre;
 }
 
 /* ============================================================================================== */
@@ -1395,24 +1423,97 @@ video {
   border-bottom: 1px solid #d4e2ee;
 }
 
-/* Responsive constraints for screens */
+/* ============================================================================================== */
+/* MOBILE RESPONSIVE — JarBees, Archeoscope, Galleries, Diagram */
+/* ============================================================================================== */
 @media (max-width: 768px) {
+  /* JarBees — single column */
   .jarbees-row {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 28px;
   }
-  
+
+  .jarbees-col-media {
+    width: 100%;
+    order: -1; /* Image above text on mobile */
+  }
+
+  /* Galleries — always full width on mobile */
+  .jarbees-gallery,
+  .archeoscope-gallery {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gallery-main-img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gallery-main-img img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  /* Metrics grid */
   .jarbees-metrics {
-    gap: 12px;
+    gap: 10px;
   }
-  
+
+  /* Details/capabilities grid */
   .jarbees-details-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 14px;
   }
-  
+
+  /* Architecture section */
   .jarbees-architecture-section {
-    padding: 20px 14px;
+    padding: 16px 12px;
+    margin-top: 24px;
+  }
+
+  /* Diagram terminal */
+  .diagram-terminal {
+    max-width: 100%;
+  }
+
+  .terminal-body {
+    padding: 14px 12px;
+  }
+
+  .terminal-body code {
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Archeoscope feature mini-grid — force single column */
+  .archeoscope-features-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* JarBees architecture font smaller */
+  .terminal-body code {
+    font-size: 0.65rem;
+  }
+
+  /* Narrow padding for flagships container */
+  .jarbees-architecture-section {
+    padding: 14px 10px;
+  }
+
+  /* Hero overlay text safe on narrow screens */
+  #home .w3-display-middle {
+    padding: 0 16px;
+  }
+
+  /* Footer text wrap on very small phones */
+  .footer-copy {
+    font-size: 0.75rem;
   }
 }
 

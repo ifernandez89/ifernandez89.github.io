@@ -1,5 +1,30 @@
 # Changelog
 
+## [2026-07-27 - Update v3] — Auditoría Mobile UX/UI — Imágenes, Diagrama y Layout
+
+> Todos los cambios están **estrictamente acotados a breakpoints mobile** (`max-width: 768px` / `max-width: 480px`). El layout de escritorio **no fue modificado**.
+
+### Galerías de imágenes (JarBees & Archeoscope)
+- **`.gallery-main-img`**: Añadido `width: 100%` y `object-fit: cover`; `transition: none` para evitar herencia del zoom `.item`.
+- **JarBees mobile**: En `≤768px` se forza `max-width: 100%; max-height: 480px; object-fit: contain; object-position: center top`.
+- **Archeoscope gallery**: Corregido `max-width: 320px` sin `width: 100%` → ahora `max-width: 340px; width: 100%`.
+- **`.jarbees-col-media`**: En mobile recibe `order: -1` — imagen aparece **arriba** del texto (mobile-first UX).
+
+### Diagrama de Flujo Cognitivo (terminal)
+- **`.terminal-body`**: Añadido `-webkit-overflow-scrolling: touch` para scroll iOS/Android suave.
+- **`pre` y `code`**: `white-space: pre` explícito para preservar el diagrama ASCII.
+- **Mobile font**: `0.7rem` en `≤768px`, `0.65rem` en `≤480px`.
+
+### Zoom en imágenes `.item` — desktop intacto
+- Efecto `scale(1.12)` y `cursor: zoom-in` ahora sólo activos con `@media (hover: hover) and (pointer: fine)` (mouse real). En touch: sin zoom ni overflow. Desktop mantiene el efecto con scale reducido de `1.2` → `1.12`.
+
+### Otros ajustes mobile
+- **Footer**: `flex-wrap: wrap; gap: 8px` en `.footer-inner` para adaptarse a phones pequeños.
+- **`.jarbees-container`**: Padding lateral `16px` en `≤480px`.
+- **`section` global**: Sin cambio en desktop (`width: 80%; max-width: 500px`). Sólo en `≤480px` expande a `100%` para aprovechar todo el ancho.
+
+---
+
 ## [2026-07-27 - Update] — Responsive Mobile, SEO & Plantas Project Upgrades
 
 ### Mobile Responsive & Layout
