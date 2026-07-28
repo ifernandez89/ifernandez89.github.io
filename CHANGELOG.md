@@ -1,5 +1,17 @@
 # Changelog
 
+## [2026-07-28] — Fix Overflow Horizontal Mobile (Root Cause)
+
+### Fix: Scroll horizontal / área blanca en mobile
+- **Root cause principal**: W3.CSS aplica `display: table` en `.w3-content`, lo cual ignora el `overflow-x: hidden` del `body`. El `<header>` con clases `w3-content w3-wide` desbordaba el viewport generando el área blanca visible a la derecha.
+- **`header`**: Forzado a `display: block !important; width: 100% !important; max-width: 100% !important; overflow: hidden` para neutralizar el `display: table` de W3.CSS.
+- **`header .w3-image`**: Añadido `width: 100% !important` para que la imagen de fondo no desborde.
+- **`#home`**: Añadido `min-height: 100vh`, `width: 100% !important; display: block !important` para asegurar cobertura completa del viewport.
+- **`.w3-content`, `.w3-row`, `.w3-col`**: Añadido `max-width: 100% !important; box-sizing: border-box` como reset global de elementos W3.CSS.
+- **`.w3-row`**: Añadido `overflow: hidden` y clearfix (`::after`) para contener columnas flotantes (como `#designer`).
+- **Media query `≤480px`**: Grids inline de 2 columnas (Archeoscope features, SIGAP hitos) ahora colapsan a columna única vía selectores de atributo `[style*="grid-template-columns"]`. Columnas `w3-col m6/m4/m3` con `float: none; width: 100%`.
+- **`script.js` — `openNav()`**: Removido `x.style.paddingTop = "15%"` innecesario (el posicionamiento ya lo maneja el CSS con `position: fixed; top: 46px`).
+
 ## [2026-07-28] — Fix Dimensiones Mobile + Revisión Técnica Completa
 
 ### Fix: Imágenes/Videos en Cards Mobile

@@ -15,7 +15,6 @@ function w3_close() {
 // Used to toggle the menu on smaller screens when clicking on the menu button
 function openNav() {
   var x = document.getElementById("navDemo");
-  x.style.paddingTop = "15%";
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else { 

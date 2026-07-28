@@ -46,6 +46,19 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+/* W3.CSS float clearfix — prevent parent collapse and overflow */
+.w3-row::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.w3-row {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 section {
   width: 80%;
   margin: 25px auto;
@@ -94,6 +107,11 @@ header {
   display: block;
   position: relative;
   z-index: 5;
+  overflow: hidden; /* contain the background image */
+  /* Override W3.CSS display:table on .w3-content */
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .header {
@@ -105,6 +123,14 @@ header {
   object-position: center;
   align-items: center;
   z-index: -1;
+}
+
+/* Hero image — never overflow on mobile */
+header .w3-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  display: block;
 }
 
 /* ============================================================================================== */
@@ -584,6 +610,23 @@ model-viewer:hover {
 /* PWA & MOBILE FIXES */
 /* ============================================================================================== */
 
+/* Prevent ALL horizontal overflow at the root */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* W3.CSS uses display:table on .w3-content which bypasses overflow-x:hidden on body.
+   Force all w3 layout primitives to stay within viewport. */
+.w3-content,
+.w3-row,
+.w3-col,
+[class*="w3-col"] {
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
 /* Safe area insets for notched phones (iPhone X+) */
 body {
   padding-bottom: env(safe-area-inset-bottom);
@@ -729,6 +772,13 @@ video {
 #home {
   position: relative;
   overflow: hidden;
+  /* Ensure full viewport coverage on mobile */
+  min-height: 100svh;
+  min-height: 100dvh;
+  min-height: 100vh;
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
 }
 
 #home::before {
@@ -1623,6 +1673,29 @@ video {
   /* Footer text wrap on very small phones */
   .footer-copy {
     font-size: 0.75rem;
+  }
+
+  /* Inline grids inside Archeoscope section — force single column */
+  #archeoscope [style*="grid-template-columns: 1fr 1fr"],
+  #archeoscope-pc [style*="grid-template-columns: 1fr 1fr"],
+  .experience-section [style*="grid-template-columns: 1fr 1fr"],
+  .ecosystem-section [style*="grid-template-columns: 1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* W3.CSS float-based columns — stack on mobile */
+  .w3-col.m6,
+  .w3-col.m4,
+  .w3-col.m3 {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  /* Ensure w3-row doesn't overflow */
+  .w3-row {
+    overflow: hidden;
+    width: 100% !important;
   }
 }
 
