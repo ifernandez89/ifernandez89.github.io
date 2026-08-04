@@ -941,7 +941,7 @@
       </div>
     </div>
 
-    <!-- Archeoscope PC / Game — Coming Soon -->
+    <!-- Archeoscope PC / Game — Official Teaser Trailer -->
     <div
       class="w3-row w3-padding-32 w3-card-2"
       id="archeoscope-pc"
@@ -972,16 +972,17 @@
             font-weight: 600;
             letter-spacing: 2px;
             font-size: 130%;
+            margin-bottom: 6px;
           "
         >
-          El juego original · ¡Listo! (Próximamente video de promoción)
+          El juego original · ¡Finalizado!
         </h3>
         <p
           class="body-text"
           style="
             color: #7eb8d4;
             font-size: 90%;
-            margin: 10px auto 4px;
+            margin: 8px auto 20px;
             max-width: 640px;
             line-height: 1.6;
             font-style: italic;
@@ -989,11 +990,67 @@
         >
           La raíz del proyecto — de acá nace todo el ecosistema Archeoscope.
         </p>
+
+        <!-- Official Teaser Trailer -->
+        <div style="max-width: 760px; margin: 0 auto 28px; position: relative;">
+          <a
+            href="https://youtu.be/t3qUjLpuhYc"
+            target="_blank"
+            rel="noopener noreferrer"
+            id="archeoscope-teaser-link"
+            aria-label="Ver teaser trailer oficial de Archeoscope en YouTube"
+            style="display: block; position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 48px rgba(0,100,200,0.45), 0 0 60px rgba(0,60,140,0.25); text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+            onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 16px 64px rgba(0,130,255,0.55), 0 0 80px rgba(0,80,180,0.35)';"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 48px rgba(0,100,200,0.45), 0 0 60px rgba(0,60,140,0.25)';">
+            <!-- YouTube Thumbnail -->
+            <img
+              src="https://img.youtube.com/vi/t3qUjLpuhYc/maxresdefault.jpg"
+              alt="Archeoscope — Teaser Trailer Oficial"
+              style="width: 100%; display: block; border-radius: 16px;"
+              onerror="this.src='https://img.youtube.com/vi/t3qUjLpuhYc/hqdefault.jpg'"
+            />
+            <!-- Play Button Overlay -->
+            <div style="
+              position: absolute; inset: 0;
+              display: flex; flex-direction: column;
+              align-items: center; justify-content: center;
+              background: rgba(5, 10, 25, 0.38);
+              border-radius: 16px;
+            ">
+              <div style="
+                width: 76px; height: 76px;
+                background: rgba(255,255,255,0.15);
+                backdrop-filter: blur(6px);
+                -webkit-backdrop-filter: blur(6px);
+                border: 2px solid rgba(126,184,212,0.6);
+                border-radius: 50%;
+                display: flex; align-items: center; justify-content: center;
+                box-shadow: 0 0 32px rgba(126,184,212,0.4);
+                transition: background 0.2s;
+              ">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#7eb8d4" xmlns="http://www.w3.org/2000/svg" style="margin-left:4px">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span style="
+                color: #7eb8d4;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.85rem;
+                letter-spacing: 2px;
+                margin-top: 14px;
+                text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+                font-weight: 600;
+              ">▶ TEASER TRAILER OFICIAL</span>
+            </div>
+          </a>
+        </div>
+        <!-- /Teaser -->
+
         <p
           class="body-text w3-text-light-grey"
           style="
             font-size: 92%;
-            margin: 16px auto;
+            margin: 0 auto 20px;
             max-width: 640px;
             line-height: 1.7;
           "
@@ -1050,23 +1107,79 @@
             >Game Mechanics</span
           >
         </div>
-        <a
-          href="https://ifernandez89.github.io/ArcheoScope/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="w3-button tag-text"
-          style="
-            background: #1a3a5c;
-            color: #7eb8d4;
-            border-radius: 6px;
-            padding: 10px 22px;
-            letter-spacing: 1px;
-            border: 1px solid #2a5a8c;
-            margin-top: 8px;
-          "
-        >
-          🌐 Ir al sitio ↗
-        </a>
+
+        <!-- Credits — Graphic Artist -->
+        <div style="
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: rgba(26,58,92,0.35);
+          border: 1px solid rgba(126,184,212,0.2);
+          border-radius: 12px;
+          padding: 10px 20px;
+          margin-bottom: 22px;
+          flex-wrap: wrap;
+          justify-content: center;
+        ">
+          <span style="font-size: 1.1rem;">🎨</span>
+          <span class="body-text" style="color: #b0cfe0; font-size: 88%; letter-spacing: 0.5px;">
+            Arte del video &amp; arte del juego:
+            <a
+              href="https://www.behance.net/gallery/191229561/Portfolio-artistico"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="
+                color: #7eb8d4;
+                font-weight: 600;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(126,184,212,0.45);
+                transition: color 0.2s, border-color 0.2s;
+              "
+              onmouseover="this.style.color='#a8d8f0'; this.style.borderColor='rgba(168,216,240,0.7)';"
+              onmouseout="this.style.color='#7eb8d4'; this.style.borderColor='rgba(126,184,212,0.45)';"
+              aria-label="Ver portfolio de Paola Quagliano en Behance"
+            >Paola Quagliano ↗</a>
+          </span>
+        </div>
+
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a
+            href="https://youtu.be/t3qUjLpuhYc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w3-button tag-text"
+            style="
+              background: #1a3a5c;
+              color: #7eb8d4;
+              border-radius: 6px;
+              padding: 10px 22px;
+              letter-spacing: 1px;
+              border: 1px solid #2a5a8c;
+              margin-top: 0;
+              text-decoration: none;
+            "
+          >
+            ▶ Ver Teaser en YouTube ↗
+          </a>
+          <a
+            href="https://ifernandez89.github.io/ArcheoScope/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w3-button tag-text"
+            style="
+              background: transparent;
+              color: #7eb8d4;
+              border-radius: 6px;
+              padding: 10px 22px;
+              letter-spacing: 1px;
+              border: 1px solid #2a5a8c;
+              margin-top: 0;
+              text-decoration: none;
+            "
+          >
+            🌐 Ir al sitio ↗
+          </a>
+        </div>
       </div>
     </div>
 
