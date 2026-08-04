@@ -991,42 +991,55 @@
           La raíz del proyecto — de acá nace todo el ecosistema Archeoscope.
         </p>
 
-        <!-- Official Teaser Trailer -->
-        <div style="max-width: 760px; margin: 0 auto 28px; position: relative;">
-          <a
-            href="https://youtu.be/t3qUjLpuhYc"
-            target="_blank"
-            rel="noopener noreferrer"
-            id="archeoscope-teaser-link"
-            aria-label="Ver teaser trailer oficial de Archeoscope en YouTube"
-            style="display: block; position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 48px rgba(0,100,200,0.45), 0 0 60px rgba(0,60,140,0.25); text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;"
-            onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 16px 64px rgba(0,130,255,0.55), 0 0 80px rgba(0,80,180,0.35)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 48px rgba(0,100,200,0.45), 0 0 60px rgba(0,60,140,0.25)';">
-            <!-- YouTube Thumbnail -->
+        <!-- Official Teaser Trailer (click-to-play inline) -->
+        <div
+          id="archeoscope-teaser-wrap"
+          style="max-width: 760px; margin: 0 auto 28px; position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 48px rgba(0,100,200,0.45), 0 0 60px rgba(0,60,140,0.25); transition: box-shadow 0.3s ease;"
+        >
+          <!-- Thumbnail + play overlay (visible before play) -->
+          <div
+            id="archeoscope-teaser-thumb"
+            role="button"
+            tabindex="0"
+            aria-label="Reproducir teaser trailer oficial de Archeoscope"
+            onclick="(function(){
+              var wrap = document.getElementById('archeoscope-teaser-wrap');
+              var thumb = document.getElementById('archeoscope-teaser-thumb');
+              var iframe = document.createElement('iframe');
+              iframe.src = 'https://www.youtube.com/embed/t3qUjLpuhYc?autoplay=1&rel=0&modestbranding=1';
+              iframe.title = 'Archeoscope — Teaser Trailer Oficial';
+              iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+              iframe.allowFullscreen = true;
+              iframe.style.cssText = 'width:100%;aspect-ratio:16/9;border:none;display:block;';
+              thumb.style.display = 'none';
+              wrap.appendChild(iframe);
+            })()"
+            onkeydown="if(event.key==='Enter'||event.key===' ')this.click()"
+            style="cursor: pointer; position: relative; display: block; line-height: 0;"
+          >
             <img
               src="https://img.youtube.com/vi/t3qUjLpuhYc/maxresdefault.jpg"
               alt="Archeoscope — Teaser Trailer Oficial"
-              style="width: 100%; display: block; border-radius: 16px;"
+              style="width: 100%; display: block;"
               onerror="this.src='https://img.youtube.com/vi/t3qUjLpuhYc/hqdefault.jpg'"
             />
-            <!-- Play Button Overlay -->
+            <!-- Play button overlay -->
             <div style="
               position: absolute; inset: 0;
               display: flex; flex-direction: column;
               align-items: center; justify-content: center;
-              background: rgba(5, 10, 25, 0.38);
-              border-radius: 16px;
+              background: rgba(5, 10, 25, 0.4);
             ">
               <div style="
                 width: 76px; height: 76px;
                 background: rgba(255,255,255,0.15);
                 backdrop-filter: blur(6px);
                 -webkit-backdrop-filter: blur(6px);
-                border: 2px solid rgba(126,184,212,0.6);
+                border: 2px solid rgba(126,184,212,0.65);
                 border-radius: 50%;
                 display: flex; align-items: center; justify-content: center;
-                box-shadow: 0 0 32px rgba(126,184,212,0.4);
-                transition: background 0.2s;
+                box-shadow: 0 0 36px rgba(126,184,212,0.45);
+                transition: background 0.2s, transform 0.2s;
               ">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="#7eb8d4" xmlns="http://www.w3.org/2000/svg" style="margin-left:4px">
                   <path d="M8 5v14l11-7z"/>
@@ -1038,11 +1051,38 @@
                 font-size: 0.85rem;
                 letter-spacing: 2px;
                 margin-top: 14px;
-                text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+                text-shadow: 0 2px 8px rgba(0,0,0,0.85);
                 font-weight: 600;
               ">▶ TEASER TRAILER OFICIAL</span>
             </div>
-          </a>
+            <!-- YouTube logo (opens YouTube in new tab) -->
+            <a
+              href="https://youtu.be/t3qUjLpuhYc"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="event.stopPropagation()"
+              aria-label="Ver en YouTube"
+              style="
+                position: absolute; bottom: 12px; right: 14px;
+                display: flex; align-items: center; gap: 5px;
+                background: rgba(0,0,0,0.55);
+                border-radius: 6px;
+                padding: 4px 10px;
+                text-decoration: none;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.7rem;
+                color: #fff;
+                letter-spacing: 1px;
+                opacity: 0.85;
+                transition: opacity 0.2s;
+              "
+              onmouseover="this.style.opacity='1'"
+              onmouseout="this.style.opacity='0.85'"
+            >
+              <svg height="12" viewBox="0 0 90 20" xmlns="http://www.w3.org/2000/svg" fill="#fff" aria-hidden="true"><path d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324ZM11.4271 14.2851V5.71489L18.8502 10L11.4271 14.2851Z"/></svg>
+              Ver en YouTube
+            </a>
+          </div>
         </div>
         <!-- /Teaser -->
 
