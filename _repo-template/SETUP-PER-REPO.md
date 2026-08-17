@@ -21,22 +21,22 @@ await page.waitForTimeout(2000); // dejá que la escena se vea
 
 ## 2. Pillow
 
-**Repo:** https://github.com/ifernandezdesign/pillow (o similar)
+**Repo:** https://github.com/ifernandez89/pillow (o similar)
 
 Editá `scripts/record-preview.js` línea 21:
 ```js
-const TARGET_URL = process.env.TARGET_URL || 'https://ifernandezdesign.github.io/pillow/';
+const TARGET_URL = process.env.TARGET_URL || 'https://ifernandez89.github.io/pillow/';
 ```
 
 El scroll por defecto funciona — es un sitio de una sola página.
 
 ## 3. Oxlahun Cauac (BlueCosmicStorm)
 
-**Repo:** https://github.com/tormentacosmicaazul/BlueCosmicStorm
+**Repo:** https://github.com/ifernandez89/BlueCosmicStorm
 
 Editá `scripts/record-preview.js` línea 21:
 ```js
-const TARGET_URL = process.env.TARGET_URL || 'https://tormentacosmicaazul.github.io/BlueCosmicStorm/';
+const TARGET_URL = process.env.TARGET_URL || 'https://ifernandez89.github.io/BlueCosmicStorm/';
 ```
 
 Scroll por defecto OK.
@@ -49,8 +49,8 @@ Scroll por defecto OK.
 4. Esperar ~2-3 minutos. Al terminar, vas a ver dos archivos nuevos commiteados por `github-actions[bot]`: `preview.webm` y `preview.mp4`.
 5. Esperar que GitHub Pages re-publique (1-2 min). Verificá que la URL funciona:
    - https://ifernandez89.github.io/ArcheoScope/preview.mp4
-   - https://ifernandezdesign.github.io/pillow/preview.mp4
-   - https://tormentacosmicaazul.github.io/BlueCosmicStorm/preview.mp4
+   - https://ifernandez89.github.io/pillow/preview.mp4
+   - https://ifernandez89.github.io/BlueCosmicStorm/preview.mp4
 
 ## En el portfolio
 
