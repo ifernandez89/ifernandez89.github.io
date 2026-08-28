@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Ignacio Gabriel Fernández — Software Architect · AI Systems · Knowledge Engineering</title>
+    <title>Ignacio Gabriel Fernández — Software Architect · AI Systems · WebAssembly Runtimes</title>
     <meta
       name="description"
-      content="Portfolio de Ignacio Gabriel Fernández, Técnico Universitario en Programación. Proyectos de IA, NestJS, JarBees y Archeoscope."
+      content="Portfolio de Ignacio Gabriel Fernández, Técnico Universitario en Programación. Arquitecturas cognitivas (JarBees), simulación 3D (ArcheoScope) y runtimes WebAssembly nativos (NIGHTMARE Diablo/Hellfire)."
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Ignacio Gabriel Fernández" />
@@ -36,13 +36,13 @@
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content="Ignacio Gabriel Fernández — Software Architect · AI Systems"
+      content="Ignacio Gabriel Fernández — Software Architect · AI Systems · WebAssembly Runtimes"
     />
     <meta
       property="og:description"
-      content="Arquitecto de Software especializado en arquitecturas cognitivas, RAG híbrido, memoria persistente, simulación astronómica y experiencias 3D."
+      content="Arquitecto de Software especializado en arquitecturas cognitivas, RAG híbrido, simulación astronómica 3D y runtimes nativos WebAssembly."
     />
-    <meta property="og:image" content="fotos/archeoscope_app_mobile.png" />
+    <meta property="og:image" content="fotos/nightmare.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ifernandez89.github.io/" />
 
@@ -50,13 +50,13 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Ignacio Gabriel Fernández — Software Architect · AI Systems"
+      content="Ignacio Gabriel Fernández — Software Architect · AI Systems · WebAssembly Runtimes"
     />
     <meta
       name="twitter:description"
-      content="Software Architect · Cognitive Architectures · AI Systems · Knowledge Engineering · Three.js"
+      content="Software Architect · Cognitive Architectures · AI Systems · WebAssembly Runtimes · Three.js"
     />
-    <meta name="twitter:image" content="fotos/archeoscope_app_mobile.png" />
+    <meta name="twitter:image" content="fotos/nightmare.jpg" />
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -94,11 +94,14 @@
           "Cognitive Architectures",
           "Hybrid RAG",
           "Memory Systems",
+          "WebAssembly",
+          "Emscripten",
+          "C++",
+          "WebGL",
           "NestJS",
           "Prisma",
           "PostgreSQL",
           "Three.js",
-          "WebGL",
           "React",
           "Next.js",
           "AI-Assisted Workflows"
@@ -141,6 +144,7 @@
             <a href="#archeoscope" class="w3-bar-item w3-button" style="display: inline-flex; align-items: center; gap: 6px;">
               <img src="fotos/logo-archeoscope-main.png" alt="" style="height: 14px; width: auto; object-fit: contain;" /> ArcheoScope
             </a>
+            <a href="#wasm-runtime" class="w3-bar-item w3-button">⚡ WebAssembly Runtime</a>
           </div>
         </div>
         <div class="w3-dropdown-hover w3-hide-small">
@@ -189,6 +193,9 @@
         <a href="#archeoscope" class="w3-bar-item w3-button" style="color: black; display: flex; align-items: center; gap: 6px;">
           <img src="fotos/logo-archeoscope-main.png" alt="" style="height: 14px; width: auto; object-fit: contain;" /> ArcheoScope
         </a>
+        <a href="#wasm-runtime" class="w3-bar-item w3-button" style="color: black"
+          >⚡ WebAssembly Runtime</a
+        >
         <a href="#experience" class="w3-bar-item w3-button" style="color: black"
           >💼 Experiencia</a
         >
@@ -222,10 +229,10 @@
         <p class="hero-kicker">SOFTWARE ARCHITECT · PARANÁ, ARGENTINA</p>
         <h1 class="hero-title">Ignacio Gabriel Fernández</h1>
         <p class="hero-tagline">
-          <strong>Software Architect · AI Systems · Knowledge Engineering</strong>
+          <strong>Software Architect · AI Systems · Knowledge Engineering · WebAssembly Runtimes</strong>
         </p>
-        <p class="hero-sub" style="max-width: 720px; margin: 12px auto 0;">
-          "Diseño sistemas inteligentes que organizan conocimiento, automatizan procesos complejos y ayudan a las personas a pensar y decidir mejor."
+        <p class="hero-sub" style="max-width: 760px; margin: 12px auto 0;">
+          "Diseño sistemas inteligentes, entornos computacionales y runtimes interactivos — desde arquitecturas cognitivas y simulación 3D en tiempo real hasta software nativo ejecutado en el navegador mediante WebAssembly."
         </p>
       </div>
     </header>
@@ -1219,6 +1226,289 @@
           >
             🌐 Ir al sitio ↗
           </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- WebAssembly Runtime Section — Flagship Project -->
+    <div
+      class="w3-row w3-padding-64 w3-card-2"
+      id="wasm-runtime"
+      data-project="nightmare"
+      style="
+        background: linear-gradient(
+          135deg,
+          #060810 0%,
+          #0e111d 45%,
+          #080a14 100%
+        );
+        border-top: 2px solid #2a1b38;
+        color: #fff;
+      "
+    >
+      <div class="wasm-container">
+        <!-- Main Flagship Header -->
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span
+            class="w3-tag tag-text wasm-badge"
+            style="
+              background: rgba(186, 85, 211, 0.12);
+              color: #c988f7;
+              border: 1px solid rgba(186, 85, 211, 0.35);
+              border-radius: 20px;
+              letter-spacing: 2px;
+              padding: 6px 18px;
+              margin-bottom: 14px;
+              display: inline-block;
+            "
+            >⚡ FLAGSHIP SYSTEM · NATIVE RUNTIME &amp; PRESERVATION</span
+          >
+          <h2
+            class="w3-text-white"
+            style="
+              font-family: &quot;Inter&quot;, sans-serif;
+              font-weight: 700;
+              letter-spacing: 2px;
+              font-size: 2.3rem;
+              margin-top: 6px;
+              margin-bottom: 10px;
+            "
+          >
+            Modern Cross-Platform WebAssembly Runtime
+          </h2>
+          <p
+            class="body-text"
+            style="
+              color: #b0b8d0;
+              font-size: 1.12rem;
+              max-width: 820px;
+              margin: 0 auto;
+              line-height: 1.65;
+            "
+          >
+            <i>An experimental runtime for bringing native software, classic game engines and systems preservation to the modern browser.</i>
+          </p>
+        </div>
+
+        <!-- NIGHTMARE Demonstration Row -->
+        <div class="wasm-row">
+          <!-- Text column -->
+          <div class="wasm-col-text">
+            <span
+              class="w3-tag tag-text"
+              style="
+                background: rgba(220, 53, 69, 0.15);
+                color: #ff6b81;
+                border: 1px solid rgba(220, 53, 69, 0.3);
+                border-radius: 20px;
+                letter-spacing: 1.5px;
+                padding: 4px 14px;
+                margin-bottom: 12px;
+                display: inline-block;
+                width: fit-content;
+              "
+              >🎮 LIVE DEMONSTRATION · DIABLO &amp; HELLFIRE</span
+            >
+            <h3
+              class="w3-text-white"
+              style="
+                font-family: &quot;Inter&quot;, sans-serif;
+                font-weight: 700;
+                letter-spacing: 2px;
+                font-size: 1.85rem;
+                margin-top: 0;
+                margin-bottom: 6px;
+              "
+            >
+              NIGHTMARE
+            </h3>
+            <p
+              class="body-text"
+              style="color: #c988f7; font-size: 1.05rem; margin-bottom: 18px; font-weight: 500;"
+            >
+              <i>Diablo / Hellfire — WebAssembly Preservation &amp; Expansion</i>
+            </p>
+            <p
+              class="body-text w3-text-light-grey"
+              style="margin-bottom: 16px; line-height: 1.75; font-size: 0.98rem"
+            >
+              A long-term DevilutionX fork focused on preserving, restoring and expanding Diablo and Hellfire content while bringing the native C++ engine to a modern browser runtime through WebAssembly and WebGL hardware acceleration.
+            </p>
+
+            <!-- Tech Badges -->
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px;">
+              <span class="w3-tag tag-text wasm-tech-tag">C++</span>
+              <span class="w3-tag tag-text wasm-tech-tag">Emscripten</span>
+              <span class="w3-tag tag-text wasm-tech-tag">WebAssembly</span>
+              <span class="w3-tag tag-text wasm-tech-tag">WebGL</span>
+              <span class="w3-tag tag-text wasm-tech-tag">SDL2</span>
+              <span class="w3-tag tag-text wasm-tech-tag">IndexedDB (VFS)</span>
+              <span class="w3-tag tag-text wasm-tech-tag">GitHub Pages</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="margin-bottom: 28px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a
+                href="https://ifernandez89.github.io/DevilutionX/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w3-button tag-text wasm-btn-primary"
+                aria-label="Jugar NIGHTMARE Diablo Hellfire en el navegador"
+              >
+                🎮 Jugar NIGHTMARE ↗
+              </a>
+              <a
+                href="https://github.com/ifernandez89/DevilutionX"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w3-button tag-text wasm-btn-secondary"
+                aria-label="Ver código fuente de NIGHTMARE en GitHub"
+              >
+                <i class="fa fa-github" aria-hidden="true"></i> Repositorio ↗
+              </a>
+            </div>
+
+            <!-- Numbers Grid / Metrics -->
+            <div class="wasm-metrics">
+              <div class="wasm-metric-card">
+                <span class="wasm-metric-num">100%</span>
+                <span class="wasm-metric-label">Native C++ Engine</span>
+              </div>
+              <div class="wasm-metric-card">
+                <span class="wasm-metric-num">WASM</span>
+                <span class="wasm-metric-label">Browser Bytecode</span>
+              </div>
+              <div class="wasm-metric-card">
+                <span class="wasm-metric-num">60 FPS</span>
+                <span class="wasm-metric-label">WebGL Acceleration</span>
+              </div>
+              <div class="wasm-metric-card">
+                <span class="wasm-metric-num">VFS</span>
+                <span class="wasm-metric-label">IndexedDB Save Sync</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Media column -->
+          <div class="wasm-col-media">
+            <div class="wasm-frame">
+              <div class="gallery-main-img item" style="position: relative; border-radius: 14px; overflow: hidden; border: 1px solid rgba(186, 85, 211, 0.3); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 40px rgba(186, 85, 211, 0.15);">
+                <img
+                  src="fotos/nightmare.jpg"
+                  id="nightmareMainImage"
+                  alt="NIGHTMARE Diablo and Hellfire WebAssembly Runtime Gameplay"
+                  style="width: 100%; display: block;"
+                />
+                <div style="
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  padding: 10px 14px;
+                  background: linear-gradient(180deg, transparent 0%, rgba(5, 7, 15, 0.92) 100%);
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                ">
+                  <span style="font-family: 'Inter', sans-serif; font-size: 0.78rem; color: #55efc4; letter-spacing: 1px; font-weight: 600;">
+                    ● LIVE ON GITHUB PAGES
+                  </span>
+                  <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 0.75rem; color: #c988f7;">
+                    Widescreen · Español · Remaster
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Philosophy: RESTORE / EXPAND / MODERNIZE -->
+        <div class="wasm-philosophy-grid">
+          <div class="wasm-philosophy-card">
+            <div class="wasm-philosophy-header">
+              <span class="wasm-step-num">01</span>
+              <h4>RESTORE</h4>
+            </div>
+            <p class="wasm-philosophy-desc">
+              Recuperación, preservación y reintegración exhaustiva de contenido original, cinemáticas, diálogos y misiones de Diablo y la expansión Hellfire.
+            </p>
+          </div>
+
+          <div class="wasm-philosophy-card">
+            <div class="wasm-philosophy-header">
+              <span class="wasm-step-num">02</span>
+              <h4>EXPAND</h4>
+            </div>
+            <p class="wasm-philosophy-desc">
+              Nuevas misiones, rebalanceo de clases y sistemas, nuevos ítems, encuentros dinámicos y arquitectura modular extensible.
+            </p>
+          </div>
+
+          <div class="wasm-philosophy-card">
+            <div class="wasm-philosophy-header">
+              <span class="wasm-step-num">03</span>
+              <h4>MODERNIZE</h4>
+            </div>
+            <p class="wasm-philosophy-desc">
+              Pipeline WebAssembly, renderizado WebGL, soporte widescreen nativo, Gamepad API, controles táctiles y persistencia en IndexedDB.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Architecture Diagram Terminal -->
+        <div class="wasm-architecture-section">
+          <h3 class="diagram-title">NIGHTMARE WebAssembly Runtime Architecture</h3>
+          <div class="diagram-terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">wasm-runtime-pipeline.spec</span>
+            </div>
+            <div class="terminal-body">
+              <pre><code>                    NIGHTMARE
+                        │
+                   DevilutionX
+                        │
+                 ┌──────┴──────┐
+                 │             │
+            Game Engine      Assets (MPQ)
+                 │             │
+                 └──────┬──────┘
+                        │
+                    Emscripten
+                        │
+                    WebAssembly
+                        │
+              ┌─────────┴─────────┐
+              │                   │
+        Browser Canvas      Virtual Storage
+              │                   │
+            WebGL             IndexedDB</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Runtime Layers Architecture -->
+        <div class="wasm-layers-grid">
+          <div class="wasm-layer-col">
+            <h4 class="wasm-layer-title">Layer 1 — Native Engine</h4>
+            <p class="wasm-layer-desc">
+              Código fuente en <strong>C/C++</strong> compilado nativamente. Lógica de juego determinista, simulación en tiempo real y gestión directa de memoria.
+            </p>
+          </div>
+          <div class="wasm-layer-col">
+            <h4 class="wasm-layer-title">Layer 2 — Transpilation</h4>
+            <p class="wasm-layer-desc">
+              Toolchain <strong>Emscripten</strong> para generar binarios <code>.wasm</code> altamente optimizados con bindings para SDL2 y subsistemas de audio y video.
+            </p>
+          </div>
+          <div class="wasm-layer-col">
+            <h4 class="wasm-layer-title">Layer 3 — Web Platform</h4>
+            <p class="wasm-layer-desc">
+              Ejecución directa en <strong>WebGL</strong>, Web Audio API, Virtual File System persistente vía <strong>IndexedDB</strong> y soporte de teclado/gamepad.
+            </p>
+          </div>
         </div>
       </div>
     </div>

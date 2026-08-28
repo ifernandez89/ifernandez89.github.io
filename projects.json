@@ -28,6 +28,12 @@
       "name": "Plantas Medicinales",
       "liveUrl": "https://ifernandez89.github.io/PlantasMedicinales/",
       "embeddable": true
+    },
+    "nightmare": {
+      "name": "NIGHTMARE — Diablo / Hellfire WASM",
+      "liveUrl": "https://ifernandez89.github.io/DevilutionX/",
+      "fallbackImage": "fotos/nightmare.jpg",
+      "embeddable": false
     }
   }
 }

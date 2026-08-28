@@ -1699,3 +1699,277 @@ video {
   }
 }
 
+/* ============================================================================================== */
+/* WEBASSEMBLY RUNTIME & NIGHTMARE STYLES */
+/* ============================================================================================== */
+.wasm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wasm-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.wasm-col-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.wasm-col-media {
+  display: flex;
+  justify-content: center;
+}
+
+.wasm-frame {
+  width: 100%;
+  max-width: 520px;
+}
+
+.wasm-tech-tag {
+  background: rgba(186, 85, 211, 0.12);
+  color: #d8a4f9;
+  border: 1px solid rgba(186, 85, 211, 0.25);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  transition: all 0.2s ease;
+}
+
+.wasm-tech-tag:hover {
+  background: rgba(186, 85, 211, 0.25);
+  border-color: #c988f7;
+  color: #fff;
+}
+
+.wasm-btn-primary {
+  background: linear-gradient(135deg, #c0392b 0%, #8e181b 100%);
+  color: #fff !important;
+  border: 1px solid rgba(255, 107, 129, 0.4);
+  border-radius: 6px;
+  padding: 10px 22px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(192, 57, 43, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.wasm-btn-primary:hover {
+  background: linear-gradient(135deg, #e74c3c 0%, #a82326 100%);
+  box-shadow: 0 6px 24px rgba(231, 76, 60, 0.6);
+  transform: translateY(-2px);
+}
+
+.wasm-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #c988f7 !important;
+  border: 1px solid rgba(186, 85, 211, 0.4);
+  border-radius: 6px;
+  padding: 10px 22px;
+  letter-spacing: 1px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.wasm-btn-secondary:hover {
+  background: rgba(186, 85, 211, 0.15);
+  border-color: #c988f7;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+.wasm-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (min-width: 480px) {
+  .wasm-metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.wasm-metric-card {
+  background: rgba(22, 16, 36, 0.45);
+  border: 1px solid rgba(186, 85, 211, 0.25);
+  border-radius: 12px;
+  padding: 16px 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.wasm-metric-card:hover {
+  border-color: rgba(186, 85, 211, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(186, 85, 211, 0.18);
+}
+
+.wasm-metric-num {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #c988f7;
+  margin-bottom: 4px;
+}
+
+.wasm-metric-label {
+  display: block;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.76rem;
+  color: #a89bc2;
+  line-height: 1.3;
+}
+
+/* Philosophy Cards (Restore / Expand / Modernize) */
+.wasm-philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 44px;
+}
+
+.wasm-philosophy-card {
+  background: rgba(20, 14, 32, 0.5);
+  border: 1px solid rgba(186, 85, 211, 0.2);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.wasm-philosophy-card:hover {
+  border-color: rgba(186, 85, 211, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.wasm-philosophy-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.wasm-step-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ff6b81;
+  background: rgba(220, 53, 69, 0.15);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.wasm-philosophy-header h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #fff;
+  margin: 0;
+}
+
+.wasm-philosophy-desc {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #c4bcd4;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Architecture Section */
+.wasm-architecture-section {
+  background: rgba(10, 8, 18, 0.65);
+  border: 1px solid rgba(186, 85, 211, 0.25);
+  border-radius: 14px;
+  padding: 32px 24px;
+  margin-bottom: 40px;
+}
+
+/* Layers Grid */
+.wasm-layers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.wasm-layer-col {
+  background: rgba(18, 14, 28, 0.4);
+  border: 1px solid rgba(186, 85, 211, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.wasm-layer-col:hover {
+  border-color: rgba(186, 85, 211, 0.4);
+  transform: translateY(-2px);
+}
+
+.wasm-layer-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c988f7;
+  margin-bottom: 8px;
+}
+
+.wasm-layer-desc {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #b8b0ca;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.wasm-layer-desc strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+.wasm-layer-desc code {
+  font-family: monospace;
+  background: rgba(186, 85, 211, 0.15);
+  color: #d8a4f9;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* Mobile Responsive WASM Section */
+@media (max-width: 768px) {
+  .wasm-container {
+    padding: 0 16px;
+  }
+
+  .wasm-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .wasm-col-media {
+    order: -1;
+    max-width: 100%;
+  }
+
+  .wasm-philosophy-grid,
+  .wasm-layers-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .wasm-architecture-section {
+    padding: 16px 12px;
+  }
+}
+
+

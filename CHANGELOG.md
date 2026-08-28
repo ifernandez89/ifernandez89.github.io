@@ -1,5 +1,29 @@
 # Changelog
 
+## [2026-08-28] — Flagship System: Modern Cross-Platform WebAssembly Runtime & NIGHTMARE
+
+### Nuevo Flagship System: WebAssembly Runtime
+- **Modern Cross-Platform WebAssembly Runtime**: Incorporado como el tercer pilar arquitectónico fundamental junto a JarBees y ArcheoScope.
+- **Demostración en vivo — NIGHTMARE (Diablo / Hellfire)**:
+  - Presentación técnica como fork de DevilutionX enfocado en preservación, restauración y expansión de contenido.
+  - Integración de captura de pantalla en alta resolución (`fotos/nightmare.jpg`) con badge de estado en vivo.
+  - Stack tecnológico documentado: `C++`, `Emscripten`, `WebAssembly`, `WebGL`, `SDL2`, `IndexedDB (VFS)`, `GitHub Pages`.
+  - Enlaces directos para jugar en vivo (`https://ifernandez89.github.io/DevilutionX/`) y acceder al repositorio de código fuente.
+- **Filosofía del Proyecto (3 Pilares)**:
+  - `RESTORE`: Recuperación y preservación de assets, cinemáticas y contenido original.
+  - `EXPAND`: Nuevas misiones, mecánicas, rebalanceo y soporte modular.
+  - `MODERNIZE`: Renderizado WebGL, soporte widescreen, controles Gamepad y persistencia en navegador vía IndexedDB.
+- **Diagrama de Arquitectura en Terminal**: Representación del pipeline de transpilación y ejecución nativa en browser (`DevilutionX → Emscripten → WASM → Canvas/IndexedDB`).
+- **Arquitectura de Capas (Runtime Layers)**: Desglose en Layer 1 (Native Engine C/C++), Layer 2 (Transpilation Toolchain Emscripten) y Layer 3 (Web Platform & Hardware APIs).
+
+### Navegación, Identidad & SEO
+- **Navbar (Desktop & Mobile)**: Agregado `⚡ WebAssembly Runtime` en el desplegable de Flagships y en el menú responsive.
+- **Hero & Headline**: Actualizado el lema y la cita de visión para abarcar arquitecturas cognitivas, simulación 3D y runtimes WebAssembly nativos.
+- **Catálogo de Proyectos (`projects.json`)**: Registrado `nightmare` con metadatos y fallback de imagen.
+- **Estilos (`style.css`)**: Implementado sistema de diseño oscuro con acentos carmesí y púrpura neón, tarjetas con glassmorphism y adaptación responsive total.
+
+---
+
 ## [2026-07-28] — Fix Overflow Horizontal Mobile (Root Cause)
 
 ### Fix: Scroll horizontal / área blanca en mobile
