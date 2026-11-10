@@ -1,63 +1,62 @@
-# Ignacio Fernández — desarrollador full‑stack, IA y 3D
+# Ignacio Gabriel Fernández — Software Development · AI Systems · Experimental Research
 
-Construyo sistemas de software complejos combinando desarrollo full‑stack, integración de IA/LLM y experiencias computacionales 3D (WebGL). Mis proyectos demuestran capacidad para diseñar arquitecturas end‑to‑end, prototipar soluciones con modelos de lenguaje y crear visualizaciones interactivas y análisis geoespaciales.
+Portfolio & technical overview: **[https://ifernandez89.github.io/](https://ifernandez89.github.io/)**
 
----
-
-## Mapa técnico (lectura rápida)
-
-- CORE: TypeScript · Next.js · React · NestJS · PostgreSQL · Prisma · Docker
-- AI: LLMs · Agentes IA · Ollama · LangChain · RAG · Vector DBs
-- 3D / COMPUTATIONAL: WebGL · Three.js · React Three Fiber · audio procedural
-- GEO / REMOTE SENSING: satellite imagery · Sentinel‑2 · SAR · NDVI · geospatial analysis
-- SYSTEMS: C++ · Linux · compilación multiplataforma · GitHub Actions
+Software developer focused on local AI architectures, interactive 3D/WebGL environments, WebAssembly systems integration, and experimental hardware-software instrumentation.
 
 ---
 
-## Featured projects
+## 01 · Core Projects
 
-- ArcheoScope — Aplicación inmersiva 3D y plataforma de análisis arqueológico.
-  - 3D/WebGL (Three.js · R3F · Next.js) + visualización científica. Incluye pipelines y herramientas para análisis geoespacial y remote sensing (p. ej. Sentinel‑2, SAR, índices como NDVI) y detección arqueológica; renderizado interactivo y audio procedural.
-  - Tech: Next.js · TypeScript · Three.js · React Three Fiber
-  - https://github.com/ifernandez89/ArcheoScope
+- **JarBees — Local AI & Cognitive Architecture**
+  - Modular local-first AI architecture integrating local language models, hybrid RAG retrieval (`pgvector` + relational entities), persistent episodic memory, deterministic tools, voice pipeline, and human-supervised evaluation.
+  - **Tech:** `TypeScript` · `NestJS` · `PostgreSQL / pgvector` · `Prisma` · `Python` · `Local LLMs` · `Next.js` · `Three.js`
+  - **Repositories:** [Backend (`productos_crud_bkd`)](https://github.com/ifernandez89/productos_crud_bkd) · [Frontend (`productos_crud_frd`)](https://github.com/ifernandez89/productos_crud_frd) · [Web UI Demo](https://ifernandez89.github.io/productos_crud_frd/)
 
-- Radar‑Dev — Inventario y herramientas para proyectos de transformación digital y adopción tecnológica.
-  - Enfocado en identificar oportunidades de automatización, IA y modernización para organizaciones e iniciativas de gobierno.
-  - Tech: JavaScript · análisis de datos · prototipos para transformación digital
-  - https://github.com/ifernandez89/Radar-Dev
+- **ArcheoScope — 3D Archaeoastronomy & Sky Observatory**
+  - Interactive 3D archaeoastronomy platform and real-time astronomical observatory combining a PC 3D exploration environment across ancient sites with a mobile sky observatory and procedural Web Audio synthesis.
+  - **Tech:** `Next.js` · `React` · `Three.js / R3F` · `astronomy-engine (VSOP87)` · `GLSL Shaders` · `Web Audio API`
+  - **Links:** [Live Application](https://ifernandez89.github.io/ArcheoScope/) · [Repository](https://github.com/ifernandez89/ArcheoScope)
 
-- Productos CRUD (Frontend + Backend) — Ejemplo de integración full‑stack con agente IA.
-  - Frontend (Next.js/TypeScript) + Backend (NestJS/TypeScript) que integran un agente IA para asistencia conversacional y automatización de tareas.
-  - Tech: Next.js · NestJS · TypeScript · Ollama (agente IA)
-  - Frontend: https://github.com/ifernandez89/productos_crud_frd
-  - Backend: https://github.com/ifernandez89/productos_crud_bkd
-
-- DevilutionX — Port/compilación técnica (C++ / sistemas) — contribución que demuestra experiencia en código nativo, porting y toolchains multiplataforma.
-  - Tech: C++ · compilación cross‑platform · Open Source
-  - https://github.com/ifernandez89/DevilutionX
+- **NIGHTMARE — DevilutionX WebAssembly Port**
+  - Adaptation and WebAssembly compilation of the open-source `DevilutionX` C++/SDL2 engine for native browser execution with WebGL acceleration, client-side asset loading, and persistent `IndexedDB` save storage.
+  - **Tech:** `C++` · `Emscripten` · `WebAssembly` · `SDL2` · `WebGL` · `IndexedDB`
+  - **Links:** [Live Browser Build](https://ifernandez89.github.io/DevilutionX/?force_desktop=1) · [Repository](https://github.com/ifernandez89/DevilutionX)
 
 ---
 
-## Otros proyectos (selección)
+## 02 · Research & Experiments
 
-- mergeador — Utilidad para unir PDFs (libros). https://github.com/ifernandez89/mergeador
-- PlantasMedicinales — Registro de plantas por acción terapéutica. https://github.com/ifernandez89/PlantasMedicinales
-- Contactos‑Eventos — Planificación y gestión de eventos musicales. https://github.com/ifernandez89/Contactos-Eventos
-- mate, pillow, BlueCosmicStorm — proyectos personales / demos. https://github.com/ifernandez89/mate
+- **JarBees Scientific Lab** — Experimental physical-computing instrumentation using an Android device as a sensor node for real-time 3-axis geomagnetic and inertial telemetry (`Node.js`, `Python`, `ADB / Phyphox`, `WebSockets`, `Three.js`). [Source](https://github.com/ifernandez89/productos_crud_bkd/tree/main/scientific-lab)
+- **Retro Hub** — Multi-system WebAssembly browser emulation environment featuring custom bidirectional `IndexedDB` SRAM persistence, clean CPU state initialization, and real-time educational keyboard matrix debugging (`PC Vivaz`). [Live Hub](https://ifernandez89.github.io/DevilutionX/gens/index.html) · [Source](https://github.com/ifernandez89/DevilutionX/tree/master/Packaging/emscripten)
 
 ---
 
-## Portfolio / CV
+## 03 · Technical Explorations
 
-Mi portfolio y CV están en: https://ifernandez89.github.io/ (este mismo repositorio).
-
-## Contacto
-
-- GitHub: https://github.com/ifernandez89
-- Email: nacho.xiphos@gmail.com
-
-Si querés ver un demo rápido de alguno de los proyectos destacados, abrí un issue en el repo correspondiente o escribime por email.
+- **JarBees Object Lab** — Parametric JSON-to-3D object generation, center-of-gravity stability and ergonomic validation, procedural Web Audio synthesis, and headless Python/Blender asset conversion pipelines. [Live Sandbox](https://ifernandez89.github.io/Jarbees_the_game/) · [Repository](https://github.com/ifernandez89/Jarbees_the_game)
+- **JarBeesMotion** — Cross-environment remote input prototype connecting a mobile PWA trackpad/keyboard with desktop cursor and keyboard control via a native C# / .NET Windows bridge. [PWA Interface](https://ifernandez89.github.io/JarbeesMotion/) · [Repository](https://github.com/ifernandez89/JarbeesMotion)
 
 ---
 
-*Última actualización: perfil profesional y proyectos destacados.*
+## 04 · Professional Experience (Public Sector)
+
+- **SIGAP — Public Lighting Management** (*Municipalidad de Paraná*) — Historical development of a software solution for technical information and georeferenced public lighting management (`Java`, `PostgreSQL / PostGIS`, `QGIS`).
+- **Innovation & Digital Transformation — TDI / GEDO** (*Municipalidad de Paraná*) — Technical collaboration in Public Innovation and Digital Transformation initiatives supporting administrative process modernization and electronic official documents (`GEDO`).
+
+---
+
+## 05 · Selected Personal Work & Web Prototypes
+
+- **[Counter-Strike 1.6 — Custom Scripting & Setup](https://github.com/ifernandez89/cs16-config)** — Custom wave-survival plugin in Pawn (`AMX Mod X`), 3D over-the-shoulder camera adaptation, tactical menus, and PowerShell installer.
+- **[Plantas Medicinales](https://github.com/ifernandez89/PlantasMedicinales)** ([Live PWA](https://ifernandez89.github.io/PlantasMedicinales/)) — Static Markdown phytotherapy catalog built with `Next.js` and `Tailwind CSS`.
+- **[Oxlahun Cauac](https://github.com/ifernandez89/BlueCosmicStorm)** ([Live Site](https://ifernandez89.github.io/BlueCosmicStorm/)) & **[Pillow](https://github.com/ifernandez89/pillow)** ([Live Site](https://ifernandez89.github.io/pillow/)) — Standalone web and UI/UX prototypes.
+
+---
+
+## Contact
+
+- **Portfolio:** [https://ifernandez89.github.io/](https://ifernandez89.github.io/)
+- **GitHub:** [https://github.com/ifernandez89](https://github.com/ifernandez89)
+- **LinkedIn:** [Ignacio Gabriel Fernández](https://www.linkedin.com/in/ignacio-fernández-b88631184)
+- **Email:** [nacho.xiphos@gmail.com](mailto:nacho.xiphos@gmail.com)

@@ -1,19 +1,30 @@
 <!doctype html>
-<html lang="es">
+<html lang="en" data-lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Ignacio Gabriel Fernández — Software Architect · AI Systems · WebAssembly Runtimes</title>
+    <title>Ignacio Gabriel Fernández — Software Development · AI Systems · Experimental Research</title>
     <meta
       name="description"
-      content="Portfolio de Ignacio Gabriel Fernández, Técnico Universitario en Programación. Arquitecturas cognitivas (JarBees), simulación 3D (ArcheoScope) y runtimes WebAssembly nativos (NIGHTMARE Diablo/Hellfire)."
+      content="Portfolio of Ignacio Gabriel Fernández. Software Development, Local AI & Cognitive Architectures (JarBees), 3D Archaeoastronomy Simulation (ArcheoScope), WebAssembly Systems (NIGHTMARE), and Experimental Hardware-Software Research."
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Ignacio Gabriel Fernández" />
     <meta name="theme-color" content="#0d1b2a" />
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("portfolio_lang");
+          var lang = saved === "es" ? "es" : "en";
+          document.documentElement.setAttribute("data-lang", lang);
+          document.documentElement.setAttribute("lang", lang);
+        } catch (e) {}
+      })();
+    </script>
 
     <!-- PWA -->
     <link rel="manifest" href="manifest.json" />
@@ -36,13 +47,13 @@
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content="Ignacio Gabriel Fernández — Software Architect · AI Systems · WebAssembly Runtimes"
+      content="Ignacio Gabriel Fernández — Software Development · AI Systems · Experimental Research"
     />
     <meta
       property="og:description"
-      content="Arquitecto de Software especializado en arquitecturas cognitivas, RAG híbrido, simulación astronómica 3D y runtimes nativos WebAssembly."
+      content="Software developer focused on local AI architectures, 3D/WebGL simulation, WebAssembly systems integration, and experimental hardware-software instrumentation."
     />
-    <meta property="og:image" content="fotos/nightmare.jpg" />
+    <meta property="og:image" content="https://ifernandez89.github.io/fotos/nightmare.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ifernandez89.github.io/" />
 
@@ -50,13 +61,13 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Ignacio Gabriel Fernández — Software Architect · AI Systems · WebAssembly Runtimes"
+      content="Ignacio Gabriel Fernández — Software Development · AI Systems · Experimental Research"
     />
     <meta
       name="twitter:description"
-      content="Software Architect · Cognitive Architectures · AI Systems · WebAssembly Runtimes · Three.js"
+      content="Software Development · AI Systems · 3D/WebGL · WebAssembly · Experimental Research"
     />
-    <meta name="twitter:image" content="fotos/nightmare.jpg" />
+    <meta name="twitter:image" content="https://ifernandez89.github.io/fotos/nightmare.jpg" />
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -84,27 +95,24 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Ignacio Gabriel Fernández",
-        "jobTitle": "Software Architect & AI Systems Developer",
+        "jobTitle": "Software Developer — AI Systems & Experimental Research",
         "url": "https://ifernandez89.github.io/",
         "sameAs": [
           "https://www.linkedin.com/in/ignacio-fernández-b88631184",
           "https://github.com/ifernandez89"
         ],
         "knowsAbout": [
-          "Cognitive Architectures",
-          "Hybrid RAG",
-          "Memory Systems",
-          "WebAssembly",
-          "Emscripten",
+          "Software Development",
+          "Local AI Systems",
+          "RAG & Knowledge Retrieval",
+          "Three.js & WebGL",
+          "WebAssembly & Emscripten",
           "C++",
-          "WebGL",
+          "TypeScript",
           "NestJS",
-          "Prisma",
-          "PostgreSQL",
-          "Three.js",
-          "React",
+          "PostgreSQL & PostGIS",
           "Next.js",
-          "AI-Assisted Workflows"
+          "Physical Computing"
         ]
       }
     </script>
@@ -112,109 +120,183 @@
   <body id="myPage">
     <!-- Navbar -->
     <div class="w3-top">
-      <div class="w3-bar" style="z-index: 1">
+      <div class="w3-bar" style="z-index: 1; display: flex; align-items: center; flex-wrap: wrap;">
         <a
           class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white"
           href="javascript:void(0);"
           onclick="openNav()"
-          aria-label="Abrir menú de navegación"
+          aria-label="Open navigation menu"
+          style="margin-left: auto;"
           ><i class="fa fa-bars" aria-hidden="true"></i
         ></a>
         <a
-          href="#"
+          href="#home"
           class="w3-bar-item w3-button w3-padding-large"
-          aria-label="Inicio"
+          aria-label="Home"
           ><i
             class="fa fa-code w3-margin-right"
             style="color: black"
             aria-hidden="true"
           ></i
         ></a>
+
+        <!-- Core Projects Dropdown -->
         <div class="w3-dropdown-hover w3-hide-small">
           <a
             href="#jarbees"
             class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large"
-            style="color: black; font-family: &quot;Inter&quot;, sans-serif"
+            style="color: black; font-family: 'Inter', sans-serif"
           >
-            Flagships <i class="fa fa-caret-down"></i
-          ></a>
+            <span data-lang="en">Core Projects</span>
+            <span data-lang="es">Proyectos Principales</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
           <br /><br />
           <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
-            <a href="#jarbees" class="w3-bar-item w3-button">🐝 JarBees</a>
+            <a href="#jarbees" class="w3-bar-item w3-button">01 · JarBees (Local AI)</a>
             <a href="#archeoscope" class="w3-bar-item w3-button" style="display: inline-flex; align-items: center; gap: 6px;">
-              <img src="fotos/logo-archeoscope-main.png" alt="" style="height: 14px; width: auto; object-fit: contain;" /> ArcheoScope
+              <img src="fotos/logo-archeoscope-main.png" alt="" style="height: 14px; width: auto; object-fit: contain;" /> 02 · ArcheoScope (3D)
             </a>
-            <a href="#wasm-runtime" class="w3-bar-item w3-button">⚡ WebAssembly Runtime</a>
+            <a href="#wasm-runtime" class="w3-bar-item w3-button">03 · NIGHTMARE (WASM)</a>
           </div>
         </div>
+
+        <!-- Research & Explorations Dropdown -->
+        <div class="w3-dropdown-hover w3-hide-small">
+          <a
+            href="#research-lab"
+            class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large"
+            style="color: black; font-family: 'Inter', sans-serif"
+          >
+            <span data-lang="en">Research &amp; Lab</span>
+            <span data-lang="es">Investigación y Lab</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+          <br /><br />
+          <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
+            <a href="#research-lab" class="w3-bar-item w3-button">
+              <span data-lang="en">🔬 Research &amp; Experiments</span>
+              <span data-lang="es">🔬 Investigación y Experimentos</span>
+            </a>
+            <a href="#explorations" class="w3-bar-item w3-button">
+              <span data-lang="en">🧩 Technical Explorations</span>
+              <span data-lang="es">🧩 Exploraciones Técnicas</span>
+            </a>
+            <a href="#about" class="w3-bar-item w3-button">
+              <span data-lang="en">⚗️ 3D Visual Lab</span>
+              <span data-lang="es">⚗️ Laboratorio Visual 3D</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Experience & Personal Work Dropdown -->
         <div class="w3-dropdown-hover w3-hide-small">
           <a
             href="#experience"
             class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large"
-            style="color: black; font-family: &quot;Inter&quot;, sans-serif"
-            >Trayectoria <i class="fa fa-caret-down"></i
-          ></a>
+            style="color: black; font-family: 'Inter', sans-serif"
+          >
+            <span data-lang="en">Experience &amp; Profile</span>
+            <span data-lang="es">Experiencia y Perfil</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
           <br /><br />
           <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
-            <a href="#experience" class="w3-bar-item w3-button">💼 Experiencia (SIGAP)</a>
-            <a href="#ai-workflow" class="w3-bar-item w3-button">⚙️ AI Workflow</a>
-            <a href="#ecosystem" class="w3-bar-item w3-button">🌐 Ecosistema</a>
+            <a href="#experience" class="w3-bar-item w3-button">
+              <span data-lang="en">🏛️ Public Sector Experience</span>
+              <span data-lang="es">🏛️ Sector Público (SIGAP / TDI)</span>
+            </a>
+            <a href="#ecosystem" class="w3-bar-item w3-button">
+              <span data-lang="en">🎯 Selected Personal Work</span>
+              <span data-lang="es">🎯 Proyectos Personales</span>
+            </a>
+            <a href="#designer" class="w3-bar-item w3-button">
+              <span data-lang="en">👤 Profile &amp; Technologies</span>
+              <span data-lang="es">👤 Perfil y Tecnologías</span>
+            </a>
+            <a href="#figma" class="w3-bar-item w3-button">
+              <span data-lang="en">🎨 UI/UX Figma Prototypes</span>
+              <span data-lang="es">🎨 Prototipos UI/UX Figma</span>
+            </a>
           </div>
         </div>
-        <div class="w3-dropdown-hover w3-hide-small">
-          <a
-            href="#designer"
-            class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large"
-            style="color: black; font-family: &quot;Inter&quot;, sans-serif"
-            >Estudio &amp; Lab <i class="fa fa-caret-down"></i
-          ></a>
-          <br /><br />
-          <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-theme-d2">
-            <a href="#designer" class="w3-bar-item w3-button">👤 Perfil &amp; Stack</a>
-            <a href="#figma" class="w3-bar-item w3-button">🎨 Diseños Figma</a>
-            <a href="#about" class="w3-bar-item w3-button">⚗️ Visual Lab 3D</a>
-          </div>
-        </div>
+
         <a
           href="#contact"
           class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-padding-large"
-          style="color: black; font-family: &quot;Inter&quot;, sans-serif"
-          >Contact</a
+          style="color: black; font-family: 'Inter', sans-serif"
         >
+          <span data-lang="en">Contact</span>
+          <span data-lang="es">Contacto</span>
+        </a>
+
+        <!-- Language Selector (EN / ES) -->
+        <div class="lang-switch-wrap" role="group" aria-label="Language selector" style="margin-left: auto;">
+          <button
+            type="button"
+            class="lang-btn active"
+            data-set-lang="en"
+            onclick="setPortfolioLang('en')"
+            aria-label="Switch to English"
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            class="lang-btn"
+            data-set-lang="es"
+            onclick="setPortfolioLang('es')"
+            aria-label="Cambiar a Español"
+          >
+            ES
+          </button>
+        </div>
       </div>
+
       <!-- Navbar on small screens -->
       <div
         id="navDemo"
         class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"
       >
-        <a href="#jarbees" class="w3-bar-item w3-button" style="color: black"
-          >🐝 JarBees</a
-        >
-        <a href="#archeoscope" class="w3-bar-item w3-button" style="color: black; display: flex; align-items: center; gap: 6px;">
-          <img src="fotos/logo-archeoscope-main.png" alt="" style="height: 14px; width: auto; object-fit: contain;" /> ArcheoScope
+        <a href="#jarbees" class="w3-bar-item w3-button" style="color: black">
+          01 · JarBees (Local AI)
         </a>
-        <a href="#wasm-runtime" class="w3-bar-item w3-button" style="color: black"
-          >⚡ WebAssembly Runtime</a
-        >
-        <a href="#experience" class="w3-bar-item w3-button" style="color: black"
-          >💼 Experiencia</a
-        >
-        <a href="#ecosystem" class="w3-bar-item w3-button" style="color: black"
-          >🌐 Ecosistema</a
-        >
-        <a href="#designer" class="w3-bar-item w3-button" style="color: black"
-          >👤 Perfil</a
-        >
-        <a href="#about" class="w3-bar-item w3-button" style="color: black"
-          >⚗️ Visual Lab</a
-        >
-        <a href="#contact" class="w3-bar-item w3-button" style="color: black"
-          >✉️ Contact</a
-        >
+        <a href="#archeoscope" class="w3-bar-item w3-button" style="color: black; display: flex; align-items: center; gap: 6px;">
+          <img src="fotos/logo-archeoscope-main.png" alt="" style="height: 14px; width: auto; object-fit: contain;" /> 02 · ArcheoScope (3D)
+        </a>
+        <a href="#wasm-runtime" class="w3-bar-item w3-button" style="color: black">
+          03 · NIGHTMARE (WASM)
+        </a>
+        <a href="#research-lab" class="w3-bar-item w3-button" style="color: black">
+          <span data-lang="en">🔬 Research &amp; Experiments</span>
+          <span data-lang="es">🔬 Investigación y Experimentos</span>
+        </a>
+        <a href="#explorations" class="w3-bar-item w3-button" style="color: black">
+          <span data-lang="en">🧩 Technical Explorations</span>
+          <span data-lang="es">🧩 Exploraciones Técnicas</span>
+        </a>
+        <a href="#experience" class="w3-bar-item w3-button" style="color: black">
+          <span data-lang="en">🏛️ Public Sector Experience</span>
+          <span data-lang="es">🏛️ Experiencia Sector Público</span>
+        </a>
+        <a href="#ecosystem" class="w3-bar-item w3-button" style="color: black">
+          <span data-lang="en">🎯 Selected Personal Work</span>
+          <span data-lang="es">🎯 Proyectos Personales</span>
+        </a>
+        <a href="#designer" class="w3-bar-item w3-button" style="color: black">
+          <span data-lang="en">👤 Profile &amp; Technologies</span>
+          <span data-lang="es">👤 Perfil y Tecnologías</span>
+        </a>
+        <a href="#contact" class="w3-bar-item w3-button" style="color: black">
+          <span data-lang="en">✉️ Contact</span>
+          <span data-lang="es">✉️ Contacto</span>
+        </a>
       </div>
     </div>
 
-    <!-- Header -->
+    <!-- ============================================================================================ -->
+    <!-- LEVEL 1 — 30-SECOND OVERVIEW: HERO & CURRENT EXPLORATION -->
+    <!-- ============================================================================================ -->
     <header
       class="w3-display-container w3-content w3-wide header"
       style="max-width: 2000px"
@@ -223,24 +305,121 @@
       <img
         class="w3-image"
         src="fotos/mmirrored1.png"
-        alt="Portfolio de Ignacio Gabriel Fernández"
+        alt="Portfolio of Ignacio Gabriel Fernández"
       />
       <div class="w3-display-middle w3-center">
-        <p class="hero-kicker">SOFTWARE ARCHITECT · PARANÁ, ARGENTINA</p>
+        <p class="hero-kicker">
+          <span data-lang="en">PARANÁ, ARGENTINA · SOFTWARE &amp; R&amp;D PORTFOLIO</span>
+          <span data-lang="es">PARANÁ, ARGENTINA · PORTFOLIO DE SOFTWARE E I+D</span>
+        </p>
         <h1 class="hero-title">Ignacio Gabriel Fernández</h1>
         <p class="hero-tagline">
-          <strong>Software Architect · AI Systems · Knowledge Engineering · WebAssembly Runtimes</strong>
+          <strong data-lang="en">Software Development · AI Systems · Experimental Research</strong>
+          <strong data-lang="es">Desarrollo de Software · Sistemas de IA · Investigación Experimental</strong>
         </p>
-        <p class="hero-sub" style="max-width: 760px; margin: 12px auto 0;">
-          "Diseño sistemas inteligentes, entornos computacionales y runtimes interactivos — desde arquitecturas cognitivas y simulación 3D en tiempo real hasta software nativo ejecutado en el navegador mediante WebAssembly."
+        <p class="hero-sub" style="max-width: 780px; margin: 12px auto 0;">
+          <span data-lang="en">
+            Software developer focused on local AI architectures, interactive 3D/WebGL environments, WebAssembly systems integration, and experimental hardware-software instrumentation.
+          </span>
+          <span data-lang="es">
+            Desarrollador de software enfocado en arquitecturas de IA local, entornos interactivos 3D/WebGL, integración de sistemas mediante WebAssembly e instrumentación experimental entre hardware y software.
+          </span>
         </p>
       </div>
     </header>
 
-    <!-- JarBees Section — Flagship Project -->
+    <!-- Level 1: Quick Scan Strip (3 Active Lines of Exploration) -->
+    <section class="quick-overview-strip" id="quick-overview" aria-label="Current areas of work">
+      <div class="quick-overview-inner">
+        <div class="quick-overview-header">
+          <span class="quick-overview-kicker">
+            <span data-lang="en">⚡ QUICK OVERVIEW · CURRENT EXPLORATION</span>
+            <span data-lang="es">⚡ VISTA RÁPIDA · EXPLORACIÓN ACTUAL</span>
+          </span>
+          <span class="quick-overview-note">
+            <span data-lang="en">3 core projects · 4 research &amp; technical explorations · Public sector experience</span>
+            <span data-lang="es">3 proyectos principales · 4 exploraciones e investigaciones · Experiencia en sector público</span>
+          </span>
+        </div>
+
+        <div class="quick-overview-grid">
+          <!-- Pillar 1 -->
+          <div class="quick-pillar-card">
+            <h2 class="quick-pillar-title">
+              <span>🧠</span>
+              <span data-lang="en">Local AI &amp; Cognitive Architecture</span>
+              <span data-lang="es">IA Local y Arquitectura Cognitiva</span>
+            </h2>
+            <p class="quick-pillar-desc">
+              <span data-lang="en">
+                Modular backend engineering integrating local language models, hybrid RAG retrieval, persistent memory, deterministic tools, and human-supervised evaluation.
+              </span>
+              <span data-lang="es">
+                Ingeniería backend modular integrando modelos de lenguaje locales, recuperación RAG híbrida, memoria persistente, herramientas deterministas y evaluación supervisada.
+              </span>
+            </p>
+            <div class="quick-pillar-links">
+              <a href="#jarbees" class="quick-jump-chip">01 · JarBees ↓</a>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="quick-pillar-card">
+            <h2 class="quick-pillar-title">
+              <span>🌌</span>
+              <span data-lang="en">3D Simulation &amp; Browser Runtimes</span>
+              <span data-lang="es">Simulación 3D y Runtimes en Navegador</span>
+            </h2>
+            <p class="quick-pillar-desc">
+              <span data-lang="en">
+                Real-time WebGL archaeoastronomy simulation, procedural audio synthesis, and native C++/SDL2 engines compiled to WebAssembly with persistent browser storage.
+              </span>
+              <span data-lang="es">
+                Simulación arqueoastronómica en tiempo real con WebGL, síntesis de audio procedural y motores nativos C++/SDL2 compilados a WebAssembly con persistencia en navegador.
+              </span>
+            </p>
+            <div class="quick-pillar-links">
+              <a href="#archeoscope" class="quick-jump-chip">02 · ArcheoScope ↓</a>
+              <a href="#wasm-runtime" class="quick-jump-chip">03 · NIGHTMARE WASM ↓</a>
+              <a href="#research-lab" class="quick-jump-chip">05 · Retro Hub ↓</a>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="quick-pillar-card">
+            <h2 class="quick-pillar-title">
+              <span>📡</span>
+              <span data-lang="en">Physical Computing &amp; System Bridges</span>
+              <span data-lang="es">Physical Computing y Puentes de Sistema</span>
+            </h2>
+            <p class="quick-pillar-desc">
+              <span data-lang="en">
+                Real-time geomagnetic sensor telemetry, parametric 3D geometry validation, Web-to-Windows desktop input control, and applied public-sector systems.
+              </span>
+              <span data-lang="es">
+                Telemetría geomagnética de sensores en tiempo real, validación de geometría paramétrica 3D, control entre interfaces web y escritorio Windows, y sistemas en el sector público.
+              </span>
+            </p>
+            <div class="quick-pillar-links">
+              <a href="#research-lab" class="quick-jump-chip">04 · Scientific Lab ↓</a>
+              <a href="#explorations" class="quick-jump-chip">06 · Object Lab ↓</a>
+              <a href="#explorations" class="quick-jump-chip">07 · JarBeesMotion ↓</a>
+              <a href="#experience" class="quick-jump-chip">08 · SIGAP / TDI ↓</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================================ -->
+    <!-- LEVEL 2 — CORE PROJECTS (01. JARBEES · 02. ARCHEOSCOPE · 03. NIGHTMARE) -->
+    <!-- ============================================================================================ -->
+
+    <!-- 01. JarBees — Core Project -->
     <div
       class="w3-row w3-padding-64 w3-card-2"
       id="jarbees"
+      data-project="jarbees"
       style="
         background: linear-gradient(
           135deg,
@@ -253,7 +432,6 @@
       "
     >
       <div class="jarbees-container">
-        <!-- Content grid: text left, images right -->
         <div class="jarbees-row">
           <div class="jarbees-col-text">
             <span
@@ -265,78 +443,163 @@
                 border-radius: 20px;
                 letter-spacing: 2px;
                 padding: 5px 16px;
-                margin-bottom: 16px;
+                margin-bottom: 14px;
                 display: inline-block;
+                width: fit-content;
               "
-              >🐝 PRINCIPAL WORK · COGNITIVE OS</span
             >
+              <span data-lang="en">01 · CORE PROJECT · ACTIVE DEVELOPMENT</span>
+              <span data-lang="es">01 · PROYECTO PRINCIPAL · EN DESARROLLO ACTIVO</span>
+            </span>
+
             <h2
               class="w3-text-white"
               style="
-                font-family: &quot;Inter&quot;, sans-serif;
+                font-family: 'Inter', sans-serif;
                 font-weight: 700;
-                letter-spacing: 3px;
+                letter-spacing: 2px;
                 font-size: 2.2rem;
                 margin-top: 0;
-                margin-bottom: 8px;
+                margin-bottom: 6px;
               "
             >
               JarBees
             </h2>
+
             <p
               class="body-text"
-              style="color: #7eb8d4; font-size: 1.15rem; margin-bottom: 24px; font-weight: 500;"
+              style="color: #7eb8d4; font-size: 1.05rem; margin-bottom: 16px; font-weight: 500;"
             >
-              <i>Sistema Operativo Cognitivo Personal Adaptativo</i>
+              <span data-lang="en">Local AI · Cognitive Architecture · Full-Stack Engineering</span>
+              <span data-lang="es">IA Local · Arquitectura Cognitiva · Ingeniería Full-Stack</span>
             </p>
+
             <p
               class="body-text w3-text-light-grey"
-              style="margin-bottom: 12px; line-height: 1.8; font-size: 1.05rem"
+              style="margin-bottom: 14px; line-height: 1.75; font-size: 1rem"
             >
-              JarBees no es un chatbot genérico. Es un <strong>asistente cognitivo local-first</strong> diseñado como un sistema operativo para automatizar tareas complejas, organizar conocimiento y estructurar el pensamiento. Opera bajo una arquitectura de software modular que se ejecuta 100% en Node.js de forma relacional con la base de datos, garantizando cero sobrecosto en llamadas adicionales.
+              <span data-lang="en">
+                Development of a local-first AI architecture that integrates local language models, hybrid knowledge retrieval (RAG), persistent episodic memory, deterministic tools, and human-in-the-loop supervision mechanisms.
+              </span>
+              <span data-lang="es">
+                Desarrollo de una arquitectura de IA local que integra modelos de lenguaje locales, recuperación híbrida de conocimiento (RAG), memoria episódica persistente, herramientas deterministas y mecanismos de supervisión humana.
+              </span>
             </p>
-            <div style="margin-bottom: 24px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+
+            <!-- Evolution Track (from full-stack origin to cognitive architecture) -->
+            <div class="evolution-track" aria-label="Project evolution">
+              <span class="evolution-label">
+                <span data-lang="en">Evolution:</span>
+                <span data-lang="es">Evolución:</span>
+              </span>
+              <span class="evolution-step">
+                <span data-lang="en">1. Full-Stack Origin</span>
+                <span data-lang="es">1. Origen Full-Stack</span>
+              </span>
+              <span class="evolution-arrow">→</span>
+              <span class="evolution-step">
+                <span data-lang="en">2. Local LLM &amp; RAG</span>
+                <span data-lang="es">2. IA Local y RAG</span>
+              </span>
+              <span class="evolution-arrow">→</span>
+              <span class="evolution-step">
+                <span data-lang="en">3. Memory &amp; Orchestration</span>
+                <span data-lang="es">3. Memoria y Orquestación</span>
+              </span>
+              <span class="evolution-arrow">→</span>
+              <span class="evolution-step">
+                <span data-lang="en">4. Supervised Evaluation</span>
+                <span data-lang="es">4. Evaluación Supervisada</span>
+              </span>
+              <span class="evolution-arrow">→</span>
+              <span class="evolution-step">
+                <span data-lang="en">5. Lab Integration</span>
+                <span data-lang="es">5. Integración con Lab</span>
+              </span>
+            </div>
+
+            <!-- Recruiter Summary Box -->
+            <div class="core-meta-list">
+              <div class="core-meta-item">
+                <span data-lang="en"><strong>Contributions:</strong> Modular backend architecture, vector &amp; relational RAG pipeline, persistent memory verification, context orchestration, evaluation workflows, voice pipeline, and interactive 3D web interface.</span>
+                <span data-lang="es"><strong>Contribuciones:</strong> Arquitectura backend modular, sistema RAG vectorial y relacional, verificación de memoria persistente, orquestación de contexto, evaluación comparativa, pipeline de voz e interfaz web 3D.</span>
+              </div>
+              <div class="core-meta-item">
+                <span data-lang="en"><strong>Technologies:</strong> TypeScript, NestJS, PostgreSQL, pgvector, Prisma, Python, Local LLMs (Ollama / llama.cpp), Next.js, and Three.js.</span>
+                <span data-lang="es"><strong>Tecnologías:</strong> TypeScript, NestJS, PostgreSQL, pgvector, Prisma, Python, LLMs locales (Ollama / llama.cpp), Next.js y Three.js.</span>
+              </div>
+              <div class="core-meta-item">
+                <span data-lang="en"><strong>Status:</strong> Active development. Core retrieval, memory, voice, and UI layers are functional; advanced execution remains human-supervised and depends on local GPU infrastructure.</span>
+                <span data-lang="es"><strong>Estado:</strong> En evolución activa. Las capas de recuperación, memoria, voz e interfaz son funcionales; la ejecución avanzada permanece bajo supervisión humana y depende de infraestructura GPU local.</span>
+              </div>
+            </div>
+
+            <!-- Expandable 3-Level Verification Accordion -->
+            <details class="tech-accordion">
+              <summary>
+                <span data-lang="en">Technical Summary — Working · Built · Exploratory Scope</span>
+                <span data-lang="es">Resumen Técnico — Qué funciona · Qué desarrollé · En exploración</span>
+              </summary>
+              <div class="tech-accordion-body">
+                <div>
+                  <span data-lang="en"><strong>1. What is working:</strong> Semantic and relational knowledge retrieval (`pgvector` + entity graph), episodic memory classification with database provenance checks, local GPU inference with speech-to-text/text-to-speech, and a Next.js web interface with a rigged 3D avatar.</span>
+                  <span data-lang="es"><strong>1. Qué está funcionando:</strong> Recuperación semántica y relacional de conocimiento (`pgvector` + grafo de entidades), memoria episódica con verificación de procedencia en base de datos, inferencia en GPU local con voz bidireccional e interfaz web en Next.js con avatar 3D interactivo.</span>
+                </div>
+                <div>
+                  <span data-lang="en"><strong>2. What I built:</strong> Evolved the project from an initial full-stack CRUD application (`productos_crud_bkd` / `productos_crud_frd`) into a multi-module cognitive backend with controlled evaluation states, transactional rollback, and human authorization gates.</span>
+                  <span data-lang="es"><strong>2. Qué desarrollé concretamente:</strong> Evolucioné el sistema desde una aplicación full-stack inicial (`productos_crud_bkd` / `productos_crud_frd`) hacia un backend cognitivo modular con estados de evaluación controlada, reversión transaccional y compuertas de autorización humana.</span>
+                </div>
+                <div>
+                  <span data-lang="en"><strong>3. Exploratory / Limitations:</strong> Full model inference and database retrieval run on local workstation hardware; the public GitHub Pages demo showcases the web interface and 3D avatar. Multi-step execution is intentionally gated by human approval rather than operating as an unconstrained autonomous agent.</span>
+                  <span data-lang="es"><strong>3. En exploración / Limitaciones:</strong> La inferencia completa y la base de datos operan sobre hardware local; la demo pública en GitHub Pages muestra la interfaz web y el avatar 3D. La ejecución multi-paso está deliberadamente sujeta a supervisión humana en lugar de operar con autonomía irrestricta.</span>
+                </div>
+              </div>
+            </details>
+
+            <!-- Action Links -->
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
               <a
-                href="https://github.com/ifernandez89/JarBees"
+                href="https://github.com/ifernandez89/productos_crud_bkd"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn-interact btn-interact-dark"
                 style="margin-top: 0; text-decoration: none;"
-                aria-label="Ver repositorio de JarBees en GitHub"
               >
-                <i class="fa fa-github" aria-hidden="true"></i> Ver repositorio ↗
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <span data-lang="en">Backend Repo ↗</span>
+                <span data-lang="es">Repositorio Backend ↗</span>
+              </a>
+              <a
+                href="https://github.com/ifernandez89/productos_crud_frd"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-interact btn-interact-dark"
+                style="margin-top: 0; text-decoration: none;"
+              >
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <span data-lang="en">Frontend Repo ↗</span>
+                <span data-lang="es">Repositorio Frontend ↗</span>
+              </a>
+              <a
+                href="https://ifernandez89.github.io/productos_crud_frd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-interact"
+                style="margin-top: 0; text-decoration: none;"
+              >
+                <span data-lang="en">🌐 Web Interface Demo ↗</span>
+                <span data-lang="es">🌐 Demo Interfaz Web ↗</span>
               </a>
             </div>
-            
-            <!-- Numbers Grid / Metrics -->
-            <div class="jarbees-metrics">
-              <div class="metric-card">
-                <span class="metric-num">+60</span>
-                <span class="metric-label">Fuentes Integradas</span>
-              </div>
-              <div class="metric-card">
-                <span class="metric-num">RAG</span>
-                <span class="metric-label">Híbrido 2-Capas</span>
-              </div>
-              <div class="metric-card">
-                <span class="metric-num">Local</span>
-                <span class="metric-label">First Architecture</span>
-              </div>
-              <div class="metric-card">
-                <span class="metric-num">QICA</span>
-                <span class="metric-label">Motor Cognitivo</span>
-              </div>
-            </div>
           </div>
-          
+
           <div class="jarbees-col-media">
-            <!-- Dynamic interactive images column -->
             <div class="jarbees-gallery">
               <div class="gallery-main-img item">
                 <img
                   src="fotos/jarbees_1.jpg"
                   id="jarbeesMainImage"
-                  alt="JarBees Architecture Panel"
+                  alt="JarBees Web Interface"
                   style="
                     width: 100%;
                     border-radius: 16px;
@@ -350,347 +613,22 @@
                   src="fotos/jarbees_1.jpg"
                   class="thumb-img active"
                   onclick="setProjectImage('jarbees', 'fotos/jarbees_1.jpg', this)"
-                  alt="JarBees Panel 1"
+                  alt="JarBees Interface View 1"
                 />
                 <img
                   src="fotos/jarbees_2.jpg"
                   class="thumb-img"
                   onclick="setProjectImage('jarbees', 'fotos/jarbees_2.jpg', this)"
-                  alt="JarBees Panel 2"
+                  alt="JarBees Interface View 2"
                 />
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- Capabilities Accordion/Tabs Grid -->
-        <div class="jarbees-details-grid">
-          <div class="jarbees-detail-col">
-            <h3 class="detail-header">🧠 Arquitectura Cognitiva (QICA 2.0)</h3>
-            <p class="detail-text">
-              Un motor cognitivo modular. Posee un <strong>grafo de memoria entrelazada</strong> para asociaciones no locales, un <strong>motor de incertidumbre</strong> para delimitar certidumbre y un <strong>módulo de hipótesis</strong> que genera paralelamente múltiples perspectivas de análisis con un 15% de exploración (tunelamiento cuántico) para escapar de respuestas estándar.
-            </p>
-          </div>
-          <div class="jarbees-detail-col">
-            <h3 class="detail-header">📚 Ingesta Jerárquica & RAG</h3>
-            <p class="detail-text">
-              Procesa documentos y PDFs estructurándolos en capítulos y secciones. Cuenta con indexación asíncrona concurrente en segundo plano para PostgreSQL (pgvector). El motor Reranker pondera la relevancia léxica y semántica, mientras que <strong>EvidenceService</strong> actúa como salvaguarda contra alucinaciones del LLM midiendo la confianza en las respuestas.
-            </p>
-          </div>
-          <div class="jarbees-detail-col">
-            <h3 class="detail-header">⚙️ Planner & Execution Engine</h3>
-            <p class="detail-text">
-              Orquesta objetivos dividiéndolos en tareas secuenciales (navegación Playwright, lectura de memorias, RAG). Posee control estricto de seguridad mediante <strong>ActionExecutionGate</strong>, previniendo inyecciones de prompts indirectas y requiriendo confirmación humana (HITL) para acciones potencialmente destructivas.
-            </p>
-          </div>
-          <div class="jarbees-detail-col">
-            <h3 class="detail-header">🔋 Regulación Epigenética & Balance</h3>
-            <p class="detail-text">
-              El estado adaptativo de JarBees 3.0 regula sus niveles de rigor analítico y creatividad. Además, integra un sistema turn-by-turn de <strong>Balance Energético</strong> basado en ciclos temáticos, tránsitos astrológicos y reportes multidimensionales para acompañamiento personal.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Interactive Architecture Diagram -->
-        <div class="jarbees-architecture-section">
-          <h3 class="diagram-title">Diagrama de Flujo Cognitivo de JarBees</h3>
-          <div class="diagram-terminal">
-            <div class="terminal-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="terminal-title">jarbees-cognitive-pipeline.json</span>
-            </div>
-            <div class="terminal-body">
-              <pre><code>[Consulta del Usuario]
-       ↓
-[Intent Router] ──(Detección e Invalidador de Intents)
-       ↓
-[CognitiveOrchestrator]
-       ├────── (Consulta Simple / Tools) ────→ [APIs Directas / Google SDK] (0ms LLM overhead)
-       └────── (Consulta Compleja) ──────────┐
-                                             ↓
-                                   [EpigeneticRegulator] (Modula Creatividad/Rigor)
-                                             ↓
-                                   [CognitiveField] ⚡ Grafo Entrelazado (Asociación)
-                                             ↓
-                                   [UncertaintyEngine] (Mide Unknowns/Certidumbre)
-                                             ↓
-                                   [HypothesisEngine] (Superposición de 4 hipótesis)
-                                             ↓
-                                   [InterferenceEngine] (Solapamiento RAG & Reranking)
-                                             ↓
-                                   [EvidenceService] (Valida alucinaciones y colapsa)
-                                             ↓
-                                   [LLM Provider] (Genera respuesta final de estado)</code></pre>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
-    <!-- Designer Container -->
-    <div
-      class="w3-row w3-padding-64 position w3-card-2"
-      id="designer"
-      style="
-        background-size: cover;
-        background-image: url(fotos/mmirrored2.png);
-        opacity: 1;
-      "
-    >
-      <div class="w3-col m6">
-        <section>
-          <div>
-            <img
-              src="fotos/ig.jpg"
-              class="w3-white with w3-opacity center w3-image"
-              alt="Ignacio Gabriel Fernández"
-            />
-          </div>
-        </section>
-      </div>
-      <br />
-      <!-- Small screens -->
-      <div class="w3-col m6">
-        <div class="w3-hide-large w3-hide-medium">
-          <h2
-            class="w3-wide w3-center"
-            style="font-family: &quot;Inter&quot;, sans-serif; font-weight: 600"
-          >
-            Ignacio Gabriel Fernández
-          </h2>
-          <br />
-          <p class="body-text w3-opacity w3-center w3-text-light-grey">
-            <i
-              >Software Architect — AI Systems, Knowledge Engineering &amp; 3D Simulations</i
-            >
-          </p>
-          <br />
-          <p class="body-text w3-opacity w3-center w3-text-light-grey">
-            NestJS · PostgreSQL · Prisma · LLM Integration · Three.js · WebGL · Next.js
-          </p>
-          <br />
-        </div>
-        <!-- Large medium screens -->
-        <div class="w3-hide-small">
-          <h2
-            class="w3-wide w3-justify w3-text-grey"
-            style="font-family: &quot;Inter&quot;, sans-serif; font-weight: 600"
-          >
-            Ignacio Gabriel Fernández
-          </h2>
-          <br />
-          <p class="body-text w3-opacity w3-justify w3-text-light-grey">
-            <i
-              >Software Architect — AI Systems, Knowledge Engineering &amp; 3D Simulations</i
-            >
-          </p>
-          <br />
-          <p class="body-text w3-opacity w3-justify w3-text-light-grey">
-            NestJS · PostgreSQL · Prisma · LLM Integration · Three.js · WebGL · Next.js
-          </p>
-          <br />
-        </div>
-        <p class="body-text w3-justify">
-          <span
-            class="w3-padding w3-black w3-opacity-min"
-            style="
-              font-size: 100%;
-              font-family: &quot;Inter&quot;, sans-serif;
-              font-weight: 500;
-            "
-            >Técnico Universitario en Programación (UTN Paraná - Entre
-            Ríos)</span
-          >
-        </p>
-        <br />
-        <p class="body-text w3-justify">
-          <span
-            class="w3-padding w3-black w3-opacity-min"
-            style="
-              font-size: 100%;
-              font-family: &quot;Inter&quot;, sans-serif;
-              font-weight: 500;
-            "
-            >Desarrollador Web (Argentina Programa 4.0)</span
-          >
-        </p>
-        <br />
-        <p class="body-text w3-justify">
-          <span
-            class="w3-padding w3-black w3-opacity-min"
-            style="
-              font-size: 100%;
-              font-family: &quot;Inter&quot;, sans-serif;
-              font-weight: 500;
-            "
-            >Diseño UX/UI (Puerto E-Learning - UADER)</span
-          >
-        </p>
-        <br />
-        <hr />
-        <br />
-        <!-- Stack técnico -->
-        <div class="w3-container" style="margin-bottom: 16px">
-          <p
-            class="body-text w3-opacity"
-            style="font-size: 105%; margin-bottom: 10px; letter-spacing: 1px"
-          >
-            Stack
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px">
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >NestJS</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >PostgreSQL / Prisma</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >LLMs (Ollama / OpenRouter)</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Three.js / WebGL</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >React / Next.js</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Playwright (Browser Automation)</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >REST &amp; WebSockets APIs</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >GIS (PostGIS / QGIS)</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Java</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >PWA</span
-            >
-          </div>
-        </div>
-        <!-- Especialidad -->
-        <div class="w3-container" style="margin-bottom: 16px">
-          <p
-            class="body-text w3-opacity"
-            style="font-size: 105%; margin-bottom: 10px; letter-spacing: 1px"
-          >
-            Especialización
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px">
-            <span
-              class="w3-tag w3-theme-d2 tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Arquitecturas Cognitivas</span
-            >
-            <span
-              class="w3-tag w3-theme-d2 tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Ingeniería de Conocimiento &amp; RAG</span
-            >
-            <span
-              class="w3-tag w3-theme-d2 tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Simulación Astronómica &amp; 3D</span
-            >
-            <span
-              class="w3-tag w3-theme-d2 tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Automatización de Procesos Complejos</span
-            >
-          </div>
-        </div>
-        <!-- AI-Assisted Development -->
-        <div class="w3-container" style="margin-bottom: 16px">
-          <p
-            class="body-text w3-opacity"
-            style="font-size: 105%; margin-bottom: 10px; letter-spacing: 1px"
-          >
-            ⚙️ AI-Assisted Development
-          </p>
-          <p
-            class="body-text w3-text-light-grey"
-            style="font-size: 92%; line-height: 1.7; margin-bottom: 12px"
-          >
-            Implemento workflows de desarrollo asistido por IA (vibe coding),
-            combinando editores inteligentes, múltiples modelos y estrategias de
-            prompting para acelerar la construcción de sistemas complejos. La IA
-            se utiliza como herramienta de aceleración, no como sustituto del
-            criterio técnico.
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px">
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Múltiples modelos (local/cloud)</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Skills reutilizables</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Validación manual + testing</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Prompting estratégico</span
-            >
-            <span
-              class="w3-tag w3-dark-grey tag-text"
-              style="border-radius: 4px; padding: 4px 10px"
-              >Control arquitectónico</span
-            >
-          </div>
-        </div>
-        <div class="w3-hide-large w3-hide-medium w3-container">
-          <p
-            class="body-text"
-            style="text-align: center; font-size: 110%; font-style: italic"
-          >
-            "Diseño y orquesto arquitecturas modulares de software con flujos asistidos por IA, manteniendo control absoluto sobre la lógica, la arquitectura y la validación técnica."
-          </p>
-          <br />
-        </div>
-        <div class="w3-hide-small w3-container">
-          <p
-            class="body-text w3-justify"
-            style="text-align: center; font-size: 110%; font-style: italic"
-          >
-            "Diseño y orquesto arquitecturas modulares de software con flujos asistidos por IA, manteniendo control absoluto sobre la lógica, la arquitectura y la validación técnica."
-          </p>
-          <br />
-        </div>
-      </div>
-    </div>
-
-    <!-- Archeoscope Section — Flagship Project -->
+    <!-- 02. ArcheoScope — Core Project -->
     <div
       class="w3-row w3-padding-64 w3-card-2"
       id="archeoscope"
@@ -705,27 +643,13 @@
         border-top: 2px solid #1a3a5c;
       "
     >
-      <div class="w3-col m6 w3-center" style="padding: 20px 10px">
-        <span
-          class="w3-tag tag-text"
-          style="
-            background: #1a3a5c;
-            color: #7eb8d4;
-            border-radius: 20px;
-            letter-spacing: 2px;
-            padding: 5px 16px;
-            margin-bottom: 16px;
-            display: inline-block;
-          "
-          >✦ FLAGSHIP ECOSYSTEM · MULTI-SURFACE</span
-        >
-        <br /><br />
+      <div class="w3-col m5 w3-center" style="padding: 20px 16px">
         <div class="archeoscope-gallery" style="max-width: 340px; width: 100%; margin: 0 auto;">
           <div class="gallery-main-img item" style="border-radius: 24px; overflow: hidden; box-shadow: 0 12px 48px rgba(0, 100, 180, 0.35), 0 0 80px rgba(0, 60, 120, 0.2);">
             <img
               src="fotos/archeoscope_app_mobile.png"
               id="archeoscopeMainImage"
-              alt="Archeoscope Interface"
+              alt="ArcheoScope Interface"
               style="width: 100%; display: block;"
             />
           </div>
@@ -734,221 +658,173 @@
               src="fotos/archeoscope_app_mobile.png"
               class="thumb-img active"
               onclick="setProjectImage('archeoscope', 'fotos/archeoscope_app_mobile.png', this)"
-              alt="Archeoscope Mobile"
+              alt="ArcheoScope Mobile Observatory"
               style="width: 60px; height: 45px;"
             />
             <img
               src="fotos/archeoscope_1.jpg"
               class="thumb-img"
               onclick="setProjectImage('archeoscope', 'fotos/archeoscope_1.jpg', this)"
-              alt="Archeoscope Sky View"
+              alt="ArcheoScope Sky View"
               style="width: 60px; height: 45px;"
             />
             <img
               src="fotos/archeoscope_2.jpg"
               class="thumb-img"
               onclick="setProjectImage('archeoscope', 'fotos/archeoscope_2.jpg', this)"
-              alt="Archeoscope Solar Calculations"
+              alt="ArcheoScope Solar System Simulation"
               style="width: 60px; height: 45px;"
             />
           </div>
         </div>
       </div>
-      <div class="w3-col m6">
-          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px; flex-wrap: wrap;">
-            <img
-              src="fotos/logo-archeoscope-main.png"
-              alt="ArcheoScope Logo"
-              style="max-height: 48px; width: auto; max-width: 100%; object-fit: contain;"
-            />
-            <h3
-              class="w3-text-white"
-              style="
-                font-family: &quot;Inter&quot;, sans-serif;
-                font-weight: 600;
-                letter-spacing: 3px;
-                font-size: 160%;
-                margin: 0;
-              "
-            >
-              ArcheoScope
-            </h3>
-          </div>
-          <p
-            class="body-text"
-            style="color: #7eb8d4; font-size: 105%; margin-bottom: 16px"
-          >
-            <i>Ecosistema tridimensional y cómputo arqueoastronómico</i>
-          </p>
-          <p
-            class="body-text w3-text-light-grey"
-            style="margin-bottom: 16px; line-height: 1.7; font-size: 100%"
-          >
-            ArcheoScope nació como un **juego de exploración tridimensional para PC** con un motor de simulación celeste de alta precisión basado en algoritmos astronómicos y datos arqueoastronómicos reales. De esa base estructural surge una **versión mobile companion** para la exploración y consulta simbólica cotidiana (el cielo en tiempo real, alineaciones rituales y calendarios antiguos).
-          </p>
-          <p
-            class="body-text w3-text-light-grey"
-            style="margin-bottom: 20px; line-height: 1.7; font-size: 95%"
-          >
-            Diseñado bajo un riguroso control arquitectónico y desarrollado mediante **ingeniería asistida por IA**. Modulariza el cálculo computacional del firmamento y las posiciones planetarias en Node.js, y renderiza visualizaciones 3D fluidas en el cliente utilizando WebGL y Web Audio.
-          </p>
 
-          <div style="margin-bottom: 20px">
-            <p
-              class="tag-text"
-              style="
-                color: #7eb8d4;
-                letter-spacing: 2px;
-                margin-bottom: 10px;
-                font-size: 78%;
-              "
-            >
-              📱 MOBILE — APP DE CONSULTA &amp; MOTOR CASCADA
-            </p>
-            <div
-              style="
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 6px 16px;
-              "
-            >
-              <p class="body-text w3-text-light-grey" style="font-size: 88%">
-                <span>🌍</span> <strong>Hoy</strong> — cielo en tiempo real
-              </p>
-              <p class="body-text w3-text-light-grey" style="font-size: 88%">
-                <span>✨</span> <strong>Constelaciones</strong> — cielo nocturno
-              </p>
-              <p class="body-text w3-text-light-grey" style="font-size: 88%">
-                <span>🪐</span> <strong>Astrología</strong> — posiciones locales
-              </p>
-              <p class="body-text w3-text-light-grey" style="font-size: 88%">
-                <span>📅</span> <strong>Calendarios</strong> — Maya, Babilónico
-              </p>
-              <p class="body-text w3-text-light-grey" style="font-size: 88%">
-                <span>🌦️</span> <strong>Clima</strong> — fases y transiciones
-              </p>
-              <p class="body-text w3-text-light-grey" style="font-size: 88%">
-                <span>🔔</span> <strong>Eventos</strong> — alertas astronómicas
-              </p>
-            </div>
-          </div>
+      <div class="w3-col m7" style="padding: 12px 24px;">
+        <span
+          class="w3-tag tag-text"
+          style="
+            background: #1a3a5c;
+            color: #7eb8d4;
+            border-radius: 20px;
+            letter-spacing: 2px;
+            padding: 5px 16px;
+            margin-bottom: 14px;
+            display: inline-block;
+          "
+        >
+          <span data-lang="en">02 · CORE PROJECT · INTERACTIVE 3D &amp; ASTRONOMY</span>
+          <span data-lang="es">02 · PROYECTO PRINCIPAL · 3D INTERACTIVO Y ASTRONOMÍA</span>
+        </span>
 
-          <div
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap;">
+          <img
+            src="fotos/logo-archeoscope-main.png"
+            alt="ArcheoScope Logo"
+            style="max-height: 46px; width: auto; max-width: 100%; object-fit: contain;"
+          />
+          <h2
+            class="w3-text-white"
             style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 6px;
-              margin-bottom: 24px;
+              font-family: 'Inter', sans-serif;
+              font-weight: 700;
+              letter-spacing: 2px;
+              font-size: 2rem;
+              margin: 0;
             "
           >
-            <span
-              class="w3-tag tag-text"
-              style="
-                background: #0d2137;
-                color: #7eb8d4;
-                border-radius: 4px;
-                padding: 4px 10px;
-              "
-              >React Native</span
-            >
-            <span
-              class="w3-tag tag-text"
-              style="
-                background: #0d2137;
-                color: #7eb8d4;
-                border-radius: 4px;
-                padding: 4px 10px;
-              "
-              >Three.js / WebGL</span
-            >
-            <span
-              class="w3-tag tag-text"
-              style="
-                background: #0d2137;
-                color: #7eb8d4;
-                border-radius: 4px;
-                padding: 4px 10px;
-              "
-              >Astronomical Engine</span
-            >
-            <span
-              class="w3-tag tag-text"
-              style="
-                background: #0d2137;
-                color: #7eb8d4;
-                border-radius: 4px;
-                padding: 4px 10px;
-              "
-              >Web Audio API</span
-            >
-            <span
-              class="w3-tag tag-text"
-              style="
-                background: #0d2137;
-                color: #7eb8d4;
-                border-radius: 4px;
-                padding: 4px 10px;
-              "
-              >PWA</span
-            >
-            <span
-              class="w3-tag tag-text"
-              style="
-                background: #0d2137;
-                color: #7eb8d4;
-                border-radius: 4px;
-                padding: 4px 10px;
-              "
-              >AI-Assisted Dev</span
-            >
+            ArcheoScope
+          </h2>
+        </div>
+
+        <p
+          class="body-text"
+          style="color: #7eb8d4; font-size: 1.02rem; margin-bottom: 14px; font-weight: 500;"
+        >
+          <span data-lang="en">Three.js · WebGL · 3D Simulation · Astronomy · Interactive Experiences</span>
+          <span data-lang="es">Three.js · WebGL · Simulación 3D · Astronomía · Experiencias Interactivas</span>
+        </p>
+
+        <p
+          class="body-text w3-text-light-grey"
+          style="margin-bottom: 16px; line-height: 1.75; font-size: 0.98rem"
+        >
+          <span data-lang="en">
+            Interactive 3D archaeoastronomy platform and real-time sky observatory running in the browser. Combines a <strong>PC 3D exploration experience</strong> across ancient ceremonial sites with a <strong>mobile astronomical observatory</strong> for real-time sky tracking, constellations, and historical calendars.
+          </span>
+          <span data-lang="es">
+            Plataforma interactiva de arqueoastronomía 3D y observatorio celeste en tiempo real en el navegador. Combina un <strong>entorno de exploración 3D para PC</strong> sobre sitios ceremoniales antiguos con un <strong>observatorio astronómico móvil</strong> de posiciones celestes, constelaciones y calendarios históricos.
+          </span>
+        </p>
+
+        <!-- Recruiter Summary Box -->
+        <div class="core-meta-list">
+          <div class="core-meta-item">
+            <span data-lang="en"><strong>Contributions:</strong> 3D scene architecture, astronomical ephemeris integration, custom GLSL atmospheric/terrain shaders, procedural Web Audio synthesis, responsive mobile observatory, and static web packaging.</span>
+            <span data-lang="es"><strong>Contribuciones:</strong> Arquitectura de escena 3D, integración de cálculo de efemérides, shaders GLSL de atmósfera y terreno, síntesis de audio procedural en Web Audio, observatorio móvil adaptable y empaquetado web.</span>
           </div>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap">
-            <a
-              href="https://ifernandez89.github.io/ArcheoScope/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w3-button tag-text"
-              style="
-                background: #1a3a5c;
-                color: #7eb8d4;
-                border-radius: 6px;
-                padding: 10px 20px;
-                letter-spacing: 1px;
-                border: 1px solid #2a5a8c;
-              "
-            >
-              🚀 Ver App Mobile ↗
-            </a>
-            <a
-              href="https://github.com/ifernandez89/ArcheoScope"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w3-button tag-text"
-              style="
-                background: transparent;
-                color: #7eb8d4;
-                border-radius: 6px;
-                padding: 10px 20px;
-                letter-spacing: 1px;
-                border: 1px solid #2a5a8c;
-              "
-            >
-              <i class="fa fa-github"></i> GitHub ↗
-            </a>
-            <button
-              type="button"
-              data-interact
-              class="btn-interact btn-interact-dark"
-              aria-label="Abrir preview interactivo de Archeoscope"
-            >
-              Live preview
-            </button>
+          <div class="core-meta-item">
+            <span data-lang="en"><strong>Technologies:</strong> Next.js, React, TypeScript, Three.js, React Three Fiber, astronomy-engine (VSOP87), GLSL Shaders, and Web Audio API.</span>
+            <span data-lang="es"><strong>Tecnologías:</strong> Next.js, React, TypeScript, Three.js, React Three Fiber, astronomy-engine (VSOP87), GLSL Shaders y Web Audio API.</span>
           </div>
+          <div class="core-meta-item">
+            <span data-lang="en"><strong>Status:</strong> Functional public release (`v1.3.0`) with PC 3D exploration and mobile observatory live on GitHub Pages. Cooperative multiplayer and additional archaeological sites remain on the development roadmap.</span>
+            <span data-lang="es"><strong>Estado:</strong> Versión pública funcional (`v1.3.0`) con exploración 3D en PC y observatorio móvil activos en GitHub Pages. El modo multijugador cooperativo y nuevos sitios arqueológicos continúan en la hoja de ruta.</span>
+          </div>
+        </div>
+
+        <!-- Expandable 3-Level Verification Accordion -->
+        <details class="tech-accordion">
+          <summary>
+            <span data-lang="en">Technical Summary — Working · Built · Exploratory Scope</span>
+            <span data-lang="es">Resumen Técnico — Qué funciona · Qué desarrollé · En exploración</span>
+          </summary>
+          <div class="tech-accordion-body">
+            <div>
+              <span data-lang="en"><strong>1. What is working:</strong> 3D exploration across 6 archaeological sites (*Giza, Puma Punku, Teotihuacán, Easter Island, Tres Zapotes, Göbekli Tepe*), star catalog and 3D Solar System simulation on PC; real-time lunar/planetary tracking, 27 constellations, Maya &amp; Babylonian calendars, and weather telemetry on mobile.</span>
+              <span data-lang="es"><strong>1. Qué está funcionando:</strong> Exploración 3D en 6 sitios arqueológicos (*Giza, Puma Punku, Teotihuacán, Isla de Pascua, Tres Zapotes, Göbekli Tepe*), catálogo estelar y Sistema Solar 3D en PC; seguimiento lunar/planetario en tiempo real, 27 constelaciones, calendarios Maya y Babilónico, y clima en móvil.</span>
+            </div>
+            <div>
+              <span data-lang="en"><strong>2. What I built:</strong> End-to-end 3D rendering pipeline, spatial alignment between VSOP87 astronomical coordinates and local horizon geometry, GPU instancing/culling optimizations, and harmonic orbital audio synthesis.</span>
+              <span data-lang="es"><strong>2. Qué desarrollé concretamente:</strong> Pipeline completo de renderizado 3D, alineación espacial entre coordenadas astronómicas VSOP87 y geometría del horizonte local, optimización en GPU y síntesis sonora armónica basada en órbitas planetarias.</span>
+            </div>
+            <div>
+              <span data-lang="en"><strong>3. Exploratory / Roadmap:</strong> Multi-user synchronization, native mobile store packaging, and community mission editing tools are planned for future iterations.</span>
+              <span data-lang="es"><strong>3. En exploración / Hoja de ruta:</strong> La sincronización multijugador, el empaquetado nativo para tiendas móviles y el editor comunitario de misiones están proyectados para futuras etapas.</span>
+            </div>
+          </div>
+        </details>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+          <a
+            href="https://ifernandez89.github.io/ArcheoScope/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w3-button tag-text"
+            style="
+              background: #1a3a5c;
+              color: #7eb8d4;
+              border-radius: 6px;
+              padding: 10px 20px;
+              letter-spacing: 1px;
+              border: 1px solid #2a5a8c;
+            "
+          >
+            <span data-lang="en">🚀 Launch Application ↗</span>
+            <span data-lang="es">🚀 Abrir Aplicación ↗</span>
+          </a>
+          <a
+            href="https://github.com/ifernandez89/ArcheoScope"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w3-button tag-text"
+            style="
+              background: transparent;
+              color: #7eb8d4;
+              border-radius: 6px;
+              padding: 10px 20px;
+              letter-spacing: 1px;
+              border: 1px solid #2a5a8c;
+            "
+          >
+            <i class="fa fa-github"></i>
+            <span data-lang="en">Repository ↗</span>
+            <span data-lang="es">Repositorio ↗</span>
+          </a>
+          <button
+            type="button"
+            data-interact
+            class="btn-interact btn-interact-dark"
+            style="margin-top: 0;"
+            aria-label="Open interactive preview of ArcheoScope"
+          >
+            <span data-lang="en">Live preview</span>
+            <span data-lang="es">Vista interactiva</span>
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- Archeoscope PC / Game — Official Teaser Trailer -->
+    <!-- ArcheoScope Official Teaser Video Row -->
     <div
       class="w3-row w3-padding-32 w3-card-2"
       id="archeoscope-pc"
@@ -957,64 +833,35 @@
         border-top: 1px solid #1a3a5c;
       "
     >
-      <div class="w3-container w3-center" style="padding: 40px 20px">
-        <span
-          class="w3-tag tag-text"
-          style="
-            background: #0d2137;
-            color: #7eb8d4;
-            border-radius: 20px;
-            letter-spacing: 2px;
-            padding: 4px 14px;
-            margin-bottom: 14px;
-            display: inline-block;
-          "
-          >🎮 ARCHEOSCOPE — PC / ORIGINAL GAME</span
-        >
-        <br /><br />
-        <h3
-          class="w3-text-white"
-          style="
-            font-family: &quot;Inter&quot;, sans-serif;
-            font-weight: 600;
-            letter-spacing: 2px;
-            font-size: 130%;
-            margin-bottom: 6px;
-          "
-        >
-          El juego original · ¡Finalizado!
-        </h3>
+      <div class="w3-container w3-center" style="padding: 24px 20px">
         <p
-          class="body-text"
+          class="tag-text"
           style="
             color: #7eb8d4;
-            font-size: 90%;
-            margin: 8px auto 20px;
-            max-width: 640px;
-            line-height: 1.6;
-            font-style: italic;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            font-size: 0.8rem;
           "
         >
-          La raíz del proyecto — de acá nace todo el ecosistema Archeoscope.
+          <span data-lang="en">🎬 ARCHEOSCOPE — OFFICIAL VIDEO DEMONSTRATION</span>
+          <span data-lang="es">🎬 ARCHEOSCOPE — DEMOSTRACIÓN EN VIDEO OFICIAL</span>
         </p>
 
-        <!-- Official Teaser Trailer (click-to-play inline) -->
         <div
           id="archeoscope-teaser-wrap"
-          style="max-width: 760px; margin: 0 auto 28px; position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 48px rgba(0,100,200,0.45), 0 0 60px rgba(0,60,140,0.25); transition: box-shadow 0.3s ease;"
+          style="max-width: 720px; margin: 0 auto 20px; position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 48px rgba(0,100,200,0.35);"
         >
-          <!-- Thumbnail + play overlay (visible before play) -->
           <div
             id="archeoscope-teaser-thumb"
             role="button"
             tabindex="0"
-            aria-label="Reproducir teaser trailer oficial de Archeoscope"
+            aria-label="Play ArcheoScope official teaser trailer"
             onclick="(function(){
               var wrap = document.getElementById('archeoscope-teaser-wrap');
               var thumb = document.getElementById('archeoscope-teaser-thumb');
               var iframe = document.createElement('iframe');
               iframe.src = 'https://www.youtube.com/embed/t3qUjLpuhYc?autoplay=1&rel=0&modestbranding=1';
-              iframe.title = 'Archeoscope — Teaser Trailer Oficial';
+              iframe.title = 'ArcheoScope — Official Teaser Trailer';
               iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
               iframe.allowFullscreen = true;
               iframe.style.cssText = 'width:100%;aspect-ratio:16/9;border:none;display:block;';
@@ -1026,11 +873,10 @@
           >
             <img
               src="https://img.youtube.com/vi/t3qUjLpuhYc/maxresdefault.jpg"
-              alt="Archeoscope — Teaser Trailer Oficial"
+              alt="ArcheoScope — Official Teaser Trailer"
               style="width: 100%; display: block;"
               onerror="this.src='https://img.youtube.com/vi/t3qUjLpuhYc/hqdefault.jpg'"
             />
-            <!-- Play button overlay -->
             <div style="
               position: absolute; inset: 0;
               display: flex; flex-direction: column;
@@ -1038,7 +884,7 @@
               background: rgba(5, 10, 25, 0.4);
             ">
               <div style="
-                width: 76px; height: 76px;
+                width: 72px; height: 72px;
                 background: rgba(255,255,255,0.15);
                 backdrop-filter: blur(6px);
                 -webkit-backdrop-filter: blur(6px);
@@ -1046,116 +892,28 @@
                 border-radius: 50%;
                 display: flex; align-items: center; justify-content: center;
                 box-shadow: 0 0 36px rgba(126,184,212,0.45);
-                transition: background 0.2s, transform 0.2s;
               ">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="#7eb8d4" xmlns="http://www.w3.org/2000/svg" style="margin-left:4px">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="#7eb8d4" xmlns="http://www.w3.org/2000/svg" style="margin-left:4px">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
               </div>
               <span style="
                 color: #7eb8d4;
                 font-family: 'Inter', sans-serif;
-                font-size: 0.85rem;
+                font-size: 0.82rem;
                 letter-spacing: 2px;
-                margin-top: 14px;
+                margin-top: 12px;
                 text-shadow: 0 2px 8px rgba(0,0,0,0.85);
                 font-weight: 600;
-              ">▶ TEASER TRAILER OFICIAL</span>
+              ">
+                <span data-lang="en">▶ WATCH OFFICIAL TEASER</span>
+                <span data-lang="es">▶ VER TEASER OFICIAL</span>
+              </span>
             </div>
-            <!-- YouTube logo (opens YouTube in new tab) -->
-            <a
-              href="https://youtu.be/t3qUjLpuhYc"
-              target="_blank"
-              rel="noopener noreferrer"
-              onclick="event.stopPropagation()"
-              aria-label="Ver en YouTube"
-              style="
-                position: absolute; bottom: 12px; right: 14px;
-                display: flex; align-items: center; gap: 5px;
-                background: rgba(0,0,0,0.55);
-                border-radius: 6px;
-                padding: 4px 10px;
-                text-decoration: none;
-                font-family: 'Inter', sans-serif;
-                font-size: 0.7rem;
-                color: #fff;
-                letter-spacing: 1px;
-                opacity: 0.85;
-                transition: opacity 0.2s;
-              "
-              onmouseover="this.style.opacity='1'"
-              onmouseout="this.style.opacity='0.85'"
-            >
-              <svg height="12" viewBox="0 0 90 20" xmlns="http://www.w3.org/2000/svg" fill="#fff" aria-hidden="true"><path d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324ZM11.4271 14.2851V5.71489L18.8502 10L11.4271 14.2851Z"/></svg>
-              Ver en YouTube
-            </a>
           </div>
         </div>
-        <!-- /Teaser -->
 
-        <p
-          class="body-text w3-text-light-grey"
-          style="
-            font-size: 92%;
-            margin: 0 auto 20px;
-            max-width: 640px;
-            line-height: 1.7;
-          "
-        >
-          Juego interactivo de exploración simbólica que combina <strong>visualización dinámica, lógica propia y desarrollo asistido por IA</strong>. Diseñado como experiencia lúdica, pero construido sobre un sistema modular de interacción, navegación por épocas históricas y astronomía real. El jugador explora constelaciones, calendarios ancestrales y alineaciones rituales en un universo generado proceduralmente.
-        </p>
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            justify-content: center;
-            margin-bottom: 20px;
-          "
-        >
-          <span
-            class="w3-tag tag-text"
-            style="
-              background: #0d2137;
-              color: #7eb8d4;
-              border-radius: 4px;
-              padding: 4px 10px;
-            "
-            >Three.js</span
-          >
-          <span
-            class="w3-tag tag-text"
-            style="
-              background: #0d2137;
-              color: #7eb8d4;
-              border-radius: 4px;
-              padding: 4px 10px;
-            "
-            >Procedural Generation</span
-          >
-          <span
-            class="w3-tag tag-text"
-            style="
-              background: #0d2137;
-              color: #7eb8d4;
-              border-radius: 4px;
-              padding: 4px 10px;
-            "
-            >Real Astronomy</span
-          >
-          <span
-            class="w3-tag tag-text"
-            style="
-              background: #0d2137;
-              color: #7eb8d4;
-              border-radius: 4px;
-              padding: 4px 10px;
-            "
-            >Game Mechanics</span
-          >
-        </div>
-
-        <!-- Credits — Graphic Artist -->
+        <!-- Graphic Art Credit -->
         <div style="
           display: inline-flex;
           align-items: center;
@@ -1163,14 +921,14 @@
           background: rgba(26,58,92,0.35);
           border: 1px solid rgba(126,184,212,0.2);
           border-radius: 12px;
-          padding: 10px 20px;
-          margin-bottom: 22px;
+          padding: 8px 18px;
           flex-wrap: wrap;
           justify-content: center;
         ">
-          <span style="font-size: 1.1rem;">🎨</span>
-          <span class="body-text" style="color: #b0cfe0; font-size: 88%; letter-spacing: 0.5px;">
-            Arte del video &amp; arte del juego:
+          <span style="font-size: 1rem;">🎨</span>
+          <span class="body-text" style="color: #b0cfe0; font-size: 86%; letter-spacing: 0.4px;">
+            <span data-lang="en">Video &amp; game visual art collaboration:</span>
+            <span data-lang="es">Arte visual del video y del juego:</span>
             <a
               href="https://www.behance.net/gallery/191229561/Portfolio-artistico"
               target="_blank"
@@ -1180,57 +938,14 @@
                 font-weight: 600;
                 text-decoration: none;
                 border-bottom: 1px solid rgba(126,184,212,0.45);
-                transition: color 0.2s, border-color 0.2s;
               "
-              onmouseover="this.style.color='#a8d8f0'; this.style.borderColor='rgba(168,216,240,0.7)';"
-              onmouseout="this.style.color='#7eb8d4'; this.style.borderColor='rgba(126,184,212,0.45)';"
-              aria-label="Ver portfolio de Paola Quagliano en Behance"
             >Paola Quagliano ↗</a>
           </span>
-        </div>
-
-        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-          <a
-            href="https://youtu.be/t3qUjLpuhYc"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w3-button tag-text"
-            style="
-              background: #1a3a5c;
-              color: #7eb8d4;
-              border-radius: 6px;
-              padding: 10px 22px;
-              letter-spacing: 1px;
-              border: 1px solid #2a5a8c;
-              margin-top: 0;
-              text-decoration: none;
-            "
-          >
-            ▶ Ver Teaser en YouTube ↗
-          </a>
-          <a
-            href="https://ifernandez89.github.io/ArcheoScope/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w3-button tag-text"
-            style="
-              background: transparent;
-              color: #7eb8d4;
-              border-radius: 6px;
-              padding: 10px 22px;
-              letter-spacing: 1px;
-              border: 1px solid #2a5a8c;
-              margin-top: 0;
-              text-decoration: none;
-            "
-          >
-            🌐 Ir al sitio ↗
-          </a>
         </div>
       </div>
     </div>
 
-    <!-- WebAssembly Runtime Section — Flagship Project -->
+    <!-- 03. NIGHTMARE / DevilutionX WASM — Core Project -->
     <div
       class="w3-row w3-padding-64 w3-card-2"
       id="wasm-runtime"
@@ -1247,156 +962,129 @@
       "
     >
       <div class="wasm-container">
-        <!-- Main Flagship Header -->
-        <div style="text-align: center; margin-bottom: 40px;">
-          <span
-            class="w3-tag tag-text wasm-badge"
-            style="
-              background: rgba(186, 85, 211, 0.12);
-              color: #c988f7;
-              border: 1px solid rgba(186, 85, 211, 0.35);
-              border-radius: 20px;
-              letter-spacing: 2px;
-              padding: 6px 18px;
-              margin-bottom: 14px;
-              display: inline-block;
-            "
-            >⚡ FLAGSHIP SYSTEM · NATIVE RUNTIME &amp; PRESERVATION</span
-          >
-          <h2
-            class="w3-text-white"
-            style="
-              font-family: &quot;Inter&quot;, sans-serif;
-              font-weight: 700;
-              letter-spacing: 2px;
-              font-size: 2.3rem;
-              margin-top: 6px;
-              margin-bottom: 10px;
-            "
-          >
-            Modern Cross-Platform WebAssembly Runtime
-          </h2>
-          <p
-            class="body-text"
-            style="
-              color: #b0b8d0;
-              font-size: 1.12rem;
-              max-width: 820px;
-              margin: 0 auto;
-              line-height: 1.65;
-            "
-          >
-            <i>An experimental runtime for bringing native software, classic game engines and systems preservation to the modern browser.</i>
-          </p>
-        </div>
-
-        <!-- NIGHTMARE Demonstration Row -->
         <div class="wasm-row">
-          <!-- Text column -->
           <div class="wasm-col-text">
             <span
-              class="w3-tag tag-text"
+              class="w3-tag tag-text wasm-badge"
               style="
-                background: rgba(220, 53, 69, 0.15);
-                color: #ff6b81;
-                border: 1px solid rgba(220, 53, 69, 0.3);
+                background: rgba(186, 85, 211, 0.12);
+                color: #c988f7;
+                border: 1px solid rgba(186, 85, 211, 0.35);
                 border-radius: 20px;
-                letter-spacing: 1.5px;
-                padding: 4px 14px;
-                margin-bottom: 12px;
+                letter-spacing: 2px;
+                padding: 5px 16px;
+                margin-bottom: 14px;
                 display: inline-block;
                 width: fit-content;
               "
-              >🎮 LIVE DEMONSTRATION · DIABLO &amp; HELLFIRE</span
             >
-            <h3
+              <span data-lang="en">03 · CORE PROJECT · WEBASSEMBLY &amp; SYSTEMS PORT</span>
+              <span data-lang="es">03 · PROYECTO PRINCIPAL · PORT WEBASSEMBLY Y SISTEMAS</span>
+            </span>
+
+            <h2
               class="w3-text-white"
               style="
-                font-family: &quot;Inter&quot;, sans-serif;
+                font-family: 'Inter', sans-serif;
                 font-weight: 700;
                 letter-spacing: 2px;
-                font-size: 1.85rem;
+                font-size: 2rem;
                 margin-top: 0;
                 margin-bottom: 6px;
               "
             >
-              NIGHTMARE
-            </h3>
+              NIGHTMARE — DevilutionX WASM
+            </h2>
+
             <p
               class="body-text"
-              style="color: #c988f7; font-size: 1.05rem; margin-bottom: 18px; font-weight: 500;"
+              style="color: #c988f7; font-size: 1.02rem; margin-bottom: 14px; font-weight: 500;"
             >
-              <i>Diablo / Hellfire — WebAssembly Preservation &amp; Expansion</i>
+              <span data-lang="en">C++ · Emscripten · WebAssembly · SDL2 · Browser Persistence</span>
+              <span data-lang="es">C++ · Emscripten · WebAssembly · SDL2 · Persistencia en Navegador</span>
             </p>
+
             <p
               class="body-text w3-text-light-grey"
               style="margin-bottom: 16px; line-height: 1.75; font-size: 0.98rem"
             >
-              A long-term DevilutionX fork focused on preserving, restoring and expanding Diablo and Hellfire content while bringing the native C++ engine to a modern browser runtime through WebAssembly and WebGL hardware acceleration.
+              <span data-lang="en">
+                Technical adaptation and WebAssembly compilation of the open-source <code>DevilutionX</code> engine (C++/SDL2 reconstruction of <em>Diablo I</em>) to execute natively inside modern web browsers with hardware-accelerated WebGL rendering, local asset management, and persistent savegame storage.
+              </span>
+              <span data-lang="es">
+                Adaptación técnica y compilación a WebAssembly del motor open-source <code>DevilutionX</code> (reconstrucción en C++/SDL2 de <em>Diablo I</em>) para ejecutarse directamente en navegadores modernos con aceleración WebGL, gestión de archivos en cliente y persistencia local de partidas.
+              </span>
             </p>
 
-            <!-- Tech Badges -->
-            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px;">
-              <span class="w3-tag tag-text wasm-tech-tag">C++</span>
-              <span class="w3-tag tag-text wasm-tech-tag">Emscripten</span>
-              <span class="w3-tag tag-text wasm-tech-tag">WebAssembly</span>
-              <span class="w3-tag tag-text wasm-tech-tag">WebGL</span>
-              <span class="w3-tag tag-text wasm-tech-tag">SDL2</span>
-              <span class="w3-tag tag-text wasm-tech-tag">IndexedDB (VFS)</span>
-              <span class="w3-tag tag-text wasm-tech-tag">GitHub Pages</span>
+            <!-- Recruiter Summary Box -->
+            <div class="core-meta-list purple-accent">
+              <div class="core-meta-item">
+                <span data-lang="en"><strong>Contributions (vs. inherited engine):</strong> While the core C++/SDL2 game engine comes from the upstream <em>DevilutionX</em> project, I built the Emscripten/WASM web compilation pipeline, asynchronous virtual filesystem synchronization (<code>IndexedDB</code>), browser asset manager, and custom expansion/restoration design specifications.</span>
+                <span data-lang="es"><strong>Contribuciones (frente al motor heredado):</strong> Mientras el motor C++/SDL2 base proviene del proyecto <em>DevilutionX</em>, desarrollé el pipeline de compilación web con Emscripten/WASM, la sincronización del sistema de archivos virtual en <code>IndexedDB</code>, el gestor de recursos en navegador y las especificaciones de restauración y expansión.</span>
+              </div>
+              <div class="core-meta-item">
+                <span data-lang="en"><strong>Technologies:</strong> C++, Emscripten, WebAssembly (WASM), SDL2, WebGL / OpenGL ES 2.0, IndexedDB, and JavaScript.</span>
+                <span data-lang="es"><strong>Tecnologías:</strong> C++, Emscripten, WebAssembly (WASM), SDL2, WebGL / OpenGL ES 2.0, IndexedDB y JavaScript.</span>
+              </div>
+              <div class="core-meta-item">
+                <span data-lang="en"><strong>Status:</strong> Functional browser build deployed on GitHub Pages. Custom content expansion modules (<em>Restoration Layer</em> / <em>Tristram Invasion</em>) are documented as architectural designs in progress.</span>
+                <span data-lang="es"><strong>Estado:</strong> Build funcional en navegador desplegado en GitHub Pages. Los módulos de expansión de contenido (<em>Restoration Layer</em> / <em>Tristram Invasion</em>) se encuentran en etapa de especificación y desarrollo incremental.</span>
+              </div>
             </div>
 
+            <!-- Expandable 3-Level Verification Accordion -->
+            <details class="tech-accordion purple-accent">
+              <summary>
+                <span data-lang="en">Technical Summary — Working · Built · Exploratory Scope</span>
+                <span data-lang="es">Resumen Técnico — Qué funciona · Qué desarrollé · En exploración</span>
+              </summary>
+              <div class="tech-accordion-body">
+                <div>
+                  <span data-lang="en"><strong>1. What is working:</strong> Native C++ engine running in browser via WebAssembly and WebGL, client-side MPQ loader (supporting shareware demo or user-supplied retail data), and persistent savegame/configuration storage in <code>IndexedDB</code>.</span>
+                  <span data-lang="es"><strong>1. Qué está funcionando:</strong> Ejecución del motor C++ en navegador vía WebAssembly y WebGL, cargador de archivos MPQ en cliente (compatible con versión shareware o datos provistos por el usuario) y guardado persistente en <code>IndexedDB</code>.</span>
+                </div>
+                <div>
+                  <span data-lang="en"><strong>2. What I built:</strong> WebAssembly packaging workflow, browser storage persistence bridge, touch/gamepad web integration, cross-save compatibility handling, and technical expansion specifications.</span>
+                  <span data-lang="es"><strong>2. Qué desarrollé concretamente:</strong> Flujo de empaquetado WebAssembly, puente de persistencia en almacenamiento del navegador, adaptación de controles web/táctiles, compatibilidad de partidas y especificaciones de expansión.</span>
+                </div>
+                <div>
+                  <span data-lang="en"><strong>3. Exploratory / Limitations:</strong> Custom expansion campaigns and experimental rendering studies are currently architectural prototypes not yet merged into the live demo binary.</span>
+                  <span data-lang="es"><strong>3. En exploración / Limitaciones:</strong> Las campañas de expansión propias y estudios de renderizado experimental están documentados a nivel de prototipo arquitectónico y aún no integrados en el binario público.</span>
+                </div>
+              </div>
+            </details>
+
             <!-- Action Buttons -->
-            <div style="margin-bottom: 28px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
               <a
-                href="https://ifernandez89.github.io/DevilutionX/"
+                href="https://ifernandez89.github.io/DevilutionX/?force_desktop=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="w3-button tag-text wasm-btn-primary"
-                aria-label="Jugar NIGHTMARE Diablo Hellfire en el navegador"
               >
-                🎮 Jugar NIGHTMARE ↗
+                <span data-lang="en">🎮 Launch Browser Build ↗</span>
+                <span data-lang="es">🎮 Ejecutar en Navegador ↗</span>
               </a>
               <a
                 href="https://github.com/ifernandez89/DevilutionX"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="w3-button tag-text wasm-btn-secondary"
-                aria-label="Ver código fuente de NIGHTMARE en GitHub"
               >
-                <i class="fa fa-github" aria-hidden="true"></i> Repositorio ↗
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <span data-lang="en">Repository ↗</span>
+                <span data-lang="es">Repositorio ↗</span>
               </a>
-            </div>
-
-            <!-- Numbers Grid / Metrics -->
-            <div class="wasm-metrics">
-              <div class="wasm-metric-card">
-                <span class="wasm-metric-num">100%</span>
-                <span class="wasm-metric-label">Native C++ Engine</span>
-              </div>
-              <div class="wasm-metric-card">
-                <span class="wasm-metric-num">WASM</span>
-                <span class="wasm-metric-label">Browser Bytecode</span>
-              </div>
-              <div class="wasm-metric-card">
-                <span class="wasm-metric-num">60 FPS</span>
-                <span class="wasm-metric-label">WebGL Acceleration</span>
-              </div>
-              <div class="wasm-metric-card">
-                <span class="wasm-metric-num">VFS</span>
-                <span class="wasm-metric-label">IndexedDB Save Sync</span>
-              </div>
             </div>
           </div>
 
-          <!-- Media column -->
           <div class="wasm-col-media">
             <div class="wasm-frame">
               <div class="gallery-main-img item" style="position: relative; border-radius: 14px; overflow: hidden; border: 1px solid rgba(186, 85, 211, 0.3); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 40px rgba(186, 85, 211, 0.15);">
                 <img
                   src="fotos/nightmare.jpg"
                   id="nightmareMainImage"
-                  alt="NIGHTMARE Diablo and Hellfire WebAssembly Runtime Gameplay"
+                  alt="NIGHTMARE DevilutionX WebAssembly Browser Build"
                   style="width: 100%; display: block;"
                 />
                 <div style="
@@ -1410,300 +1098,551 @@
                   justify-content: space-between;
                   align-items: center;
                 ">
-                  <span style="font-family: 'Inter', sans-serif; font-size: 0.78rem; color: #55efc4; letter-spacing: 1px; font-weight: 600;">
-                    ● LIVE ON GITHUB PAGES
+                  <span style="font-family: 'Inter', sans-serif; font-size: 0.76rem; color: #55efc4; letter-spacing: 1px; font-weight: 600;">
+                    ● WEBASSEMBLY RUNTIME
                   </span>
                   <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 0.75rem; color: #c988f7;">
-                    Widescreen · Español · Remaster
+                    C++ · SDL2 · IndexedDB
                   </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Philosophy: RESTORE / EXPAND / MODERNIZE -->
-        <div class="wasm-philosophy-grid">
-          <div class="wasm-philosophy-card">
-            <div class="wasm-philosophy-header">
-              <span class="wasm-step-num">01</span>
-              <h4>RESTORE</h4>
-            </div>
-            <p class="wasm-philosophy-desc">
-              Recuperación, preservación y reintegración exhaustiva de contenido original, cinemáticas, diálogos y misiones de Diablo y la expansión Hellfire.
-            </p>
-          </div>
-
-          <div class="wasm-philosophy-card">
-            <div class="wasm-philosophy-header">
-              <span class="wasm-step-num">02</span>
-              <h4>EXPAND</h4>
-            </div>
-            <p class="wasm-philosophy-desc">
-              Nuevas misiones, rebalanceo de clases y sistemas, nuevos ítems, encuentros dinámicos y arquitectura modular extensible.
-            </p>
-          </div>
-
-          <div class="wasm-philosophy-card">
-            <div class="wasm-philosophy-header">
-              <span class="wasm-step-num">03</span>
-              <h4>MODERNIZE</h4>
-            </div>
-            <p class="wasm-philosophy-desc">
-              Pipeline WebAssembly, renderizado WebGL, soporte widescreen nativo, Gamepad API, controles táctiles y persistencia en IndexedDB.
-            </p>
-          </div>
-        </div>
-
-        <!-- Interactive Architecture Diagram Terminal -->
-        <div class="wasm-architecture-section">
-          <h3 class="diagram-title">NIGHTMARE WebAssembly Runtime Architecture</h3>
-          <div class="diagram-terminal">
-            <div class="terminal-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="terminal-title">wasm-runtime-pipeline.spec</span>
-            </div>
-            <div class="terminal-body">
-              <pre><code>                    NIGHTMARE
-                        │
-                   DevilutionX
-                        │
-                 ┌──────┴──────┐
-                 │             │
-            Game Engine      Assets (MPQ)
-                 │             │
-                 └──────┬──────┘
-                        │
-                    Emscripten
-                        │
-                    WebAssembly
-                        │
-              ┌─────────┴─────────┐
-              │                   │
-        Browser Canvas      Virtual Storage
-              │                   │
-            WebGL             IndexedDB</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Runtime Layers Architecture -->
-        <div class="wasm-layers-grid">
-          <div class="wasm-layer-col">
-            <h4 class="wasm-layer-title">Layer 1 — Native Engine</h4>
-            <p class="wasm-layer-desc">
-              Código fuente en <strong>C/C++</strong> compilado nativamente. Lógica de juego determinista, simulación en tiempo real y gestión directa de memoria.
-            </p>
-          </div>
-          <div class="wasm-layer-col">
-            <h4 class="wasm-layer-title">Layer 2 — Transpilation</h4>
-            <p class="wasm-layer-desc">
-              Toolchain <strong>Emscripten</strong> para generar binarios <code>.wasm</code> altamente optimizados con bindings para SDL2 y subsistemas de audio y video.
-            </p>
-          </div>
-          <div class="wasm-layer-col">
-            <h4 class="wasm-layer-title">Layer 3 — Web Platform</h4>
-            <p class="wasm-layer-desc">
-              Ejecución directa en <strong>WebGL</strong>, Web Audio API, Virtual File System persistente vía <strong>IndexedDB</strong> y soporte de teclado/gamepad.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
 
-    <!-- AI-Assisted Development -->
-    <section class="ai-section" id="ai-workflow">
-      <div class="ai-bg-grid" aria-hidden="true"></div>
-      <div class="ai-row">
-        <div class="ai-col-text">
-          <span class="ai-badge">⚙️ AI-ASSISTED WORKFLOW</span>
-          <h2 class="ai-title">
-            Desarrollo asistido por IA,<br /><span class="ai-title-accent"
-              >con criterio propio</span
+    <!-- ============================================================================================ -->
+    <!-- SECTION 02 — RESEARCH & EXPERIMENTS (04. SCIENTIFIC LAB · 05. RETRO HUB) -->
+    <!-- ============================================================================================ -->
+    <section class="research-lab-section" id="research-lab">
+      <div class="section-header-dark">
+        <span class="section-kicker-dark">
+          <span data-lang="en">02 · RESEARCH &amp; EXPERIMENTS</span>
+          <span data-lang="es">02 · INVESTIGACIÓN Y EXPERIMENTOS</span>
+        </span>
+        <h2 class="section-title-dark">
+          <span data-lang="en">Hardware Instrumentation &amp; Browser Systems Research</span>
+          <span data-lang="es">Instrumentación Física e Investigación de Sistemas</span>
+        </h2>
+        <p class="section-subtitle-dark">
+          <span data-lang="en">
+            Experimental laboratories connecting physical sensor telemetry, real-time visualization, and low-level browser memory persistence.
+          </span>
+          <span data-lang="es">
+            Laboratorios experimentales que conectan telemetría de sensores físicos, visualización en tiempo real y persistencia de memoria de bajo nivel en navegador.
+          </span>
+        </p>
+      </div>
+
+      <div class="compact-lab-grid">
+        <!-- 04. JarBees Scientific Lab -->
+        <article class="compact-lab-card">
+          <div class="lab-card-top">
+            <span class="lab-status-badge">
+              <span data-lang="en">04 · Research · In Development</span>
+              <span data-lang="es">04 · Investigación · En Desarrollo</span>
+            </span>
+          </div>
+          <h3 class="lab-card-title">JarBees Scientific Lab</h3>
+          <p class="lab-card-domains">
+            <span data-lang="en">Physical Computing · Sensor Telemetry · Real-Time Visualization · Three.js</span>
+            <span data-lang="es">Physical Computing · Telemetría de Sensores · Visualización en Tiempo Real · Three.js</span>
+          </p>
+          <p class="lab-card-desc">
+            <span data-lang="en">
+              Experimental instrumentation workspace that uses an Android mobile device as a physical sensor node to acquire, visualize, and record 3-axis geomagnetic and inertial telemetry in real time.
+            </span>
+            <span data-lang="es">
+              Entorno experimental de instrumentación que utiliza un dispositivo móvil Android como nodo físico de sensores para adquirir, visualizar y registrar telemetría geomagnética e inercial triaxial en tiempo real.
+            </span>
+          </p>
+
+          <details class="tech-accordion">
+            <summary>
+              <span data-lang="en">Technical Details — Working · Built · Exploratory Scope</span>
+              <span data-lang="es">Detalles Técnicos — Qué funciona · Qué desarrollé · En exploración</span>
+            </summary>
+            <div class="tech-accordion-body">
+              <div>
+                <span data-lang="en"><strong>1. What is working:</strong> Real-time sensor acquisition bridges (via USB/ADB, Phyphox telemetry, and Web Sensor APIs), low-latency WebSocket streaming, 3D magnetic induction vector and 4-channel oscilloscope visualization with Earth-field tare calibration, and timestamped CSV logging tagged by experimental hypothesis.</span>
+                <span data-lang="es"><strong>1. Qué está funcionando:</strong> Puentes de adquisición de sensores en tiempo real (vía USB/ADB, telemetría Phyphox y Web Sensor APIs), streaming por WebSockets, visualización 3D del vector magnético y osciloscopio de 4 canales con tara de campo terrestre, y exportación de series CSV etiquetadas por hipótesis.</span>
+              </div>
+              <div>
+                <span data-lang="en"><strong>2. What I built:</strong> Node.js and Python sensor acquisition bridges, WebSocket telemetry server with sampling frequency/jitter metrics, and the Three.js + HTML5 Canvas diagnostic interface.</span>
+                <span data-lang="es"><strong>2. Qué desarrollé concretamente:</strong> Puentes de adquisición en Node.js y Python, servidor de telemetría WebSocket con cálculo de frecuencia efectiva y jitter, e interfaz de diagnóstico en Three.js y Canvas 2D.</span>
+              </div>
+              <div>
+                <span data-lang="en"><strong>3. Exploratory / Boundaries:</strong> Based on consumer mobile MEMS sensors suited for near-field trend detection rather than certified metrology. Automated LLM dataset interpretation and acoustic/resonance studies remain future research lines.</span>
+                <span data-lang="es"><strong>3. En exploración / Límites:</strong> Basado en sensores MEMS móviles de consumo orientados a detección de tendencias de campo cercano y no a metrología certificada. La interpretación automática por IA y los estudios de resonancia permanecen como líneas futuras.</span>
+              </div>
+            </div>
+          </details>
+
+          <div class="lab-tag-row">
+            <span class="lab-tech-pill">Node.js</span>
+            <span class="lab-tech-pill">Python</span>
+            <span class="lab-tech-pill">ADB / Phyphox</span>
+            <span class="lab-tech-pill">WebSockets</span>
+            <span class="lab-tech-pill">Three.js</span>
+            <span class="lab-tech-pill">CSV Telemetry</span>
+          </div>
+
+          <div class="lab-card-actions">
+            <a
+              href="https://github.com/ifernandez89/productos_crud_bkd/tree/main/scientific-lab"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-interact btn-interact-dark"
+              style="margin-top: 0; text-decoration: none;"
             >
-          </h2>
-          <p class="ai-lede">
-            Implemento flujos de <strong>vibe coding</strong> con múltiples
-            modelos y <strong>skills reutilizables</strong> para iterar rápido
-            sobre sistemas complejos — sin perder coherencia arquitectónica.
-          </p>
-          <p class="ai-insight-inline">
-            La IA acelera. Yo decido la arquitectura, la lógica y lo que queda.
-          </p>
-        </div>
-        <div class="ai-col-cards">
-          <div class="ai-card-row">
-            <article class="ai-card-mini">
-              <span aria-hidden="true">🧠</span>
-              <div>
-                <h3>Multi-modelo</h3>
-                <p>Modelos locales + cloud según la tarea.</p>
-              </div>
-            </article>
-            <article class="ai-card-mini">
-              <span aria-hidden="true">🎯</span>
-              <div>
-                <h3>Skills reutilizables</h3>
-                <p>Generación modular y consistente.</p>
-              </div>
-            </article>
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span data-lang="en">Lab Source Code ↗</span>
+              <span data-lang="es">Código del Laboratorio ↗</span>
+            </a>
           </div>
-          <div class="ai-card-row">
-            <article class="ai-card-mini">
-              <span aria-hidden="true">✅</span>
-              <div>
-                <h3>Validación humana</h3>
-                <p>Revisión manual + testing siempre.</p>
-              </div>
-            </article>
-            <article class="ai-card-mini">
-              <span aria-hidden="true">🏛️</span>
-              <div>
-                <h3>Control arquitectónico</h3>
-                <p>Las decisiones de diseño son mías.</p>
-              </div>
-            </article>
+        </article>
+
+        <!-- 05. Retro Hub -->
+        <article class="compact-lab-card" data-project="retrohub">
+          <div class="lab-card-top">
+            <span class="lab-status-badge">
+              <span data-lang="en">05 · Technical Research · Functional</span>
+              <span data-lang="es">05 · Investigación Técnica · Funcional</span>
+            </span>
           </div>
-        </div>
+          <h3 class="lab-card-title">Retro Hub</h3>
+          <p class="lab-card-domains">
+            <span data-lang="en">WebAssembly · Multi-System Emulation · Browser Storage · Input Debugging</span>
+            <span data-lang="es">WebAssembly · Emulación Multi-Sistema · Almacenamiento Web · Depuración de Periféricos</span>
+          </p>
+          <p class="lab-card-desc">
+            <span data-lang="en">
+              Browser-based WebAssembly emulation environment focused on solving bidirectional client-side save memory persistence (<code>SRAM</code> to <code>IndexedDB</code>), clean CPU state initialization across cores, and educational hardware input debugging.
+            </span>
+            <span data-lang="es">
+              Entorno de emulación WebAssembly en navegador enfocado en resolver la persistencia bidireccional de memoria en cliente (<code>SRAM</code> a <code>IndexedDB</code>), la inicialización limpia de estado de CPU entre consolas y la depuración de periféricos educativos.
+            </span>
+          </p>
+
+          <details class="tech-accordion">
+            <summary>
+              <span data-lang="en">Technical Details — Working · Built · Exploratory Scope</span>
+              <span data-lang="es">Detalles Técnicos — Qué funciona · Qué desarrollé · En exploración</span>
+            </summary>
+            <div class="tech-accordion-body">
+              <div>
+                <span data-lang="en"><strong>1. What is working:</strong> Browser WebAssembly runners for classic 8-bit/16-bit/32-bit architectures and Tiny Core Linux, unified touch/gamepad controls, persistent <code>IndexedDB</code> SRAM synchronization, and a real-time keyboard matrix visual debugger for educational computer cartridges (<em>PC Vivaz</em>).</span>
+                <span data-lang="es"><strong>1. Qué está funcionando:</strong> Ejecución en navegador mediante cores WebAssembly de arquitecturas clásicas y Tiny Core Linux, controles táctiles/gamepad unificados, sincronización persistente de SRAM en <code>IndexedDB</code> y debugger visual en tiempo real de matriz de teclado para cartuchos educativos (<em>PC Vivaz</em>).</span>
+              </div>
+              <div>
+                <span data-lang="en"><strong>2. What I built:</strong> Bidirectional <code>IndexedDB</code> SRAM persistence engine, clean ROM boot workflow preventing CPU spin-locks on state transitions, educational keyboard matrix debugger, and unified cross-runner navigation HUD.</span>
+                <span data-lang="es"><strong>2. Qué desarrollé concretamente:</strong> Motor de persistencia bidireccional de SRAM en <code>IndexedDB</code>, flujo de arranque limpio de memoria para prevenir bloqueos de CPU al cambiar de estado, debugger visual de matriz de teclado educativo e interfaz unificada de navegación.</span>
+              </div>
+              <div>
+                <span data-lang="en"><strong>3. Scope notes:</strong> Currently hosted within the Emscripten packaging tree of the WebAssembly runtime repository rather than a standalone repo.</span>
+                <span data-lang="es"><strong>3. Notas de alcance:</strong> Actualmente alojado dentro del árbol de empaquetado Emscripten del repositorio WebAssembly principal.</span>
+              </div>
+            </div>
+          </details>
+
+          <div class="lab-tag-row">
+            <span class="lab-tech-pill">WebAssembly</span>
+            <span class="lab-tech-pill">Libretro / EmulatorJS</span>
+            <span class="lab-tech-pill">IndexedDB SRAM</span>
+            <span class="lab-tech-pill">Input Matrix Debugger</span>
+            <span class="lab-tech-pill">JavaScript</span>
+          </div>
+
+          <div class="lab-card-actions">
+            <a
+              href="https://ifernandez89.github.io/DevilutionX/gens/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-interact"
+              style="margin-top: 0; text-decoration: none;"
+            >
+              <span data-lang="en">🕹️ Launch Retro Hub ↗</span>
+              <span data-lang="es">🕹️ Abrir Retro Hub ↗</span>
+            </a>
+            <a
+              href="https://github.com/ifernandez89/DevilutionX/tree/master/Packaging/emscripten"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-interact btn-interact-dark"
+              style="margin-top: 0; text-decoration: none;"
+            >
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span data-lang="en">Source Tree ↗</span>
+              <span data-lang="es">Código Fuente ↗</span>
+            </a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ============================================================================================ -->
+    <!-- SECTION 03 — TECHNICAL EXPLORATIONS (06. OBJECT LAB · 07. JARBEESMOTION) -->
+    <!-- ============================================================================================ -->
+    <section class="explorations-section" id="explorations">
+      <div class="section-header-dark">
+        <span class="section-kicker-dark">
+          <span data-lang="en">03 · TECHNICAL EXPLORATIONS</span>
+          <span data-lang="es">03 · EXPLORACIONES TÉCNICAS</span>
+        </span>
+        <h2 class="section-title-dark">
+          <span data-lang="en">Computational Geometry &amp; Cross-Environment Bridges</span>
+          <span data-lang="es">Geometría Computacional y Puentes entre Entornos</span>
+        </h2>
+        <p class="section-subtitle-dark">
+          <span data-lang="en">
+            Focused prototypes exploring parametric 3D object validation, procedural audio, and Web-to-Windows desktop integration.
+          </span>
+          <span data-lang="es">
+            Prototipos enfocados en validación de geometría paramétrica 3D, síntesis de audio procedural e integración entre aplicaciones web y escritorio Windows.
+          </span>
+        </p>
+      </div>
+
+      <div class="compact-lab-grid">
+        <!-- 06. JarBees Object Lab -->
+        <article class="compact-lab-card" data-project="objectlab">
+          <div class="lab-card-top">
+            <span class="lab-status-badge">
+              <span data-lang="en">06 · Technical Exploration · Prototype</span>
+              <span data-lang="es">06 · Exploración Técnica · Prototipo</span>
+            </span>
+          </div>
+          <h3 class="lab-card-title">JarBees Object Lab</h3>
+          <p class="lab-card-domains">
+            <span data-lang="en">Parametric 3D · Physical Validation · Procedural Web Audio · Blender Python</span>
+            <span data-lang="es">Geometría Paramétrica 3D · Validación Física · Web Audio Procedural · Blender Python</span>
+          </p>
+          <p class="lab-card-desc">
+            <span data-lang="en">
+              3D workbench for generating decomposed objects from parametric JSON definitions, featuring continuous exploded-view inspection, center-of-gravity stability checks, ergonomic validation, and headless 3D asset conversion pipelines.
+            </span>
+            <span data-lang="es">
+              Banco de pruebas 3D para generar objetos despiezados desde definiciones JSON paramétricas, con vista explotada continua, validación de estabilidad física por centro de gravedad, chequeo ergonómico y pipelines de conversión de activos 3D.
+            </span>
+          </p>
+
+          <details class="tech-accordion">
+            <summary>
+              <span data-lang="en">Technical Details — Working · Built · Exploratory Scope</span>
+              <span data-lang="es">Detalles Técnicos — Qué funciona · Qué desarrollé · En exploración</span>
+            </summary>
+            <div class="tech-accordion-body">
+              <div>
+                <span data-lang="en"><strong>1. What is working:</strong> Parametric JSON-to-Three.js mesh builder with exploded views, static stability and ergonomic clearance validator, zero-sample Web Audio DSP tactile sound synthesis, and headless Python scripts for Blender and binary model conversion.</span>
+                <span data-lang="es"><strong>1. Qué está funcionando:</strong> Generador de mallas Three.js desde JSON paramétrico con vista explotada, validador de estabilidad estática y despeje ergonómico, síntesis sonora táctil por DSP en Web Audio y scripts Python headless para Blender y conversión de formatos binarios.</span>
+              </div>
+              <div>
+                <span data-lang="en"><strong>2. What I built:</strong> Geometry stability/ergonomics validator, procedural mesh/collider builder, Web Audio DSP synthesizer, and Python automation scripts for <code>.blend</code>/<code>.glb</code> asset generation.</span>
+                <span data-lang="es"><strong>2. Qué desarrollé concretamente:</strong> Validador geométrico de estabilidad y ergonomía, constructor procedural de mallas y colisionadores, sintetizador DSP en Web Audio y scripts de automatización en Python para generación de activos <code>.blend</code>/<code>.glb</code>.</span>
+              </div>
+              <div>
+                <span data-lang="en"><strong>3. Exploratory / Scope:</strong> Phase 1 prototype integrated inside the <code>Jarbees_the_game</code> sandbox; extending the parametric schema to articulated multi-joint assemblies is the next step.</span>
+                <span data-lang="es"><strong>3. En exploración / Alcance:</strong> Prototipo de Fase 1 integrado en el entorno <code>Jarbees_the_game</code>; la ampliación del esquema paramétrico hacia ensamblajes mecánicos articulados es el siguiente paso proyectado.</span>
+              </div>
+            </div>
+          </details>
+
+          <div class="lab-tag-row">
+            <span class="lab-tech-pill">TypeScript</span>
+            <span class="lab-tech-pill">Three.js / R3F</span>
+            <span class="lab-tech-pill">Web Audio DSP</span>
+            <span class="lab-tech-pill">Python (Blender bpy)</span>
+            <span class="lab-tech-pill">GLTF / GLB</span>
+          </div>
+
+          <div class="lab-card-actions">
+            <a
+              href="https://ifernandez89.github.io/Jarbees_the_game/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-interact"
+              style="margin-top: 0; text-decoration: none;"
+            >
+              <span data-lang="en">🧊 Live Sandbox ↗</span>
+              <span data-lang="es">🧊 Abrir Sandbox ↗</span>
+            </a>
+            <a
+              href="https://github.com/ifernandez89/Jarbees_the_game"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-interact btn-interact-dark"
+              style="margin-top: 0; text-decoration: none;"
+            >
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span data-lang="en">Repository ↗</span>
+              <span data-lang="es">Repositorio ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 07. JarBeesMotion -->
+        <article class="compact-lab-card" data-project="motion">
+          <div class="lab-card-top">
+            <span class="lab-status-badge">
+              <span data-lang="en">07 · Technical Exploration · Functional Prototype</span>
+              <span data-lang="es">07 · Exploración Técnica · Prototipo Funcional</span>
+            </span>
+          </div>
+          <h3 class="lab-card-title">JarBeesMotion</h3>
+          <p class="lab-card-domains">
+            <span data-lang="en">Web-to-Desktop Integration · Mobile PWA · C# / .NET · Windows Input Bridge</span>
+            <span data-lang="es">Integración Web-Escritorio · PWA Móvil · C# / .NET · Puente Nativo Windows</span>
+          </p>
+          <p class="lab-card-desc">
+            <span data-lang="en">
+              Cross-environment remote input prototype that bridges a mobile Progressive Web App (multi-touch trackpad and virtual keyboard) with desktop cursor and keyboard control through a native Windows / .NET host application.
+            </span>
+            <span data-lang="es">
+              Prototipo de control remoto entre entornos que conecta una aplicación web progresiva móvil (trackpad multitáctil y teclado virtual) con el control de cursor y teclado de escritorio mediante una aplicación host nativa en Windows / .NET.
+            </span>
+          </p>
+
+          <details class="tech-accordion">
+            <summary>
+              <span data-lang="en">Technical Details — Working · Built · Exploratory Scope</span>
+              <span data-lang="es">Detalles Técnicos — Qué funciona · Qué desarrollé · En exploración</span>
+            </summary>
+            <div class="tech-accordion-body">
+              <div>
+                <span data-lang="en"><strong>1. What is working:</strong> Mobile PWA client with touch gesture recognition (pointer movement, clicks, drag, two-finger scroll, Unicode keyboard) communicating over encrypted local WebSockets with a C# / .NET 8 desktop host.</span>
+                <span data-lang="es"><strong>1. Qué está funcionando:</strong> Cliente PWA móvil con detección de gestos táctiles (movimiento de puntero, clics, arrastre, scroll a dos dedos y teclado Unicode) comunicado por WebSockets locales con un host de escritorio en C# / .NET 8.</span>
+              </div>
+              <div>
+                <span data-lang="en"><strong>2. What I built:</strong> Both the Next.js mobile PWA interface and the native C# / .NET Windows bridge integrating low-level Win32 input synthesis, session pairing controls, and safe disconnect handling.</span>
+                <span data-lang="es"><strong>2. Qué desarrollé concretamente:</strong> Tanto la interfaz móvil PWA en Next.js como el puente nativo en C# / .NET para Windows integrando síntesis de entrada Win32 de bajo nivel, control de sesión y liberación segura ante desconexiones.</span>
+              </div>
+              <div>
+                <span data-lang="en"><strong>3. Exploratory / Limitations:</strong> Scoped for local network (LAN) use within standard desktop sessions. Inertial gyroscope air-mouse control remains on the roadmap.</span>
+                <span data-lang="es"><strong>3. En exploración / Limitaciones:</strong> Diseñado para uso en red local (LAN) dentro de sesiones de escritorio estándar. El control inercial por giroscopio permanece proyectado en la hoja de ruta.</span>
+              </div>
+            </div>
+          </details>
+
+          <div class="lab-tag-row">
+            <span class="lab-tech-pill">C# / .NET 8</span>
+            <span class="lab-tech-pill">Win32 Input API</span>
+            <span class="lab-tech-pill">Next.js PWA</span>
+            <span class="lab-tech-pill">TypeScript</span>
+            <span class="lab-tech-pill">WebSockets</span>
+          </div>
+
+          <div class="lab-card-actions">
+            <a
+              href="https://ifernandez89.github.io/JarbeesMotion/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-interact"
+              style="margin-top: 0; text-decoration: none;"
+            >
+              <span data-lang="en">📱 PWA Interface ↗</span>
+              <span data-lang="es">📱 Interfaz PWA ↗</span>
+            </a>
+            <a
+              href="https://github.com/ifernandez89/JarbeesMotion"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-interact btn-interact-dark"
+              style="margin-top: 0; text-decoration: none;"
+            >
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span data-lang="en">Repository ↗</span>
+              <span data-lang="es">Repositorio ↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================================================ -->
+    <!-- SECTION 04 — PROFESSIONAL EXPERIENCE & PUBLIC SECTOR PROJECTS (SOBER & INSTITUTIONAL) -->
+    <!-- ============================================================================================ -->
     <section class="experience-section" id="experience">
-      <h2 class="works-section-title">Trayectoria &amp; Experiencia</h2>
+      <h2 class="works-section-title">
+        <span data-lang="en">Professional Experience &amp; Public Sector Projects</span>
+        <span data-lang="es">Experiencia Profesional y Proyectos en el Sector Público</span>
+      </h2>
       <p class="works-section-subtitle">
-        Diseño y desarrollo de sistemas de misión crítica y transformación digital municipal
+        <span data-lang="en">
+          Applied software development and technical collaboration within municipal public administration
+        </span>
+        <span data-lang="es">
+          Desarrollo de software aplicado y colaboración técnica en el ámbito de la administración pública municipal
+        </span>
       </p>
-      <div class="works-grid" style="max-width: 800px; margin: 0 auto;">
-        <!-- SIGAP -->
-        <div class="work-card">
-          <div class="work-card-media" style="height: 260px;">
-            <img src="fotos/sigapimg.png" alt="SIGAP" loading="lazy" />
-          </div>
-          <div class="work-card-body">
-            <h3 class="work-card-title" style="margin-bottom: 6px;">S.I.G.A.P</h3>
-            <p class="work-card-meta">
-              Municipalidad de Paraná · Dirección de Alumbrado Público
-            </p>
-            <p class="work-card-desc" style="font-size: 0.92rem; line-height: 1.7;">
-              Lideré el diseño arquitectónico y desarrollo del sistema central de gestión georeferenciada del alumbrado público de la ciudad. Diseñado para optimizar las operaciones de calle y la toma de decisiones directivas mediante dashboards analíticos en tiempo real.
-            </p>
-            <div style="margin-top: 14px; margin-bottom: 14px;">
-              <p class="body-text" style="font-size: 0.85rem; color: #4a5a6a; margin-bottom: 8px;"><strong>Hitos técnicos de transformación digital:</strong></p>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; font-size: 0.82rem; color: #4a5a6a;">
-                <p>⚡ Telemetría de consumo eléctrico</p>
-                <p>🗺️ Georeferenciación y GIS (PostGIS)</p>
-                <p>📦 Base de datos espacial de luminarias</p>
-                <p>📋 Reportes automáticos e inspecciones</p>
+
+      <div class="works-grid" style="max-width: 1080px; margin: 0 auto;">
+        <!-- 08. SIGAP -->
+        <article class="work-card">
+          <div class="work-card-body" style="padding: 28px;">
+            <span class="public-sector-role-badge">
+              <span data-lang="en">08 · Professional Project · Historical Development</span>
+              <span data-lang="es">08 · Proyecto Profesional · Desarrollo Histórico</span>
+            </span>
+            <div class="public-sector-header">
+              <div class="public-sector-icon" aria-hidden="true">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <div>
+                <h3 class="work-card-title" style="margin-bottom: 2px; font-size: 1.2rem;">
+                  SIGAP — Public Lighting Management
+                </h3>
+                <p class="work-card-meta" style="margin-bottom: 0;">
+                  <span data-lang="en">Municipalidad de Paraná · Public Lighting Area</span>
+                  <span data-lang="es">Municipalidad de Paraná · Área de Alumbrado Público</span>
+                </p>
               </div>
             </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px">
-              <span
-                class="tag-text"
-                style="
-                  background: #eaf1f7;
-                  color: #2a6496;
-                  border-radius: 4px;
-                  padding: 2px 8px;
-                  font-size: 70%;
-                "
-                >Java</span
-              >
-              <span
-                class="tag-text"
-                style="
-                  background: #eaf1f7;
-                  color: #2a6496;
-                  border-radius: 4px;
-                  padding: 2px 8px;
-                  font-size: 70%;
-                "
-                >PostgreSQL / PostGIS</span
-              >
-              <span
-                class="tag-text"
-                style="
-                  background: #eaf1f7;
-                  color: #2a6496;
-                  border-radius: 4px;
-                  padding: 2px 8px;
-                  font-size: 70%;
-                "
-                >QGIS</span
-              >
-              <span
-                class="tag-text"
-                style="
-                  background: #eaf1f7;
-                  color: #2a6496;
-                  border-radius: 4px;
-                  padding: 2px 8px;
-                  font-size: 70%;
-                "
-                >Spatial DB</span
-              >
+
+            <p class="work-card-desc" style="font-size: 0.92rem; line-height: 1.7; margin-top: 10px;">
+              <span data-lang="en">
+                Development of a software solution oriented toward managing technical information, georeferenced records, and operational processes linked to the Public Lighting area.
+              </span>
+              <span data-lang="es">
+                Desarrollo de una solución informática orientada a la gestión de información técnica, registros georreferenciados y procesos vinculados al área de Alumbrado Público.
+              </span>
+            </p>
+
+            <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #e6eef5; font-size: 0.86rem; color: #3a5060; line-height: 1.6;">
+              <p style="margin-bottom: 6px;">
+                <span data-lang="en"><strong>Participation:</strong> System development and relational/spatial data modeling carried out within the framework of my municipal functions.</span>
+                <span data-lang="es"><strong>Participación:</strong> Desarrollo del sistema y modelado de datos relacional/espacial realizado en el marco de mis funciones en el municipio.</span>
+              </p>
+              <p style="color: #6a7f90; font-size: 0.8rem; font-style: italic;">
+                <span data-lang="en">Note: Presented as historical professional development experience; continuity or subsequent institutional adoption is unconfirmed.</span>
+                <span data-lang="es">Nota: Presentado como experiencia histórica de desarrollo profesional; su continuidad posterior no se encuentra confirmada.</span>
+              </p>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px">
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 3px 9px; font-size: 72%;">Java</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 3px 9px; font-size: 72%;">PostgreSQL / PostGIS</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 3px 9px; font-size: 72%;">QGIS</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 3px 9px; font-size: 72%;">Spatial Data Modeling</span>
             </div>
           </div>
-        </div>
+        </article>
+
+        <!-- 09. Innovation & Digital Transformation — TDI / GEDO -->
+        <article class="work-card">
+          <div class="work-card-body" style="padding: 28px;">
+            <span class="public-sector-role-badge">
+              <span data-lang="en">09 · Professional Collaboration · Public Sector</span>
+              <span data-lang="es">09 · Colaboración Profesional · Sector Público</span>
+            </span>
+            <div class="public-sector-header">
+              <div class="public-sector-icon" aria-hidden="true">
+                <i class="fa fa-sitemap"></i>
+              </div>
+              <div>
+                <h3 class="work-card-title" style="margin-bottom: 2px; font-size: 1.2rem;">
+                  <span data-lang="en">Innovation &amp; Digital Transformation — TDI / GEDO</span>
+                  <span data-lang="es">Innovación y Transformación Digital — TDI / GEDO</span>
+                </h3>
+                <p class="work-card-meta" style="margin-bottom: 0;">
+                  <span data-lang="en">Municipalidad de Paraná · Public Innovation &amp; Digital Transformation</span>
+                  <span data-lang="es">Municipalidad de Paraná · Innovación Pública y Transformación Digital</span>
+                </p>
+              </div>
+            </div>
+
+            <p class="work-card-desc" style="font-size: 0.92rem; line-height: 1.7; margin-top: 10px;">
+              <span data-lang="en">
+                Collaboration in Public Innovation and Digital Transformation initiatives linked to administrative processes, digital management tools, and municipal modernization.
+              </span>
+              <span data-lang="es">
+                Colaboración en iniciativas de Innovación Pública y Transformación Digital vinculadas a procesos administrativos, herramientas digitales y modernización de la gestión municipal.
+              </span>
+            </p>
+
+            <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #e6eef5; font-size: 0.86rem; color: #3a5060; line-height: 1.6;">
+              <p style="margin-bottom: 6px;">
+                <span data-lang="en"><strong>Participation:</strong> Technical collaboration from the Public Innovation and Digital Transformation area, supporting process analysis, electronic official documents (<code>GEDO</code>), and operational adoption across municipal teams.</span>
+                <span data-lang="es"><strong>Participación:</strong> Colaboración técnica desde el área de Innovación Pública y Transformación Digital, acompañando el relevamiento de circuitos administrativos, documentos electrónicos oficiales (<code>GEDO</code>) y adopción operativa.</span>
+              </p>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px">
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 3px 9px; font-size: 72%;">Digital Government</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 3px 9px; font-size: 72%;">GEDO / Administrative Workflows</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 3px 9px; font-size: 72%;">Process Modernization</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Ecosystem Section -->
+    <!-- ============================================================================================ -->
+    <!-- SECTION 05 — SELECTED PERSONAL WORK & WEB PROTOTYPES -->
+    <!-- ============================================================================================ -->
     <section class="ecosystem-section" id="ecosystem">
-      <h2 class="works-section-title">Ecosistema de Desarrollo</h2>
+      <h2 class="works-section-title">
+        <span data-lang="en">Selected Personal Work &amp; Web Prototypes</span>
+        <span data-lang="es">Proyectos Personales Seleccionados y Prototipos Web</span>
+      </h2>
       <p class="works-section-subtitle">
-        Micro-sistemas, integraciones de conocimiento y desarrollos independientes
+        <span data-lang="en">
+          Game scripting, automation tooling, and standalone web interfaces
+        </span>
+        <span data-lang="es">
+          Scripting de videojuegos, herramientas de automatización e interfaces web independientes
+        </span>
       </p>
+
       <div class="works-grid">
-        <!-- Oxlahun Cauac -->
-        <div class="work-card" data-project="oxlahun">
-          <div class="work-card-media">
-            <video
-              onloadstart="this.muted = true"
-              autoplay
-              loop
-              playsinline
-              muted
-              src="videos/OC.mp4"
-            ></video>
-          </div>
-          <div class="work-card-body">
-            <h3 class="work-card-title">Oxlahun Cauac</h3>
-            <p class="work-card-meta">Portal de Sincronía y Calendarios Ancestrales</p>
-            <p class="work-card-desc">
-              Sitio web interactivo con identidad visual propia enfocado en calendarios simbólicos (Maya Tzolk'in y Haab). Diseñado con micro-animaciones CSS y transiciones fluidas de navegación astronómica para una experiencia inmersiva.
+        <!-- 10. CS 1.6 Config & Modding -->
+        <div class="work-card">
+          <div class="work-card-body" style="padding: 24px;">
+            <span class="public-sector-role-badge">
+              <span data-lang="en">10 · Personal Project · Scripting &amp; Modding</span>
+              <span data-lang="es">10 · Proyecto Personal · Scripting y Modding</span>
+            </span>
+            <h3 class="work-card-title">Counter-Strike 1.6 — Custom Scripting &amp; Setup</h3>
+            <p class="work-card-meta">
+              <span data-lang="en">AMX Mod X (Pawn) · Camera &amp; HUD Customization · PowerShell</span>
+              <span data-lang="es">AMX Mod X (Pawn) · Cámara y HUD Personalizado · PowerShell</span>
             </p>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; align-items: center;">
-              <button
-                type="button"
-                data-interact
-                class="btn-interact"
-                style="margin-top: 0;"
-                aria-label="Abrir preview interactivo de Oxlahun Cauac"
-              >
-                Live preview
-              </button>
+            <p class="work-card-desc">
+              <span data-lang="en">
+                Custom configuration, scripting, and automation pack for <em>Counter-Strike 1.6</em>. Includes a custom wave-survival plugin written in <strong>Pawn (AMX Mod X)</strong> with economy and perk mechanics, a 3D over-the-shoulder camera adaptation, custom tactical menus, and an automated PowerShell installer with backup support.
+              </span>
+              <span data-lang="es">
+                Pack de configuración, scripting y automatización para <em>Counter-Strike 1.6</em>. Incluye un plugin propio de supervivencia por oleadas escrito en <strong>Pawn (AMX Mod X)</strong> con sistema de economía, adaptación de cámara 3D sobre el hombro, menú táctico personalizado e instalador automatizado en PowerShell con respaldo seguro.
+              </span>
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; margin-bottom: 12px;">
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 2px 8px; font-size: 70%;">Pawn (AMX Mod X)</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 2px 8px; font-size: 70%;">GoldSrc Scripting</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 2px 8px; font-size: 70%;">PowerShell</span>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; align-items: center;">
               <a
-                href="https://ifernandez89.github.io/BlueCosmicStorm/"
+                href="https://github.com/ifernandez89/cs16-config"
                 class="work-card-link"
                 style="margin-top: 0;"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Ver proyecto ↗</a
               >
+                <i class="fa fa-github"></i>
+                <span data-lang="en">Repository ↗</span>
+                <span data-lang="es">Repositorio ↗</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Plantas -->
+        <!-- Plantas Medicinales -->
         <div class="work-card" data-project="plantas">
           <div class="work-card-media" style="position: relative; height: 200px; overflow: hidden; background: #0a1525;">
             <img
               src="fotos/Plantas Medicinales/screenshots/portfolio-home-desktop.png"
               id="plantasMainImage"
-              alt="Plantas Home"
+              alt="Plantas Medicinales Home"
               style="width: 100%; height: 100%; object-fit: cover; display: block;"
             />
             <div class="gallery-thumbs" style="position: absolute; bottom: 8px; left: 8px; right: 8px; display: flex; gap: 4px; justify-content: center; z-index: 10;">
@@ -1731,58 +1670,24 @@
             </div>
           </div>
           <div class="work-card-body">
-            <h3 class="work-card-title">Plantas</h3>
-            <p class="work-card-meta">Biblioteca de Conocimiento Local-First</p>
-            <p class="work-card-desc">
-              Base de conocimiento estática sobre fitoterapia integrada directamente en JarvisKnowledgeService. El parseador extrae metadatos estructurados (descripción, precauciones y acciones) de archivos JSON locales para alimentar al RAG.
+            <h3 class="work-card-title">Plantas Medicinales</h3>
+            <p class="work-card-meta">
+              <span data-lang="en">Static Reference Catalog &amp; Offline PWA</span>
+              <span data-lang="es">Catálogo Estático de Consulta y PWA Offline</span>
             </p>
-            <div
-              style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; margin-bottom: 12px;"
-            >
-              <span
-                class="tag-text"
-                style="
-                  background: #eaf1f7;
-                  color: #2a6496;
-                  border-radius: 4px;
-                  padding: 2px 8px;
-                  font-size: 70%;
-                "
-                >Node.js</span
-              >
-              <span
-                class="tag-text"
-                style="
-                  background: #eaf1f7;
-                  color: #2a6496;
-                  border-radius: 4px;
-                  padding: 2px 8px;
-                  font-size: 70%;
-                "
-                >JSON Databases</span
-              >
-              <span
-                class="tag-text"
-                style="
-                  background: #eaf1f7;
-                  color: #2a6496;
-                  border-radius: 4px;
-                  padding: 2px 8px;
-                  font-size: 70%;
-                "
-                >Knowledge Library</span
-              >
-              <span
-                class="tag-text"
-                style="
-                  background: #eaf1f7;
-                  color: #2a6496;
-                  border-radius: 4px;
-                  padding: 2px 8px;
-                  font-size: 70%;
-                "
-                >Local RAG</span
-              >
+            <p class="work-card-desc">
+              <span data-lang="en">
+                Static web catalog on phytotherapy built with Next.js and structured Markdown files. Organizes therapeutic actions, active principles, evidence levels, and safety precautions with offline PWA support.
+              </span>
+              <span data-lang="es">
+                Catálogo web estático sobre fitoterapia construido con Next.js y archivos Markdown estructurados. Organiza acciones terapéuticas, principios activos, niveles de evidencia y precauciones con soporte PWA offline.
+              </span>
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; margin-bottom: 12px;">
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 2px 8px; font-size: 70%;">Next.js</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 2px 8px; font-size: 70%;">Tailwind CSS</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 2px 8px; font-size: 70%;">Markdown SSG</span>
+              <span class="tag-text" style="background: #eaf1f7; color: #2a6496; border-radius: 4px; padding: 2px 8px; font-size: 70%;">PWA</span>
             </div>
             <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; align-items: center;">
               <button
@@ -1790,9 +1695,10 @@
                 data-interact
                 class="btn-interact"
                 style="margin-top: 0;"
-                aria-label="Abrir preview interactivo de Plantas Medicinales"
+                aria-label="Open interactive preview of Plantas Medicinales"
               >
-                Live preview
+                <span data-lang="en">Live preview</span>
+                <span data-lang="es">Vista interactiva</span>
               </button>
               <a
                 href="https://ifernandez89.github.io/PlantasMedicinales/"
@@ -1800,15 +1706,68 @@
                 style="margin-top: 0;"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Ver proyecto ↗</a
               >
+                <span data-lang="en">Open site ↗</span>
+                <span data-lang="es">Ver sitio ↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Oxlahun Cauac -->
+        <div class="work-card" data-project="oxlahun">
+          <div class="work-card-media" style="height: 200px;">
+            <video
+              onloadstart="this.muted = true"
+              autoplay
+              loop
+              playsinline
+              muted
+              src="videos/OC.mp4"
+            ></video>
+          </div>
+          <div class="work-card-body">
+            <h3 class="work-card-title">Oxlahun Cauac</h3>
+            <p class="work-card-meta">
+              <span data-lang="en">Interactive Symbolic Calendar Web Experience</span>
+              <span data-lang="es">Experiencia Web Interactiva de Calendarios Simbólicos</span>
+            </p>
+            <p class="work-card-desc">
+              <span data-lang="en">
+                Interactive web portal focused on traditional Mesoamerican symbolic calendars (Tzolk'in and Haab), designed with custom visual identity, CSS micro-animations, and responsive layout.
+              </span>
+              <span data-lang="es">
+                Portal web interactivo enfocado en calendarios simbólicos tradicionales (Tzolk'in y Haab), diseñado con identidad visual propia, micro-animaciones CSS y diseño adaptable.
+              </span>
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; align-items: center;">
+              <button
+                type="button"
+                data-interact
+                class="btn-interact"
+                style="margin-top: 0;"
+                aria-label="Open interactive preview of Oxlahun Cauac"
+              >
+                <span data-lang="en">Live preview</span>
+                <span data-lang="es">Vista interactiva</span>
+              </button>
+              <a
+                href="https://ifernandez89.github.io/BlueCosmicStorm/"
+                class="work-card-link"
+                style="margin-top: 0;"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span data-lang="en">Open site ↗</span>
+                <span data-lang="es">Ver sitio ↗</span>
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Pillow -->
         <div class="work-card" data-project="pillow">
-          <div class="work-card-media">
+          <div class="work-card-media" style="height: 200px;">
             <video
               onloadstart="this.muted = true"
               autoplay
@@ -1820,9 +1779,17 @@
           </div>
           <div class="work-card-body">
             <h3 class="work-card-title">Pillow</h3>
-            <p class="work-card-meta">Prototipo E-Commerce &amp; UX Case Study</p>
+            <p class="work-card-meta">
+              <span data-lang="en">E-Commerce UI/UX &amp; Vanilla JS Prototype</span>
+              <span data-lang="es">Prototipo E-Commerce UI/UX en Vanilla JS</span>
+            </p>
             <p class="work-card-desc">
-              Estudio de experiencia de usuario aplicado a una tienda virtual. Implementa microinteracciones de alta fidelidad, animaciones para feedbacks visuales en caliente, carrito de compras dinámico y transiciones enfocadas en la retención.
+              <span data-lang="en">
+                Zero-dependency e-commerce front-end study structured with layered state/UI separation, CSS design tokens, dynamic cart feedback, and interactive micro-transitions.
+              </span>
+              <span data-lang="es">
+                Estudio de front-end e-commerce sin dependencias externas estructurado con separación de estado e interfaz, tokens de diseño en CSS, carrito dinámico y micro-transiciones.
+              </span>
             </p>
             <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; align-items: center;">
               <button
@@ -1830,9 +1797,10 @@
                 data-interact
                 class="btn-interact"
                 style="margin-top: 0;"
-                aria-label="Abrir preview interactivo de Pillow"
+                aria-label="Open interactive preview of Pillow"
               >
-                Live preview
+                <span data-lang="en">Live preview</span>
+                <span data-lang="es">Vista interactiva</span>
               </button>
               <a
                 href="https://ifernandez89.github.io/pillow/"
@@ -1840,44 +1808,239 @@
                 style="margin-top: 0;"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Ver proyecto ↗</a
               >
+                <span data-lang="en">Open site ↗</span>
+                <span data-lang="es">Ver sitio ↗</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Figma Section — Redesigned -->
+    <!-- ============================================================================================ -->
+    <!-- SECTION 06 — PROFILE, EDUCATION & TECHNOLOGIES BY DOMAIN -->
+    <!-- ============================================================================================ -->
+    <div
+      class="w3-row w3-padding-64 position w3-card-2"
+      id="designer"
+      style="
+        background-size: cover;
+        background-image: url(fotos/mmirrored2.png);
+        opacity: 1;
+      "
+    >
+      <div class="w3-col m5">
+        <section>
+          <div>
+            <img
+              src="fotos/ig.jpg"
+              class="w3-white with w3-opacity center w3-image"
+              alt="Ignacio Gabriel Fernández"
+            />
+          </div>
+        </section>
+      </div>
+      <br />
+      <div class="w3-col m7" style="padding: 0 24px;">
+        <h2
+          class="w3-wide w3-text-white"
+          style="font-family: 'Inter', sans-serif; font-weight: 600"
+        >
+          Ignacio Gabriel Fernández
+        </h2>
+        <p class="body-text w3-text-light-grey" style="margin-bottom: 18px;">
+          <i data-lang="en">Software Development · AI Systems · Experimental Research</i>
+          <i data-lang="es">Desarrollo de Software · Sistemas de IA · Investigación Experimental</i>
+        </p>
+
+        <!-- Education Badges -->
+        <p class="body-text" style="margin-bottom: 10px;">
+          <span
+            class="w3-padding w3-black w3-opacity-min"
+            style="font-size: 95%; font-family: 'Inter', sans-serif; font-weight: 500; display: inline-block; border-radius: 6px;"
+          >
+            <span data-lang="en">University Technician in Programming (UTN Paraná — Entre Ríos)</span>
+            <span data-lang="es">Técnico Universitario en Programación (UTN Paraná — Entre Ríos)</span>
+          </span>
+        </p>
+        <p class="body-text" style="margin-bottom: 10px;">
+          <span
+            class="w3-padding w3-black w3-opacity-min"
+            style="font-size: 95%; font-family: 'Inter', sans-serif; font-weight: 500; display: inline-block; border-radius: 6px;"
+          >
+            <span data-lang="en">Web Developer (Argentina Programa 4.0) · UX/UI Design (UADER)</span>
+            <span data-lang="es">Desarrollador Web (Argentina Programa 4.0) · Diseño UX/UI (UADER)</span>
+          </span>
+        </p>
+
+        <hr style="border-color: rgba(255,255,255,0.2); margin: 20px 0;" />
+
+        <!-- Technologies Grouped by Domain -->
+        <div style="margin-bottom: 14px">
+          <p class="body-text w3-text-light-grey" style="font-size: 0.9rem; font-weight: 600; margin-bottom: 8px;">
+            <span data-lang="en">Backend, Data &amp; Local AI</span>
+            <span data-lang="es">Backend, Datos e IA Local</span>
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px">
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">TypeScript</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">Node.js</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">NestJS</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">PostgreSQL / pgvector</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">Prisma</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">Python</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">Local LLMs &amp; RAG</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 14px">
+          <p class="body-text w3-text-light-grey" style="font-size: 0.9rem; font-weight: 600; margin-bottom: 8px;">
+            <span data-lang="en">3D, Graphics &amp; Browser Systems</span>
+            <span data-lang="es">3D, Gráficos y Sistemas en Navegador</span>
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px">
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">Three.js / R3F</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">WebGL / GLSL</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">C++ / Emscripten / WASM</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">SDL2</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">Web Audio API</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">IndexedDB</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 14px">
+          <p class="body-text w3-text-light-grey" style="font-size: 0.9rem; font-weight: 600; margin-bottom: 8px;">
+            <span data-lang="en">Frontend, Desktop Bridges &amp; Instrumentation</span>
+            <span data-lang="es">Frontend, Puentes de Escritorio e Instrumentación</span>
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px">
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">React / Next.js</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">C# / .NET</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">Java</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">PostGIS / QGIS</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">ADB / Phyphox Telemetry</span>
+            <span class="w3-tag w3-dark-grey tag-text" style="border-radius: 4px; padding: 4px 10px">WebSockets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI-Assisted Development Methodology -->
+    <section class="ai-section" id="ai-workflow">
+      <div class="ai-bg-grid" aria-hidden="true"></div>
+      <div class="ai-row">
+        <div class="ai-col-text">
+          <span class="ai-badge">⚙️ AI-ASSISTED ENGINEERING</span>
+          <h2 class="ai-title">
+            <span data-lang="en">AI-assisted development,<br /><span class="ai-title-accent">guided by technical judgment</span></span>
+            <span data-lang="es">Desarrollo asistido por IA,<br /><span class="ai-title-accent">con criterio técnico propio</span></span>
+          </h2>
+          <p class="ai-lede">
+            <span data-lang="en">
+              I integrate multi-model AI workflows to accelerate prototyping, refactoring, and research across complex stacks—while keeping architectural design, verification, and engineering decisions under direct human control.
+            </span>
+            <span data-lang="es">
+              Integro flujos de trabajo asistidos por IA para acelerar el prototipado, la refactorización y la investigación técnica, manteniendo las decisiones de arquitectura, verificación y diseño bajo control humano directo.
+            </span>
+          </p>
+        </div>
+        <div class="ai-col-cards">
+          <div class="ai-card-row">
+            <article class="ai-card-mini">
+              <span aria-hidden="true">🧠</span>
+              <div>
+                <h3>
+                  <span data-lang="en">Local &amp; Cloud Models</span>
+                  <span data-lang="es">Modelos Locales y Cloud</span>
+                </h3>
+                <p>
+                  <span data-lang="en">Task-specific model selection.</span>
+                  <span data-lang="es">Selección según el problema técnico.</span>
+                </p>
+              </div>
+            </article>
+            <article class="ai-card-mini">
+              <span aria-hidden="true">🎯</span>
+              <div>
+                <h3>
+                  <span data-lang="en">Modular Architecture</span>
+                  <span data-lang="es">Arquitectura Modular</span>
+                </h3>
+                <p>
+                  <span data-lang="en">Structured, maintainable boundaries.</span>
+                  <span data-lang="es">Límites de código claros y mantenibles.</span>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="ai-card-row">
+            <article class="ai-card-mini">
+              <span aria-hidden="true">✅</span>
+              <div>
+                <h3>
+                  <span data-lang="en">Human Verification</span>
+                  <span data-lang="es">Verificación Humana</span>
+                </h3>
+                <p>
+                  <span data-lang="en">Code review and functional testing.</span>
+                  <span data-lang="es">Revisión manual y pruebas funcionales.</span>
+                </p>
+              </div>
+            </article>
+            <article class="ai-card-mini">
+              <span aria-hidden="true">🏛️</span>
+              <div>
+                <h3>
+                  <span data-lang="en">Engineering Ownership</span>
+                  <span data-lang="es">Control de Diseño</span>
+                </h3>
+                <p>
+                  <span data-lang="en">AI accelerates; engineering decides.</span>
+                  <span data-lang="es">La IA acelera; el criterio técnico decide.</span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Figma Section (Fixed IDs matching images/titles) -->
     <section class="figma-section" id="figma">
-      <h2 class="figma-section-title">Design Work</h2>
-      <p class="figma-section-subtitle">UI/UX prototypes crafted in Figma</p>
+      <h2 class="figma-section-title">
+        <span data-lang="en">UI/UX Design Explorations</span>
+        <span data-lang="es">Exploraciones de Diseño UI/UX</span>
+      </h2>
+      <p class="figma-section-subtitle">
+        <span data-lang="en">Interface prototypes crafted in Figma</span>
+        <span data-lang="es">Prototipos de interfaz diseñados en Figma</span>
+      </p>
       <div class="figma-grid">
         <div class="figma-card" id="ifernandez">
           <div class="figma-card-img item">
             <img
               src="fotos/figma1.png"
-              alt="Diseño Figma — Ifernández portfolio"
+              alt="Figma Design — Ifernández portfolio"
               loading="lazy"
             />
           </div>
           <h3 class="figma-card-title">Ifernández</h3>
         </div>
-        <div class="figma-card" id="pillow">
+        <div class="figma-card" id="bluecosmicstorm">
           <div class="figma-card-img item">
             <img
               src="fotos/figma3.png"
-              alt="Diseño Figma — BlueCosmicStorm"
+              alt="Figma Design — BlueCosmicStorm"
               loading="lazy"
             />
           </div>
           <h3 class="figma-card-title">BlueCosmicStorm</h3>
         </div>
-        <div class="figma-card" id="bluecosmicstorm">
+        <div class="figma-card" id="pillow-figma">
           <div class="figma-card-img item">
             <img
               src="fotos/figma2.png"
-              alt="Diseño Figma — Pillow"
+              alt="Figma Design — Pillow"
               loading="lazy"
             />
           </div>
@@ -1886,7 +2049,7 @@
       </div>
     </section>
 
-    <!-- Experimental Systems Section -->
+    <!-- 3D Visual Lab Section -->
     <div
       class="w3-row w3-padding-64 w3-center w3-card-2"
       id="about"
@@ -1901,7 +2064,6 @@
         overflow: hidden;
       "
     >
-      <!-- Particle canvas background -->
       <canvas
         id="particle-bg"
         style="
@@ -1929,13 +2091,15 @@
             margin-bottom: 20px;
             display: inline-block;
           "
-          >⚗️ EXPERIMENTAL SYSTEMS</span
         >
+          <span data-lang="en">⚗️ 3D VISUAL LAB</span>
+          <span data-lang="es">⚗️ LABORATORIO VISUAL 3D</span>
+        </span>
         <br /><br />
         <h2
           class="w3-text-white"
           style="
-            font-family: &quot;Inter&quot;, sans-serif;
+            font-family: 'Inter', sans-serif;
             font-weight: 600;
             letter-spacing: 2px;
             font-size: 145%;
@@ -1953,66 +2117,34 @@
             font-style: italic;
           "
         >
-          An experimental environment where I explore 3D modeling, procedural
-          geometry and interactive real-time rendering.
+          <span data-lang="en">An experimental sandbox exploring 3D modeling, non-Euclidean geometry, and real-time WebGL rendering.</span>
+          <span data-lang="es">Un espacio experimental donde exploro modelado 3D, geometría no euclidiana y renderizado WebGL en tiempo real.</span>
         </p>
         <div style="text-align: left; margin-bottom: 24px">
-          <p
-            class="body-text w3-text-light-grey"
-            style="font-size: 88%; margin-bottom: 8px"
-          >
-            ⬡ <strong>3D Modeling</strong> — GLB/GLTF assets rendered in real
-            time on the web
+          <p class="body-text w3-text-light-grey" style="font-size: 88%; margin-bottom: 8px">
+            <span data-lang="en">⬡ <strong>3D Modeling</strong> — GLB/GLTF assets rendered in real time on the web</span>
+            <span data-lang="es">⬡ <strong>Modelado 3D</strong> — Activos GLB/GLTF renderizados en tiempo real en la web</span>
           </p>
-          <p
-            class="body-text w3-text-light-grey"
-            style="font-size: 88%; margin-bottom: 8px"
-          >
-            ⬡ <strong>Impossible geometry</strong> — optical illusions &
-            non-euclidean structures
+          <p class="body-text w3-text-light-grey" style="font-size: 88%; margin-bottom: 8px">
+            <span data-lang="en">⬡ <strong>Impossible geometry</strong> — optical illusions &amp; non-Euclidean structures</span>
+            <span data-lang="es">⬡ <strong>Geometría imposible</strong> — ilusiones ópticas y estructuras no euclidianas</span>
           </p>
-          <p
-            class="body-text w3-text-light-grey"
-            style="font-size: 88%; margin-bottom: 8px"
-          >
-            ⬡ <strong>Symbolic representation</strong> — geometry as a language
-            for cosmos
-          </p>
-          <p
-            class="body-text w3-text-light-grey"
-            style="font-size: 88%; margin-bottom: 8px"
-          >
-            ⬡ <strong>Interactive viewer</strong> — orbit, zoom, pan — full
-            WebGL pipeline
+          <p class="body-text w3-text-light-grey" style="font-size: 88%; margin-bottom: 8px">
+            <span data-lang="en">⬡ <strong>Interactive viewer</strong> — orbit, zoom, pan via WebGL pipeline</span>
+            <span data-lang="es">⬡ <strong>Visor interactivo</strong> — órbita, zoom y paneo sobre pipeline WebGL</span>
           </p>
         </div>
-        <p
-          class="body-text w3-text-light-grey"
-          style="
-            font-size: 85%;
-            line-height: 1.7;
-            max-width: 420px;
-            margin: 0 auto;
-          "
-        >
-          These experiments feed directly into
-          <strong style="color: #7eb8d4">Archeoscope</strong> — testing how 3D
-          assets, geometry and perception can be rendered in real time on the
-          browser.
-        </p>
       </div>
       <div
         class="w3-col m6"
         style="position: relative; z-index: 1; padding: 20px"
       >
-        <br />
         <p
           class="tag-text"
           style="color: #7eb8d4; letter-spacing: 2px; margin-bottom: 12px"
         >
           UFO — 3D MODEL · INTERACTIVE VIEWER
         </p>
-        <!-- 3D Model Viewer -->
         <model-viewer
           src="modelos3d/ufo.glb"
           alt="UFO 3D model — impossible geometry sculpture"
@@ -2026,7 +2158,7 @@
           environment-image="neutral"
           style="
             width: 100%;
-            height: 360px;
+            height: 340px;
             border-radius: 12px;
             box-shadow:
               0 0 40px rgba(0, 100, 180, 0.25),
@@ -2047,93 +2179,22 @@
           class="body-text"
           style="color: #4a7a9b; font-size: 78%; margin-top: 10px"
         >
-          drag to orbit · scroll to zoom · pinch on mobile
+          <span data-lang="en">drag to orbit · scroll to zoom · pinch on mobile</span>
+          <span data-lang="es">arrastrar para rotar · scroll para zoom · pellizcar en móvil</span>
         </p>
-        <br />
-        <p
-          class="body-text w3-text-light-grey"
-          style="
-            font-size: 84%;
-            line-height: 1.7;
-            max-width: 380px;
-            margin: 0 auto;
-          "
-        >
-          Impossible geometry sculpture — a hexagonal structure where each face
-          forms an optical illusion. Inspired by Escher's impossible objects and
-          sacred geometry. 3D printed, then modeled as a GLB asset for real-time
-          web rendering via WebGL.
-        </p>
-        <br />
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            justify-content: center;
-          "
-        >
-          <span
-            class="w3-tag tag-text"
-            style="
-              background: #0d2137;
-              color: #7eb8d4;
-              border-radius: 4px;
-              padding: 3px 9px;
-            "
-            >WebGL</span
-          >
-          <span
-            class="w3-tag tag-text"
-            style="
-              background: #0d2137;
-              color: #7eb8d4;
-              border-radius: 4px;
-              padding: 3px 9px;
-            "
-            >GLTF/GLB</span
-          >
-          <span
-            class="w3-tag tag-text"
-            style="
-              background: #0d2137;
-              color: #7eb8d4;
-              border-radius: 4px;
-              padding: 3px 9px;
-            "
-            >model-viewer</span
-          >
-          <span
-            class="w3-tag tag-text"
-            style="
-              background: #0d2137;
-              color: #7eb8d4;
-              border-radius: 4px;
-              padding: 3px 9px;
-            "
-            >3D Printing</span
-          >
-          <span
-            class="w3-tag tag-text"
-            style="
-              background: #0d2137;
-              color: #7eb8d4;
-              border-radius: 4px;
-              padding: 3px 9px;
-            "
-            >Sacred Geometry</span
-          >
-        </div>
       </div>
     </div>
 
-    <!-- Contact Section — Inline -->
+    <!-- Contact Section -->
     <section class="contact-section" id="contact">
       <div class="contact-inner">
-        <h2 class="contact-title">Let's talk</h2>
+        <h2 class="contact-title">
+          <span data-lang="en">Contact</span>
+          <span data-lang="es">Contacto</span>
+        </h2>
         <p class="contact-subtitle">
-          Have a project in mind, want to collaborate, or just say hi? Drop me a
-          message.
+          <span data-lang="en">Interested in collaborating, discussing a technical project, or getting in touch? Send me a message.</span>
+          <span data-lang="es">¿Te interesa colaborar, conversar sobre un proyecto técnico o ponerte en contacto? Enviame un mensaje.</span>
         </p>
         <form
           class="contact-form"
@@ -2141,7 +2202,6 @@
           method="POST"
           target="_blank"
         >
-          <!-- FormSubmit config -->
           <input
             type="hidden"
             name="_subject"
@@ -2152,12 +2212,17 @@
           <input type="text" name="_honey" style="display: none" />
           <div class="contact-row">
             <div class="contact-field">
-              <label for="contact-name">Name</label>
+              <label for="contact-name">
+                <span data-lang="en">Name</span>
+                <span data-lang="es">Nombre</span>
+              </label>
               <input
                 id="contact-name"
                 type="text"
                 name="name"
                 placeholder="Your name"
+                data-placeholder-en="Your name"
+                data-placeholder-es="Tu nombre"
                 required
                 autocomplete="name"
               />
@@ -2169,25 +2234,38 @@
                 type="email"
                 name="email"
                 placeholder="your@email.com"
+                data-placeholder-en="your@email.com"
+                data-placeholder-es="tu@email.com"
                 required
                 autocomplete="email"
               />
             </div>
           </div>
           <div class="contact-field">
-            <label for="contact-message">Message</label>
+            <label for="contact-message">
+              <span data-lang="en">Message</span>
+              <span data-lang="es">Mensaje</span>
+            </label>
             <textarea
               id="contact-message"
               name="message"
               placeholder="Tell me about your project..."
+              data-placeholder-en="Tell me about your project..."
+              data-placeholder-es="Contame sobre tu proyecto o consulta..."
               rows="5"
               required
             ></textarea>
           </div>
-          <button type="submit" class="contact-submit">Send message</button>
+          <button type="submit" class="contact-submit">
+            <span data-lang="en">Send message</span>
+            <span data-lang="es">Enviar mensaje</span>
+          </button>
         </form>
         <div class="contact-alt">
-          <p>Or reach me directly:</p>
+          <p>
+            <span data-lang="en">Or reach me directly:</span>
+            <span data-lang="es">O contactame directamente:</span>
+          </p>
           <div class="contact-links">
             <a href="mailto:nacho.xiphos@gmail.com" aria-label="Email"
               ><i class="fa fa-envelope-o"></i> nacho.xiphos@gmail.com</a
@@ -2214,14 +2292,14 @@
               ><i class="fa fa-whatsapp"></i> WhatsApp</a
             >
           </div>
-          <!-- PWA Install button — shown only when installable -->
           <button
             id="pwa-install-btn"
             style="display: none; margin-top: 28px"
-            aria-label="Instalar app"
+            aria-label="Install app"
           >
-            <i class="fa fa-download" style="margin-right: 8px"></i> Add to Home
-            Screen
+            <i class="fa fa-download" style="margin-right: 8px"></i>
+            <span data-lang="en">Add to Home Screen</span>
+            <span data-lang="es">Agregar a pantalla de inicio</span>
           </button>
         </div>
       </div>
@@ -2231,10 +2309,9 @@
     <footer class="site-footer-new">
       <div class="footer-inner">
         <p class="footer-copy">
-          © <span id="footer-year"></span> Ignacio Gabriel Fernández · Paraná, Entre
-          Ríos
+          © <span id="footer-year"></span> Ignacio Gabriel Fernández · Paraná, Entre Ríos, Argentina
         </p>
-        <a href="#home" class="footer-top" aria-label="Volver al inicio"
+        <a href="#home" class="footer-top" aria-label="Back to top"
           ><i class="fa fa-chevron-up"></i
         ></a>
       </div>
@@ -2245,6 +2322,7 @@
       document.querySelectorAll(".item").forEach(function (item) {
         item.addEventListener("mousemove", function (e) {
           const img = this.querySelector("img");
+          if (!img) return;
           const rect = this.getBoundingClientRect();
           const x = e.clientX - rect.left;
           const y = e.clientY - rect.top;

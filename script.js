@@ -378,3 +378,40 @@ function setProjectImage(projectId, imagePath, thumbElement) {
   }
 }
 
+/*-----------------------------------------------------------------------------------------*/
+/* Bilingual Language Switcher (EN / ES) */
+function setPortfolioLang(lang) {
+  const validLang = lang === 'es' ? 'es' : 'en';
+  document.documentElement.setAttribute('data-lang', validLang);
+  document.documentElement.setAttribute('lang', validLang);
+  try {
+    localStorage.setItem('portfolio_lang', validLang);
+  } catch (e) {}
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.getAttribute('data-set-lang') === validLang);
+    btn.setAttribute('aria-pressed', btn.getAttribute('data-set-lang') === validLang ? 'true' : 'false');
+  });
+
+  document.querySelectorAll('[data-placeholder-en]').forEach((el) => {
+    const nextPlaceholder = el.getAttribute('data-placeholder-' + validLang);
+    if (nextPlaceholder) el.setAttribute('placeholder', nextPlaceholder);
+  });
+
+  if (validLang === 'es') {
+    document.title = 'Ignacio Gabriel Fernández — Desarrollo de Software · Sistemas de IA · Investigación Experimental';
+  } else {
+    document.title = 'Ignacio Gabriel Fernández — Software Development · AI Systems · Experimental Research';
+  }
+}
+
+(function initPortfolioLang() {
+  let saved = 'en';
+  try {
+    const stored = localStorage.getItem('portfolio_lang');
+    if (stored === 'es' || stored === 'en') saved = stored;
+  } catch (e) {}
+  setPortfolioLang(saved);
+})();
+
+

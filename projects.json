@@ -1,26 +1,47 @@
 {
   "projects": {
+    "jarbees": {
+      "name": "JarBees — Web Interface",
+      "liveUrl": "https://ifernandez89.github.io/productos_crud_frd/",
+      "fallbackImage": "fotos/jarbees_1.jpg",
+      "embeddable": true
+    },
     "archeoscope": {
-      "name": "Archeoscope",
+      "name": "ArcheoScope",
       "liveUrl": "https://ifernandez89.github.io/ArcheoScope/",
-      "previewMp4": "https://ifernandez89.github.io/ArcheoScope/preview.mp4",
-      "previewWebm": "https://ifernandez89.github.io/ArcheoScope/preview.webm",
       "fallbackImage": "fotos/archeoscope_app_mobile.png",
+      "embeddable": true
+    },
+    "nightmare": {
+      "name": "NIGHTMARE — DevilutionX WASM",
+      "liveUrl": "https://ifernandez89.github.io/DevilutionX/?force_desktop=1",
+      "fallbackImage": "fotos/nightmare.jpg",
+      "embeddable": false
+    },
+    "retrohub": {
+      "name": "Retro Hub — WebAssembly Emulation",
+      "liveUrl": "https://ifernandez89.github.io/DevilutionX/gens/index.html",
+      "embeddable": true
+    },
+    "objectlab": {
+      "name": "JarBees Object Lab",
+      "liveUrl": "https://ifernandez89.github.io/Jarbees_the_game/",
+      "embeddable": true
+    },
+    "motion": {
+      "name": "JarBeesMotion — PWA Client",
+      "liveUrl": "https://ifernandez89.github.io/JarbeesMotion/",
       "embeddable": true
     },
     "pillow": {
       "name": "Pillow",
       "liveUrl": "https://ifernandez89.github.io/pillow/",
-      "previewMp4": "https://ifernandez89.github.io/pillow/preview.mp4",
-      "previewWebm": "https://ifernandez89.github.io/pillow/preview.webm",
       "fallbackVideo": "videos/pillow.mp4",
       "embeddable": true
     },
     "oxlahun": {
       "name": "Oxlahun Cauac",
       "liveUrl": "https://ifernandez89.github.io/BlueCosmicStorm/",
-      "previewMp4": "https://ifernandez89.github.io/BlueCosmicStorm/preview.mp4",
-      "previewWebm": "https://ifernandez89.github.io/BlueCosmicStorm/preview.webm",
       "fallbackVideo": "videos/OC.mp4",
       "embeddable": true
     },
@@ -28,12 +49,6 @@
       "name": "Plantas Medicinales",
       "liveUrl": "https://ifernandez89.github.io/PlantasMedicinales/",
       "embeddable": true
-    },
-    "nightmare": {
-      "name": "NIGHTMARE — Diablo / Hellfire WASM",
-      "liveUrl": "https://ifernandez89.github.io/DevilutionX/",
-      "fallbackImage": "fotos/nightmare.jpg",
-      "embeddable": false
     }
   }
 }

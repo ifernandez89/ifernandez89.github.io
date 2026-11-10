@@ -1,5 +1,27 @@
 # Changelog
 
+## [2026-11-10] — Editorial Restructuring, Bilingual Selector (EN/ES) & Operational Privacy Audit
+
+### Estructura Editorial en 3 Niveles de Lectura
+- **Nivel 1 — Vista Rápida (30s)**: Hero actualizado con perfil `Software Development · AI Systems · Experimental Research` y nueva franja `Current Exploration` con acceso directo a las 3 líneas de trabajo activas.
+- **Nivel 2 — Proyectos y Experiencia (1–3 min)**:
+  - **01. Core Projects**: Fichas concisas orientadas a reclutadores (*Descripción, Evolución/Contexto, Contribuciones, Tecnologías, Estado*) para **JarBees** (con línea evolutiva desde `productos_crud_bkd`/`productos_crud_frd`), **ArcheoScope** y **NIGHTMARE — DevilutionX WASM** (diferenciando aportes propios del motor C++ heredado).
+  - **02. Research & Experiments**: Tarjetas compactas para **JarBees Scientific Lab** (telemetría geomagnética e inercial en tiempo real) y **Retro Hub** (emulación WASM multi-sistema con persistencia SRAM en `IndexedDB` y debugger de teclado educativo *PC Vivaz*).
+  - **03. Technical Explorations**: Incorporación de **JarBees Object Lab** (geometría paramétrica 3D, validación física/ergonómica y síntesis Web Audio) y **JarBeesMotion** (puente de entrada remota entre PWA móvil y escritorio Windows/.NET).
+  - **04. Professional Experience & Public Sector**: Presentación institucional sobria de **SIGAP** (desarrollo histórico en el área de Alumbrado Público) e **Innovación y Transformación Digital — TDI / GEDO** (colaboración técnica municipal), sin exponer capturas ni datos internos.
+  - **05. Selected Personal Work**: Incorporación de **Counter-Strike 1.6 — Custom Scripting & Setup** (plugin Pawn para AMX Mod X, cámara 3D sobre el hombro e instalador PowerShell) junto a **Plantas Medicinales**, **Oxlahun Cauac** y **Pillow**.
+- **Nivel 3 — Desglose Técnico Opcional**: Acordeones desplegables (`<details class="tech-accordion">`) en cada proyecto con los 3 niveles de verificación (*1. Qué funciona · 2. Qué desarrollé · 3. En exploración / Límites*).
+
+### Selector Bilingüe Instantáneo (`EN / ES`)
+- Implementado selector de idioma `EN | ES` en la barra de navegación con persistencia en `localStorage` y conmutación CSS instantánea (`html[data-lang="en|es"]`) sin parpadeo.
+
+### Privacidad Operativa y Correcciones Técnicas
+- Removidos nombres internos de clases/módulos, diagramas internos de seguridad, rutas locales, identificadores de dispositivos y capturas internas institucionales.
+- Corregido el enlace de repositorio de JarBees hacia `productos_crud_bkd` / `productos_crud_frd` y su demo web pública.
+- Corregido el texto de `Plantas Medicinales`, el formato Markdown crudo en `ArcheoScope`, los IDs cruzados en la sección Figma, las URLs absolutas de `og:image`/`twitter:image` y las referencias en `projects.json`.
+
+---
+
 ## [2026-08-28] — Flagship System: Modern Cross-Platform WebAssembly Runtime & NIGHTMARE
 
 ### Nuevo Flagship System: WebAssembly Runtime

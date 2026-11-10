@@ -1,5 +1,5 @@
-const CACHE_NAME = 'ifernandez-portfolio-v4';
-const CACHE_STATIC = 'ifernandez-static-v4';
+const CACHE_NAME = 'ifernandez-portfolio-v5';
+const CACHE_STATIC = 'ifernandez-static-v5';
 
 // Assets to pre-cache on install
 const PRECACHE_ASSETS = [
@@ -17,11 +17,12 @@ const PRECACHE_ASSETS = [
   '/fotos/mmirrored1.png',
   '/fotos/mmirrored2.png',
   '/fotos/ig.jpg',
+  '/fotos/jarbees_1.jpg',
   '/fotos/archeoscope_app_mobile.png',
+  '/fotos/nightmare.jpg',
   '/fotos/figma1.png',
   '/fotos/figma2.png',
   '/fotos/figma3.png',
-  '/fotos/sigapimg.png',
 ];
 
 // ─── Install ────────────────────────────────────────────────────────────────
